@@ -1,0 +1,47 @@
+[
+  {
+    "test": "Production corpus retained after release",
+    "status": "PASS",
+    "records": 5,
+    "llm": "NOT_CONFIGURED",
+    "states": [
+      {
+        "id": "2501.00423v1",
+        "status": "partial"
+      },
+      {
+        "id": "2501.00447v1",
+        "status": "failed"
+      },
+      {
+        "id": "2501.00561v1",
+        "status": "success"
+      },
+      {
+        "id": "2501.00591v1",
+        "status": "partial"
+      },
+      {
+        "id": "2501.00680v1",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "test": "Self-hosted licensed heading font",
+    "status": "PASS",
+    "bytes": 73196,
+    "sha256": "45b70301cd51c7782c3f467a100cf415478cdaa4655ccafca0ac3b876674df77",
+    "mime": "font/woff2"
+  },
+  {
+    "test": "Reviewed typography, contrast and recovery assets are live",
+    "status": "PASS"
+  },
+  {
+    "test": "Real five-paper Excel remains downloadable and byte-identical",
+    "status": "PASS",
+    "bytes": 64266,
+    "sha256": "46edc48e6a74c1e18e92c0fc3588a09095904f1805c78be88be41a809a3df910"
+  }
+]

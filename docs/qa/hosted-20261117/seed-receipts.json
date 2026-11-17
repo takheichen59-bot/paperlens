@@ -1,0 +1,108 @@
+[
+  {
+    "record": "2501.00591v1",
+    "status": 201
+  },
+  {
+    "record": "2501.00447v1",
+    "status": 201
+  },
+  {
+    "record": "2501.00423v1",
+    "status": 201
+  },
+  {
+    "record": "2501.00561v1",
+    "status": 201
+  },
+  {
+    "record": "2501.00680v1",
+    "status": 201
+  },
+  {
+    "pdf": "2501.00680v1",
+    "status": 201,
+    "sha256": "1f88d96cfa8bc36595ac00eaebd42db85fbcc1eb35733058e2399906aa0fb7cd"
+  },
+  {
+    "pdf": "2501.00591v1",
+    "status": 201,
+    "sha256": "a4b49de0f407be3444b089a4a9b7955319ad55634929f802c18044461c0060cf"
+  },
+  {
+    "pdf": "2501.00561v1",
+    "status": 201,
+    "sha256": "5f1c9de042bdb4020a8977dc1889b9be906c24c1aea556d47994ce64a89d6f77"
+  },
+  {
+    "pdf": "2501.00447v1",
+    "status": 201,
+    "sha256": "c5f176d2ad680dbce590b751c2679bec832b313d1bb6d5fbcb2562a87c63106b"
+  },
+  {
+    "pdf": "2501.00423v1",
+    "status": 201,
+    "sha256": "7bfd69c413d3aba5c14690b45e0b42f621f693d0cb9fa9cb64168d795f27e3d2"
+  },
+  {
+    "artifact": "research.xlsx",
+    "status": 201,
+    "download_sha256": "46edc48e6a74c1e18e92c0fc3588a09095904f1805c78be88be41a809a3df910",
+    "bytes": 64266
+  },
+  {
+    "artifact": "research.jsonl",
+    "status": 201,
+    "download_sha256": "1a981a85ae763733eb3839e2fd353f98f2fda5a72b3c489991d3bd601600de4e",
+    "bytes": 473018
+  },
+  {
+    "artifact": "research.csv",
+    "status": 201,
+    "download_sha256": "11c51444d5f9db4821125e29c8033d28f49c1f5719a298a4d0d724b6083a9800",
+    "bytes": 22546
+  },
+  {
+    "artifact": "evidence.csv",
+    "status": 201,
+    "download_sha256": "ec9d7c2f3de4bbc05bdfc45e2a40709864375698847b024cc37089ba664bf258",
+    "bytes": 119475
+  },
+  {
+    "artifact": "material_roles.csv",
+    "status": 201,
+    "download_sha256": "750eead9d777c6c4cd8957474a0470aa64b8dd1e24fe3804137f2b4f1e3dc41e",
+    "bytes": 47372
+  },
+  {
+    "artifact": "numeric_attribution.csv",
+    "status": 201,
+    "download_sha256": "1d69f1b3cc44ad26e582351ebf766df3b45c3bca36d17c1ec34cbad85e02577f",
+    "bytes": 18556
+  },
+  {
+    "artifact": "processing-report.pdf",
+    "status": 201,
+    "download_sha256": "a56d845d32f23c8a8d8d80f9dd10dee7690b6b3e1aa492ccb6420dad19cc8e48",
+    "bytes": 4493842
+  },
+  {
+    "health": {
+      "status": "ok",
+      "product": "PaperLens",
+      "version": "0.3.1-hosted",
+      "storage": true,
+      "parser": "PDF.js in browser",
+      "record_format": "research-1",
+      "llm": "NOT_CONFIGURED",
+      "scientific_accuracy": "NOT_INDEPENDENTLY_EVALUATED",
+      "seed_count": 5
+    },
+    "live_records": 5,
+    "crossref": {
+      "provider": "crossref",
+      "scope": "REAL_UPSTREAM_METADATA",
+      "title": "Coexistence of commensurate and incommensurate antiferromagnetic ground states in\n                    <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\">\n                      <mml:mrow>\n                        <mml:msub>\n                          <mml:mi>Co</mml:mi>\n                          <mml:mi>x</mml:mi>\n                        </mml:msub>\n                        <mml:msub>\n                          <mml:mi>NbSe</mml:mi>\n                          <mml:mn>2</mml:mn>\n                        </mml:msub>\n                      </mml:mrow>\n                    </mml:math>\n                    single crystal"
+    }
+  }
+]

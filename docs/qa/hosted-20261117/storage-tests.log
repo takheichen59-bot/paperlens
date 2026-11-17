@@ -1,0 +1,6 @@
+PASS concurrent_record
+PASS concurrent_review
+PASS failed_publish
+PASS history_and_delete
+PASS chunked_limit
+PHASE A CLOUD: 5 passed, 0 failed

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="theme-color" content="#183e53"><meta name="description" content="PaperLens 科学文献研究工作台：检索真实论文、批量获取全文、整理研究记录并回查原文证据。">
+ <title>PaperLens · 文献研究工作台</title>
+ <link rel="icon" href="/paperlens.svg" type="image/svg+xml"><link rel="stylesheet" href="/workspace.css">
+</head>
+<body>
+ <a href="#content" class="skip-link">跳到主要内容</a>
+ <aside class="sidebar" id="sidebar" aria-label="工作区导航">
+  <a class="brand" href="#discovery"><img src="/paperlens.svg" width="31" height="31" alt=""><span>PaperLens</span></a>
+  <div class="workspace-name"><span class="workspace-avatar">研</span><span>个人研究空间<small>让研究有据可循</small></span></div>
+  <nav class="main-nav">
+   <a href="#discovery" data-nav="discovery"><span data-icon="search"></span><span>文献检索</span></a>
+   <a href="#library" data-nav="library"><span data-icon="library"></span><span>我的文献库</span><span class="nav-count" id="library-count">—</span></a>
+   <a href="#jobs" data-nav="jobs"><span data-icon="layers"></span><span>批次任务</span><span class="nav-count" id="jobs-count"></span></a>
+   <a href="#exports" data-nav="exports"><span data-icon="download"></span><span>导出文件</span></a>
+   <a href="#compare" data-nav="compare"><span data-icon="columns"></span><span>文献比较</span></a>
+  </nav>
+  <div class="sidebar-bottom"><a href="#settings" data-nav="settings"><span data-icon="settings"></span>使用说明与设置</a><div class="sidebar-note"><span class="small-dot"></span>以原文为依据<p>自动结果需人工复核</p></div></div>
+ </aside>
+ <div class="app-shell">
+  <header class="topbar"><div class="topbar-left"><button class="icon-button menu-button" id="menu-toggle" aria-label="打开导航" aria-expanded="false" aria-controls="sidebar"><span data-icon="menu"></span></button><span class="breadcrumb">研究工作台 <span>/</span> <strong id="route-label">文献检索</strong></span></div><div class="topbar-right"><span class="connection" id="connection"><span class="small-dot"></span>正在连接</span><span class="privacy"><span data-icon="lock"></span>仅你可见</span><span class="user-avatar" aria-label="个人工作区"><span data-icon="user"></span></span></div></header>
+  <main id="content" tabindex="-1"><div class="loading-state" role="status">正在打开你的研究工作台…</div></main>
+  <footer class="app-footer"><span>PaperLens · 让每一条研究记录，都能回到原文。</span><span>半自动研究工具 · 不保证字段完整性</span></footer>
+ </div>
+ <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+ <input type="file" id="paper-upload" accept="application/pdf,.pdf" multiple hidden>
+ <input type="file" id="record-upload" accept=".jsonl,.json,application/json" hidden>
+ <script type="module" src="/workspace.js"></script>
+</body></html>

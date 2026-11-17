@@ -1,0 +1,13 @@
+PASS handoff-style attribution keeps background material and 97% external
+PASS current comparator and procedural reagent stay distinct
+PASS result, simulation parameter, experimental condition and mixed remain separate
+PASS explicit return to current work resets preceding prior ownership
+PASS sentence boundaries keep decimals and multiple values intact
+PASS all raw slices count Unicode code points, including supplementary characters
+PASS reference and caption candidates never enter the role layer
+PASS past/perfect findings and negation survive without rewriting
+PASS original baseline fields and input blocks remain unchanged
+PASS numeric-index, role, material and context evidence tampering are rejected
+REAL RECORD COMPATIBILITY: 5 actual records; source-span validation only, browser extraction not asserted.
+PASS five real Python records remain schema-compatible without reclassifying them
+HOSTED ATTRIBUTION: 11 passed, 0 failed; rule candidates, no scientific accuracy claim

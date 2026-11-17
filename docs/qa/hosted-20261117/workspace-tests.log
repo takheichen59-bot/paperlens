@@ -1,0 +1,9 @@
+PASS verified examples exclude arbitrary local and Crossref imports
+PASS live health exposes absent model and independent record format
+PASS fixed real ID lookup is explicit about provenance and does not pretend live search
+PASS invalid discovery requests stop before a source request
+PASS Crossref DOI lookup keeps upstream metadata separate from fulltext
+PASS upstream failure returns failure without substituting known corpus
+PASS artifact download handles unavailable and unregistered files explicitly
+PASS registered download preserves bytes, content type and attachment filename
+SEARCH WORKSPACE: 8 passed; fixtures explicitly synthetic, browser rendering not tested

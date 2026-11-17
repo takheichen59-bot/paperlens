@@ -1,3 +1,9 @@
+# Current PaperLens deployment
+
+The search-first PaperLens workspace is deployed at https://paperlens-research-workspace.halvedbolt3.chatgpt.site (owner-private ChatGPT sign-in). See [hosted workspace guide](../docs/HOSTED_WORKSPACE.md) and [actual validation results](../docs/qa/hosted-20261117/REPORT.md). Build the current app with `node build-workspace.mjs`; `build.mjs` below is the retained older MatterLens presentation.
+
+---
+
 # MatterLens 0.2.0 — 科研文献工作台交付说明
 
 本版把四阶段功能串成可使用的半自动工具：批量获取论文 → 科研记录 → 证据检索与跨论文比较 → 可恢复批处理。网站：
