@@ -37,3 +37,9 @@ python tests/browser/run_research_delivery.py --directory /absolute/export/versi
 ```
 
 This separately checks real paper identities and identical Excel/JSONL/report-PDF download bytes. It does not import research records into the independent ScientificRecord database or certify scientific accuracy.
+
+## Hosted workspace UI
+
+`python tests/browser/run_hosted_workspace.py --output work/hosted-browser-ci` runs the new Worker UI in actual Chromium with explicitly synthetic engineering fixtures and an isolated filesystem storage adapter. GitHub Actions runs it after the existing FastAPI browser suite. It exercises search controls, selection/JSONL/Excel scope, PDF report rendering, evidence, review overlays, viewed-record replacement, real PDF.js ingestion, invalid-PDF retry and mobile navigation. Screenshots and downloaded artifacts are uploaded by CI. The search response in this UI suite is a labelled fixture; real arXiv/Crossref calls and the five real-paper downloads have separate production receipts.
+
+This suite does not authenticate to the private production Site, evaluate scientific accuracy, or substitute mocked storage for a production R2 test. On managed Sites Linux it refuses to create a separate preview server; use the official preview relay there.
