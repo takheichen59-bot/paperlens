@@ -1,0 +1,20 @@
+[
+  {
+    "attempt": 1,
+    "failure": {
+      "name": "08 comparison matrix and export missing-data behavior",
+      "status": "FAIL",
+      "error": "AssertionError: Locator expected to contain text 'methodology'\nActual value: paper_idui:canonical-0ui:canonical-1document_sha2569798b6ed6491dded7f441f46b054b62dd074fc9da625b3ec46795854c1d5db749a1c95e965e97f6cb012aca99368ae0cccdc9578b988b969206a61cc959c7846research_problemNot ReportedNot ReportedcontributionsNot ReportedNot ReportedalgorithmsNot ReportedNot Reportedmathematical_modelNot ReportedNot ReportedconstraintsNot ReportedNot Reportedquantitative_resultsNot ReportedNot ReportedlimitationsNot ReportedNot ReportedreproducibilityNot ReportedNot Reportedevidence[\n  {\n    \"evidence_id\": \"manual-0\",\n    \"paper_id\": \"ui:canonical-0\",\n    \"document_sha256\": \"9798b6ed6491dded7f441f46b054b62dd074fc9da625b3ec46795854c1d5db74\",\n    \"segment_id\": \"p1-b2:0\",\n    \"page\": 1,\n    \"section\": \"Methods\",\n    \"quote\": \"We used a synthetic solver for interface testing only.\",\n    \"start\": 0,\n    \"end\": 54,\n    \"extraction_model\": \"MANUAL_ENGINEERING_FIXTURE\",\n    \"extraction_version\": \"ui-1\",\n    \"validation_status\":"
+    },
+    "resolution": "Comparison records now include methodology and conclusions; source evidence remains attached."
+  },
+  {
+    "attempt": 2,
+    "failure": "Harness polled the old completed job before the retry POST was acknowledged.",
+    "resolution": "Wait for the real resume response before polling; no expected result was weakened."
+  },
+  {
+    "attempt": 3,
+    "result": "12 PASS; no JavaScript or CSP events."
+  }
+]

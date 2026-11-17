@@ -35,8 +35,9 @@
   "E": {
     "implementation": "LOCAL_API_AND_WEBSITE_IMPLEMENTED",
     "api_tests": "PASS",
-    "browser_e2e": "NOT_EXECUTED",
-    "production_deployment": "NOT_EXECUTED"
+    "browser_e2e": "PASS_CHROMIUM_12_ENGINEERING_5_REAL_SOURCE_SMOKE",
+    "production_deployment": "NOT_EXECUTED",
+    "browser_scope": "Single Chromium engine, synthetic fixtures plus20 real metadata and1 real PDF; not scientific quality or production."
   },
   "F": {
     "implementation": "SOURCE_HANDOFF_PREPARED",

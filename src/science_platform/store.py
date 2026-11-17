@@ -59,7 +59,9 @@ class Store:
    for r in rows:
     if paper_ids and r['paper_id'] not in paper_ids:continue
     e=c.execute("SELECT * FROM extractions WHERE document_id=? AND status!='STALE' ORDER BY rowid DESC LIMIT 1",(r['current_document'],)).fetchone()
-    out.append({'paper':json.loads(r['metadata_json']),'access_status':r['access_status'],'document_id':r['current_document'],'extraction_id':e['extraction_id'] if e else None,'extraction':json.loads(e['payload_json']) if e else None})
+    review=c.execute("SELECT * FROM reviews WHERE extraction_id=? AND status!='STALE' ORDER BY revision DESC LIMIT 1",(e['extraction_id'],)).fetchone() if e else None
+    review_data={'revision':review['revision'],'status':review['status'],'payload':json.loads(review['payload_json']),'created_at':review['created_at']} if review else None
+    out.append({'review':review_data,'paper':json.loads(r['metadata_json']),'access_status':r['access_status'],'document_id':r['current_document'],'extraction_id':e['extraction_id'] if e else None,'extraction':json.loads(e['payload_json']) if e else None})
    return out
  def current_review(self,eid):
   with self.connection() as c:
@@ -72,7 +74,7 @@ class Store:
    old=c.execute('SELECT document_id FROM documents WHERE paper_id=? AND sha256=?',(pid,sha)).fetchone()
    if old:
     did=old['document_id']
-    c.execute("UPDATE documents SET license=COALESCE(?,license),source_url=CASE WHEN ?!='' THEN ? ELSE source_url END WHERE document_id=?",(license,source_url,source_url,did))
+    c.execute("UPDATE documents SET path=?,file_size=?,license=COALESCE(?,license),source_url=CASE WHEN ?!='' THEN ? ELSE source_url END WHERE document_id=?",(str(Path(path).resolve()),Path(path).stat().st_size,license,source_url,source_url,did))
    else:c.execute('INSERT INTO documents VALUES(?,?,?,?,?,?,?,?,?,?,?)',(did,pid,sha,str(Path(path).resolve()),kind,license,source_url,method,Path(path).stat().st_size,now(),'CURRENT'))
    if p['current_document'] and p['current_document']!=did:
     c.execute("UPDATE documents SET status='STALE' WHERE document_id=?",(p['current_document'],));c.execute("UPDATE extractions SET status='STALE' WHERE document_id=?",(p['current_document'],));c.execute("UPDATE reviews SET status='STALE' WHERE extraction_id IN (SELECT extraction_id FROM extractions WHERE document_id=?)",(p['current_document'],))
@@ -139,7 +141,21 @@ class Store:
  def pause(self,jid):
   with self.connection() as c:c.execute("UPDATE jobs SET status='PAUSED',updated_at=? WHERE job_id=? AND status IN ('QUEUED','RUNNING')",(now(),jid))
  def resume(self,jid):
-  with self.connection() as c:c.execute("UPDATE jobs SET status='QUEUED',owner=NULL,lease_until=NULL,attempts=0,updated_at=? WHERE job_id=? AND status IN ('PAUSED','FAILED')",(now(),jid))
+  """Resume checkpoints or retry only failed items. Keep completed artifacts."""
+  with self.connection() as c:
+   c.execute('BEGIN IMMEDIATE');row=c.execute('SELECT * FROM jobs WHERE job_id=?',(jid,)).fetchone()
+   if not row:raise PlatformError('JOB_NOT_FOUND')
+   result=json.loads(row['result_json'] or '{}')
+   failed=[k for k,v in result.get('items',{}).items() if v.get('status')=='FAILED']
+   if row['status'] not in {'PAUSED','FAILED'} and not (row['status']=='COMPLETED' and failed):raise PlatformError('JOB_NOT_RETRYABLE')
+   progress=row['progress']
+   if row['status'] in {'FAILED','COMPLETED'}:
+    if row['kind']=='batch':
+     items=result.get('items',{});result={'items':{k:v for k,v in items.items() if k not in failed},'submitted':row['total']};progress=len(result['items']);result['processed']=progress
+    elif row['kind']=='discovery':
+     for source in result.get('sources',{}).values():
+      if source.get('status') in {'FAILED','NOT_EXECUTED'}:source.update(status='QUEUED');source.pop('error',None)
+   c.execute("UPDATE jobs SET status='QUEUED',owner=NULL,lease_until=NULL,attempts=0,error_code=NULL,result_json=?,progress=?,updated_at=? WHERE job_id=?",(encode(result),progress,now(),jid))
  def job(self,jid):
   with self.connection() as c:
    r=c.execute('SELECT * FROM jobs WHERE job_id=?',(jid,)).fetchone();return dict(r) if r else None
