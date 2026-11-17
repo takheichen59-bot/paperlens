@@ -10,7 +10,7 @@ https://github.com/takheichen59-bot/paperlens
 
 源码已推送到main分支，并逐一核对374个文件的Git blob SHA，全部一致。首次源码提交：`6a6def9641591923913e8963172176e5d68d369b`。核验回执见[GITHUB_UPLOAD.json](GITHUB_UPLOAD.json)。后续提交记录交付状态，不改变已验证的程序实现。
 
-GitHub Actions已触发；其状态以仓库Actions页面为准，不把“已经触发”当作“已经通过”。
+GitHub Actions已实际完成并通过：Linux Python3.11、Python3.12和Worker三个job均成功。[查看运行记录](https://github.com/takheichen59-bot/paperlens/actions/runs/44029712362)。验证范围仅限离线工程行为。
 
 ## 上传内容
 

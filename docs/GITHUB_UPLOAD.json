@@ -6,5 +6,30 @@
   "all_blob_hashes_match": true,
   "sensitive_runtime_paths_absent": true,
   "required_documentation_present": true,
-  "verification_scope": "All 374 blobs of the uploaded source commit; subsequent changes only record this handoff."
+  "verification_scope": "All 374 blobs of the uploaded source commit; subsequent changes only record this handoff.",
+  "github_actions": {
+    "run_id": 44029712362,
+    "url": "https://github.com/takheichen59-bot/paperlens/actions/runs/44029712362",
+    "tested_source_commit": "6a6def9641591923913e8963172176e5d68d369b",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "worker",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "python (3.12)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "python (3.11)",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "scope": "Offline engineering checks on Linux; not real models, publisher permissions, scientific gold or browser interaction."
+  }
 }

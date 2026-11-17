@@ -45,7 +45,9 @@
     "windows": "NOT_EXECUTED",
     "github_upload": "UPLOADED_SOURCE_VERIFIED",
     "github_source_commit": "6a6def9641591923913e8963172176e5d68d369b",
-    "github_verified_source_blobs": 374
+    "github_verified_source_blobs": 374,
+    "github_actions": "PASS_LINUX_PYTHON_3_11_3_12_WORKER",
+    "github_actions_run_id": 44029712362
   },
   "updated": "2026-11-17",
   "github_target": "takheichen59-bot/paperlens"
