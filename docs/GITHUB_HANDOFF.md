@@ -1,28 +1,39 @@
 # GitHub交付说明
 
-## 用户指定的仓库
+## 仓库
 
 https://github.com/takheichen59-bot/paperlens
 
-2026-11-17检查：仓库已存在、当前为public；连接账户为DerekChen315，对目标仓库的权限为pull=true、push=false。当前还不能将源码推送到该仓库。
+用户指定的公开仓库。2026-11-17已确认DerekChen315的协作者写权限生效。源码准备阶段的创建仓库/待接受邀请障碍已经解决。
 
-需要将GitHub连接切换/重新授权到有写权限的账户，并授权访问paperlens；或为DerekChen315授予该仓库写权限及连接访问权限。不需要提供或粘贴任何密钥。
+## 上传内容
 
-## 已准备内容
+Python源码、新版本地网站、旧版Worker网站源码快照、SQL迁移基线、合成测试样本、验收脚本、安装启动文件、功能介绍、25项已知问题及真实测试日志。
 
-源码、网站源码、SQL基线迁移、合成样本、验收脚本、真实测试日志、功能说明和25项问题清单。密钥、运行数据库、真实PDF缓存、私人复核记录、备份与旧制品不在上传范围。
+密钥、实际.env、运行数据库、个人文献库、真实论文PDF缓存、私人复核记录、备份和旧构建制品不在上传范围。
 
-## 在自己电脑上传
-
-在本机认证为目标仓库有写权限的账户，解压源码后：
+## 从仓库开始
 
 ```bash
-gh auth login
-git init -b main
-git add .
-git commit -m "Import PaperLens 0.3.0 source and documentation"
-git remote add origin https://github.com/takheichen59-bot/paperlens.git
-git push -u origin main
+git clone https://github.com/takheichen59-bot/paperlens.git
+cd paperlens
+python -m venv .venv
+# Linux/macOS
+source .venv/bin/activate
+# Windows PowerShell: .\.venv\Scripts\Activate.ps1
+python -m pip install -e '.[platform,test]'
+python -m science_platform serve --data ./data/science-platform
 ```
 
-以上用于仍为空的目标仓库。如目标已新增文件/提交，先获取并保留原有历史；不要force覆盖。上传GitHub与部署网站是不同操作，本次上传不会自动部署后端或变更线上访问范围。
+浏览器打开http://127.0.0.1:8765。完整安装见INSTALL.md。
+
+## 主要文档
+
+- README.md：功能概览、入口与限制。
+- PROJECT_OVERVIEW.md：产品工作流、三条代码路径、数据和功能内容。
+- KNOWN_ISSUES.md：25项现有问题、优先级、未执行验证。
+- INSTALL.md：安装、运行、规则批处理、模型与解析器配置。
+- ARCHITECTURE.md：架构、API路由与状态库数据字典。
+- VALIDATION.md：实际测试、原始日志与验证边界。
+
+上传GitHub与部署网站是不同操作。本次源码上传不自动部署Python服务，不变更既有托管网站或其访问范围。真实模型、人工金标准、浏览器E2E等未完成事项仍保持原状态，不因源码上传而视为完成。
