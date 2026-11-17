@@ -1,0 +1,10 @@
+{
+  "repository": "takheichen59-bot/paperlens",
+  "branch": "main",
+  "uploaded_source_commit": "6a6def9641591923913e8963172176e5d68d369b",
+  "verified_blobs": 374,
+  "all_blob_hashes_match": true,
+  "sensitive_runtime_paths_absent": true,
+  "required_documentation_present": true,
+  "verification_scope": "All 374 blobs of the uploaded source commit; subsequent changes only record this handoff."
+}

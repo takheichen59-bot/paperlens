@@ -6,6 +6,12 @@ https://github.com/takheichen59-bot/paperlens
 
 用户指定的公开仓库。2026-11-17已确认DerekChen315的协作者写权限生效。源码准备阶段的创建仓库/待接受邀请障碍已经解决。
 
+## 上传核验
+
+源码已推送到main分支，并逐一核对374个文件的Git blob SHA，全部一致。首次源码提交：`6a6def9641591923913e8963172176e5d68d369b`。核验回执见[GITHUB_UPLOAD.json](GITHUB_UPLOAD.json)。后续提交记录交付状态，不改变已验证的程序实现。
+
+GitHub Actions已触发；其状态以仓库Actions页面为准，不把“已经触发”当作“已经通过”。
+
 ## 上传内容
 
 Python源码、新版本地网站、旧版Worker网站源码快照、SQL迁移基线、合成测试样本、验收脚本、安装启动文件、功能介绍、25项已知问题及真实测试日志。
