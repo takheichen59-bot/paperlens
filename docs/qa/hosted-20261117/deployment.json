@@ -1,10 +1,11 @@
 {
   "project_id": "appgprj_6afc39941c148191b91e61a527c41c7c",
-  "version_id": "appgprj_6afc39941c148191b91e61a527c41c7c~appgver_85e900f3648481919a8958a17536c20c",
-  "deployment_id": "appgdep_6afc856e3eb48191a0fb4ec9aad71877",
+  "version_id": "appgprj_6afc39941c148191b91e61a527c41c7c~appgver_795668003fd881919de4c1c609933e03",
+  "deployment_id": "appgdep_6afc8db510dc8191b666b6fc74325624",
   "status": "succeeded",
   "url": "https://paperlens-research-workspace.halvedbolt3.chatgpt.site",
-  "site_source_commit": "73affa26a5751176cc792c635b86a1a78249d61a",
+  "site_source_commit": "e01b3ca198942dda2ddc80484ed62cb8b60ffc53",
+  "github_runtime_source": "57754c2724625f2216440c1309e11c63c8b0264f",
   "audience": "owner-private",
   "main_modified": false
 }
