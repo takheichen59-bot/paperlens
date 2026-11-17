@@ -328,7 +328,7 @@
     "typographyMeta": {
       "display": {
         "displayName": "Search heading",
-        "purpose": "Dominant literature discovery heading; platform Chinese-capable sans."
+        "purpose": "Self-hosted Noto Sans SC subset at weight 600, with consistent Chinese and Latin heading glyphs."
       },
       "fingerprint": {
         "displayName": "PDF fingerprint",
@@ -443,7 +443,7 @@
   ],
   "narrative": {
     "northStar": "The Research Atlas",
-    "overview": "A cool research atlas gives scientific records the clarity of a reading sheet and keeps their sources close. Deep teal navigation anchors the workspace; blue-grey surroundings separate white reading surfaces. Restrained controls, compact metadata and generous paragraph leading support sustained inspection of Chinese interface text and original-language papers.\n\nThe hierarchy is practical and composed. Borders and tonal changes organize the interface, while small source chips connect a claim to an adjacent evidence inspector. This metaphor and its descriptive language record the implementer's delegated direction; they are not a separately approved visual composition. The current system is extracted from source code. Desktop and mobile rendered validation remains unavailable because the managed preview relay timed out and the production browser encountered a sign-in wall.",
+    "overview": "A cool research atlas gives scientific records the clarity of a reading sheet and keeps their sources close. Deep teal navigation anchors the workspace; blue-grey surroundings separate white reading surfaces. Restrained controls, compact metadata and generous paragraph leading support sustained inspection of Chinese interface text and original-language papers.\n\nThe hierarchy is practical and composed. Borders and tonal changes organize the interface, while small source chips connect a claim to an adjacent evidence inspector. This metaphor and its descriptive language record the implementer's delegated direction; they are not a separately approved visual composition. The current system is extracted from source code. Desktop and mobile captures and twelve Chromium engineering checks were obtained in GitHub Actions with controlled fixtures. Production authentication remains untested; scientific correctness is not evaluated.",
     "keyCharacteristics": [
       "Deep teal navigation and white reading surfaces.",
       "Compact metadata beside readable scientific paragraphs.",

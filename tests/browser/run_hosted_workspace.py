@@ -101,7 +101,7 @@ if(s.revision==='ONE')await writeFile('work/preview-objects/'+Buffer.from('resea
                     def check(name, fn):
                         fn(); results.append({'name': name, 'status': 'PASS'})
                     def capture(name):
-                        path = output / name; page.screenshot(path=str(path), full_page=True); report['screenshots'].append(name)
+                        page.evaluate('document.fonts.ready'); path = output / name; page.screenshot(path=str(path), full_page=True); report['screenshots'].append(name)
                     def library():
                         page.goto(origin + '/#library'); page.get_by_role('heading', name='我的文献库', exact=True).wait_for()
                     def open_fixture():
@@ -208,7 +208,14 @@ if(s.revision==='ONE')await writeFile('work/preview-objects/'+Buffer.from('resea
                     bad.locator('.job-error').wait_for(timeout=30000)
                     assert done.is_visible()
                     assert page.locator('.job-row').filter(has_text='记录已保存').count() == completed_before
-                    results.append({'name': 'Actual PDF.js processing saves a vector PDF; invalid PDF failure and failed-only retry preserve completed work', 'status': 'PASS'})
+                    results.append({'name': 'Actual PDF.js processing saves a vector PDF; invalid PDF recovery/replacement and failed-only retry preserve completed work', 'status': 'PASS'})
+                    assert 'PDF 结构无效或文件已损坏' in bad.locator('.job-error').inner_text()
+                    with page.expect_file_chooser() as chooser:
+                        bad.get_by_role('button', name='重新选择 PDF', exact=True).click()
+                    chooser.value.set_files(str(fixture_dir / 'alpha-TWO.pdf'))
+                    bad.get_by_role('link', name='查看记录', exact=True).wait_for(timeout=90000)
+                    assert done.is_visible()
+                    assert page.locator('.job-row').filter(has_text='记录已保存').count() == completed_before + 1
                     capture('jobs-desktop.png')
                     page.set_viewport_size({'width': 390, 'height': 844})
                     page.goto(origin); page.reload(); page.get_by_role('heading', name='检索科学文献', exact=True).wait_for()

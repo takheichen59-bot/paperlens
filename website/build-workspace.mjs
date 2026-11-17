@@ -7,7 +7,7 @@ await mkdir('dist/server',{recursive:true});await mkdir('dist/.openai',{recursiv
 const assets={};
 for(const file of await readdir('web_assets',{recursive:true})){
  if(!(await stat(path.join('web_assets',file))).isFile()||['phase1-index.json','research-index.json','index.html'].includes(file))continue;
- const type=file.endsWith('.html')?'text/html;charset=utf-8':file.endsWith('.css')?'text/css;charset=utf-8':/\.m?js$/.test(file)?'text/javascript;charset=utf-8':file.endsWith('.svg')?'image/svg+xml':'application/json;charset=utf-8';
+ const type=file.endsWith('.html')?'text/html;charset=utf-8':file.endsWith('.css')?'text/css;charset=utf-8':/\.m?js$/.test(file)?'text/javascript;charset=utf-8':file.endsWith('.woff2')?'font/woff2':file.endsWith('.svg')?'image/svg+xml':'application/json;charset=utf-8';
  assets['/'+file]={data:(await readFile(path.join('web_assets',file))).toString('base64'),mime:type};
 }
 assets['/']={data:(await readFile('web_assets/workspace.html')).toString('base64'),mime:'text/html;charset=utf-8'};

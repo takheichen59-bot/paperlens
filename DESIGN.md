@@ -24,19 +24,19 @@ colors:
   source-active-line: "#88b2c4"
 typography:
   display:
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif'
+    fontFamily: 'PaperLensHeading, "Noto Sans SC", sans-serif'
     fontSize: "31px"
     fontWeight: 680
     lineHeight: 1.35
     letterSpacing: "-0.025em"
   headline:
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif'
+    fontFamily: 'PaperLensHeading, "Noto Sans SC", sans-serif'
     fontSize: "19px"
     fontWeight: 650
     lineHeight: 1.5
     letterSpacing: "-0.015em"
   title:
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif'
+    fontFamily: 'PaperLensHeading, "Noto Sans SC", sans-serif'
     fontSize: "15px"
     fontWeight: 650
     lineHeight: 1.6
@@ -147,7 +147,7 @@ components:
 
 A cool research atlas gives scientific records the clarity of a reading sheet and keeps their sources close. Deep teal navigation anchors the workspace; blue-grey surroundings separate white reading surfaces. Restrained controls, compact metadata and generous paragraph leading support sustained inspection of Chinese interface text and original-language papers.
 
-The hierarchy is practical and composed. Borders and tonal changes organize the interface, while small source chips connect a claim to an adjacent evidence inspector. This metaphor and its descriptive language record the implementer's delegated direction; they are not a separately approved visual composition. The current system is extracted from source code. Desktop and mobile rendered validation remains unavailable because the managed preview relay timed out and the production browser encountered a sign-in wall.
+The hierarchy is practical and composed. Borders and tonal changes organize the interface, while small source chips connect a claim to an adjacent evidence inspector. This metaphor and its descriptive language record the implementer's delegated direction; they are not a separately approved visual composition. The current system is extracted from source code. Desktop and mobile captures and twelve Chromium engineering checks were obtained in GitHub Actions using controlled, labelled fixtures. Production authentication remains untested; real-paper/API/download receipts are a separate validation scope.
 
 **Key Characteristics:**
 
@@ -185,11 +185,11 @@ Feedback primitives remain semantic: **Review Green** (`success`) for a reviewed
 
 ## Typography
 
-**Display and Body Font:** the platform sans-serif stack in frontmatter, with Chinese fallbacks and no external font dependency.
+**Display Font:** self-hosted PaperLensHeading, an OFL-licensed Noto Sans SC weight-600 subset with compatible Latin glyphs. Heading typography is consistent across Chinese and English. **Body Font:** the platform sans-serif stack in frontmatter, with Chinese fallbacks. No browser request to a font service is made.
 
 **Label/Mono Font:** the same sans-serif stack for labels and metadata; the system monospace stack for PDF fingerprints.
 
-The type is quiet, compact and suitable for mixed Chinese interface text and long English paper titles. Sizes are explicitly tuned per role rather than following a fixed modular ratio. Actual variable-weight rendering depends on the platform's installed font.
+The type is quiet, compact and suitable for mixed Chinese interface text and long English paper titles. Sizes are explicitly tuned per role rather than following a fixed modular ratio. Headings use the self-hosted weight-600 face; other text depends on the installed body-font stack.
 
 ### Hierarchy
 

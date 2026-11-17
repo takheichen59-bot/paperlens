@@ -25,6 +25,7 @@ Commands and full output are committed beside this report.
 | Hosted attribution | `node verify-hosted-attribution.mjs --real-jsonl <actual-five-records>` | 11 passed | Synthetic rule safety plus actual five-record format/source-span compatibility; no scientific accuracy score |
 | Hosted exports | `node verify-hosted-exports.mjs --records <actual-five-records>` | 8 passed | File/field/source consistency, not browser rendering |
 | New discovery/workspace requests | `node verify-workspace.mjs` | 8 passed | Synthetic service responses are explicitly labelled fixtures |
+| New hosted UI in actual Chromium | `python tests/browser/run_hosted_workspace.py` in GitHub Actions | 12 passed on source `1dc4f86` | Controlled synthetic records/search response and filesystem adapter; production authentication not tested |
 | Impeccable mechanical design detector | `impeccable detect --json --changed` | `[]` | Static detector, not a visual verdict |
 
 The additional `verify-site.mjs` CI entry also passed its 19 existing phase-one checks; it invokes the same suite and is not counted as a separate test population. The clean staged-source export secret scan checked 539 files with zero findings. A scan of the entire developer folder initially encountered certificate/private-key test strings in ignored virtual-environment dependencies; these runtime files are not part of the source export. Vendored Impeccable whitespace/Windows CRLF is retained from upstream; the application diff passes whitespace checks.
@@ -61,14 +62,18 @@ The browser extractor records `browser-context-roles-v1`; the actual seeded Pyth
 ## Failed or unavailable verification
 
 - Managed browser preview failed with `relay could not open browser port 4173: timed out waiting for relay readiness`, including after the app's port-argument repair and environment recovery. A manual replacement preview server was not used to bypass this limitation.
-- The cloud browser opened the real production URL but encountered its ChatGPT sign-in gate. No authenticated desktop/mobile captures were obtained. The independent Impeccable reviewer returned **recapture**, not a visual ship verdict. This UI's interactive browser acceptance remains **not executed**. Prior FastAPI browser suites are not substituted for it.
+- The cloud browser opened the real production URL but encountered its ChatGPT sign-in gate. No authenticated production captures were obtained. Subsequently, the new hosted-UI suite ran in actual Chromium on GitHub Actions with explicitly labelled engineering fixtures: **12 passed**. It captured desktop/mobile homepage, evidence and batch screens and exercised actual PDF.js, Excel, JSONL and PDF report generation. Production authentication remains untested. The first independent visual review returned **fix** for contrast, typography, invalid-PDF recovery and stale documentation; these bounded fixes are now implemented and undergoing a follow-up run. Prior FastAPI browser suites remain a separate scope.
 - The documentation agent exhausted its usage limit after writing DESIGN.md. The build thread completed the sidecar and documented the substitution in `.impeccable/review/finish-review.md`.
 - An initial Node direct-network request failed. Re-running with the execution environment's configured HTTP proxy succeeded; the production receipts above are from successful real requests.
 
 ## Remaining priorities
 
-1. Capture the authenticated UI at desktop and mobile widths, execute selection/review/upload/retry/download flows in the rendered browser, and repeat the independent finish review.
+1. Complete the follow-up rendered review after bounded design fixes, then verify the owner login flow in the actual private production Site. Controlled Chromium flows do not certify production authentication.
 2. Add 3–5 further papers with explicit role-level expert labels, then extend to 20 full-text batch regressions. The current five-paper outputs have no independent scientific gold standard.
 3. Improve rule coverage of methods/findings/conclusions and ambiguous role ownership without silently rewriting original automatic fields.
 
 No paid model, external private-paper upload or public audience change was performed. The deep-model state is explicitly `NOT_CONFIGURED`; OCR and expert scientific validation are not claimed.
+
+## Chromium artifacts
+
+The first hosted-UI Chromium run is https://github.com/takheichen59-bot/paperlens/actions/runs/44133218406, artifact `chromium-workflow-evidence` (ID 14349934139, SHA256 `79fb8b8df56d7754bc1f6abbaee2317489aeee54af8972ba35c60511eb3c7ab5`). The genuine homepage metadata is the pinned corpus; two additional records used for interaction checks are SYNTHETIC. Detailed scientific fields and the generated test PDF/Excel/JSONL are engineering fixtures, not real-paper results.
