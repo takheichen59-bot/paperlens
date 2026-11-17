@@ -1,0 +1,7 @@
+PASS first_and_isolation
+PASS resume
+PASS invalidate_and_deduplicate
+PASS reviews_and_exports
+SCALE DETAIL: 5000 synthetic tasks; killed=-9; resumed=24; processed=4976; failed=0
+PASS scale_and_kill_resume
+BATCH SUMMARY: 5 passed, 0 failed

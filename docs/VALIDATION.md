@@ -1,5 +1,7 @@
 # 实测结果与验证边界
 
+本开发分支已整合PR #1/#2，并在2026-11-17重跑：54项单元/集成、160项旧验收、12项Chromium流程、5项真实来源冒烟、4项真实交付浏览器检查；另实际下载并处理5篇固定CC-BY论文。各项范围、原始日志和失败尝试见[本轮归属验证报告](qa/attribution-20261117/REPORT.md)。这些数量分别计数，不累加历史PR数量，也不代表科研准确率。新PR/远端CI尚受当前认证失效阻塞。
+
 本次上传前复验：2026-11-17，Linux/Python3.12。原始日志在 [logs/github](../logs/github/)。测试分别计数，不合并成“科研能力全部通过”。
 
 ## 本次重新执行
@@ -63,3 +65,7 @@ OCR用例要求`tesseract`英文数据。GitHub Actions工作流已编写，但�
 ## GitHub上传后的远端复验
 
 2026-11-17：[GitHub Actions #44029712362](https://github.com/takheichen59-bot/paperlens/actions/runs/44029712362)完成，conclusion=success；python(3.11)、python(3.12)、worker三个job均通过。被测源码提交为`6a6def9641591923913e8963172176e5d68d369b`，其后的提交仅记录交付文档。此CI仅验证离线工程行为，不补足本文列出的真实模型、人工金标准、浏览器和授权来源等验证。
+
+## Chromium workflow verification — 2026-11-17 follow-up
+
+Actual browser execution is now available:12 deterministic Chromium cases and5 real upstream/PDF workflow checks passed. [Report, receipts and actual screenshots](qa/workflow-20261117/REPORT.md). This supersedes only the earlier blanket “browser NOT EXECUTED” statement for this small Chromium scope; model quality, human gold, other browsers/devices and production remain unverified.

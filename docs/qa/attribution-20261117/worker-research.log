@@ -1,0 +1,17 @@
+PASS Python record shares the browser/server evidence validator
+PASS Tampered raw slice is rejected
+PASS Nonempty field without its evidence is rejected
+PASS Evidence placed in excluded sections is rejected
+PASS Browser rules produce bounded, evidence-backed four-field records
+PASS Retrieval returns actual citations and refuses unsupported matches
+PASS Graph edges point to existing source evidence
+PASS Human edits override presentation without mutating original evidence
+PASS Scientific Excel and CSV contain all four primary fields
+PASS Research records persist and round-trip through the API
+PASS API rejects invalid scientific evidence without creating a record
+PASS Saved record summaries appear in the workspace index
+PASS Review saves separately; stale revisions are rejected
+PASS Newly imported local records support review by explicit record ID
+PASS Full bundle refuses missing PDF or science artifacts
+PASS HTML and event bindings cover the visible primary actions
+RESEARCH WEB: 16 passed, 0 failed (offline logic/API/export; browser interaction not tested)

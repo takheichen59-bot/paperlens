@@ -74,3 +74,7 @@ Paper IDs may contain DOI slashes; URL-encode them in clients. Secrets stay in s
 The OpenAI-compatible client makes bounded specialist calls, validates exact cited text and structured numbers, rejects unsupported fields and separates model status from quote status. Real-model integration is not executed. Cross-section reconciliation, inference and graph relation coverage are incomplete; consult KNOWN_ISSUES.
 
 Real embeddings are optional; current semantic behavior reranks BM25 candidates rather than providing a semantic-only candidate pool. The assistant is extractive and evidence-thresholded, not a general researcher or novelty oracle.
+
+## Workflow repair additions
+
+Export endpoints optionally accept repeated `paper_id` query values; omission keeps all-library behavior, while invalid/unknown selections are rejected. JSONL snapshots now include the current review with revision/status/payload; spreadsheets additionally expose readable identifiers, methodology, conclusions and results. Nested original records remain present. `/jobs/{id}/resume` can requeue failed items from a completed mixed batch while keeping successful checkpoints. No legacy contract or database schema changes are required. Large selected-ID URLs can exceed proxy limits; this path is validated for small batches, not5000-ID URLs.

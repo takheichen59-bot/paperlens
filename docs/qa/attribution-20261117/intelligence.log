@@ -1,0 +1,6 @@
+PASS case_vectors
+PASS case_no_evidence
+PASS case_answer
+PASS case_graph
+PASS case_compare
+INTELLIGENCE SUMMARY: 5 passed, 0 failed

@@ -87,3 +87,5 @@ Phase 4 批处理 / 工程验收通过 / python acceptance/research_batch.py / 5
 | 0.3.0 GitHub source handoff | 源码/文档已整理，GitHub写权限已确认 | scripts/verify_all.py; unittest tests/master | 科研金标准、真实模型、双解析器、浏览器、Windows与生产部署未验收；详见KNOWN_ISSUES.md |
 
 | GitHub source publication | 已上传并核验 | takheichen59-bot/paperlens main；374个源码文件SHA一致 | GitHub上传不代表网站部署或科研准确率验收 |
+
+| Chromium workflow follow-up | 已本地验证，待PR审阅 | tests/browser/run_workflow.py；run_live_smoke.py | 12项合成流程+5项真实来源冒烟；科研准确率/跨浏览器/生产未验收；冻结契约和SQL未改 |

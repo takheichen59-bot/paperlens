@@ -1,0 +1,36 @@
+[
+  {
+    "stage": "dependency comparison",
+    "observation": "Unpinned PyMuPDF 1.28.2 changed sample methods length to 1678; switched to requirements-tested.txt PyMuPDF 1.26.6 for all before/after corpus comparisons."
+  },
+  {
+    "stage": "acquisition script first attempt",
+    "status": "FAILED_IMPORT",
+    "reason": "FulltextLink symbol misspelled; corrected to FullTextLink, then all 5 real official downloads passed."
+  },
+  {
+    "stage": "comparison validator first attempt",
+    "status": "FAILED_CHECKER",
+    "reason": "Strategy version changes from v1.1 to v1.2 are intentional; now verifies exact evidence identity excluding only strategy. All original field payloads and span text/offset/page remain equal."
+  },
+  {
+    "stage": "secret scan in development tree",
+    "status": "FAILED_SCOPE",
+    "reason": "Existing scanner also scanned ignored .venv dependencies and found certifi CA PEM and a Playwright binary marker. Re-ran same scanner on exact git upload candidates in a clean staging tree: no findings."
+  },
+  {
+    "stage": "independent spreadsheet reader first attempt",
+    "status": "FAILED_CHECKER",
+    "reason": "Checker assumed empty strings were None; normalized reader empty values only, then actual fields matched. Workbook was not rewritten to satisfy the check."
+  },
+  {
+    "stage": "GitHub",
+    "status": "BLOCKED_AUTH",
+    "reason": "gh auth status and gh api user return401. git push --dry-run cannot read Username. No valid operating identity or push permission established; no PR created."
+  },
+  {
+    "stage": "attachment output directory",
+    "status": "BLOCKED_FILESYSTEM",
+    "reason": "Specified /codex output root is absent/read-only in the attached cloud environment; unsandboxed mkdir permission denied, sudo unavailable. Deliverables retained in cloud workspace downloads."
+  }
+]

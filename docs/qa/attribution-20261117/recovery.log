@@ -1,0 +1,10 @@
+{
+  "corpus": "SYNTHETIC_ENGINEERING_FIXTURE",
+  "kill_returncode": -9,
+  "checkpoint_papers": 2,
+  "completed": 12,
+  "attempts": 2,
+  "parse_rows": 12,
+  "duplicate_completed_work": 0,
+  "status": "PASS"
+}

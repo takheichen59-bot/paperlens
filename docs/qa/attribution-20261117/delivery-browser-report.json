@@ -1,0 +1,28 @@
+{
+  "scope": "REAL_EXPORT_PREVIEW_AND_IDENTICAL_BROWSER_DOWNLOADS",
+  "checks": [
+    {
+      "name": "preview actual paper identities",
+      "status": "PASS"
+    },
+    {
+      "name": "identical browser download research.xlsx",
+      "status": "PASS",
+      "sha256": "9689cefe5633dac771e0c1c5c90eec02c23274f017da5b49d0c9a3d4e04e676f"
+    },
+    {
+      "name": "identical browser download research.jsonl",
+      "status": "PASS",
+      "sha256": "c311c323a3aebf5b7a89a389596f41e3bc8be6f0af2b3fdb7180aa28a0edd28b"
+    },
+    {
+      "name": "identical browser download processing-report.pdf",
+      "status": "PASS",
+      "sha256": "4045beb5a72d714f5de279a961e3bce86891f0bafd1fd680e7056b7f2d1f54e8"
+    }
+  ],
+  "scientific_accuracy": "NOT_EVALUATED",
+  "status": "PASS",
+  "chromium": "156.0.8078.79",
+  "paper_count": 1
+}

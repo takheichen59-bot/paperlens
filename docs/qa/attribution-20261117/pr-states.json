@@ -1,0 +1,14 @@
+[
+  {
+    "number": 1,
+    "state": "OPEN",
+    "mergedTime": null,
+    "title": "修复批次重试、重复 DOI 上传和选中导出，补充真实 Chromium 流程验收"
+  },
+  {
+    "number": 2,
+    "state": "OPEN",
+    "mergedTime": null,
+    "title": "保留过去式发现句，并记录一篇真实 BiFeO3 论文的导出效果"
+  }
+]

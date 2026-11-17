@@ -1,0 +1,824 @@
+{
+  "status": "PASS",
+  "scope": "REAL_PDFS_SOURCE_SPAN_AND_DELIVERY_CONSISTENCY",
+  "batch": {
+    "submitted": 5,
+    "processed": 5,
+    "resumed": 0,
+    "duplicates": 0,
+    "failed": 0
+  },
+  "scientific_accuracy": "NOT_EVALUATED_NO_INDEPENDENT_GOLD",
+  "real_llm": "NOT_EXECUTED",
+  "report_pages": 15,
+  "records": [
+    {
+      "id": "2501.00591v1",
+      "source": {
+        "pages": 7,
+        "bytes": 8110924,
+        "sha256": "a4b49de0f407be3444b089a4a9b7955319ad55634929f802c18044461c0060cf",
+        "url": "https://arxiv.org/pdf/2501.00591v1",
+        "license": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "status": "partial",
+      "review_status": "unreviewed",
+      "original_fields_unchanged": true,
+      "field_lengths": {
+        "methods": 0,
+        "findings": 811,
+        "conclusions": 0
+      },
+      "materials": [
+        {
+          "name": "CrI3",
+          "role": "background"
+        },
+        {
+          "name": "NbSe2",
+          "role": "uncertain"
+        },
+        {
+          "name": "CoI2",
+          "role": "uncertain"
+        }
+      ],
+      "numeric_roles": {
+        "uncertain": 5,
+        "cited_result": 1,
+        "own_result": 1
+      },
+      "numeric_candidates": [
+        {
+          "candidate_index": 0,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e10"
+          ],
+          "context_evidence_ids": [],
+          "text": "At x = 1/4, the centrosymmetric structure (P63/mmc) promotes Co-Co\ninteractions leading to the formation of an A-type antiferromagnetic structure phase with a transition\ntemperature of TN\nA = 169 K.",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "candidate_index": 1,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e11"
+          ],
+          "context_evidence_ids": [],
+          "text": "At x = 1/3, the non-centrosymmetric structure (P6322) induces a\nlower-temperature magnetic phase with TN\nS = 28 K.",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "candidate_index": 2,
+          "role": "cited_result",
+          "reason": "explicit_prior_work_context",
+          "evidence_ids": [
+            "e16"
+          ],
+          "context_evidence_ids": [
+            "e37"
+          ],
+          "text": "A\ncanonical\nexample\nof\na\nTMD\nhosting\nboth\nsuperconductivity and a CDW is pristine 2H-NbSe2,\nwhich undergoes a superconducting transition at 7 K and\na CDW transition at 31 K [25–27].",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "candidate_index": 3,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e18"
+          ],
+          "context_evidence_ids": [],
+          "text": "The CVT was carried out in a 12.5\ncm long ampule with an inner diameter of 14 mm.",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "candidate_index": 4,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e26"
+          ],
+          "context_evidence_ids": [],
+          "text": "Powder diffraction data, as shown in Figure\n4(a), refined to the non-centrosymmetric P6322 space\ngroup at 40 K, revealing purely nuclear reflections.",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "candidate_index": 5,
+          "role": "own_result",
+          "reason": "current_result_statement",
+          "evidence_ids": [
+            "e27"
+          ],
+          "context_evidence_ids": [],
+          "text": "When\ncomparing data collected at 40 K and 10 K, we observed\nthe appearance of magnetic peaks associated with the\nTN S transition.",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "candidate_index": 6,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e28"
+          ],
+          "context_evidence_ids": [],
+          "text": "This intensity growth\nobserved between 200 K and 50 K, is consistent\nwith\nthe\nTN A\ntransition,\nbut\nno\nfurther\nchanges\nwere detected down to 5 K.",
+          "pages": [
+            4
+          ]
+        }
+      ],
+      "exact_slices_verified": 37,
+      "missing_core_fields": [
+        "methods",
+        "conclusions"
+      ]
+    },
+    {
+      "id": "2501.00447v1",
+      "source": {
+        "pages": 9,
+        "bytes": 836130,
+        "sha256": "c5f176d2ad680dbce590b751c2679bec832b313d1bb6d5fbcb2562a87c63106b",
+        "url": "https://arxiv.org/pdf/2501.00447v1",
+        "license": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "status": "failed",
+      "review_status": "unreviewed",
+      "original_fields_unchanged": true,
+      "field_lengths": {
+        "methods": 0,
+        "findings": 0,
+        "conclusions": 0
+      },
+      "materials": [],
+      "numeric_roles": {},
+      "numeric_candidates": [],
+      "exact_slices_verified": 2,
+      "missing_core_fields": [
+        "materials",
+        "methods",
+        "findings",
+        "conclusions"
+      ]
+    },
+    {
+      "id": "2501.00423v1",
+      "source": {
+        "pages": 16,
+        "bytes": 974554,
+        "sha256": "7bfd69c413d3aba5c14690b45e0b42f621f693d0cb9fa9cb64168d795f27e3d2",
+        "url": "https://arxiv.org/pdf/2501.00423v1",
+        "license": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "status": "partial",
+      "review_status": "unreviewed",
+      "original_fields_unchanged": true,
+      "field_lengths": {
+        "methods": 0,
+        "findings": 0,
+        "conclusions": 174
+      },
+      "materials": [
+        {
+          "name": "InCl3",
+          "role": "uncertain"
+        },
+        {
+          "name": "HCl",
+          "role": "reagent_or_environment"
+        },
+        {
+          "name": "ethanol",
+          "role": "reagent_or_environment"
+        }
+      ],
+      "numeric_roles": {
+        "uncertain": 16
+      },
+      "numeric_candidates": [
+        {
+          "candidate_index": 0,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e10"
+          ],
+          "context_evidence_ids": [],
+          "text": "(51 cm-1) which evolves with temperature.",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "candidate_index": 1,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e11"
+          ],
+          "context_evidence_ids": [],
+          "text": "centered around 2 eV that can be enhanced with doping (say, Na) at the Ag site.17 The origin",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "candidate_index": 2,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e12"
+          ],
+          "context_evidence_ids": [],
+          "text": "and experimental studies, reported a broad PL centered around 1.95 eV, which was attributed",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "candidate_index": 3,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e13"
+          ],
+          "context_evidence_ids": [],
+          "text": "around 585 nm indicating the presence of mid-gap states near about 2 eV mediated by defects",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "candidate_index": 4,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e14"
+          ],
+          "context_evidence_ids": [],
+          "text": "and 10 ml of 37% (w/w) concentrated hydrochloric acid (HCl) were loaded in teflon-liner.",
+          "pages": [
+            3
+          ]
+        },
+        {
+          "candidate_index": 5,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e15"
+          ],
+          "context_evidence_ids": [],
+          "text": "Nearly 1-2 mm sized big single crystals were",
+          "pages": [
+            3
+          ]
+        },
+        {
+          "candidate_index": 6,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e17"
+          ],
+          "context_evidence_ids": [],
+          "text": "using a PANalytical diffractometer with Cu Ka radiation (1.5406 Å), for Crystal A and Bruker",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "candidate_index": 7,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e18"
+          ],
+          "context_evidence_ids": [],
+          "text": "D8 Advance X-ray diffraction machine with the radiation source as Cu Kα (1.54 Å), for Crystal",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "candidate_index": 8,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e19"
+          ],
+          "context_evidence_ids": [],
+          "text": "detector and to an Nd-YAG 532 nm laser source.",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "candidate_index": 9,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e20"
+          ],
+          "context_evidence_ids": [],
+          "text": "The temperature-dependent (80 K- 400 K)",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "candidate_index": 10,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e21"
+          ],
+          "context_evidence_ids": [],
+          "text": "𝐸𝑔.23 The lowest frequency mode P1 (51 cm-1), is assigned as F2g symmetry which describes",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "candidate_index": 11,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e22"
+          ],
+          "context_evidence_ids": [],
+          "text": "the translation of Cs atom in the space between the octahedra AgCl6 and InCl6, P2 (113 cm-1)",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "candidate_index": 12,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e23"
+          ],
+          "context_evidence_ids": [],
+          "text": "(141 cm-1) is associated to Eg symmetry and the high-frequency phonon P4 (288 cm-1) is an Ag",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "candidate_index": 13,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e24"
+          ],
+          "context_evidence_ids": [],
+          "text": "bandgap semiconductors (3-5 eV), the electronic continuum is not likely to exist.",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "candidate_index": 14,
+          "role": "uncertain",
+          "reason": "mixed_result_condition_or_comparison",
+          "evidence_ids": [
+            "e25"
+          ],
+          "context_evidence_ids": [],
+          "text": "we observe the occurrence of Fano asymmetry with a laser energy excitation of 2.3 eV (532",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "candidate_index": 15,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e26"
+          ],
+          "context_evidence_ids": [],
+          "text": "attributed to Ag/In antisite disorders that give rise to states near about 2 eV.18 Therefore, the",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "exact_slices_verified": 36,
+      "missing_core_fields": [
+        "methods",
+        "findings"
+      ]
+    },
+    {
+      "id": "2501.00561v1",
+      "source": {
+        "pages": 9,
+        "bytes": 4348948,
+        "sha256": "5f1c9de042bdb4020a8977dc1889b9be906c24c1aea556d47994ce64a89d6f77",
+        "url": "https://arxiv.org/pdf/2501.00561v1",
+        "license": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "status": "success",
+      "review_status": "unreviewed",
+      "original_fields_unchanged": true,
+      "field_lengths": {
+        "methods": 2240,
+        "findings": 494,
+        "conclusions": 1312
+      },
+      "materials": [
+        {
+          "name": "Ga2O3",
+          "role": "study_subject"
+        },
+        {
+          "name": "Al2O3",
+          "role": "uncertain"
+        },
+        {
+          "name": "O2",
+          "role": "uncertain"
+        },
+        {
+          "name": "CrO2",
+          "role": "uncertain"
+        },
+        {
+          "name": "Cr2O3",
+          "role": "uncertain"
+        },
+        {
+          "name": "GaN",
+          "role": "uncertain"
+        },
+        {
+          "name": "AlN",
+          "role": "uncertain"
+        }
+      ],
+      "numeric_roles": {
+        "cited_result": 2,
+        "uncertain": 7,
+        "experimental_condition": 6,
+        "simulation_parameter": 1
+      },
+      "numeric_candidates": [
+        {
+          "candidate_index": 0,
+          "role": "cited_result",
+          "reason": "explicit_prior_work_context",
+          "evidence_ids": [
+            "e32"
+          ],
+          "context_evidence_ids": [
+            "e102"
+          ],
+          "text": "It is\nperhaps best known for giving rise to the 694.3 nm (1.786 eV) emission in Cr-doped Al2O3, exploited in ruby\nlasers.",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "candidate_index": 1,
+          "role": "cited_result",
+          "reason": "explicit_prior_work_context",
+          "evidence_ids": [
+            "e33"
+          ],
+          "context_evidence_ids": [
+            "e103"
+          ],
+          "text": "Cr possesses a quartet ground-state spin and has an internal transition with a zero-phonon\nline near 1.8 eV.",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "candidate_index": 2,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e34"
+          ],
+          "context_evidence_ids": [],
+          "text": "Monoclinic Ga2O3 (β-Ga2O3) has garnered attention\nfor its ability to be controllably n-type-doped despite\nits ultra-wide (∼4.9 eV) bandgap.1,2 Its high breakdown\nfield and availability of high-quality low-cost substrates\nmake it an excellent material for high-power electron-\nics and ultraviolet optoelectronics.1,3–5 These properties\nalso render β-Ga2O3 a suitable host for quantum de-\nfects.6,7 Realizing any of these applications in β-Ga2O3\ndemands control over the native point defects and impu-\nrities present in the crystal and a deeper understanding\nof their electrical and optical properties relevant for spin\nand photonic qubits.8",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "candidate_index": 3,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e35"
+          ],
+          "context_evidence_ids": [],
+          "text": "We study the excited-\nstate structure and find an internal transition between\na 2E excited state and 4A2 ground state near 1.8 eV.",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "candidate_index": 4,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e36"
+          ],
+          "context_evidence_ids": [],
+          "text": "The agreement provides compelling evidence that the ob-\nserved spectrum, with a zero-phonon line (ZPL) at 1.79\neV, is indeed due to substitutional Cr on an octahedral\nsite.",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "candidate_index": 5,
+          "role": "experimental_condition",
+          "reason": "experimental_procedure",
+          "evidence_ids": [
+            "e38"
+          ],
+          "context_evidence_ids": [],
+          "text": "A single crystal sample of β-Ga2O3 was grown via the\nfloating zone method, using a locally designed laser float-\ning zone furnace “LOKII” in the Wilson lab at UC Santa\nBarbara.23 In preparation for the crystal growth, poly-\ncrystalline powder of Ga2O3 (99.99 %, Alfa Aesar) was\ndried overnight at 1200 ◦C and then packed in a rubber\nballoon with a diameter of 4 mm.",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "candidate_index": 6,
+          "role": "experimental_condition",
+          "reason": "experimental_procedure",
+          "evidence_ids": [
+            "e39"
+          ],
+          "context_evidence_ids": [],
+          "text": "The packed powder in\nthe balloon was pressed into a 90 mm long rod using a\ncold isostatic press.",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "candidate_index": 7,
+          "role": "experimental_condition",
+          "reason": "experimental_procedure",
+          "evidence_ids": [
+            "e40"
+          ],
+          "context_evidence_ids": [],
+          "text": "The rod was then broken into two\npieces, measuring 65 mm and 25 mm in length.",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "candidate_index": 8,
+          "role": "experimental_condition",
+          "reason": "experimental_procedure",
+          "evidence_ids": [
+            "e41"
+          ],
+          "context_evidence_ids": [],
+          "text": "Growth conditions were\nkept constant throughout the process, including a trans-\nlation rate of 15 mm/hr for both the seed and feed rods, a\nrotation rate of 10 rpm, and a total incident laser power\nof 168 W.",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "candidate_index": 9,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e42"
+          ],
+          "context_evidence_ids": [],
+          "text": "The length of the single crystal of β-Ga2O3\nis 60 mm as shown in Fig. 1.",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "candidate_index": 10,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e44"
+          ],
+          "context_evidence_ids": [],
+          "text": "phases making up less than 1% of the crystal.",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "candidate_index": 11,
+          "role": "experimental_condition",
+          "reason": "experimental_procedure",
+          "evidence_ids": [
+            "e45"
+          ],
+          "context_evidence_ids": [],
+          "text": "To characterize the optical properties of the grown β-\nGa2O3 sample at wavelengths in the visible spectrum,\nphotoluminescence spectroscopy was performed at 4.2 K\nusing a 532 nm laser diode as an excitation source.",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "candidate_index": 12,
+          "role": "experimental_condition",
+          "reason": "experimental_procedure",
+          "evidence_ids": [
+            "e46"
+          ],
+          "context_evidence_ids": [],
+          "text": "A low-pass fil-\nter at 550 nm is used to block the residual laser light.",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "candidate_index": 13,
+          "role": "uncertain",
+          "reason": "insufficient_or_mixed_numeric_context",
+          "evidence_ids": [
+            "e47"
+          ],
+          "context_evidence_ids": [],
+          "text": "A sharp line at 1.79 eV associated\nwith the zero-phonon line is found, as well as several\nsmaller peaks at lower energy.",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "candidate_index": 14,
+          "role": "uncertain",
+          "reason": "mixed_result_condition_or_comparison",
+          "evidence_ids": [
+            "e48"
+          ],
+          "context_evidence_ids": [],
+          "text": "The screening parameter is\nset to the default value, and we tune the mixing pa-\nrameter to 32%, resulting in a bandgap of 4.83 eV in\ngood agreement with the experimental value of 4.9 eV.2",
+          "pages": [
+            3
+          ]
+        },
+        {
+          "candidate_index": 15,
+          "role": "simulation_parameter",
+          "reason": "computational_procedure",
+          "evidence_ids": [
+            "e49"
+          ],
+          "context_evidence_ids": [],
+          "text": "The wavefunctions were expanded in a plane-wave basis\nwith an energy cutoff of 400 eV.",
+          "pages": [
+            3
+          ]
+        }
+      ],
+      "exact_slices_verified": 103,
+      "missing_core_fields": []
+    },
+    {
+      "id": "2501.00680v1",
+      "source": {
+        "pages": 11,
+        "bytes": 6027220,
+        "sha256": "1f88d96cfa8bc36595ac00eaebd42db85fbcc1eb35733058e2399906aa0fb7cd",
+        "url": "https://arxiv.org/pdf/2501.00680v1",
+        "license": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "status": "success",
+      "review_status": "unreviewed",
+      "original_fields_unchanged": true,
+      "field_lengths": {
+        "methods": 1676,
+        "findings": 134,
+        "conclusions": 405
+      },
+      "materials": [
+        {
+          "name": "BiFeO3",
+          "role": "study_subject"
+        },
+        {
+          "name": "MoS2",
+          "role": "background"
+        },
+        {
+          "name": "Bi4Ti3O12",
+          "role": "background"
+        }
+      ],
+      "numeric_roles": {
+        "cited_result": 3,
+        "simulation_parameter": 1,
+        "own_result": 2
+      },
+      "numeric_candidates": [
+        {
+          "candidate_index": 0,
+          "role": "cited_result",
+          "reason": "background_citation",
+          "evidence_ids": [
+            "e15"
+          ],
+          "context_evidence_ids": [],
+          "text": "Furthermore, BiFeO3 has a bandgap in the range 2.2 −2.6eV\n[12], which is a\nrelatively small value when compared to other ferroelectric materials.",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "candidate_index": 1,
+          "role": "cited_result",
+          "reason": "explicit_prior_work_context",
+          "evidence_ids": [
+            "e16"
+          ],
+          "context_evidence_ids": [
+            "e54"
+          ],
+          "text": "In recent work, Wafa Amdouni and collaborators [1] investigated the piezo-\nphotocatalytic properties of BiFeO3 nanoparticles with 60 nm size.",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "candidate_index": 2,
+          "role": "cited_result",
+          "reason": "explicit_prior_work_context",
+          "evidence_ids": [
+            "e17"
+          ],
+          "context_evidence_ids": [
+            "e55"
+          ],
+          "text": "The results show\nthat in approximately 30 minutes, the BiFeO3 nanoparticles successfully degraded 97%\nof the Rhodamine B, a model aqueous organic dye pollutant, using only the piezo-\ncatalytic effect.",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "candidate_index": 3,
+          "role": "simulation_parameter",
+          "reason": "computational_procedure",
+          "evidence_ids": [
+            "e18"
+          ],
+          "context_evidence_ids": [],
+          "text": "A temperature of 1 K was\nchosen to facilitate effective relaxation while introducing a minimal amount of thermal\nnoise.",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "candidate_index": 4,
+          "role": "own_result",
+          "reason": "current_result_statement",
+          "evidence_ids": [
+            "e21"
+          ],
+          "context_evidence_ids": [],
+          "text": "At the center of this cut of the nanoparticle, the volume of the\nunit cell is approximately 1% smaller than the average volume in the nanoparticle.",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "candidate_index": 5,
+          "role": "own_result",
+          "reason": "current_result_statement",
+          "evidence_ids": [
+            "e22"
+          ],
+          "context_evidence_ids": [],
+          "text": "For the rest of the nanoparticle’s surface,\nthe volume increases in some regions up to 6%, especially at the vertices and edges of\nthe nanoparticle.",
+          "pages": [
+            5
+          ]
+        }
+      ],
+      "exact_slices_verified": 55,
+      "missing_core_fields": []
+    }
+  ]
+}

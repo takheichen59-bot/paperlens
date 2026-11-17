@@ -18,7 +18,7 @@ class ResearchTests(unittest.TestCase):
    self.assertFalse(Retriever(s).search('unicorn')['hits']);self.assertFalse(Retriever(s).search('quantum ocean')['hits'])
  def rec(self,pid):return ScientificRecord(paper_id=pid,document_sha256='a'*64,extraction_version='x',model='fixture',execution_status='EXECUTED')
  def test_2_compare_preserves_missing(self):
-  rows=compare([self.rec('1'),self.rec('2')]);self.assertEqual(rows[0]['quantitative_results'],'Not Reported');self.assertIn('No cross-dataset',rows[0]['comparison_warning'])
+  rows=compare([self.rec('1'),self.rec('2')]);self.assertEqual(rows[0]['quantitative_results'],'Not Reported');self.assertEqual(rows[0]['methodology'],'Not Reported');self.assertEqual(rows[0]['conclusions'],'Not Reported');self.assertIn('No cross-dataset',rows[0]['comparison_warning'])
   with self.assertRaises(PlatformError):compare([self.rec('1')])
  def test_3_gaps_no_global_novelty_claim(self):
   g=gaps([self.rec('1'),self.rec('2')]);self.assertFalse(g['novelty_claims']);self.assertEqual(g['hypotheses'],[]);self.assertIn('does not establish absence',g['observations'][0]['text'])

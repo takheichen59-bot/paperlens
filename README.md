@@ -25,7 +25,7 @@
 | 专项 AI 提取 | 研究问题、贡献、算法、数学、方法、实验、结果、局限、结论等专用任务 | 有严格Schema和证据校验；真实LLM未配置、未执行 |
 | 研究情报 | 算法浏览、2–10篇比较、来源关系图、BM25检索、带阈值的问答入口 | 结构性测试通过；真实嵌入、生成式问答和研究假设未验证/未实现 |
 | 数据可靠性 | 持久队列、逐篇隔离、暂停/恢复、历史记录、来源变更失效、复核冲突检查 | 真实进程终止/恢复已测；没有真实5000篇性能承诺 |
-| 网站 | 新版本地科研工作区；保留旧版Worker网站源码 | API调用链已测；真实浏览器交互与截图未执行 |
+| 网站 | 新版本地科研工作区；保留旧版Worker网站源码 | Chromium12项流程+5项真实来源冒烟已执行；跨浏览器/生产验收未完成 |
 
 ## 快速启动新版网站
 
@@ -62,6 +62,8 @@ paperlens-research run --manifest /path/to/corpus/index.json \
 
 规则结果保留材料、方法、发现、结论和证据；不能当作已完成的深度算法分析。输出路径由命令打印。格式、失败队列与复核说明见[旧版交付文档](docs/RESEARCH_DELIVERY.md)。
 
+新增材料角色和数值归属规则候选：区分本文对象、背景、对照，以及本文结果、模拟参数、实验条件和引用结果，保留原始候选及证据。导出包含六表Excel、JSONL、证据CSV、阅读预览和处理报告PDF，详见[规则归属与交付](docs/RESEARCH_ROLES.md)。本轮五篇真实PDF的实际结果和缺口见[验证报告](docs/qa/attribution-20261117/REPORT.md)。
+
 ## 新旧数据边界
 
 - `src/contracts/` 与 `src/storage/` 的12个已冻结文件保持不变。
@@ -69,6 +71,8 @@ paperlens-research run --manifest /path/to/corpus/index.json \
 - `research` 库的规则记录、新版 `ScientificRecord` 和托管网站记录是不同格式；不会静默混为同一套分析结果。
 - GitHub 存放源码、合成测试样本和评测报告，**不包含个人文献库、真实PDF缓存、密钥或数据库**。真实PDF需要合法重新获取或自行导入。
 - `website/` 是此前托管Worker网站的源码快照，包含本轮未部署的存储修复；新版FastAPI网站在 `src/science_platform/web/`。GitHub仓库建立不等于网站或后端已经重新部署。
+
+浏览器流程修复与实际截图：[本轮报告](docs/qa/workflow-20261117/REPORT.md)。复现见 [浏览器检查说明](tests/browser/README.md)。
 
 ## 复验
 

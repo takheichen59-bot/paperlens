@@ -1,0 +1,93 @@
+{
+  "scope": "OFFICIAL_ARXIV_CC_BY_PDFS_NOT_SEARCH_RESULTS",
+  "downloaded": 5,
+  "requested": 5,
+  "receipts": [
+    {
+      "id": "2501.00680v1",
+      "sha256": "1f88d96cfa8bc36595ac00eaebd42db85fbcc1eb35733058e2399906aa0fb7cd",
+      "path": "/workspace/work/acquired-validation/pdf/1f88d96cfa8bc36595ac00eaebd42db85fbcc1eb35733058e2399906aa0fb7cd.pdf",
+      "bytes": 6027220,
+      "source_url": "https://arxiv.org/pdf/2501.00680v1",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "access_status": "FULLTEXT_AVAILABLE",
+      "acquisition_method": "OFFICIAL_HOST_ALLOWLIST_EGRESS_PDF",
+      "downloaded_at": "2026-11-17T10:27:02.364714+00:00",
+      "reuse_scope": "FOLLOW_RECORDED_LICENSE",
+      "probe": {
+        "pages": 11,
+        "characters": 23081,
+        "needs_ocr": false
+      }
+    },
+    {
+      "id": "2501.00591v1",
+      "sha256": "a4b49de0f407be3444b089a4a9b7955319ad55634929f802c18044461c0060cf",
+      "path": "/workspace/work/acquired-validation/pdf/a4b49de0f407be3444b089a4a9b7955319ad55634929f802c18044461c0060cf.pdf",
+      "bytes": 8110924,
+      "source_url": "https://arxiv.org/pdf/2501.00591v1",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "access_status": "FULLTEXT_AVAILABLE",
+      "acquisition_method": "OFFICIAL_HOST_ALLOWLIST_EGRESS_PDF",
+      "downloaded_at": "2026-11-17T10:27:03.047958+00:00",
+      "reuse_scope": "FOLLOW_RECORDED_LICENSE",
+      "probe": {
+        "pages": 7,
+        "characters": 32699,
+        "needs_ocr": false
+      }
+    },
+    {
+      "id": "2501.00561v1",
+      "sha256": "5f1c9de042bdb4020a8977dc1889b9be906c24c1aea556d47994ce64a89d6f77",
+      "path": "/workspace/work/acquired-validation/pdf/5f1c9de042bdb4020a8977dc1889b9be906c24c1aea556d47994ce64a89d6f77.pdf",
+      "bytes": 4348948,
+      "source_url": "https://arxiv.org/pdf/2501.00561v1",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "access_status": "FULLTEXT_AVAILABLE",
+      "acquisition_method": "OFFICIAL_HOST_ALLOWLIST_EGRESS_PDF",
+      "downloaded_at": "2026-11-17T10:27:03.448791+00:00",
+      "reuse_scope": "FOLLOW_RECORDED_LICENSE",
+      "probe": {
+        "pages": 9,
+        "characters": 39071,
+        "needs_ocr": false
+      }
+    },
+    {
+      "id": "2501.00447v1",
+      "sha256": "c5f176d2ad680dbce590b751c2679bec832b313d1bb6d5fbcb2562a87c63106b",
+      "path": "/workspace/work/acquired-validation/pdf/c5f176d2ad680dbce590b751c2679bec832b313d1bb6d5fbcb2562a87c63106b.pdf",
+      "bytes": 836130,
+      "source_url": "https://arxiv.org/pdf/2501.00447v1",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "access_status": "FULLTEXT_AVAILABLE",
+      "acquisition_method": "OFFICIAL_HOST_ALLOWLIST_EGRESS_PDF",
+      "downloaded_at": "2026-11-17T10:27:03.923752+00:00",
+      "reuse_scope": "FOLLOW_RECORDED_LICENSE",
+      "probe": {
+        "pages": 9,
+        "characters": 29530,
+        "needs_ocr": false
+      }
+    },
+    {
+      "id": "2501.00423v1",
+      "sha256": "7bfd69c413d3aba5c14690b45e0b42f621f693d0cb9fa9cb64168d795f27e3d2",
+      "path": "/workspace/work/acquired-validation/pdf/7bfd69c413d3aba5c14690b45e0b42f621f693d0cb9fa9cb64168d795f27e3d2.pdf",
+      "bytes": 974554,
+      "source_url": "https://arxiv.org/pdf/2501.00423v1",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "access_status": "FULLTEXT_AVAILABLE",
+      "acquisition_method": "OFFICIAL_HOST_ALLOWLIST_EGRESS_PDF",
+      "downloaded_at": "2026-11-17T10:27:04.236377+00:00",
+      "reuse_scope": "FOLLOW_RECORDED_LICENSE",
+      "probe": {
+        "pages": 16,
+        "characters": 25307,
+        "needs_ocr": false
+      }
+    }
+  ],
+  "failures": []
+}

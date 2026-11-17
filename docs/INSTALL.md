@@ -74,3 +74,15 @@ python -m science_platform serve
 ## 新旧网站
 
 `src/science_platform/web`由FastAPI直接提供。`website`是Worker站点源码快照，不会随GitHub push自动部署；缺少R2绑定时，涉及托管文件/保存的操作不能完整工作。历史下载制品不在仓库。不得把仓库创建描述为在线平台部署完成。
+
+## 真实浏览器流程复验
+
+```bash
+python -m pip install -e '.[platform,browser]'
+python -m playwright install --with-deps chromium
+python tests/browser/run_workflow.py --output work/browser
+# 可选：真实Crossref查询及指定arXiv文献下载，需要网络
+python tests/browser/run_live_smoke.py --output work/browser-live
+```
+
+默认套件使用标注清楚的合成工程数据，不验证科研准确率；在线套件是真实请求，来源故障会非零退出并留下报告。服务和数据库都临时隔离。批量导出未选择论文时导出全部，选择后仅导出所选，复核笔记独立于原始科研字段保留。

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "reader": "openpyxl + PyMuPDF",
+  "results": [
+    {
+      "name": "release-export",
+      "papers": 5,
+      "worksheets": [
+        "阅读汇总",
+        "原始字段与修订",
+        "材料角色",
+        "数值归属",
+        "证据",
+        "说明"
+      ],
+      "report_pages": 15,
+      "field_values_match_jsonl": true,
+      "formula_cells": 0
+    },
+    {
+      "name": "release-single-export",
+      "papers": 1,
+      "worksheets": [
+        "阅读汇总",
+        "原始字段与修订",
+        "材料角色",
+        "数值归属",
+        "证据",
+        "说明"
+      ],
+      "report_pages": 4,
+      "field_values_match_jsonl": true,
+      "formula_cells": 0
+    }
+  ]
+}

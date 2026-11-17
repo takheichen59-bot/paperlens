@@ -1,0 +1,426 @@
+{
+  "scope": "REAL_UPSTREAM_AND_REAL_PDF_BROWSER_SMOKE",
+  "checks": [
+    {
+      "name": "real Crossref search target20 returns20 stored records",
+      "status": "PASS"
+    },
+    {
+      "name": "real arXiv PDF downloaded and resource-limited probe accepted",
+      "status": "PASS"
+    },
+    {
+      "name": "real PDF parsed; missing model remains NOT_EXECUTED",
+      "status": "PASS"
+    },
+    {
+      "name": "real paper workflow note saved without claiming scientific review",
+      "status": "PASS"
+    },
+    {
+      "name": "selected real-paper JSONL Excel PDF downloads preserve identity SHA and notes",
+      "status": "PASS"
+    }
+  ],
+  "real_llm": "NOT_EXECUTED",
+  "scientific_accuracy": "NOT_EVALUATED",
+  "search_job": {
+    "job_id": "job:a66ed1a55d414a9a8540e7500d91dbe4",
+    "kind": "discovery",
+    "payload_json": {
+      "query": "materials science computational",
+      "doi": null,
+      "author": null,
+      "venue": null,
+      "year_from": null,
+      "year_to": null,
+      "min_citations": null,
+      "open_access": null,
+      "target": 20,
+      "providers": [
+        "crossref"
+      ]
+    },
+    "status": "COMPLETED",
+    "progress": 20,
+    "total": 20,
+    "attempts": 1,
+    "max_attempts": 3,
+    "result_json": {
+      "target": 20,
+      "raw_received": 20,
+      "deduplicated": 20,
+      "sources": {
+        "crossref": {
+          "pages": 1,
+          "cursor": "MTAyNzU2NDUyMjAwMCwxMC4xMDA3JTJGczEwMjA4MDAxMDAwNg==",
+          "status": "READY",
+          "reported_total": 13106867
+        }
+      },
+      "note": "Target is not a guarantee; only real received records are stored."
+    },
+    "error_code": null,
+    "idempotency_key": null,
+    "created_at": "2026-11-17T10:22:27.696028+00:00",
+    "updated_at": "2026-11-17T10:22:34.407667+00:00"
+  },
+  "search_records": [
+    {
+      "paper_id": "doi:10.1006/fstl.1993.1018",
+      "doi": "10.1006/fstl.1993.1018",
+      "title": "LWT Bulletin",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1006/fstl.1993.1018",
+          "retrieved_at": "2026-11-17T10:22:34.336685+00:00",
+          "citation_count": 0,
+          "venue": "LWT - Food Science and Technology",
+          "year": 1993
+        }
+      ]
+    },
+    {
+      "paper_id": "doi:10.1006/fstl.1993.1019",
+      "doi": "10.1006/fstl.1993.1019",
+      "title": "Review of Food Biotechnology—Techniques and Applications, by Gauri S. Mittal; Advances in Seafood Biochemistry—Composition and Quality, by G. J. Flick, Jr. and R. E. Martin; Food Science and Human Nutrition (Developments in Food Science, Volume 29), by George Charalambous, Elsevier; Food Machinery for the Production of Cereal Foods, Snack Foods and Confectionery, by Ling-Min Cheng and Proteins Interactions, by H. Visser",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1006/fstl.1993.1019",
+          "retrieved_at": "2026-11-17T10:22:34.336769+00:00",
+          "citation_count": 1,
+          "venue": "LWT - Food Science and Technology",
+          "year": 1993
+        }
+      ]
+    },
+    {
+      "paper_id": "doi:10.1006/fstl.1993.1022",
+      "doi": "10.1006/fstl.1993.1022",
+      "title": "Production of Tanoor Bread with Hard White and Other U.S. Wheats",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1006/fstl.1993.1022",
+          "retrieved_at": "2026-11-17T10:22:34.336804+00:00",
+          "citation_count": 12,
+          "venue": "LWT - Food Science and Technology",
+          "year": 1993
+        }
+      ]
+    },
+    {
+      "paper_id": "doi:10.1006/fstl.1993.1023",
+      "doi": "10.1006/fstl.1993.1023",
+      "title": "Spectrophotometric Method for Fungal Pectinesterase Activity Determination",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1006/fstl.1993.1023",
+          "retrieved_at": "2026-11-17T10:22:34.336835+00:00",
+          "citation_count": 27,
+          "venue": "LWT - Food Science and Technology",
+          "year": 1993
+        }
+      ]
+    },
+    {
+      "paper_id": "doi:10.1006/fstl.1993.1025",
+      "doi": "10.1006/fstl.1993.1025",
+      "title": "The Use of DSC to Study the Effects of Solutes on Heterogeneous Ice Nucleation Kinetics in Model Food Emulsions",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1006/fstl.1993.1025",
+          "retrieved_at": "2026-11-17T10:22:34.336860+00:00",
+          "citation_count": 15,
+          "venue": "LWT - Food Science and Technology",
+          "year": 1993
+        }
+      ]
+    },
+    {
+      "paper_id": "doi:10.1006/fstl.1993.1027",
+      "doi": "10.1006/fstl.1993.1027",
+      "title": "The Influence of Fermentation on Volatile Compounds in French Bread Dough",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1006/fstl.1993.1027",
+          "retrieved_at": "2026-11-17T10:22:34.336888+00:00",
+          "citation_count": 47,
+          "venue": "LWT - Food Science and Technology",
+          "year": 1993
+        }
+      ]
+    },
+    {
+      "paper_id": "doi:10.1006/fstl.1993.1030",
+      "doi": "10.1006/fstl.1993.1030",
+      "title": "Changes in Textural Properties of Beef Longissimus Dorsi Muscle During Aging",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1006/fstl.1993.1030",
+          "retrieved_at": "2026-11-17T10:22:34.336912+00:00",
+          "citation_count": 3,
+          "venue": "LWT - Food Science and Technology",
+          "year": 1993
+        }
+      ]
+    },
+    {
+      "paper_id": "doi:10.1006/fstl.1993.1032",
+      "doi": "10.1006/fstl.1993.1032",
+      "title": "Physical and Sensory Characteristics of Akara (Fried Cowpea Paste) Made from Whole and Decorticated Cowpeas (Vigna unguiculata)",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1006/fstl.1993.1032",
+          "retrieved_at": "2026-11-17T10:22:34.336943+00:00",
+          "citation_count": 20,
+          "venue": "LWT - Food Science and Technology",
+          "year": 1993
+        }
+      ]
+    },
+    {
+      "paper_id": "doi:10.1006/fstl.1993.1033",
+      "doi": "10.1006/fstl.1993.1033",
+      "title": "Formulation and Evaluation of a Peanut Milk Based Whipped Topping Using Response Surface Methodology",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1006/fstl.1993.1033",
+          "retrieved_at": "2026-11-17T10:22:34.336970+00:00",
+          "citation_count": 9,
+          "venue": "LWT - Food Science and Technology",
+          "year": 1993
+        }
+      ]
+    },
+    {
+      "paper_id": "doi:10.1006/fstl.1993.1035",
+      "doi": "10.1006/fstl.1993.1035",
+      "title": "12-Methyltridecanal, a Species-Specific Odorant of Stewed Beef",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1006/fstl.1993.1035",
+          "retrieved_at": "2026-11-17T10:22:34.336991+00:00",
+          "citation_count": 60,
+          "venue": "LWT - Food Science and Technology",
+          "year": 1993
+        }
+      ]
+    },
+    {
+      "paper_id": "doi:10.1007/s001289900280",
+      "doi": "10.1007/s001289900280",
+      "title": "Comparison of the Pesticide Capture Efficiency of Potential Passive Dosimeter Materials",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1007/s001289900280",
+          "retrieved_at": "2026-11-17T10:22:34.337024+00:00",
+          "citation_count": 1,
+          "venue": "Bulletin of Environmental Contamination and Toxicology",
+          "year": 1996
+        }
+      ]
+    },
+    {
+      "paper_id": "doi:10.1007/s001289900345",
+      "doi": "10.1007/s001289900345",
+      "title": "Chromium(III) Sorption Enhancement Through NTA—Modification of Biological Materials",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1007/s001289900345",
+          "retrieved_at": "2026-11-17T10:22:34.337127+00:00",
+          "citation_count": 5,
+          "venue": "Bulletin of Environmental Contamination and Toxicology",
+          "year": 1997
+        }
+      ]
+    },
+    {
+      "paper_id": "doi:10.1007/s100219900001",
+      "doi": "10.1007/s100219900001",
+      "title": "Editorial: At Last: A Journal Devoted to Ecosystem Science",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1007/s100219900001",
+          "retrieved_at": "2026-11-17T10:22:34.337162+00:00",
+          "citation_count": 23,
+          "venue": "Ecosystems",
+          "year": 1998
+        }
+      ]
+    },
+    {
+      "paper_id": "doi:10.1007/s102080010003",
+      "doi": "10.1007/s102080010003",
+      "title": "On Cayley-Transform Methods for the Discretization of Lie-Group Equations",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1007/s102080010003",
+          "retrieved_at": "2026-11-17T10:22:34.337183+00:00",
+          "citation_count": 34,
+          "venue": "Foundations of Computational Mathematics",
+          "year": 2001
+        }
+      ]
+    },
+    {
+      "paper_id": "doi:10.1007/s102080010005",
+      "doi": "10.1007/s102080010005",
+      "title": "Finding Mixed Cells in the Mixed Volume Computation",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1007/s102080010005",
+          "retrieved_at": "2026-11-17T10:22:34.337206+00:00",
+          "citation_count": 27,
+          "venue": "Foundations of Computational Mathematics",
+          "year": 2001
+        }
+      ]
+    },
+    {
+      "paper_id": "doi:10.1007/s102080010006",
+      "doi": "10.1007/s102080010006",
+      "title": "Quantum Computation and the Localization of Modular Functors",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1007/s102080010006",
+          "retrieved_at": "2026-11-17T10:22:34.337226+00:00",
+          "citation_count": 31,
+          "venue": "Foundations of Computational Mathematics",
+          "year": 2001
+        }
+      ]
+    },
+    {
+      "paper_id": "doi:10.1067/mem.2001.114127",
+      "doi": "10.1067/mem.2001.114127",
+      "title": "Preface: International guidelines 2000: The story and the science",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1067/mem.2001.114127",
+          "retrieved_at": "2026-11-17T10:22:34.336580+00:00",
+          "citation_count": 2,
+          "venue": "Annals of Emergency Medicine",
+          "year": 2001
+        }
+      ]
+    },
+    {
+      "paper_id": "doi:10.1067/men.2000.111510",
+      "doi": "10.1067/men.2000.111510",
+      "title": "Assessing critical thinking of applicants to the Master of Science in Nursing Emergency Nurse Practitioner Option with clinical case scenario-based interviewing",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1067/men.2000.111510",
+          "retrieved_at": "2026-11-17T10:22:34.336549+00:00",
+          "citation_count": 3,
+          "venue": "Journal of Emergency Nursing",
+          "year": 2000
+        }
+      ]
+    },
+    {
+      "paper_id": "doi:10.1067/mva.2001.112233",
+      "doi": "10.1067/mva.2001.112233",
+      "title": "Basic science curriculum in vascular surgery residency",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1067/mva.2001.112233",
+          "retrieved_at": "2026-11-17T10:22:34.336661+00:00",
+          "citation_count": 5,
+          "venue": "Journal of Vascular Surgery",
+          "year": 2001
+        }
+      ]
+    },
+    {
+      "paper_id": "doi:10.1067/mvn.2000.109281",
+      "doi": "10.1067/mvn.2000.109281",
+      "title": "How readability of patient materials affects",
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1067/mvn.2000.109281",
+          "retrieved_at": "2026-11-17T10:22:34.336477+00:00",
+          "citation_count": 14,
+          "venue": "Journal of Vascular Nursing",
+          "year": 2000
+        }
+      ]
+    }
+  ],
+  "download_job": {
+    "job_id": "job:1b00267f5a6f44a0b72418851c241ede",
+    "kind": "batch",
+    "payload_json": {
+      "paper_ids": [
+        "arxiv:2501.00534v2"
+      ],
+      "action": "acquire",
+      "force": false
+    },
+    "status": "COMPLETED",
+    "progress": 1,
+    "total": 1,
+    "attempts": 1,
+    "max_attempts": 3,
+    "result_json": {
+      "items": {
+        "arxiv:2501.00534v2": {
+          "status": "FULLTEXT_AVAILABLE",
+          "document_id": "doc:caeb78bb89b94370a091fb5ae3010243"
+        }
+      },
+      "submitted": 1,
+      "processed": 1,
+      "counts": {
+        "FULLTEXT_AVAILABLE": 1
+      }
+    },
+    "error_code": null,
+    "idempotency_key": null,
+    "created_at": "2026-11-17T10:22:34.912153+00:00",
+    "updated_at": "2026-11-17T10:22:41.071390+00:00"
+  },
+  "download": {
+    "document_id": "doc:caeb78bb89b94370a091fb5ae3010243",
+    "paper_id": "arxiv:2501.00534v2",
+    "sha256": "b979aebce79a4f1c4afb24dc6087c2dc0cc5e7c5d9a5bdec7e112c3153c19a77",
+    "kind": "pdf",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://arxiv.org/pdf/2501.00534v2",
+    "acquisition_method": "OFFICIAL_HOST_ALLOWLIST_EGRESS_PDF",
+    "file_size": 3702933,
+    "acquired_at": "2026-11-17T10:22:41.067275+00:00",
+    "status": "CURRENT"
+  },
+  "license_basis": {
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "verified_at": "2026-11-16T07:31:17.649470+00:00",
+    "same_sha_as_previously_verified_version": true
+  },
+  "parsed": {
+    "parser": "pymupdf",
+    "segments": 32,
+    "extraction_execution_status": "NOT_EXECUTED"
+  },
+  "status": "PASS"
+}
