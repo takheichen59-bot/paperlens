@@ -1,0 +1,9 @@
+PASS six worksheets preserve original column positions and declare valid relationships
+PASS human edits are visible while exact automatic fields and review JSON remain available
+PASS historical records explicitly mark attribution as not executed
+PASS CSV formulas are escaped and every Excel cell remains an inline string
+PASS long Unicode cells are visibly truncated and JSONL remains complete
+PASS workbook captures one immutable export snapshot before async ZIP work
+PASS selected package excludes unrelated PDF jobs and preserves review overlays
+PASS actual supplied research records export matching core fields and exact source locations
+HOSTED EXPORTS: 8 passed, 0 failed (file consistency; not scientific accuracy or browser UI)

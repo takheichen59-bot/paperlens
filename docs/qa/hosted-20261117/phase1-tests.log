@@ -1,0 +1,20 @@
+PASS ID parsing merges versions and rejects foreign URLs
+PASS Index deduplication uses source ID and case-insensitive DOI
+PASS One download failure does not interrupt other papers
+PASS Content-identical PDFs are skipped as duplicates
+PASS Resume preserves already verified in-memory PDFs
+PASS Memory limit skips only oversized additions
+PASS Cancellation keeps completed PDFs and leaves remaining jobs pending
+PASS Real corpus index contains 20 unique, CC-licensed records
+PASS CSV and JSONL export all 20 metadata records, with formula-safe CSV
+PASS XLSX and PDF ZIP artifacts are generated for independent archive validation
+PASS Official cached Atom feed is parsed into 100 real records
+PASS API search supports category-only 20-paper pagination
+PASS API rejects invalid identifiers before network access
+PASS API size overflow is skipped while ordinary source errors remain failures
+PASS License lookup preserves an official CC license URL
+PASS Server corpus ingest enforces manifest size and SHA256
+PASS Server corpus status and streaming ZIP contain the seeded file
+PASS Missing corpus object prevents publishing an incomplete ZIP
+PASS Every static application selector exists in the HTML
+PHASE 1 WEB: 19 passed, 0 failed (logic/API/archive generation; browser interaction not tested)

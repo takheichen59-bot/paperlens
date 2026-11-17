@@ -1,0 +1,100 @@
+[
+  {
+    "test": "HTML app entry and same-origin CSP",
+    "status": "PASS",
+    "http": 200,
+    "csp": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; worker-src 'self' blob:; frame-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'"
+  },
+  {
+    "test": "Real live five-record index",
+    "status": "PASS",
+    "states": {
+      "partial": 2,
+      "failed": 1,
+      "success": 2
+    }
+  },
+  {
+    "test": "Live full record exact evidence validation",
+    "status": "PASS",
+    "id": "2501.00423v1",
+    "evidence": 36
+  },
+  {
+    "test": "Live full record exact evidence validation",
+    "status": "PASS",
+    "id": "2501.00447v1",
+    "evidence": 2
+  },
+  {
+    "test": "Live full record exact evidence validation",
+    "status": "PASS",
+    "id": "2501.00561v1",
+    "evidence": 103
+  },
+  {
+    "test": "Live full record exact evidence validation",
+    "status": "PASS",
+    "id": "2501.00591v1",
+    "evidence": 37
+  },
+  {
+    "test": "Live full record exact evidence validation",
+    "status": "PASS",
+    "id": "2501.00680v1",
+    "evidence": 55
+  },
+  {
+    "test": "BiFeO3 live ownership and original fields",
+    "status": "PASS",
+    "materials": {
+      "BiFeO3": "study_subject",
+      "MoS2": "background",
+      "Bi4Ti3O12": "background"
+    },
+    "methods_characters": 1676,
+    "findings_characters": 134,
+    "conclusions_characters": 405,
+    "review_status": "unreviewed"
+  },
+  {
+    "test": "Original 11-page public PDF byte verification",
+    "status": "PASS",
+    "bytes": 6027220,
+    "sha256": "1f88d96cfa8bc36595ac00eaebd42db85fbcc1eb35733058e2399906aa0fb7cd"
+  },
+  {
+    "test": "Fixed corpus lookup provenance",
+    "status": "PASS",
+    "scope": "PINNED_REAL_CORPUS_ID_LOOKUP"
+  },
+  {
+    "test": "Real keyword upstream request",
+    "provider": "crossref",
+    "http": 200,
+    "status": "PASS",
+    "scope": "REAL_UPSTREAM_METADATA",
+    "count": 20,
+    "error": null
+  },
+  {
+    "test": "Real keyword upstream request",
+    "provider": "arxiv",
+    "http": 200,
+    "status": "PASS",
+    "scope": "REAL_UPSTREAM_METADATA",
+    "count": 20,
+    "error": null
+  },
+  {
+    "test": "Built worker rejects cross-origin write before storage",
+    "status": "PASS",
+    "http": 403
+  },
+  {
+    "test": "Production full bundle streamed and downloaded",
+    "status": "PASS",
+    "bytes": 25538403,
+    "sha256": "8f54f849d017bd794872e9a3d1d998765bc49e544aef0dddda12ea289534508e"
+  }
+]

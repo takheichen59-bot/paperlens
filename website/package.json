@@ -1,1 +1,11 @@
-{"name": "matterlens", "private": true, "type": "module", "scripts": {"build": "node build.mjs", "test": "node verify-site.mjs"}}
+{
+  "name": "paperlens-workspace",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node verify-site.mjs",
+    "dev": "node scripts/dev.mjs",
+    "build:workspace": "node build-workspace.mjs"
+  }
+}

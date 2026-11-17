@@ -1,0 +1,486 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-17T16:46:06.863430+00:00",
+  "title": "Design System: PaperLens",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "displayName": "Ink",
+        "role": "neutral",
+        "canonical": "oklch(32.65% 0.0367 231.14)",
+        "tonalRamp": [
+          "#060c10",
+          "#1a2930",
+          "#314955",
+          "#516a78",
+          "#738e9c",
+          "#97b3c1",
+          "#c5d7e1",
+          "#e9f0f4"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      },
+      "muted": {
+        "displayName": "Muted",
+        "role": "neutral",
+        "canonical": "oklch(52.79% 0.0317 240.14)",
+        "tonalRamp": [
+          "#070c10",
+          "#1d2830",
+          "#364754",
+          "#566977",
+          "#788c9b",
+          "#9db1c0",
+          "#c9d6e1",
+          "#eaeff3"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      },
+      "brand": {
+        "displayName": "Brand",
+        "role": "primary",
+        "canonical": "oklch(45.46% 0.0661 220.11)",
+        "tonalRamp": [
+          "#010d12",
+          "#062b35",
+          "#104d5d",
+          "#356f80",
+          "#5993a5",
+          "#7eb8cb",
+          "#b6dbe8",
+          "#e3f1f6"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      },
+      "brand-dark": {
+        "displayName": "Brand Dark",
+        "role": "primary",
+        "canonical": "oklch(34.68% 0.0564 235.86)",
+        "tonalRamp": [
+          "#030d13",
+          "#122937",
+          "#254a5f",
+          "#456b82",
+          "#688fa7",
+          "#8cb4cd",
+          "#bed9ea",
+          "#e6f0f7"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      },
+      "brand-soft": {
+        "displayName": "Brand Soft",
+        "role": "primary",
+        "canonical": "oklch(95.09% 0.0107 204.12)",
+        "tonalRamp": [
+          "#090c0c",
+          "#222728",
+          "#3f4748",
+          "#5f6869",
+          "#828b8c",
+          "#a7b0b1",
+          "#cfd6d6",
+          "#ecefef"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      },
+      "page": {
+        "displayName": "Page",
+        "role": "neutral",
+        "canonical": "oklch(97.14% 0.0042 236.50)",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#252728",
+          "#434547",
+          "#646668",
+          "#87898b",
+          "#abaeb0",
+          "#d2d4d6",
+          "#eeeeef"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      },
+      "line": {
+        "displayName": "Line",
+        "role": "neutral",
+        "canonical": "oklch(91.62% 0.0111 225.99)",
+        "tonalRamp": [
+          "#090c0c",
+          "#232729",
+          "#3f4649",
+          "#60686b",
+          "#828b8e",
+          "#a7b0b3",
+          "#cfd5d8",
+          "#edeff0"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      },
+      "white": {
+        "displayName": "White",
+        "role": "neutral",
+        "canonical": "oklch(100.00% 0.0000 89.88)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#262626",
+          "#454545",
+          "#666666",
+          "#898989",
+          "#aeaeae",
+          "#d4d4d4",
+          "#eeeeee"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      },
+      "success": {
+        "displayName": "Success",
+        "role": "semantic",
+        "canonical": "oklch(49.99% 0.0823 165.66)",
+        "tonalRamp": [
+          "#000f08",
+          "#012f20",
+          "#02523b",
+          "#2f755b",
+          "#55997d",
+          "#7abfa2",
+          "#b4e0cc",
+          "#e2f3eb"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      },
+      "warning": {
+        "displayName": "Warning",
+        "role": "semantic",
+        "canonical": "oklch(53.92% 0.0966 76.53)",
+        "tonalRamp": [
+          "#140900",
+          "#382100",
+          "#613c00",
+          "#855e18",
+          "#aa8140",
+          "#d1a665",
+          "#eccfa6",
+          "#f8eddd"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      },
+      "danger": {
+        "displayName": "Danger",
+        "role": "semantic",
+        "canonical": "oklch(51.96% 0.1211 22.20)",
+        "tonalRamp": [
+          "#1a0304",
+          "#461113",
+          "#782326",
+          "#a04545",
+          "#c86967",
+          "#f18e8b",
+          "#ffc0bd",
+          "#ffe7e5"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      },
+      "brand-hover": {
+        "displayName": "Brand Hover",
+        "role": "primary",
+        "canonical": "oklch(39.76% 0.0623 224.39)",
+        "tonalRamp": [
+          "#020d12",
+          "#0a2b36",
+          "#194c5d",
+          "#3b6e81",
+          "#5e92a5",
+          "#83b7cc",
+          "#b9dbe8",
+          "#e4f1f6"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      },
+      "focus": {
+        "displayName": "Focus",
+        "role": "neutral",
+        "canonical": "oklch(76.40% 0.0481 220.76)",
+        "tonalRamp": [
+          "#040d10",
+          "#132a32",
+          "#264b57",
+          "#466d7a",
+          "#69909e",
+          "#8db6c4",
+          "#bfd9e3",
+          "#e6f1f4"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      },
+      "field-line": {
+        "displayName": "Field Line",
+        "role": "neutral",
+        "canonical": "oklch(88.06% 0.0171 230.93)",
+        "tonalRamp": [
+          "#090c0d",
+          "#21282b",
+          "#3c474c",
+          "#5d686e",
+          "#7f8b92",
+          "#a4b0b7",
+          "#cdd6da",
+          "#eceff1"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      },
+      "source-ink": {
+        "displayName": "Source Ink",
+        "role": "neutral",
+        "canonical": "oklch(54.45% 0.0527 236.61)",
+        "tonalRamp": [
+          "#040c12",
+          "#142936",
+          "#28495d",
+          "#486b81",
+          "#6b8fa5",
+          "#8fb4cb",
+          "#c0d8e8",
+          "#e7f0f6"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      },
+      "source-bg": {
+        "displayName": "Source Bg",
+        "role": "neutral",
+        "canonical": "oklch(98.24% 0.0045 214.33)",
+        "tonalRamp": [
+          "#0a0b0c",
+          "#252727",
+          "#424646",
+          "#636768",
+          "#868a8b",
+          "#abafb0",
+          "#d2d5d5",
+          "#eeefef"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      },
+      "source-line": {
+        "displayName": "Source Line",
+        "role": "neutral",
+        "canonical": "oklch(91.89% 0.0165 221.09)",
+        "tonalRamp": [
+          "#080c0d",
+          "#21282a",
+          "#3c474b",
+          "#5c686d",
+          "#7f8c90",
+          "#a3b1b5",
+          "#cdd6d9",
+          "#eceff0"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      },
+      "source-active-ink": {
+        "displayName": "Source Active Ink",
+        "role": "neutral",
+        "canonical": "oklch(42.65% 0.0664 232.14)",
+        "tonalRamp": [
+          "#020d14",
+          "#0b2a39",
+          "#1a4b62",
+          "#3c6d86",
+          "#5f91ab",
+          "#83b6d1",
+          "#b9daec",
+          "#e4f1f8"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      },
+      "source-active-bg": {
+        "displayName": "Source Active Bg",
+        "role": "neutral",
+        "canonical": "oklch(95.21% 0.0126 228.93)",
+        "tonalRamp": [
+          "#090c0d",
+          "#22272a",
+          "#3f464a",
+          "#5f686c",
+          "#828b8f",
+          "#a6b0b4",
+          "#cfd5d8",
+          "#eceff0"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      },
+      "source-active-line": {
+        "displayName": "Source Active Line",
+        "role": "neutral",
+        "canonical": "oklch(73.94% 0.0520 226.09)",
+        "tonalRamp": [
+          "#030d11",
+          "#122a34",
+          "#244b5a",
+          "#446c7d",
+          "#6790a1",
+          "#8bb5c7",
+          "#bed9e5",
+          "#e6f0f5"
+        ],
+        "tonalRampProvenance": "Synthesized in OKLab for documentation; not shipping CSS tokens"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Search heading",
+        "purpose": "Dominant literature discovery heading; platform Chinese-capable sans."
+      },
+      "fingerprint": {
+        "displayName": "PDF fingerprint",
+        "purpose": "SHA256 identifiers only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "toast",
+        "value": "0 12px 40px rgb(0 0 0 / 10%)",
+        "purpose": "Raised transient message"
+      },
+      {
+        "name": "search",
+        "value": "0 2px 5px rgb(0 0 0 / 3%)",
+        "purpose": "Input separation"
+      },
+      {
+        "name": "drawer",
+        "value": "8px 0 32px rgb(0 0 0 / 20%)",
+        "purpose": "Open mobile navigation only"
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-state",
+        "value": "160ms",
+        "purpose": "Hover and control color transition; disabled for reduced motion"
+      },
+      {
+        "name": "loading",
+        "value": "1.4s ease-in-out infinite alternate",
+        "purpose": "Skeleton opacity; disabled for reduced motion"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "1600px"
+      },
+      {
+        "name": "compact",
+        "value": "1150px"
+      },
+      {
+        "name": "single-column",
+        "value": "950px"
+      },
+      {
+        "name": "mobile",
+        "value": "720px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "html": "<button class=\"ds-button-primary\">检索文献</button>",
+      "css": ".ds-button-primary{font:550 14px/1.6 sans-serif;min-height:39px;border:1px solid #245f70;border-radius:7px;padding:8px 14px;background:#245f70;color:#fff;cursor:pointer;transition:background-color .16s}.ds-button-primary:hover{background:#194e60}.ds-button-primary:focus-visible{outline:3px solid #91bac8;outline-offset:3px}",
+      "description": "Source-derived primary button."
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "html": "<button class=\"ds-button-secondary\">检索文献</button>",
+      "css": ".ds-button-secondary{font:550 14px/1.6 sans-serif;min-height:39px;border:1px solid #dce5e9;border-radius:7px;padding:8px 14px;background:#fff;color:#203844;cursor:pointer;transition:background-color .16s}.ds-button-secondary:hover{background:#edf3f6}.ds-button-secondary:focus-visible{outline:3px solid #91bac8;outline-offset:3px}",
+      "description": "Source-derived secondary button."
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "html": "<button class=\"ds-button-ghost\">检索文献</button>",
+      "css": ".ds-button-ghost{font:550 14px/1.6 sans-serif;min-height:39px;border:1px solid transparent;border-radius:7px;padding:8px 14px;background:transparent;color:#203844;cursor:pointer;transition:background-color .16s}.ds-button-ghost:hover{background:#e9f0f4}.ds-button-ghost:focus-visible{outline:3px solid #91bac8;outline-offset:3px}",
+      "description": "Source-derived ghost button."
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "input-search",
+      "html": "<label class=\"ds-label\" for=\"ds-search\">关键词、DOI 或 arXiv ID</label><input class=\"ds-search\" id=\"ds-search\" placeholder=\"例如：BiFeO3 nanoparticles\">",
+      "css": ".ds-label{display:block;font:600 12px/1.6 sans-serif;color:#3f5b6a;margin-bottom:7px}.ds-search{font:15px/1.6 sans-serif;width:100%;height:58px;border:1px solid #bcced8;border-radius:8px;padding:14px 16px;background:#fff;color:#203844;box-shadow:0 2px 5px rgb(0 0 0 / 3%)}.ds-search:focus-visible{outline:3px solid #91bac8;outline-offset:3px}",
+      "description": "Large search control with external label."
+    },
+    {
+      "name": "Current Navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "html": "<nav class=\"ds-nav\" aria-label=\"示例导航\"><a aria-current=\"page\" href=\"#discovery\">文献检索</a><a href=\"#library\">我的文献库</a></nav>",
+      "css": ".ds-nav{background:#183e53;padding:18px;font:14px/1.6 sans-serif}.ds-nav a{display:block;min-height:46px;padding:10px 14px;border-radius:8px;text-decoration:none;color:#c3d5df}.ds-nav a:hover{background:#284e63;color:#fff}.ds-nav a[aria-current]{background:#e6f0f1;color:#244f60;font-weight:620}.ds-nav a:focus-visible{outline:3px solid #91bac8;outline-offset:3px}",
+      "description": "Deep navigation with explicit current-page state."
+    },
+    {
+      "name": "Source Chip",
+      "kind": "chip",
+      "refersTo": "source-chip",
+      "html": "<button class=\"ds-source\">原文 p.8 · ev-01</button>",
+      "css": ".ds-source{font:11px/1.6 sans-serif;border:1px solid #d9e7ec;border-radius:5px;padding:3px 7px;color:#52758b;background:#f6fafb;cursor:pointer}.ds-source:hover{color:#23556d;border-color:#88b2c4;background:#e7f1f6}.ds-source:focus-visible{outline:3px solid #91bac8;outline-offset:3px}",
+      "description": "Evidence control with original page and identifier."
+    },
+    {
+      "name": "Reading Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "html": "<section class=\"ds-panel\"><h2>研究记录</h2><p>自动结果与原文证据分别保留。</p></section>",
+      "css": ".ds-panel{background:#fff;color:#203844;border:1px solid #dce5e9;border-radius:12px;padding:24px;font:14px/1.6 sans-serif}.ds-panel h2{font-size:19px;line-height:1.5;margin:0 0 8px}.ds-panel p{margin:0;color:#5b6e7c}",
+      "description": "Flat bordered reading surface without decorative elevation."
+    }
+  ],
+  "narrative": {
+    "northStar": "The Research Atlas",
+    "overview": "A cool research atlas gives scientific records the clarity of a reading sheet and keeps their sources close. Deep teal navigation anchors the workspace; blue-grey surroundings separate white reading surfaces. Restrained controls, compact metadata and generous paragraph leading support sustained inspection of Chinese interface text and original-language papers.\n\nThe hierarchy is practical and composed. Borders and tonal changes organize the interface, while small source chips connect a claim to an adjacent evidence inspector. This metaphor and its descriptive language record the implementer's delegated direction; they are not a separately approved visual composition. The current system is extracted from source code. Desktop and mobile rendered validation remains unavailable because the managed preview relay timed out and the production browser encountered a sign-in wall.",
+    "keyCharacteristics": [
+      "Deep teal navigation and white reading surfaces.",
+      "Compact metadata beside readable scientific paragraphs.",
+      "Source chips that lead to a dedicated evidence margin.",
+      "Borders and tonal layers with selective neutral shadows.",
+      "Clear textual states and visible keyboard focus."
+    ],
+    "rules": [
+      {
+        "name": "Legible State",
+        "body": "Always name a status in text; color and dots support the label.",
+        "section": "colors"
+      },
+      {
+        "name": "Reading Measure",
+        "body": "Preserve the record paragraph's comfortable measure and generous leading; allow titles, identifiers and source text to wrap.",
+        "section": "typography"
+      },
+      {
+        "name": "Flat Reading",
+        "body": "Keep ordinary reading surfaces flat; reserve shadows for the existing raised or input roles.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** use deep teal for navigation and white sheets for reading.",
+      "**Do** preserve readable wrapping, paragraph leading and the evidence margin's relationship to the record.",
+      "**Do** pair every feedback color with a clear textual state.",
+      "**Do** keep source chips, original page references and PDF fingerprints available during review.",
+      "**Do** preserve the visible keyboard outline and CSS reduced-motion treatment."
+    ],
+    "donts": [
+      "**Don't** add decorative shadows to ordinary panels or record sections.",
+      "**Don't** use a success tint to imply scientific correctness.",
+      "**Don't** hide missing-field or error labels behind color alone.",
+      "**Don't** replace the geometric SVG and licensed line icons with unrelated imagery.",
+      "**Don't** describe this code-derived system as a user-approved composition or a visually validated desktop/mobile build."
+    ]
+  }
+}
