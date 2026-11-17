@@ -1,0 +1,6 @@
+PASS history
+PASS failed_replacement
+PASS bad_item_isolation
+PASS publication_failure
+PASS hash_bound_review
+PHASE A PYTHON: 5 passed, 0 failed

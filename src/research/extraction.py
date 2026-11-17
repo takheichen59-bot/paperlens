@@ -14,8 +14,9 @@ from contracts.jsonl_schema import validate_record
 from extractors.composite import CompositeExtractor, status_for
 from extractors.common import result
 from parsers.sections import StructuredPDFParser, eligible_blocks
+from .attribution import build_attribution, validate_attribution
 
-VERSION = "scientific-evidence-v1.1"
+VERSION = "scientific-evidence-v1.2"
 
 
 class ScientificBaselineAdapter(BaseExtractor):
@@ -164,6 +165,7 @@ def enrich(paper, view, base, meta):
                              "section_kind": b.kind.value} for b in body],
         "status": legacy["status"], "review_status": "unreviewed", "warnings": list(base.warnings),
         "legacy_record": legacy}
+    record["attribution"] = build_attribution(record, body, quote, sentence_ranges)
     validate_scientific_record(record)
     return record
 
@@ -203,6 +205,7 @@ def validate_scientific_record(record):
                 raise ValueError("Candidate contradicts evidence")
     if len(record["methods"]) > 3000:
         raise ValueError("Methods passage exceeds policy")
+    validate_attribution(record)
     return record
 
 

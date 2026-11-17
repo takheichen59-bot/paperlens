@@ -51,5 +51,25 @@
     "github_actions_run_id": 44029712362
   },
   "updated": "2026-11-17",
-  "github_target": "takheichen59-bot/paperlens"
+  "github_target": "takheichen59-bot/paperlens",
+  "research_roles_20261117": {
+    "implementation": "ADDITIVE_RULE_ATTRIBUTION_AND_READABLE_EXPORTS",
+    "extractor": "scientific-evidence-v1.2",
+    "unit_integration_tests": 54,
+    "real_pdfs": 5,
+    "real_record_statuses": {
+      "success": 2,
+      "partial": 2,
+      "failed": 1
+    },
+    "real_gold": "NOT_EXECUTED",
+    "real_llm": "NOT_EXECUTED",
+    "browser_workflow_checks": 12,
+    "live_browser_checks": 5,
+    "delivery_browser_checks": 4,
+    "new_source_upload": "BLOCKED_AUTH",
+    "new_pr": "NOT_CREATED",
+    "new_remote_ci": "NOT_EXECUTED",
+    "report": "docs/qa/attribution-20261117/REPORT.md"
+  }
 }

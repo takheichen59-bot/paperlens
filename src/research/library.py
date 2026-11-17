@@ -9,19 +9,19 @@ from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
 from uuid import uuid4
-import csv, hashlib, json, os, zipfile
+import csv, hashlib, json, os
 from threading import Lock
 from .locking import exclusive_lock
-from xml.sax.saxutils import escape
 
 from contracts import ContractError, Stage, ErrorKind
 from exports import parse_failure_line
 from extractors.warning_policy import WarningClassificationError
 from .extraction import extract_pdf, validate_scientific_record, VERSION, ScientificBaselineAdapter
 from parsers.sections import StructuredPDFParser
+from .delivery import ROLE_HEADERS, ROLE_TITLES, role_cells, write_workbook, write_detail_csvs, write_processing_report, write_preview
 
 FIELDS = ["materials", "methods", "findings", "conclusions", "algorithms", "formulas", "experimental_data", "limitations"]
-HEADERS = ["paper_id", "title", "materials", "methods", "findings", "conclusions", "algorithms", "formulas", "experimental_data", "limitations", "doi", "source_url", "status", "review_status", "notes"]
+HEADERS = ["paper_id", "title", "materials", "methods", "findings", "conclusions", "algorithms", "formulas", "experimental_data", "limitations", "doi", "source_url", "status", "review_status", "notes"] + ROLE_HEADERS
 
 
 def atomic_json(path, value):
@@ -210,6 +210,9 @@ class Library:
                 parse_failure_line(json.loads(path.read_text()))
                 failures.write(path.read_text().strip() + "\n")
         write_xlsx(directory / "research.xlsx", self.records())
+        write_detail_csvs(directory, self.records)
+        write_processing_report(directory / "processing-report.pdf", self.records)
+        write_preview(directory / "preview.html", self.records)
         manifest = {"version": version, "records": count, "directory": str(directory.resolve()),
             "files": {p.name: checksum(p) for p in directory.iterdir() if p.is_file()}}
         atomic_json(directory / "manifest.json", manifest)
@@ -229,7 +232,7 @@ def table_row(record):
         "; ".join(a["name"] for a in record["algorithms"]),
         "\n".join(a["text"] for a in record["formulas"]), "\n".join(a["text"] for a in record["experimental_data"]),
         values["limitations"], record["meta"].get("doi") or "", record["meta"].get("url", ""), record["status"],
-        overlay.get("decision", "unreviewed"), overlay.get("note", "")]
+        overlay.get("decision", "unreviewed"), overlay.get("note", "")] + role_cells(record)
 
 
 def csv_safe(value):
@@ -238,27 +241,6 @@ def csv_safe(value):
 
 
 def write_xlsx(path, records):
-    def cell(value, style=0):
-        text = re_xml(str(value))[:32760]
-        return '<c t="inlineStr" s="'+str(style)+'"><is><t xml:space="preserve">' + escape(text) + '</t></is></c>'
-    with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as z:
-        z.writestr("[Content_Types].xml", '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/></Types>')
-        z.writestr("_rels/.rels", '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>')
-        z.writestr("xl/workbook.xml", '<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="Research" sheetId="1" r:id="rId1"/></sheets></workbook>')
-        z.writestr("xl/_rels/workbook.xml.rels", '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>')
-        z.writestr('xl/styles.xml','<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><fonts count="1"><font><sz val="11"/><name val="Calibri"/></font></fonts><fills count="2"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill></fills><borders count="1"><border/></borders><cellStyleXfs count="1"><xf/></cellStyleXfs><cellXfs count="2"><xf numFmtId="49" fontId="0" fillId="0" borderId="0" xfId="0" applyAlignment="1"><alignment vertical="top" wrapText="1"/></xf><xf numFmtId="49" fontId="0" fillId="0" borderId="0" xfId="0" applyAlignment="1"><alignment vertical="center" wrapText="1"/></xf></cellXfs></styleSheet>')
-        with z.open("xl/worksheets/sheet1.xml", "w") as sheet:
-            widths=[20,52,28,65,65,65,30,50,65,50,30,48,15,20,40]
-            cols='<cols>'+''.join(f'<col min="{i}" max="{i}" width="{width}" customWidth="1"/>' for i,width in enumerate(widths,1))+'</cols>'
-            sheet.write(('<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetViews><sheetView workbookViewId="0"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews>'+cols+'<sheetData>').encode())
-            sheet.write(('<row r="1" ht="30" customHeight="1">' + ''.join(cell(v,1) for v in ['论文ID','论文标题','材料 / 化学物','研究方法','主要发现','结论','算法 / 计算方法','公式候选','数值 / 实验数据候选','局限候选','DOI','原文链接','结构状态','复核状态','复核备注']) + '</row>').encode())
-            count=1
-            for record in records:
-                count+=1
-                sheet.write((f'<row r="{count}" ht="90" customHeight="1">' + ''.join(cell(v) for v in table_row(record)) + '</row>').encode())
-            sheet.write(('</sheetData><autoFilter ref="A1:O'+str(count)+'"/></worksheet>').encode())
-
-
-def re_xml(text):
-    import re
-    return re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", text)
+    headers = ['论文ID','论文标题','材料候选（含背景）','研究方法','主要发现','结论',
+        '算法 / 计算方法','公式候选','数值候选（全部）','局限候选','DOI','原文链接','结构状态','复核状态','复核备注'] + ROLE_TITLES
+    write_workbook(path, records, headers, table_row)

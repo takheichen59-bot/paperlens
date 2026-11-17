@@ -28,3 +28,12 @@ python tests/browser/run_live_smoke.py --output work/browser-live
 This separately searches 20 Crossref records and downloads a fixed arXiv benchmark declared in `samples/browser/real_paper.json`. It does not claim that the benchmark came from those 20 results. The known paper's CC license was checked previously; the run records whether newly downloaded bytes match that verified version. It parses the actual PDF, records a workflow note, and downloads JSONL/Excel/PDF exports. No model means `NOT_EXECUTED`; generated findings are not asserted. Published screenshots contain public source metadata and synthetic/workflow notes only. The source PDF itself is excluded from Git.
 
 Each process exits nonzero on failure and writes `report.json`. The local server always terminates in `finally`. Browser-native PDF layout and fragment scrolling vary by browser: URL/page controls are asserted, but precise PDF scroll position and bbox overlays are not certified.
+
+Actual research-format delivery preview (requires previously generated legal exports; no model):
+
+```bash
+python tests/browser/run_research_delivery.py --directory /absolute/export/version \
+  --browser /usr/bin/chromium --output work/delivery-browser
+```
+
+This separately checks real paper identities and identical Excel/JSONL/report-PDF download bytes. It does not import research records into the independent ScientificRecord database or certify scientific accuracy.

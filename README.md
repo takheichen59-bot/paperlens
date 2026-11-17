@@ -62,6 +62,8 @@ paperlens-research run --manifest /path/to/corpus/index.json \
 
 规则结果保留材料、方法、发现、结论和证据；不能当作已完成的深度算法分析。输出路径由命令打印。格式、失败队列与复核说明见[旧版交付文档](docs/RESEARCH_DELIVERY.md)。
 
+新增材料角色和数值归属规则候选：区分本文对象、背景、对照，以及本文结果、模拟参数、实验条件和引用结果，保留原始候选及证据。导出包含六表Excel、JSONL、证据CSV、阅读预览和处理报告PDF，详见[规则归属与交付](docs/RESEARCH_ROLES.md)。本轮五篇真实PDF的实际结果和缺口见[验证报告](docs/qa/attribution-20261117/REPORT.md)。
+
 ## 新旧数据边界
 
 - `src/contracts/` 与 `src/storage/` 的12个已冻结文件保持不变。
