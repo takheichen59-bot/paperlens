@@ -43,7 +43,8 @@
     "isolated_wheel": "PASS",
     "offline_regression": "PASS",
     "windows": "NOT_EXECUTED",
-    "github_upload": "BLOCKED_CREATE_REPOSITORY_PERMISSION"
+    "github_upload": "BLOCKED_TARGET_PUSH_PERMISSION"
   },
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "github_target": "takheichen59-bot/paperlens"
 }

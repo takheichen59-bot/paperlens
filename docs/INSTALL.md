@@ -7,7 +7,7 @@ Python3.11或更高；新版网站另需FastAPI/uvicorn，`.[platform]`会安装
 ## 从GitHub运行
 
 ```bash
-git clone https://github.com/DerekChen315/paperlens.git
+git clone https://github.com/takheichen59-bot/paperlens.git
 cd paperlens
 python -m venv .venv
 source .venv/bin/activate
@@ -17,7 +17,7 @@ python -m science_platform --version
 python -m science_platform serve --data ./data/science-platform
 ```
 
-私有仓库clone需先完成GitHub认证。网站地址 http://127.0.0.1:8765 。服务默认仅监听本机。`launch/start.bat`和`launch/start.sh`可安装并启动；Windows启动未实机验证。
+仓库写入需完成GitHub认证并获得该仓库的写权限。网站地址 http://127.0.0.1:8765 。服务默认仅监听本机。`launch/start.bat`和`launch/start.sh`可安装并启动；Windows启动未实机验证。
 
 ### 无模型使用
 
