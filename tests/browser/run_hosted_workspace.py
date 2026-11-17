@@ -210,6 +210,7 @@ if(s.revision==='ONE')await writeFile('work/preview-objects/'+Buffer.from('resea
                     assert page.locator('.job-row').filter(has_text='记录已保存').count() == completed_before
                     results.append({'name': 'Actual PDF.js processing saves a vector PDF; invalid PDF recovery/replacement and failed-only retry preserve completed work', 'status': 'PASS'})
                     assert 'PDF 结构无效或文件已损坏' in bad.locator('.job-error').inner_text()
+                    capture('failed-pdf-desktop.png')
                     with page.expect_file_chooser() as chooser:
                         bad.get_by_role('button', name='重新选择 PDF', exact=True).click()
                     chooser.value.set_files(str(fixture_dir / 'alpha-TWO.pdf'))
