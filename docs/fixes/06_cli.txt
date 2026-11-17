@@ -1,0 +1,6 @@
+PASS case_single
+PASS case_search
+PASS case_resume
+PASS case_invalid_parameters
+PASS case_partial_batch
+SUMMARY: 5 passed, 0 failed

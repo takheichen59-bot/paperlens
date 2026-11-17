@@ -1,0 +1,26 @@
+[
+  {
+    "mutation": "m02_fk_disabled",
+    "test": "m02_storage.py",
+    "returncode": 1,
+    "detected": true,
+    "stdout": "PASS case_first_write\nPASS case_upserts\nFAIL case_rollback: AssertionError\nFAIL case_reopen: AssertionError\nPASS case_migration\nSUMMARY: 3 passed, 2 failed\n",
+    "stderr": ""
+  },
+  {
+    "mutation": "m14_offset_check_removed",
+    "test": "m14_extraction_validation.py",
+    "returncode": 0,
+    "detected": false,
+    "stdout": "PASS case_complete\nPASS case_missing_field\nPASS case_no_evidence\nPASS case_invalid_location\nPASS case_duplicate\nSUMMARY: 5 passed, 0 failed\n",
+    "stderr": ""
+  },
+  {
+    "mutation": "m14_missing_block_check_removed",
+    "test": "m14_extraction_validation.py",
+    "returncode": 1,
+    "detected": true,
+    "stdout": "PASS case_complete\nPASS case_missing_field\nPASS case_no_evidence\nFAIL case_invalid_location: AssertionError\nPASS case_duplicate\nSUMMARY: 4 passed, 1 failed\n",
+    "stderr": ""
+  }
+]

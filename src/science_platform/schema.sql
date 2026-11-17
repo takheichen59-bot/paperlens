@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS schema_versions(version INTEGER PRIMARY KEY, applied_at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS papers(paper_id TEXT PRIMARY KEY, doi TEXT UNIQUE, title TEXT NOT NULL, metadata_json TEXT NOT NULL, access_status TEXT NOT NULL DEFAULT 'METADATA_ONLY', current_document TEXT);
+CREATE TABLE IF NOT EXISTS documents(document_id TEXT PRIMARY KEY, paper_id TEXT NOT NULL REFERENCES papers(paper_id), sha256 TEXT NOT NULL, path TEXT NOT NULL, kind TEXT NOT NULL, license TEXT, source_url TEXT, acquisition_method TEXT NOT NULL, file_size INTEGER NOT NULL, acquired_at TEXT NOT NULL, status TEXT NOT NULL, UNIQUE(paper_id,sha256));
+CREATE TABLE IF NOT EXISTS parses(parse_id TEXT PRIMARY KEY, document_id TEXT NOT NULL REFERENCES documents(document_id), parser_version TEXT NOT NULL, payload_json TEXT NOT NULL, status TEXT NOT NULL, UNIQUE(document_id,parser_version));
+CREATE TABLE IF NOT EXISTS extractions(extraction_id TEXT PRIMARY KEY, document_id TEXT NOT NULL REFERENCES documents(document_id), model TEXT NOT NULL, version TEXT NOT NULL, payload_json TEXT NOT NULL, status TEXT NOT NULL, created_at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS reviews(review_id TEXT PRIMARY KEY, extraction_id TEXT NOT NULL REFERENCES extractions(extraction_id), revision INTEGER NOT NULL, payload_json TEXT NOT NULL, status TEXT NOT NULL, created_at TEXT NOT NULL, UNIQUE(extraction_id,revision));
+CREATE TABLE IF NOT EXISTS jobs(job_id TEXT PRIMARY KEY, kind TEXT NOT NULL, payload_json TEXT NOT NULL, status TEXT NOT NULL, progress INTEGER NOT NULL DEFAULT 0, total INTEGER NOT NULL DEFAULT 0, attempts INTEGER NOT NULL DEFAULT 0, max_attempts INTEGER NOT NULL DEFAULT 3, owner TEXT, lease_until REAL, result_json TEXT, error_code TEXT, idempotency_key TEXT UNIQUE, created_at TEXT NOT NULL, updated_at TEXT NOT NULL);
+CREATE INDEX IF NOT EXISTS idx_jobs_claim ON jobs(status,lease_until,created_at);
+CREATE TABLE IF NOT EXISTS events(event_id INTEGER PRIMARY KEY AUTOINCREMENT, job_id TEXT, event TEXT NOT NULL, payload_json TEXT NOT NULL, created_at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS search_results(job_id TEXT NOT NULL REFERENCES jobs(job_id), paper_id TEXT NOT NULL REFERENCES papers(paper_id), PRIMARY KEY(job_id,paper_id));
+CREATE TABLE IF NOT EXISTS source_rates(provider TEXT PRIMARY KEY, next_allowed REAL NOT NULL);
+INSERT OR IGNORE INTO schema_versions(version,applied_at) VALUES(1,strftime('%Y-%m-%dT%H:%M:%fZ','now'));

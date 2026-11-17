@@ -1,0 +1,49 @@
+{
+  "A": {
+    "status": "IMPLEMENTED_TESTED",
+    "python_cases": 5,
+    "cloud_cases": 5,
+    "legacy_batch_cases": 5,
+    "hosted_regression_cases": 16,
+    "windows_runtime": "NOT EXECUTED"
+  },
+  "B": {
+    "offline_cases": 5,
+    "real_crossref_records": 20,
+    "real_openalex_records": 20,
+    "semantic_scholar": "FAILED_EXTERNAL_HTTP_429",
+    "springer": "NOT EXECUTED_MISSING_KEY",
+    "elsevier": "NOT EXECUTED_MISSING_KEY",
+    "pinned_download": "FAILED_NETWORK_GATEWAY",
+    "official_allowlist_download": "EXECUTED_REAL_PDF"
+  },
+  "C": {
+    "implementation": "PARSER_AND_SPECIALIST_ADAPTERS_IMPLEMENTED",
+    "offline_tests": "PASS",
+    "real_pdfs_parsed": 10,
+    "real_llm": "NOT_EXECUTED",
+    "real_dual_parser": "NOT_EXECUTED",
+    "human_gold": "NOT_EXECUTED"
+  },
+  "D": {
+    "implementation": "PARTIAL",
+    "offline_tests": "PASS",
+    "real_embeddings": "NOT_EXECUTED",
+    "hypothesis_generation": "NOT_IMPLEMENTED",
+    "scientific_quality": "NOT_EVALUATED"
+  },
+  "E": {
+    "implementation": "LOCAL_API_AND_WEBSITE_IMPLEMENTED",
+    "api_tests": "PASS",
+    "browser_e2e": "NOT_EXECUTED",
+    "production_deployment": "NOT_EXECUTED"
+  },
+  "F": {
+    "implementation": "SOURCE_HANDOFF_PREPARED",
+    "isolated_wheel": "PASS",
+    "offline_regression": "PASS",
+    "windows": "NOT_EXECUTED",
+    "github_upload": "BLOCKED_CREATE_REPOSITORY_PERMISSION"
+  },
+  "updated": "2026-11-17"
+}

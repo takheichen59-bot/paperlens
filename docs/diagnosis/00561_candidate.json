@@ -1,0 +1,483 @@
+{
+  "chemicals": [
+    "Ga2O3",
+    "Al2O3",
+    "CrO2",
+    "CrGa",
+    "Cr2O3",
+    "GaO4",
+    "GaO6",
+    "GaN",
+    "AlN"
+  ],
+  "conclusions": "While there is remarkably good agreement between the\npositions of peaks in the calculated and experimental\nspectra, distinct differences in the relative intensity of\nvarious peaks occur. A prominent example occurs in the\nenergy range between 1.72 and 1.74 eV, where experi-\nmentally three prominent peaks occur that appear much\nattenuated in the simulations. These peaks occur at en-\nergies relative to the ZPL that coincide with bulk TO\nphonon mode energies. In fact, many of the peaks in the\nphonon sideband coincide with peaks in the bulk phonon\ndensity of states.46 We note that these peaks also showed\nstrong polarization dependence that differs from that of\nthe ZPL (Fig. 3).\nWe hypothesize that the difference in intensity in\nthe measured and simulated lineshape function may be\ndue to effects beyond the Franck-Condon approximation,\nknown as the Herzberg-Teller effect.47 The Herzberg-\nTeller effect corresponds to the linear term in a series\nexpansion of the transition dipole moment in the atomic\ncoordinates. In the Franck-Condon approximation, the\ntransition matrix element, which determines the polar-\nization, is assumed to be independent of the atomic coor-\ndinates. As a result, the phonon sideband should exhibit\nthe same polarization dependence as the zero-phonon\nline, contrary to our observations for the peaks in the\nrange of 1.72-1.74 eV. The Herzberg-Teller effect allows\nphonons to interact with the transition dipole moment,\n\nIn summary, we have reported a thorough theoretical\nand experimental investigation of Cr in β-Ga2O3. Using\nfirst-principles calculations with a hybrid functional, we\ndemonstrated that Cr prefers incorporating as a substi-\ntutional impurity on the octahedral Ga site in a neutral\ncharge state. The center has a d3 electron configuration\nand a high-spin quartet ground state, compatible with\nuse as a spin qubit. It exhibits a spin-flip internal transi-\ntion with a ZPL at 1.8 eV, for which we calculated the lu-\nminescence lineshape. We performed photoluminescence\nexperiments on samples of β-Ga2O3 grown by the float-\ning zone method and found good agreement between the\nmeasured and calculated lineshape functions. Our work\n\nuncovered evidence of effects beyond the Franck-Condon\napproximation in the spectrum. We also observed a pre-\nviously unreported emission that we attributed to Cr in\na competing phase of Ga2O3.\nIn total, our work sig-\nnificantly advances the understanding of Cr in β-Ga2O3\nand opens up the potential to utilize it as a quantum\ndefect. Future studies isolating individual Cr impurities,\nincluding measurements of spin dynamics, photon anti-\nbunching, and brightness in microcavities, will guide the\ndevelopment and impact of β-Ga2O3 for quantum net-\nworking, communications, and sensing.",
+  "methods": "phases making up less than 1% of the crystal.\nAddi-\ntionally, single-crystal Laue diffraction was collected us-\ning the horizontal Laue System AK261, manufactured by\nPhotonic Science, to determine the crystal orientation.\nAny incorporation of Cr in the sample was uninten-\ntional.\nWe believe there are two possible sources of\nCr contamination during the growth. X-ray diffraction\nshows evidence for the presence of CrO2 in the polycrys-\ntalline Ga2O3 source material. In addition, the alumina\nseed rod was relatively low purity and may also be a\nsource of contamination.\n\nA single crystal sample of β-Ga2O3 was grown via the\nfloating zone method, using a locally designed laser float-\ning zone furnace “LOKII” in the Wilson lab at UC Santa\nBarbara.23 In preparation for the crystal growth, poly-\ncrystalline powder of Ga2O3 (99.99 %, Alfa Aesar) was\ndried overnight at 1200 ◦C and then packed in a rubber\nballoon with a diameter of 4 mm. The packed powder in\nthe balloon was pressed into a 90 mm long rod using a\ncold isostatic press. The rod was then broken into two\npieces, measuring 65 mm and 25 mm in length. These\ntwo pieces served as the feed rod and seed rod for the\ngrowth process. Subsequently, the rods were sintered at\n1200 ◦C for 10 hours in air to increase their density and\nhardness.\nAn initial melting test with the seed rod of β-Ga2O3\nshowed that an incident laser power of 100 W per laser\n(600 W total) was not sufficient to melt the seed rod.\nTherefore, an alumina rod was used as a seed rod, which\nmelted at around 1900 ◦C using a laser power of 36 W\nper laser (216 W total). The growth of β-Ga2O3 was con-\nducted using a pressure of 1000 psi of an Ar:O2 = 80:20\nmix to prevent any volatility. Growth conditions were\nkept constant throughout the process, including a trans-\nlation rate of 15 mm/hr for both the seed and feed rods, a\nrotation rate of 10 rpm, and a total incident laser power\nof 168 W. The length of the single crystal of β-Ga2O3\nis 60 mm as shown in Fig. 1. The phase purity of the\ncrystal was confirmed by measuring a micron-sized bro-\nken piece of the rod using a Kappa Apex II single-crystal\ndiffractometer. However, due to the experimental lim-\nitations, we cannot rule out the presence of alternative\n\nTo characterize the optical properties of the grown β-\nGa2O3 sample at wavelengths in the visible spectrum,\nphotoluminescence spectroscopy was performed at 4.2 K\nusing a 532 nm laser diode as an excitation source. A lin-\near polarizer and half-wave plate in the excitation path\nwere utilized to set the excitation of the input laser. Re-\nflected light is rerouted through the collection path where\nanother set of half-wave plate and linear polarizer filter\nthe polarization of the collected light.\nA low-pass fil-\nter at 550 nm is used to block the residual laser light.\nLight is finally routed to a Princeton Instruments spec-\ntrometer. Dominant ZPL peaks were measured using a\n300 groove/mm grating, while fine features of the phonon\nsideband were measured using an 1800 groove/mm grat-\ning.\nThe measured photoluminescence lineshape function\nis shown in Fig. 2. The spectrum results from ensem-\nble emission; isolating a single emitter was not possible,\ngiven the overall low intensity consistent with the long\nlifetime of emission. A sharp line at 1.79 eV associated\nwith the zero-phonon line is found, as well as several\nsmaller peaks at lower energy. The observed photolumi-\nnescence peaks did not show any significant power depen-\ndence. Given the similarity of the emission to that of Cr\nin Al2O3, as well as the similarity between the two crys-\ntal structures, we hypothesize that the emission is due to\n\nIV.\nDENSITY FUNCTIONAL THEORY\n\nWe perform DFT calculations using the projector\naugmented-wave method (PAW)25 implemented in the\nVienna Ab-initio Simulation Package (VASP).26,27 For\nthe exchange-correlation potential, we utilize the hybrid\nfunctional of Heyd, Scuseria, and Ernzerhof28,29 to en-\nsure accurate predictions.\nThe screening parameter is\nset to the default value, and we tune the mixing pa-\nrameter to 32%, resulting in a bandgap of 4.83 eV in\ngood agreement with the experimental value of 4.9 eV.2\n\nunintentional Cr incorporation during the growth. We\nwill confirm this hypothesis in the Sec. IV by comparing\nwith a spectrum calculated with DFT.\n\nTo further understand the properties of the lumines-\ncent center, we measure the polarization dependence of\nthe photoluminescence spectra as shown in Fig. 3. Ex-\ncitation polarization spectroscopy was performed by ro-\ntating the half-wave plate at the excitation path and re-\nmoving the polarizers on the collection path. Similarly,\nemission polarization was measured by rotating the half-\nwave plate in the collection path. We find that each peak\nof the photoluminescence spectrum exhibits the same de-\npendence on the excitation polarization angle [Fig. 3(a)].\nIn contrast, the spectrum changes significantly as a func-\ntion of the polarization of the emitted light [Fig. 3(b)].\nThis observation is unexpected within the usual Franck-\nCondon approximation24 of photoluminescence, in which\nall peaks in the phonon sideband should behave the same\nas the ZPL.\n\nO(II) are also three-fold coordinated (on the shared cor-\nner of one GaO6 octahedron and two GaO4 tetrahedra);\nO(III), on the other hand, are four-fold coordinated. We\nfind that Cr prefers incorporating on the octahedral site:\nCr0\nGa(II) is lower in energy than Cr0\nGa(I) by 1.60 eV. The\nformation energy of Cr0\nGa(II) is as low as 0.07 eV for Ga-\nrich conditions, indicating that Cr can be easily incor-\nporated. This is consistent with the fact that Cr is oc-\ntahedrally coordinated with oxygen in Cr2O3. The site\npreference of Cr also agrees with the findings of exper-\nimental observations.17,18,34 We find a (+/0) transition\nlevel for CrGa(II) at 1.15 eV above the VBM. Given that\nacceptors in β-Ga2O3 are all deep, with ionization ener-\ngies of at least 1.3 eV,35 we conclude that CrGa(II) will\nexclusively occur in the neutral charge state, correspond-\ning to the 3+ oxidation state and consistent with EPR\nmeasurements.17,18\n\nTo assess the optical properties of Cr0\nGa(II),\nwe\ncalculate the excited states of the impurity using\nthe constrained-occupation ∆SCF approach.37 Excited\nstates are frequently multideterminant in nature, requir-\ning a description beyond DFT, which is a single deter-\nminant framework. We address this issue using the ap-\nproach proposed by Ziegler38 and implemented within\nDFT by von Barth,39 which entails combining the ener-\ngies of several single-determinant calculations. The equa-\ntions for a d3 system in an octahedral environment are\ngiven in Appendix A of Ref. 40. The energy of the 2E\nexcited state is given by\n\nand confirmed in our measurements here.\nFor Cr0\nGa(I) we found a 4T1 ground state and a 2E\nexcited state only 0.93 eV above the ground state. In\ntetrahedral symmetry, the 2E excited state is single de-\nterminant and can be trivially represented within DFT.\nThe 2E excited state requires moving an electron from\na t2 orbital to an e orbital, for which we expect cou-\npling to phonons to be much stronger compared to the\ntransition in Cr0\nGa(II), leading to a much larger HR fac-\ntor and a much more pronounced phonon sideband. This\neffect was observed in calculations of transition metal im-\npurities in GaN and AlN.41 While CrGa(I) may also be\nnegatively charged under typical n-type conditions, the\npresence of an additional electron alters the electronic\nstructure, making it unlikely to explain the emission. As\na result, Cr0\nGa(I) can safely be ruled out at as the origin\nfor the emission near 1.8 eV.\n\nIn doing so, we assume that contributions from changes\nin the broken-symmetry character of the mixed state are\nnegligible.45 The forces entering Eq. (3) are evaluated\nconsistently with the HSE functional. In the equilibrium\ngeometry of the 4A2 state, F(4A2) ≈0.\nThe computational lineshape function is shown in\nFig. 2.\nWe find overall agreement between the mea-\nsured and simulated lineshape functions, allowing us to\nattribute most of the lower-energy peaks to the phonon\nsideband of the transition. We calculate a total Huang-\nRhys factor S of 0.05, indicating weak electron-phonon\ncoupling.",
+  "extraction_method": "chemicals-rules-v1-4e21e5892490+ner-off+methods-bounded-v3-3000-6ca4b0c5e9+conclusions-sections-v1+strict-evidence-v3:3000:111",
+  "source_snippets": [
+    {
+      "field": "chemicals",
+      "text": "Characterization of Chromium Impurities in β-Ga2O3\nMark E. Turiansky,1, a) Sai Mu,1, 2, b) Lukas Razinkovas,3, 4 Kamyar Parto,5 Sahil D. Patel,5 Sean Doan,6 Ganesh\nPokharel,1, 7 Steven J. Gomez Alvarado,1 Stephen D. Wilson,1 Galan Moody,5 and Chris G. Van de Walle1, c)",
+      "page_start": 1,
+      "page_end": 1,
+      "section": null,
+      "block_id": "p1-b0",
+      "start_offset": 0,
+      "end_offset": 269,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "Chromium is a common transition-metal impurity that is easily incorporated during crystal growth. It is\nperhaps best known for giving rise to the 694.3 nm (1.786 eV) emission in Cr-doped Al2O3, exploited in ruby\nlasers. Chromium has also been found in monoclinic gallium oxide, a wide-bandgap semiconductor being\npursued for power electronics. In this work, we thoroughly characterize the behavior of Cr in Ga2O3 through\ntheoretical and experimental techniques. β-Ga2O3 samples are grown with the floating zone method and show\nevidence of a sharp photoluminescence signal, reminiscent of ruby. We calculate the energetics of formation\nof Cr from first principles, demonstrating that Cr preferentially incorporates as a neutral impurity on the\noctahedral site. Cr possesses a quartet ground-state spin and has an internal transition with a zero-phonon\nline near 1.8 eV. By comparing the calculated and experimentally measured luminescence lineshape function,\nwe elucidate the role of coupling to phonons and uncover features beyond the Franck-Condon approximation.\nThe combination of strong emission with a small Huang-Rhys factor of 0.05 and a technologically relevant\nhost material render Cr in Ga2O3 attractive as a quantum defect.",
+      "page_start": 1,
+      "page_end": 1,
+      "section": null,
+      "block_id": "p1-b3",
+      "start_offset": 0,
+      "end_offset": 1233,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "similarities, such as the presence of an octahedrally coor-\ndinated cation site; however, the lower-symmetry mon-\noclinic crystal also includes a tetrahedrally coordinated\ncation site. We thus expect the incorporation and behav-\nior of Cr in β-Ga2O3 to have complexities beyond those\nobserved in ruby.",
+      "page_start": 1,
+      "page_end": 1,
+      "section": "INTRODUCTION",
+      "block_id": "p1-b5",
+      "start_offset": 0,
+      "end_offset": 301,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "Monoclinic Ga2O3 (β-Ga2O3) has garnered attention\nfor its ability to be controllably n-type-doped despite\nits ultra-wide (∼4.9 eV) bandgap.1,2 Its high breakdown\nfield and availability of high-quality low-cost substrates\nmake it an excellent material for high-power electron-\nics and ultraviolet optoelectronics.1,3–5 These properties\nalso render β-Ga2O3 a suitable host for quantum de-\nfects.6,7 Realizing any of these applications in β-Ga2O3\ndemands control over the native point defects and impu-\nrities present in the crystal and a deeper understanding\nof their electrical and optical properties relevant for spin\nand photonic qubits.8",
+      "page_start": 1,
+      "page_end": 1,
+      "section": "INTRODUCTION",
+      "block_id": "p1-b6",
+      "start_offset": 0,
+      "end_offset": 639,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "Signatures of Cr incorporation in β-Ga2O3 have been\nreported.\nElectron-paramagnetic resonance (EPR) ex-\nperiments found spin-active centers associated with Cr\nin the 3+ oxidation state.16–18 Deep-level transient spec-\ntroscopy (DLTS) and thermoluminescence (TL)19,20 have\nfound deep levels suggested to be due to Cr. Photolumi-\nnescence spectra reminiscent of ruby have also suggested\nto be due to Cr,16,18,21,22 and a long lifetime (≈ms) was\nobserved.16 Given the many uncertainties that are still\nassociated with these attributions to Cr in β-Ga2O3, a\nthorough characterization of its incorporation as well as\nits electronic and optical properties is warranted.",
+      "page_start": 1,
+      "page_end": 1,
+      "section": "INTRODUCTION",
+      "block_id": "p1-b7",
+      "start_offset": 0,
+      "end_offset": 663,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "Numerous defects and impurities have been uncov-\nered in β-Ga2O3.9–13 Chromium is a common impurity,\nwell known for its role in ruby—corundum-Al2O3 doped\nwith Cr—that enabled the first solid-state lasers.14 Cr in\nAl2O3 is also being explored as a potential spin qubit.15",
+      "page_start": 1,
+      "page_end": 1,
+      "section": "INTRODUCTION",
+      "block_id": "p1-b9",
+      "start_offset": 0,
+      "end_offset": 270,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "Here we combine advanced first-principles calcula-\ntions with photoluminescence measurements on β-Ga2O3\ngrown by the floating zone method to assess the proper-\nties of Cr in β-Ga2O3. Utilizing density functional theory\n(DFT) with a hybrid functional, we find that Cr prefer-\nentially incorporates on the octahedral cation site, giving\nrise to several levels in the bandgap. We focus on Cr in\na 3+ oxidation state, which corresponds to the neutral\ncharge state of the impurity and is stable for most of",
+      "page_start": 1,
+      "page_end": 1,
+      "section": "INTRODUCTION",
+      "block_id": "p1-b12",
+      "start_offset": 0,
+      "end_offset": 501,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "FIG. 1.\nSingle crystal of β-Ga2O3 grown from high-pressure\nlaser floating zone furnace.",
+      "page_start": 2,
+      "page_end": 2,
+      "section": "INTRODUCTION",
+      "block_id": "p2-b2",
+      "start_offset": 0,
+      "end_offset": 87,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "the relevant range of Fermi levels. We study the excited-\nstate structure and find an internal transition between\na 2E excited state and 4A2 ground state near 1.8 eV.\nWe simulate the photoluminescence spectrum from first\nprinciples and compare with explicit measurements on\nβ-Ga2O3 samples grown by the floating zone method.\nThe agreement provides compelling evidence that the ob-\nserved spectrum, with a zero-phonon line (ZPL) at 1.79\neV, is indeed due to substitutional Cr on an octahedral\nsite. We theoretically and experimentally verify a small\nHuang-Rhys factor of ≈0.05, which in combination with\na wide bandgap, millisecond-long recombination lifetime,\nand sharp ZPL make this center a compelling candidate\nfor spin and photonic qubits.\nThe paper is organized as follows. In Sec. II, we discuss\nthe details of the floating zone growth of monoclinic β-\nGa2O3. In Sec. III, we cover the measurements of the\nphotoluminescence spectrum of the β-Ga2O3 samples in\nthe visible spectrum, including polarization dependence.\nIn Sec. IV, we outline the computational methodology\nand results employed to study Cr impurities in β-Ga2O3.\nWe discuss the implications of all these results in Sec. V\nand conclude in Sec. VI.",
+      "page_start": 2,
+      "page_end": 2,
+      "section": "INTRODUCTION",
+      "block_id": "p2-b3",
+      "start_offset": 0,
+      "end_offset": 1214,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "phases making up less than 1% of the crystal.\nAddi-\ntionally, single-crystal Laue diffraction was collected us-\ning the horizontal Laue System AK261, manufactured by\nPhotonic Science, to determine the crystal orientation.\nAny incorporation of Cr in the sample was uninten-\ntional.\nWe believe there are two possible sources of\nCr contamination during the growth. X-ray diffraction\nshows evidence for the presence of CrO2 in the polycrys-\ntalline Ga2O3 source material. In addition, the alumina\nseed rod was relatively low purity and may also be a\nsource of contamination.",
+      "page_start": 2,
+      "page_end": 2,
+      "section": "GROWTH OF β-GA2O3",
+      "block_id": "p2-b5",
+      "start_offset": 0,
+      "end_offset": 570,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "A single crystal sample of β-Ga2O3 was grown via the\nfloating zone method, using a locally designed laser float-\ning zone furnace “LOKII” in the Wilson lab at UC Santa\nBarbara.23 In preparation for the crystal growth, poly-\ncrystalline powder of Ga2O3 (99.99 %, Alfa Aesar) was\ndried overnight at 1200 ◦C and then packed in a rubber\nballoon with a diameter of 4 mm. The packed powder in\nthe balloon was pressed into a 90 mm long rod using a\ncold isostatic press. The rod was then broken into two\npieces, measuring 65 mm and 25 mm in length. These\ntwo pieces served as the feed rod and seed rod for the\ngrowth process. Subsequently, the rods were sintered at\n1200 ◦C for 10 hours in air to increase their density and\nhardness.\nAn initial melting test with the seed rod of β-Ga2O3\nshowed that an incident laser power of 100 W per laser\n(600 W total) was not sufficient to melt the seed rod.\nTherefore, an alumina rod was used as a seed rod, which\nmelted at around 1900 ◦C using a laser power of 36 W\nper laser (216 W total). The growth of β-Ga2O3 was con-\nducted using a pressure of 1000 psi of an Ar:O2 = 80:20\nmix to prevent any volatility. Growth conditions were\nkept constant throughout the process, including a trans-\nlation rate of 15 mm/hr for both the seed and feed rods, a\nrotation rate of 10 rpm, and a total incident laser power\nof 168 W. The length of the single crystal of β-Ga2O3\nis 60 mm as shown in Fig. 1. The phase purity of the\ncrystal was confirmed by measuring a micron-sized bro-\nken piece of the rod using a Kappa Apex II single-crystal\ndiffractometer. However, due to the experimental lim-\nitations, we cannot rule out the presence of alternative",
+      "page_start": 2,
+      "page_end": 2,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p2-b7",
+      "start_offset": 0,
+      "end_offset": 1668,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "To characterize the optical properties of the grown β-\nGa2O3 sample at wavelengths in the visible spectrum,\nphotoluminescence spectroscopy was performed at 4.2 K\nusing a 532 nm laser diode as an excitation source. A lin-\near polarizer and half-wave plate in the excitation path\nwere utilized to set the excitation of the input laser. Re-\nflected light is rerouted through the collection path where\nanother set of half-wave plate and linear polarizer filter\nthe polarization of the collected light.\nA low-pass fil-\nter at 550 nm is used to block the residual laser light.\nLight is finally routed to a Princeton Instruments spec-\ntrometer. Dominant ZPL peaks were measured using a\n300 groove/mm grating, while fine features of the phonon\nsideband were measured using an 1800 groove/mm grat-\ning.\nThe measured photoluminescence lineshape function\nis shown in Fig. 2. The spectrum results from ensem-\nble emission; isolating a single emitter was not possible,\ngiven the overall low intensity consistent with the long\nlifetime of emission. A sharp line at 1.79 eV associated\nwith the zero-phonon line is found, as well as several\nsmaller peaks at lower energy. The observed photolumi-\nnescence peaks did not show any significant power depen-\ndence. Given the similarity of the emission to that of Cr\nin Al2O3, as well as the similarity between the two crys-\ntal structures, we hypothesize that the emission is due to",
+      "page_start": 2,
+      "page_end": 2,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p2-b8",
+      "start_offset": 0,
+      "end_offset": 1411,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "Ef(Crq\nGa) = Etot(Crq\nGa) −Etot(Ga2O3) −µCr\n+ µGa + q(EF + EVBM) + ∆q ,\n(1)",
+      "page_start": 3,
+      "page_end": 3,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p3-b24",
+      "start_offset": 0,
+      "end_offset": 75,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "where Etot(Crq\nGa) is the total energy of a supercell con-\ntaining CrGa in charge state q, Etot(Ga2O3) is the total\nenergy of a bulk supercell, and EF is the Fermi energy\nreferenced to the valence-band maximum (VBM). ∆q is\na finite-size correction term for charged defects.32,33",
+      "page_start": 3,
+      "page_end": 3,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p3-b25",
+      "start_offset": 0,
+      "end_offset": 278,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "µCr/Ga are the chemical potentials referenced to the ap-\npropriate elemental phase (Cr metal or Ga metal). The\nchemical potentials describe the growth and processing\nconditions: we will assume Ga-rich growth conditions\nand incorporation of Cr at the solubility limit. Cr2O3\n(chromia) is a potential secondary phase that may form\nwhen Cr is present during growth and sets the solubility\nlimit for Cr. Cr2O3 is most stable in the rhombohedral\nphase and is calculated in the ground-state spin configu-\nration, which is G-type antiferromagnetic. We note that\nwhen Cr2O3 is used as a limiting phase, the formation\nenergy of substitutional Cr is independent of the growth\nconditions (i.e. Ga-rich vs. O-rich).\nThe calculated formation energies are shown in Fig. 4.\nThe β-Ga2O3 crystal structure (inset of Fig. 4) contains\ntwo types of cation sites: the tetrahedral site (denoted\nas I) and the octahedral site (denoted as II). O(I) are\nthree-fold coordinated (on a shared corner of two edge-\nsharing GaO4 octahedra and one GaO6 tetrahedron), and",
+      "page_start": 3,
+      "page_end": 3,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p3-b28",
+      "start_offset": 0,
+      "end_offset": 1038,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "O(II) are also three-fold coordinated (on the shared cor-\nner of one GaO6 octahedron and two GaO4 tetrahedra);\nO(III), on the other hand, are four-fold coordinated. We\nfind that Cr prefers incorporating on the octahedral site:\nCr0\nGa(II) is lower in energy than Cr0\nGa(I) by 1.60 eV. The\nformation energy of Cr0\nGa(II) is as low as 0.07 eV for Ga-\nrich conditions, indicating that Cr can be easily incor-\nporated. This is consistent with the fact that Cr is oc-\ntahedrally coordinated with oxygen in Cr2O3. The site\npreference of Cr also agrees with the findings of exper-\nimental observations.17,18,34 We find a (+/0) transition\nlevel for CrGa(II) at 1.15 eV above the VBM. Given that\nacceptors in β-Ga2O3 are all deep, with ionization ener-\ngies of at least 1.3 eV,35 we conclude that CrGa(II) will\nexclusively occur in the neutral charge state, correspond-\ning to the 3+ oxidation state and consistent with EPR\nmeasurements.17,18",
+      "page_start": 4,
+      "page_end": 4,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p4-b7",
+      "start_offset": 0,
+      "end_offset": 932,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "FIG. 4.\nFormation energy versus Fermi level for substitu-\ntional CrGa in β-Ga2O3 under Ga-rich conditions. The total\nground-state spin S is denoted for each charge state. Inset:\nprimitive cell of the β-Ga2O3 crystal structure. O atoms are\nshown in red and Ga in green. Ga and O atoms in different\ncoordinations are labeled with a Roman numeral.",
+      "page_start": 4,
+      "page_end": 4,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p4-b9",
+      "start_offset": 0,
+      "end_offset": 344,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "ronment is maintained for Cr0\nGa(II); however, due to the\nrelatively low symmetry of the β-Ga2O3 crystal, we find\na local C1h symmetry for Cr0\nGa(II).",
+      "page_start": 4,
+      "page_end": 4,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p4-b10",
+      "start_offset": 0,
+      "end_offset": 150,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "Incorporation of Cr on O sites is unlikely because of\nthe large size mismatch. We investigated Cr in interstitial\nconfigurations but found its formation energy to be much\nhigher than that of Cr0\nGa(II) when the Fermi level is within\n∼1 eV of the conduction-band minimum (CBM).\nFor CrGa(I) we find a (0/−) transition level at 0.27 eV\nbelow the CBM, indicating that the negative charge state\n(with ground-state spin S = 2) is stable under n-type\nconditions. The stability of a negative charge state for\nCrGa(I) prompted us to explicitly look for it in the case\nof CrGa(II): we were able to converge a locally stable\nCr−\nGa(II) configuration, but the (0/−) transition level was\nfound to be 0.70 eV above the CBM, indicating it can\nnever be thermodynamically stabilized.\nFocusing on Cr0\nGa(II), there is no notable local distor-\ntion in the atomic geometry.\nThe relaxed Cr-O bond\nlengths are 1.96 ˚A for the two Cr-O(I) bonds, 1.94 ˚A for\nthe two Cr-O(II) bonds, and 1.99 ˚A and 2.03 ˚A for Cr-\nO(III), which are similar to Ga(II)-O bonds in pristine\nGa2O3. These results indicate that the octahedral envi-",
+      "page_start": 4,
+      "page_end": 4,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p4-b12",
+      "start_offset": 0,
+      "end_offset": 1102,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "FIG. 5.\nHSE Kohn-Sham eigenvalue spectrum for Cr0\nGa(II)\nin β-Ga2O3 in: (a) the 4A2 ground state; (b) the 2E ex-\ncited state with a single spin flip. The orange (blue) shaded\narea represents the valence (conduction) band. Spin-up and\nspin-down channels are depicted; occupied (empty) states are\nindicated by filled (open) red arrows. The Fermi level is ref-\nerenced to the VBM.",
+      "page_start": 5,
+      "page_end": 5,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p5-b30",
+      "start_offset": 0,
+      "end_offset": 377,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "and confirmed in our measurements here.\nFor Cr0\nGa(I) we found a 4T1 ground state and a 2E\nexcited state only 0.93 eV above the ground state. In\ntetrahedral symmetry, the 2E excited state is single de-\nterminant and can be trivially represented within DFT.\nThe 2E excited state requires moving an electron from\na t2 orbital to an e orbital, for which we expect cou-\npling to phonons to be much stronger compared to the\ntransition in Cr0\nGa(II), leading to a much larger HR fac-\ntor and a much more pronounced phonon sideband. This\neffect was observed in calculations of transition metal im-\npurities in GaN and AlN.41 While CrGa(I) may also be\nnegatively charged under typical n-type conditions, the\npresence of an additional electron alters the electronic\nstructure, making it unlikely to explain the emission. As\na result, Cr0\nGa(I) can safely be ruled out at as the origin\nfor the emission near 1.8 eV.",
+      "page_start": 5,
+      "page_end": 5,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p5-b31",
+      "start_offset": 0,
+      "end_offset": 905,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "Even though Cr0\nGa(I) is significantly higher in energy\nthan Cr0\nGa(II), we cannot exclude that it could be in-\ncorporated in the crystal under non-equilibrium condi-\ntions.\nWe therefore also examine its electronic struc-\nture. In a tetrahedral crystal field, the e states are lower\nin energy than the t2 states. Combined with particle-\nhole symmetry, a d3 system with tetrahedral symmetry\nis thus equivalent to a d7 system with octahedral sym-\nmetry.36 We thus expect that CrGa(I) behaves very dif-\nferently from CrGa(II), and our calculations confirm this:\nwe find that Cr0\nGa(I) has a 4T1 ground state, consistent\nwith the d7 Tanabe-Sugano diagram for small crystal-\nfield splitting.36",
+      "page_start": 5,
+      "page_end": 5,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p5-b33",
+      "start_offset": 0,
+      "end_offset": 688,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "to accurately reproduce the frequencies of Raman-active\nvibrational modes in Ga2O3. Supercell calculations were\nconducted with a 1 × 5 × 3 multiple of the conventional\nmonoclinic cell containing 300 atomic sites, using an in-\ncreased 600 eV energy cutoff and Brillouin zone sampling\nat the Γ-point. To compute the vibrational structure, we\nutilize the finite-difference method as implemented in the\nPhonopy software package.44",
+      "page_start": 6,
+      "page_end": 6,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p6-b4",
+      "start_offset": 0,
+      "end_offset": 426,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "leading to differing polarization dependence as well as\nvaried intensities with respect to the Franck-Condon ap-\nproximation.\nWhile the photoluminescence spectrum shown in Fig. 2\nis representative of the majority of the sample, we did\nfind that selected areas (particularly near the edges of\nthe crystal) displayed a spectrum, shown in Fig. 6, that\nis distinct from the one in Fig. 2 and, to our knowledge,\nhas not been reported before.\nIn spite of the distinct\nshape, the qualitative similarity to Fig. 2 (including the\nalmost identical ZPL and a phonon sideband extending\nover about 100 meV) suggests that this spectrum is also\ndue to a Cr-related center.\nAbove, we already ruled out Cr0\nGa(I) as the cause of\nthe emission. We speculate that the spectrum in Fig. 6\nmay be due to an octahedrally coordinated Cr impurity\nin a secondary phase of Ga2O3, given that this spectrum\nis only observed in some areas of the crystal.\nThe α\n(corundum), κ (orthorhombic) and γ (defective spinel)\nphases of Ga2O3 all contain octahedrally coordinated Ga\nsites.46 More work is needed to verify this hypothesis.",
+      "page_start": 6,
+      "page_end": 6,
+      "section": "DISCUSSION",
+      "block_id": "p6-b17",
+      "start_offset": 0,
+      "end_offset": 1095,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "In summary, we have reported a thorough theoretical\nand experimental investigation of Cr in β-Ga2O3. Using\nfirst-principles calculations with a hybrid functional, we\ndemonstrated that Cr prefers incorporating as a substi-\ntutional impurity on the octahedral Ga site in a neutral\ncharge state. The center has a d3 electron configuration\nand a high-spin quartet ground state, compatible with\nuse as a spin qubit. It exhibits a spin-flip internal transi-\ntion with a ZPL at 1.8 eV, for which we calculated the lu-\nminescence lineshape. We performed photoluminescence\nexperiments on samples of β-Ga2O3 grown by the float-\ning zone method and found good agreement between the\nmeasured and calculated lineshape functions. Our work",
+      "page_start": 6,
+      "page_end": 6,
+      "section": "CONCLUSIONS",
+      "block_id": "p6-b20",
+      "start_offset": 0,
+      "end_offset": 724,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "chemicals",
+      "text": "uncovered evidence of effects beyond the Franck-Condon\napproximation in the spectrum. We also observed a pre-\nviously unreported emission that we attributed to Cr in\na competing phase of Ga2O3.\nIn total, our work sig-\nnificantly advances the understanding of Cr in β-Ga2O3\nand opens up the potential to utilize it as a quantum\ndefect. Future studies isolating individual Cr impurities,\nincluding measurements of spin dynamics, photon anti-\nbunching, and brightness in microcavities, will guide the\ndevelopment and impact of β-Ga2O3 for quantum net-\nworking, communications, and sensing.",
+      "page_start": 7,
+      "page_end": 7,
+      "section": "CONCLUSIONS",
+      "block_id": "p7-b1",
+      "start_offset": 0,
+      "end_offset": 586,
+      "strategy": "chemicals-rules-v1-4e21e5892490"
+    },
+    {
+      "field": "methods",
+      "text": "phases making up less than 1% of the crystal.\nAddi-\ntionally, single-crystal Laue diffraction was collected us-\ning the horizontal Laue System AK261, manufactured by\nPhotonic Science, to determine the crystal orientation.\nAny incorporation of Cr in the sample was uninten-\ntional.\nWe believe there are two possible sources of\nCr contamination during the growth. X-ray diffraction\nshows evidence for the presence of CrO2 in the polycrys-\ntalline Ga2O3 source material. In addition, the alumina\nseed rod was relatively low purity and may also be a\nsource of contamination.",
+      "page_start": 2,
+      "page_end": 2,
+      "section": "GROWTH OF β-GA2O3",
+      "block_id": "p2-b5",
+      "start_offset": 0,
+      "end_offset": 570,
+      "strategy": "methods-bounded-v3-3000-6ca4b0c5e9"
+    },
+    {
+      "field": "methods",
+      "text": "A single crystal sample of β-Ga2O3 was grown via the\nfloating zone method, using a locally designed laser float-\ning zone furnace “LOKII” in the Wilson lab at UC Santa\nBarbara.23 In preparation for the crystal growth, poly-\ncrystalline powder of Ga2O3 (99.99 %, Alfa Aesar) was\ndried overnight at 1200 ◦C and then packed in a rubber\nballoon with a diameter of 4 mm. The packed powder in\nthe balloon was pressed into a 90 mm long rod using a\ncold isostatic press. The rod was then broken into two\npieces, measuring 65 mm and 25 mm in length. These\ntwo pieces served as the feed rod and seed rod for the\ngrowth process. Subsequently, the rods were sintered at\n1200 ◦C for 10 hours in air to increase their density and\nhardness.\nAn initial melting test with the seed rod of β-Ga2O3\nshowed that an incident laser power of 100 W per laser\n(600 W total) was not sufficient to melt the seed rod.\nTherefore, an alumina rod was used as a seed rod, which\nmelted at around 1900 ◦C using a laser power of 36 W\nper laser (216 W total). The growth of β-Ga2O3 was con-\nducted using a pressure of 1000 psi of an Ar:O2 = 80:20\nmix to prevent any volatility. Growth conditions were\nkept constant throughout the process, including a trans-\nlation rate of 15 mm/hr for both the seed and feed rods, a\nrotation rate of 10 rpm, and a total incident laser power\nof 168 W. The length of the single crystal of β-Ga2O3\nis 60 mm as shown in Fig. 1. The phase purity of the\ncrystal was confirmed by measuring a micron-sized bro-\nken piece of the rod using a Kappa Apex II single-crystal\ndiffractometer. However, due to the experimental lim-\nitations, we cannot rule out the presence of alternative",
+      "page_start": 2,
+      "page_end": 2,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p2-b7",
+      "start_offset": 0,
+      "end_offset": 1668,
+      "strategy": "methods-bounded-v3-3000-6ca4b0c5e9"
+    },
+    {
+      "field": "methods",
+      "text": "To characterize the optical properties of the grown β-\nGa2O3 sample at wavelengths in the visible spectrum,\nphotoluminescence spectroscopy was performed at 4.2 K\nusing a 532 nm laser diode as an excitation source. A lin-\near polarizer and half-wave plate in the excitation path\nwere utilized to set the excitation of the input laser. Re-\nflected light is rerouted through the collection path where\nanother set of half-wave plate and linear polarizer filter\nthe polarization of the collected light.\nA low-pass fil-\nter at 550 nm is used to block the residual laser light.\nLight is finally routed to a Princeton Instruments spec-\ntrometer. Dominant ZPL peaks were measured using a\n300 groove/mm grating, while fine features of the phonon\nsideband were measured using an 1800 groove/mm grat-\ning.\nThe measured photoluminescence lineshape function\nis shown in Fig. 2. The spectrum results from ensem-\nble emission; isolating a single emitter was not possible,\ngiven the overall low intensity consistent with the long\nlifetime of emission. A sharp line at 1.79 eV associated\nwith the zero-phonon line is found, as well as several\nsmaller peaks at lower energy. The observed photolumi-\nnescence peaks did not show any significant power depen-\ndence. Given the similarity of the emission to that of Cr\nin Al2O3, as well as the similarity between the two crys-\ntal structures, we hypothesize that the emission is due to",
+      "page_start": 2,
+      "page_end": 2,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p2-b8",
+      "start_offset": 0,
+      "end_offset": 1411,
+      "strategy": "methods-bounded-v3-3000-6ca4b0c5e9"
+    },
+    {
+      "field": "methods",
+      "text": "IV.\nDENSITY FUNCTIONAL THEORY",
+      "page_start": 3,
+      "page_end": 3,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p3-b1",
+      "start_offset": 0,
+      "end_offset": 29,
+      "strategy": "methods-bounded-v3-3000-6ca4b0c5e9"
+    },
+    {
+      "field": "methods",
+      "text": "We perform DFT calculations using the projector\naugmented-wave method (PAW)25 implemented in the\nVienna Ab-initio Simulation Package (VASP).26,27 For\nthe exchange-correlation potential, we utilize the hybrid\nfunctional of Heyd, Scuseria, and Ernzerhof28,29 to en-\nsure accurate predictions.\nThe screening parameter is\nset to the default value, and we tune the mixing pa-\nrameter to 32%, resulting in a bandgap of 4.83 eV in\ngood agreement with the experimental value of 4.9 eV.2",
+      "page_start": 3,
+      "page_end": 3,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p3-b19",
+      "start_offset": 0,
+      "end_offset": 478,
+      "strategy": "methods-bounded-v3-3000-6ca4b0c5e9"
+    },
+    {
+      "field": "methods",
+      "text": "unintentional Cr incorporation during the growth. We\nwill confirm this hypothesis in the Sec. IV by comparing\nwith a spectrum calculated with DFT.",
+      "page_start": 3,
+      "page_end": 3,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p3-b23",
+      "start_offset": 0,
+      "end_offset": 146,
+      "strategy": "methods-bounded-v3-3000-6ca4b0c5e9"
+    },
+    {
+      "field": "methods",
+      "text": "To further understand the properties of the lumines-\ncent center, we measure the polarization dependence of\nthe photoluminescence spectra as shown in Fig. 3. Ex-\ncitation polarization spectroscopy was performed by ro-\ntating the half-wave plate at the excitation path and re-\nmoving the polarizers on the collection path. Similarly,\nemission polarization was measured by rotating the half-\nwave plate in the collection path. We find that each peak\nof the photoluminescence spectrum exhibits the same de-\npendence on the excitation polarization angle [Fig. 3(a)].\nIn contrast, the spectrum changes significantly as a func-\ntion of the polarization of the emitted light [Fig. 3(b)].\nThis observation is unexpected within the usual Franck-\nCondon approximation24 of photoluminescence, in which\nall peaks in the phonon sideband should behave the same\nas the ZPL.",
+      "page_start": 3,
+      "page_end": 3,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p3-b26",
+      "start_offset": 0,
+      "end_offset": 858,
+      "strategy": "methods-bounded-v3-3000-6ca4b0c5e9"
+    },
+    {
+      "field": "methods",
+      "text": "O(II) are also three-fold coordinated (on the shared cor-\nner of one GaO6 octahedron and two GaO4 tetrahedra);\nO(III), on the other hand, are four-fold coordinated. We\nfind that Cr prefers incorporating on the octahedral site:\nCr0\nGa(II) is lower in energy than Cr0\nGa(I) by 1.60 eV. The\nformation energy of Cr0\nGa(II) is as low as 0.07 eV for Ga-\nrich conditions, indicating that Cr can be easily incor-\nporated. This is consistent with the fact that Cr is oc-\ntahedrally coordinated with oxygen in Cr2O3. The site\npreference of Cr also agrees with the findings of exper-\nimental observations.17,18,34 We find a (+/0) transition\nlevel for CrGa(II) at 1.15 eV above the VBM. Given that\nacceptors in β-Ga2O3 are all deep, with ionization ener-\ngies of at least 1.3 eV,35 we conclude that CrGa(II) will\nexclusively occur in the neutral charge state, correspond-\ning to the 3+ oxidation state and consistent with EPR\nmeasurements.17,18",
+      "page_start": 4,
+      "page_end": 4,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p4-b7",
+      "start_offset": 0,
+      "end_offset": 932,
+      "strategy": "methods-bounded-v3-3000-6ca4b0c5e9"
+    },
+    {
+      "field": "methods",
+      "text": "To assess the optical properties of Cr0\nGa(II),\nwe\ncalculate the excited states of the impurity using\nthe constrained-occupation ∆SCF approach.37 Excited\nstates are frequently multideterminant in nature, requir-\ning a description beyond DFT, which is a single deter-\nminant framework. We address this issue using the ap-\nproach proposed by Ziegler38 and implemented within\nDFT by von Barth,39 which entails combining the ener-\ngies of several single-determinant calculations. The equa-\ntions for a d3 system in an octahedral environment are\ngiven in Appendix A of Ref. 40. The energy of the 2E\nexcited state is given by",
+      "page_start": 5,
+      "page_end": 5,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p5-b2",
+      "start_offset": 0,
+      "end_offset": 619,
+      "strategy": "methods-bounded-v3-3000-6ca4b0c5e9"
+    },
+    {
+      "field": "methods",
+      "text": "and confirmed in our measurements here.\nFor Cr0\nGa(I) we found a 4T1 ground state and a 2E\nexcited state only 0.93 eV above the ground state. In\ntetrahedral symmetry, the 2E excited state is single de-\nterminant and can be trivially represented within DFT.\nThe 2E excited state requires moving an electron from\na t2 orbital to an e orbital, for which we expect cou-\npling to phonons to be much stronger compared to the\ntransition in Cr0\nGa(II), leading to a much larger HR fac-\ntor and a much more pronounced phonon sideband. This\neffect was observed in calculations of transition metal im-\npurities in GaN and AlN.41 While CrGa(I) may also be\nnegatively charged under typical n-type conditions, the\npresence of an additional electron alters the electronic\nstructure, making it unlikely to explain the emission. As\na result, Cr0\nGa(I) can safely be ruled out at as the origin\nfor the emission near 1.8 eV.",
+      "page_start": 5,
+      "page_end": 5,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p5-b31",
+      "start_offset": 0,
+      "end_offset": 905,
+      "strategy": "methods-bounded-v3-3000-6ca4b0c5e9"
+    },
+    {
+      "field": "methods",
+      "text": "In doing so, we assume that contributions from changes\nin the broken-symmetry character of the mixed state are\nnegligible.45 The forces entering Eq. (3) are evaluated\nconsistently with the HSE functional. In the equilibrium\ngeometry of the 4A2 state, F(4A2) ≈0.\nThe computational lineshape function is shown in\nFig. 2.\nWe find overall agreement between the mea-\nsured and simulated lineshape functions, allowing us to\nattribute most of the lower-energy peaks to the phonon\nsideband of the transition. We calculate a total Huang-\nRhys factor S of 0.05, indicating weak electron-phonon\ncoupling.",
+      "page_start": 6,
+      "page_end": 6,
+      "section": "PHOTOLUMINESCENCE SPECTROSCOPY",
+      "block_id": "p6-b15",
+      "start_offset": 0,
+      "end_offset": 593,
+      "strategy": "methods-bounded-v3-3000-6ca4b0c5e9"
+    },
+    {
+      "field": "conclusions",
+      "text": "While there is remarkably good agreement between the\npositions of peaks in the calculated and experimental\nspectra, distinct differences in the relative intensity of\nvarious peaks occur. A prominent example occurs in the\nenergy range between 1.72 and 1.74 eV, where experi-\nmentally three prominent peaks occur that appear much\nattenuated in the simulations. These peaks occur at en-\nergies relative to the ZPL that coincide with bulk TO\nphonon mode energies. In fact, many of the peaks in the\nphonon sideband coincide with peaks in the bulk phonon\ndensity of states.46 We note that these peaks also showed\nstrong polarization dependence that differs from that of\nthe ZPL (Fig. 3).\nWe hypothesize that the difference in intensity in\nthe measured and simulated lineshape function may be\ndue to effects beyond the Franck-Condon approximation,\nknown as the Herzberg-Teller effect.47 The Herzberg-\nTeller effect corresponds to the linear term in a series\nexpansion of the transition dipole moment in the atomic\ncoordinates. In the Franck-Condon approximation, the\ntransition matrix element, which determines the polar-\nization, is assumed to be independent of the atomic coor-\ndinates. As a result, the phonon sideband should exhibit\nthe same polarization dependence as the zero-phonon\nline, contrary to our observations for the peaks in the\nrange of 1.72-1.74 eV. The Herzberg-Teller effect allows\nphonons to interact with the transition dipole moment,",
+      "page_start": 6,
+      "page_end": 6,
+      "section": "CONCLUSIONS",
+      "block_id": "p6-b19",
+      "start_offset": 0,
+      "end_offset": 1449,
+      "strategy": "conclusions-sections-v1"
+    },
+    {
+      "field": "conclusions",
+      "text": "In summary, we have reported a thorough theoretical\nand experimental investigation of Cr in β-Ga2O3. Using\nfirst-principles calculations with a hybrid functional, we\ndemonstrated that Cr prefers incorporating as a substi-\ntutional impurity on the octahedral Ga site in a neutral\ncharge state. The center has a d3 electron configuration\nand a high-spin quartet ground state, compatible with\nuse as a spin qubit. It exhibits a spin-flip internal transi-\ntion with a ZPL at 1.8 eV, for which we calculated the lu-\nminescence lineshape. We performed photoluminescence\nexperiments on samples of β-Ga2O3 grown by the float-\ning zone method and found good agreement between the\nmeasured and calculated lineshape functions. Our work",
+      "page_start": 6,
+      "page_end": 6,
+      "section": "CONCLUSIONS",
+      "block_id": "p6-b20",
+      "start_offset": 0,
+      "end_offset": 724,
+      "strategy": "conclusions-sections-v1"
+    },
+    {
+      "field": "conclusions",
+      "text": "uncovered evidence of effects beyond the Franck-Condon\napproximation in the spectrum. We also observed a pre-\nviously unreported emission that we attributed to Cr in\na competing phase of Ga2O3.\nIn total, our work sig-\nnificantly advances the understanding of Cr in β-Ga2O3\nand opens up the potential to utilize it as a quantum\ndefect. Future studies isolating individual Cr impurities,\nincluding measurements of spin dynamics, photon anti-\nbunching, and brightness in microcavities, will guide the\ndevelopment and impact of β-Ga2O3 for quantum net-\nworking, communications, and sensing.",
+      "page_start": 7,
+      "page_end": 7,
+      "section": "CONCLUSIONS",
+      "block_id": "p7-b1",
+      "start_offset": 0,
+      "end_offset": 586,
+      "strategy": "conclusions-sections-v1"
+    }
+  ],
+  "field_status": [
+    [
+      "chemicals",
+      "found"
+    ],
+    [
+      "conclusions",
+      "found"
+    ],
+    [
+      "methods",
+      "found"
+    ]
+  ],
+  "warnings": [
+    "page_1_possible_multicolumn",
+    "page_2_possible_multicolumn",
+    "page_3_possible_multicolumn",
+    "page_4_possible_multicolumn",
+    "page_5_possible_multicolumn",
+    "page_6_possible_multicolumn",
+    "page_7_possible_multicolumn",
+    "page_8_possible_multicolumn",
+    "page_9_possible_multicolumn"
+  ]
+}

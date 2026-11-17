@@ -1,0 +1,19 @@
+{
+  "main_validation": {
+    "pydantic": "2.13.4",
+    "httpx": "0.28.1",
+    "feedparser": "6.0.14",
+    "PyMuPDF": "1.26.6",
+    "typer": "0.29.1"
+  },
+  "isolated_install": {
+    "pydantic": "2.14.3",
+    "httpx": "0.28.1",
+    "feedparser": "6.0.14",
+    "PyMuPDF": "1.28.2",
+    "typer": "0.29.1"
+  },
+  "main_and_isolated_active_checks": 160,
+  "browser_interaction_verified": false,
+  "browser_qa_limit": "Managed environment offers no callable cua_repl.js tool; HTTP and JS/API logic checked."
+}

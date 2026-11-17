@@ -1,0 +1,5 @@
+[download]
+max_pdf_mib = 100
+
+[extraction]
+methods_max_chars = 3000

@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/xW/2yviPbPDORLg+2caBIvxVZpY</id>
+  <title>arXiv Query: search_query=cat:cond-mat.mtrl-sci AND submittedDate:"202301010000 TO 202412312359"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-15T12:09:18Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=cat:cond-mat.mtrl-sci+AND+submittedDate:%22202301010000+TO+202412312359%22&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>14711</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2501.00680v1</id>
+    <title>BiFeO$_3$ nanoparticles at low-temperature using atomistic simulations -- surface charge distribution and terminations</title>
+    <updated>2024-12-31T23:36:12Z</updated>
+    <link href="https://arxiv.org/abs/2501.00680v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.00680v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper analyzes how the ferroelectric properties of cubic-like BiFeO$_3$ nanoparticles are affected by different terminations and charge distributions at the surface using ab-initio-based atomistic computational experiments. Our findings unveil multiple multidomain configurations and illustrate how the different order parameters evolve towards the surface. Interestingly, for neutral terminations, a non-rhombohedral phase of BiFeO$_3$ with a stripe-like polarization arrangement was stabilized. We evaluate the polarization, oxygen octahedra rotation, and volume variation for all the configurations obtained, taking advantage of the atomic-scale details provided by the methods used in this study.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-31T23:36:12Z</published>
+    <arxiv:comment>11 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Mauro A. P. Goncalves</name>
+    </author>
+    <author>
+      <name>Monica Graf</name>
+    </author>
+    <author>
+      <name>Marek Pasciak</name>
+    </author>
+    <author>
+      <name>Jiri Hlinka</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.00679v1</id>
+    <title>Theory of Transient Heat Conduction</title>
+    <updated>2024-12-31T23:31:57Z</updated>
+    <link href="https://arxiv.org/abs/2501.00679v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.00679v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ultrafast and nanoscale heat conduction demands a unified theoretical framework that rigorously bridges macroscopic transport equations with microscopic material properties derived from statistical physics.Existing empirical generalizations of Fourier's law often lack a solid microscopic foundation, failing to connect observed non-Fourier behavior with underlying atomic scale mechanisms. In this work, we present a time-domain theory of transient heat conduction rooted in Zwanzig's statistical theory of irreversible processes. Central to this framework is the time-domain transport function, Z(t), defined through equilibrium time-correlation functions of heat fluxes. This function generalizes the conventional concept of steady-state thermal conductivity, governing the transition of conduction dynamics from onset second sound type wave propagation at finite speeds to diffusion-dominated behavior across broad temporal and spatial scales. Unlike phonon hydrodynamic models that rely on mesoscopic constructs such as phonon drift velocity, our approach provides a quantitative and microscopic description of intrinsic memory effects in transient heat fluxes and applies universally to bulk materials at any temperature or length scale. By integrating atomistic-scale first-principles calculations with continuum-level macroscopic equations, this framework offers a robust foundation for numerical simulations of transient temperature fields. Furthermore, it facilitates the interpretation and design of transient thermal grating experiments using nanometer-scale heat sources and ultrafast laser systems in the extreme ultraviolet and x-ray wavelength ranges, advancing our understanding of heat dissipation dynamics.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-31T23:31:57Z</published>
+    <arxiv:comment>38 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>David E. Crawford</name>
+    </author>
+    <author>
+      <name>Yi Zeng</name>
+    </author>
+    <author>
+      <name>Judith Vidal</name>
+    </author>
+    <author>
+      <name>Jianjun Dong</name>
+    </author>
+    <arxiv:doi>10.1103/p8wg-p1j3</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/p8wg-p1j3" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.01468v1</id>
+    <title>Phase-Field Modeling of Fracture under Compression and Confinement in Anisotropic Geomaterials</title>
+    <updated>2024-12-31T21:39:43Z</updated>
+    <link href="https://arxiv.org/abs/2501.01468v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.01468v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Strongly anisotropic geomaterials undergo fracture under compressive loading. This paper applies a phase-field fracture model to study this fracture process. While phase-field fracture models have several advantages, they provide unphysical predictions when the stress state is complex and includes compression that can cause crack faces to contact.
+  Building on a phase-field model that accounts for compressive traction across the crack face, this paper extends the model to anisotropic fracture. The key features include: (1) a homogenized anisotropic elastic response and strongly-anisotropic model for the work to fracture; (2) an effective damage response that accounts consistently for compressive traction across the crack face, that is derived from the anisotropic elastic response; (3) a regularized crack normal field that overcomes the shortcomings of the isotropic setting, and enables the correct crack response, both across and transverse to the crack face.
+  To test the model, we first compare the predictions to phase-field fracture evolution calculations in a fully-resolved layered specimen with spatial inhomogeneity, and show that it captures the overall patterns of crack growth. We then apply the model to previously-reported experimental observations of fracture evolution in laboratory specimens of shales under compression with confinement, and find that it predicts well the observed crack patterns in a broad range of loading conditions. We further apply the model to predict the growth of wing cracks under compression and confinement. The effective crack response model enables us to treat the initial crack simply as a non-singular damaged zone within the computational domain, thereby allowing for easy and general computations.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-31T21:39:43Z</published>
+    <arxiv:comment>To appear in International Journal for Numerical and Analytical Methods in Geomechanics</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Maryam Hakimzadeh</name>
+    </author>
+    <author>
+      <name>Carlos Mora-Corral</name>
+    </author>
+    <author>
+      <name>Noel Walkington</name>
+    </author>
+    <author>
+      <name>Giuseppe Buscarnera</name>
+    </author>
+    <author>
+      <name>Kaushik Dayal</name>
+    </author>
+    <arxiv:doi>10.1002/nag.3933</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1002/nag.3933" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.00620v1</id>
+    <title>A Novel Velocity Discretization for Lattice Boltzmann Method: Application to Compressible Flow</title>
+    <updated>2024-12-31T19:42:06Z</updated>
+    <link href="https://arxiv.org/abs/2501.00620v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.00620v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Lattice Boltzmann Method (LBM) has emerged as a powerful tool in computational fluid dynamics and material science. However, standard LBM formulation imposes some limitations on the applications of the method, particularly compressible fluids. In this paper, we introduce a new velocity discretization method to overcome some of these challenges. In this new formulation, the particle populations are discretized using a bump function that has a mean and a variance. This introduces enough independent degrees of freedom to set the equilibrium moments to the moments of Maxwell-Boltzmann distribution up to and including the third moments. Consequently, the correct macroscopic fluid dynamics equations for compressible fluids are recovered. We validate our method using several benchmark simulations.</summary>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-31T19:42:06Z</published>
+    <arxiv:comment>33 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.soft"/>
+    <author>
+      <name>Navid Afrasiabian</name>
+    </author>
+    <author>
+      <name>Colin Denniston</name>
+    </author>
+    <arxiv:doi>10.1063/5.0255862</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/5.0255862" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.00600v2</id>
+    <title>Constriction and contact impedance of ceramic solid electrolytes</title>
+    <updated>2025-01-05T19:18:40Z</updated>
+    <link href="https://arxiv.org/abs/2501.00600v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.00600v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The development of solid-state batteries (SSBs) is hindered by degradation at solid-solid interfaces due to void formation and contact loss, resulting in increased impedance. Here, we systematically investigate the roles of real and unrecoverable interfacial contact areas at the electrode/Li$_6$PS$_5$Cl interface in driving the impedance rise. By controlling contact geometries and applied pressures, we identify their distinct contributions to the impedance spectra and quantify their influence on the interfacial resistance and transport. Experiments reveal that interfacial resistance varies strongly with recoverable contact area and applied pressure following power law scaling, with exponents of -1 and -0.5, respectively. Moreover, distributed contacts result in lower impedance due to smaller potential gradients and a more uniform potential distribution. Continuum simulations of the contact geometries predict interfacial resistances in agreement with experiments. Our work highlights the influence of unrecoverable and recoverable contact losses on SSB impedance while quantifying the effectiveness of mitigation strategies.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-31T18:57:37Z</published>
+    <arxiv:comment>19 pages, 6 figures + 17 pages of Supporting Information</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>ACS Energy Lett. 10, 1999 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Md Salman Rabbi Limon</name>
+    </author>
+    <author>
+      <name>Curtis Duffee</name>
+    </author>
+    <author>
+      <name>Zeeshan Ahmad</name>
+    </author>
+    <arxiv:doi>10.1021/acsenergylett.5c00032</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1021/acsenergylett.5c00032" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.00591v1</id>
+    <title>Coexistence of Commensurate and Incommensurate Antiferromagnetic Groundstates in Co$_x$NbSe$_2$ Single Crystal</title>
+    <updated>2024-12-31T18:32:33Z</updated>
+    <link href="https://arxiv.org/abs/2501.00591v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.00591v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In Co$_x$NbSe$_2$, crystal symmetry, and cobalt site occupation drive the formation of two distinct magnetic phases. At $x = 1/4$, the centrosymmetric structure ($P$6$_3$/$mmc$) promotes Co-Co interactions leading to the formation of an $A$-type antiferromagnetic structure phase with a transition temperature of $T_N^A$ = 169 K. At $x = 1/3$, the non-centrosymmetric structure ($P$6$_3$22) induces a lower-temperature magnetic phase with $T_N^S$ = 28 K. We report the coexistence of both substructures within a superlattice, with a nuclear propagation vector of (1/3, 1/3, 0) relative to the host lattice. Single crystals of Co$_{0.28}$NbSe$_2$ exhibit both magnetic transitions, with $T_N^A$ corresponding to the $x \sim 1/4$ phase and $T_N^S$ corresponding to the $x \sim 1/3$ phase. Magnetic susceptibility and specific heat measurements confirm these transitions, although only the high-temperature $T_N^A$ phase significantly affects resistivity. We successfully isolate each phase in powder samples, while single crystals with an intercalation ratio of $x = 0.28$ display the coexistence of both phases in a single sample. Using single-crystal neutron diffraction, we solved the magnetic structure of the high-temperature centrosymmetric phase ($T_N^A$), and neutron powder diffraction revealed the double-$q$ magnetic structure of the low-temperature noncentrosymmetric phase ($T_N^S$)</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-31T18:32:33Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>H. Cein Mandujano</name>
+    </author>
+    <author>
+      <name>Peter Y. Zavalij</name>
+    </author>
+    <author>
+      <name>Alicia Manjón-Sanz</name>
+    </author>
+    <author>
+      <name>Huibo Cao</name>
+    </author>
+    <author>
+      <name>Efrain E. Rodriguez</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevMaterials.9.014403</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevMaterials.9.014403" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.00589v2</id>
+    <title>Efficient training of machine learning potentials for metallic glasses: CuZrAl validation</title>
+    <updated>2025-07-22T07:46:07Z</updated>
+    <link href="https://arxiv.org/abs/2501.00589v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.00589v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Interatomic potentials are key to uncovering microscopic structure-property relationships, essential for multiscale simulations and high-throughput experiments. For metallic glasses, their disordered atomic structure makes the development of potentials particularly challenging, resulting in the scarcity of chemistry-specific parametrizations for this important class of materials. We address this gap by introducing an efficient methodology to design machine learning interatomic potentials (MLIPs), benchmarked on the CuZrAl system. Using a Lennard-Jones surrogate model, swap-Monte Carlo sampling, and single-point Density Functional Theory (DFT) corrections, we capture amorphous structures spanning 14 decades of supercooling. These representative configurations, competing with the experimental time scale, enable robust model training across diverse states, while minimizing the need for extensive DFT datasets. The resulting MLIP matches the experimental data and predictions of the classical embedded atom method (EAM) for structural, dynamical, energetic, and mechanical properties. This approach offers a scalable path to develop accurate MLIPs for complex metallic glasses, including emerging multi-component and high-entropy systems.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-31T18:26:34Z</published>
+    <arxiv:comment>10 pages, 6 figures, supplementary information</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Antoni Wadowski</name>
+    </author>
+    <author>
+      <name>Anshul D. S. Parmar</name>
+    </author>
+    <author>
+      <name>Filip Kaśkosz</name>
+    </author>
+    <author>
+      <name>Jesper Byggmästar</name>
+    </author>
+    <author>
+      <name>Jan S. Wróbel</name>
+    </author>
+    <author>
+      <name>Mikko J. Alava</name>
+    </author>
+    <author>
+      <name>Silvia Bonfanti</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.00564v1</id>
+    <title>Large Language Model-Driven Database for Thermoelectric Materials</title>
+    <updated>2024-12-31T17:50:46Z</updated>
+    <link href="https://arxiv.org/abs/2501.00564v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.00564v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Thermoelectric materials provide a sustainable way to convert waste heat into electricity. However, data-driven discovery and optimization of these materials are challenging because of a lack of a reliable database. Here we developed a comprehensive database of 7,123 thermoelectric compounds, containing key information such as chemical composition, structural detail, seebeck coefficient, electrical and thermal conductivity, power factor, and figure of merit (ZT). We used the GPTArticleExtractor workflow, powered by large language models (LLM), to extract and curate data automatically from the scientific literature published in Elsevier journals. This process enabled the creation of a structured database that addresses the challenges of manual data collection. The open access database could stimulate data-driven research and advance thermoelectric material analysis and discovery.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-31T17:50:46Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Suman Itani</name>
+    </author>
+    <author>
+      <name>Yibo Zhang</name>
+    </author>
+    <author>
+      <name>Jiadong Zang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.00561v1</id>
+    <title>Characterization of Chromium Impurities in $β$-Ga$_2$O$_3$</title>
+    <updated>2024-12-31T17:48:10Z</updated>
+    <link href="https://arxiv.org/abs/2501.00561v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.00561v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Chromium is a common transition-metal impurity that is easily incorporated during crystal growth. It is perhaps best known for giving rise to the 694.3 nm (1.786 eV) emission in Cr-doped Al$_2$O$_3$, exploited in ruby lasers. Chromium has also been found in monoclinic gallium oxide, a wide-bandgap semiconductor being pursued for power electronics. In this work, we thoroughly characterize the behavior of Cr in Ga$_2$O$_3$ through theoretical and experimental techniques. $β$-Ga$_2$O$_3$ samples are grown with the floating zone method and show evidence of a sharp photoluminescence signal, reminiscent of ruby. We calculate the energetics of formation of Cr from first principles, demonstrating that Cr preferentially incorporates as a neutral impurity on the octahedral site. Cr possesses a quartet ground-state spin and has an internal transition with a zero-phonon line near 1.8 eV. By comparing the calculated and experimentally measured luminescence lineshape function, we elucidate the role of coupling to phonons and uncover features beyond the Franck-Condon approximation. The combination of strong emission with a small Huang-Rhys factor of 0.05 and a technologically relevant host material render Cr in Ga$_2$O$_3$ attractive as a quantum defect.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-31T17:48:10Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Mark E. Turiansky</name>
+    </author>
+    <author>
+      <name>Sai Mu</name>
+    </author>
+    <author>
+      <name>Lukas Razinkovas</name>
+    </author>
+    <author>
+      <name>Kamyar Parto</name>
+    </author>
+    <author>
+      <name>Sahil D. Patel</name>
+    </author>
+    <author>
+      <name>Sean Doan</name>
+    </author>
+    <author>
+      <name>Ganesh Pokharel</name>
+    </author>
+    <author>
+      <name>Steven J. Gomez Alvarado</name>
+    </author>
+    <author>
+      <name>Stephen D. Wilson</name>
+    </author>
+    <author>
+      <name>Galan Moody</name>
+    </author>
+    <author>
+      <name>Chris G. Van de Walle</name>
+    </author>
+    <arxiv:doi>10.1063/5.0255859</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/5.0255859" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.00534v2</id>
+    <title>Non-reciprocal neutral ferroelectric domain walls in BiFeO3</title>
+    <updated>2025-01-09T17:19:21Z</updated>
+    <link href="https://arxiv.org/abs/2501.00534v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.00534v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper analyzes a peculiar phenomenon of non-reciprocal domain wall pairs and illustrate the implications in ab-initio-based atomistic computational experiments with (112)-oriented planar R180 domain walls within the canonical multiferroic ferroelectric crystal of BiFeO3. Results show that parallel walls on the opposite sides of a given domain within a simply twinned lamellar domain structure can have considerably different polarization and oxygen octahedra tilt profiles, different thickness and energy densities. The spontaneous formation of zigzag walls and triangular domains suggests that these domain walls are actually the lowest energy planar R180 walls in pure insulating BiFeO3 crystals and films.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-31T16:39:19Z</published>
+    <arxiv:comment>5 pages, 4 figures, corrected missprints, improved graphics and analysis, additional references</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>M. A. P. Goncalves</name>
+    </author>
+    <author>
+      <name>M. Graf</name>
+    </author>
+    <author>
+      <name>M. Pasciak</name>
+    </author>
+    <author>
+      <name>J. Hlinka</name>
+    </author>
+  </entry>
+</feed>

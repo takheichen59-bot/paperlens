@@ -1,0 +1,12 @@
+PASS case_standard
+PASS case_numbered
+PASS case_combined
+PASS case_body_words
+PASS case_unknown_and_supplement
+PASS case_reference_leak
+PASS case_funding_leak
+PASS case_acknowledgement_title
+PASS case_raw_unchanged_coverage
+PASS case_refs_and_ack_coexist
+PASS case_old_cache_reparsed
+SUMMARY: 11 passed, 0 failed

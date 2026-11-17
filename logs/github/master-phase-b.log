@@ -1,0 +1,10 @@
+test_missing_credentials_and_rate_limit (__main__.PhaseB.test_missing_credentials_and_rate_limit) ... ok
+test_normalization_dedup_and_registry (__main__.PhaseB.test_normalization_dedup_and_registry) ... ok
+test_provider_contracts_offline_fixture (__main__.PhaseB.test_provider_contracts_offline_fixture) ... ok
+test_ssrf_redirect_and_html_rejected (__main__.PhaseB.test_ssrf_redirect_and_html_rejected) ... ok
+test_transactional_job_and_document_history (__main__.PhaseB.test_transactional_job_and_document_history) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.145s
+
+OK

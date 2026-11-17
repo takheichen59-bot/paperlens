@@ -1,0 +1,7 @@
+Wheel resources present; Python modules compile.
+Imported from isolated wheel install:
+/workspace/m01-contracts/work/wheel-install/contracts/__init__.py
+/workspace/m01-contracts/work/wheel-install/storage/__init__.py
+Offline installed-wheel demo:
+{"submitted": 3, "duplicates": 0, "success": 3, "partial": 0, "failed": 0, "exported": 3, "results": "/workspace/m01-contracts/work/isolated-wheel/results/results.jsonl"}
+exit_code=0; 3 valid success records

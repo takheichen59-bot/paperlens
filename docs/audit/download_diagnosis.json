@@ -1,0 +1,22 @@
+[
+  {
+    "arxiv_id": "2501.01468v1",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "content_length_header": "129565883",
+    "decoded_bytes_observed_lower_bound": 20976448,
+    "starts_pdf": true,
+    "stopped_at_default_limit": true,
+    "default_limit_bytes": 20971520
+  },
+  {
+    "arxiv_id": "2501.00600v2",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "content_length_header": "40474244",
+    "decoded_bytes_observed_lower_bound": 20987904,
+    "starts_pdf": true,
+    "stopped_at_default_limit": true,
+    "default_limit_bytes": 20971520
+  }
+]

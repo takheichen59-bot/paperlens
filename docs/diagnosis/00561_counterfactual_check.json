@@ -1,0 +1,16 @@
+{
+  "diagnostic_only": true,
+  "database_or_results_written": false,
+  "checks": "All existing checks remain enabled, max_methods_chars=3000",
+  "original_rejection": {
+    "stage": "validate",
+    "error_kind": "validation_failed",
+    "retryable": false,
+    "safe_message": "Record validation failed."
+  },
+  "methods_chars_before": 8229,
+  "chemicals_count_retained": 9,
+  "conclusions_chars_retained": 2763,
+  "counterfactual_status": "partial",
+  "existing_jsonl_schema_valid": true
+}

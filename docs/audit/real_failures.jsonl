@@ -1,0 +1,4 @@
+{"paper_id": "arxiv:2501.00600", "stage": "extract", "error_kind": "extract_failed", "reason": "no_valid_result", "attempts": 1}
+{"paper_id": "arxiv:2501.01468", "stage": "extract", "error_kind": "extract_failed", "reason": "no_valid_result", "attempts": 1}
+{"event_id": "417b631e-5a90-4ea3-b186-c90486a1eff6", "paper_id": "arxiv:2501.01468", "stage": "download", "error_kind": "invalid_download", "retryable": false, "safe_message": "Downloaded file is invalid.", "attempts": 1}
+{"event_id": "387fd4d9-23fa-4758-a3fc-73f0dd4239e3", "paper_id": "arxiv:2501.00600", "stage": "download", "error_kind": "invalid_download", "retryable": false, "safe_message": "Downloaded file is invalid.", "attempts": 1}

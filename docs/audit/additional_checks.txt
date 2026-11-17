@@ -1,0 +1,6 @@
+PASS primary_key_wrapping
+PASS foreign_key_wrapping
+PASS check_constraint_wrapping
+PASS same_block_wrong_offsets_rejected
+PASS wrong_page_rejected
+SUMMARY: 5 passed, 0 failed

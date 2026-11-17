@@ -1,0 +1,18 @@
+{
+  "cases": [
+    {
+      "name": "stage_enum_compatibility",
+      "original_members": [
+        ["SEARCH", "search"],
+        ["METADATA", "metadata"],
+        ["DOWNLOAD", "download"],
+        ["PARSE", "parse"],
+        ["EXTRACT", "extract"],
+        ["VALIDATE", "validate"],
+        ["EXPORT", "export"]
+      ],
+      "required_members": [["STORAGE", "storage"], ["EXPORT", "export"]],
+      "unknown_value": "unknown_stage"
+    }
+  ]
+}

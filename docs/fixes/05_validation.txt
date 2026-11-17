@@ -1,0 +1,10 @@
+PASS case_complete
+PASS case_missing_field
+PASS case_no_evidence
+PASS case_invalid_location
+PASS case_duplicate
+PASS case_wrong_slice
+PASS case_field_evidence_mismatch
+PASS case_long_methods
+PASS case_production_checks_not_exposed
+SUMMARY: 9 passed, 0 failed

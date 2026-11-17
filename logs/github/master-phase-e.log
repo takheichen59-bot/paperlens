@@ -1,0 +1,12 @@
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+test_1_upload_parse_job_and_missing_model (__main__.APITests.test_1_upload_parse_job_and_missing_model) ... ok
+test_2_idempotence_pause_resume (__main__.APITests.test_2_idempotence_pause_resume) ... ok
+test_3_actual_filter_export_and_venue (__main__.APITests.test_3_actual_filter_export_and_venue) ... ok
+test_4_auth_origin_schema_and_unsafe_upload (__main__.APITests.test_4_auth_origin_schema_and_unsafe_upload) ... ok
+test_5_hash_change_history_review_conflict (__main__.APITests.test_5_hash_change_history_review_conflict) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.532s
+
+OK

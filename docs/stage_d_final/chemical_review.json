@@ -1,0 +1,209 @@
+{
+  "predictions": 20,
+  "supported": 20,
+  "unreviewed": 0,
+  "independent_human_gold": false,
+  "scope": "paper-level deduplicated chemical/material mentions; not recall or role classification",
+  "rows": [
+    {
+      "paper_id": "arxiv:2501.00534",
+      "entity": "BiFeO3",
+      "label": "supported",
+      "reason": "Explicit chemical/material composition in main text, abstract or title; background material mentions included.",
+      "page": 1,
+      "block_id": "p1-b0",
+      "context": "Non-reciprocal neutral ferroelectric domain walls in BiFeO3",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    },
+    {
+      "paper_id": "arxiv:2501.00561",
+      "entity": "Ga2O3",
+      "label": "supported",
+      "reason": "Explicit chemical/material composition in main text, abstract or title; background material mentions included.",
+      "page": 1,
+      "block_id": "p1-b0",
+      "context": "Characterization of Chromium Impurities in β-Ga2O3\nMark E. Turiansky,1, a) Sai Mu,1, 2, b) Lukas Razinkovas,3, 4 Kamyar Parto,5 Sahil D. Patel,5 Sean Doan,6 Ganesh\nPokharel,1, 7 Steven J. Gomez Alvara",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    },
+    {
+      "paper_id": "arxiv:2501.00561",
+      "entity": "Al2O3",
+      "label": "supported",
+      "reason": "Explicit chemical/material composition in main text, abstract or title; background material mentions included.",
+      "page": 1,
+      "block_id": "p1-b3",
+      "context": "al growth. It is\nperhaps best known for giving rise to the 694.3 nm (1.786 eV) emission in Cr-doped Al2O3, exploited in ruby\nlasers. Chromium has also been found in monoclinic gallium oxide, a wide-bandgap semiconductor being\npursued for power electronics",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    },
+    {
+      "paper_id": "arxiv:2501.00561",
+      "entity": "O2",
+      "label": "supported",
+      "reason": "Oxygen component of explicitly reported Ar:O2=80:20 growth atmosphere.",
+      "page": 2,
+      "block_id": "p2-b7",
+      "context": "er laser (216 W total). The growth of β-Ga2O3 was con-\nducted using a pressure of 1000 psi of an Ar:O2 = 80:20\nmix to prevent any volatility. Growth conditions were\nkept constant throughout the process, including a trans-\nlation rate of 15 mm/hr for bo",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    },
+    {
+      "paper_id": "arxiv:2501.00561",
+      "entity": "CrO2",
+      "label": "supported",
+      "reason": "Explicit chemical/material composition in main text, abstract or title; background material mentions included.",
+      "page": 2,
+      "block_id": "p2-b5",
+      "context": "sources of\nCr contamination during the growth. X-ray diffraction\nshows evidence for the presence of CrO2 in the polycrys-\ntalline Ga2O3 source material. In addition, the alumina\nseed rod was relatively low purity and may also be a\nsource of contamination",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    },
+    {
+      "paper_id": "arxiv:2501.00561",
+      "entity": "Cr2O3",
+      "label": "supported",
+      "reason": "Explicit chemical/material composition in main text, abstract or title; background material mentions included.",
+      "page": 3,
+      "block_id": "p3-b28",
+      "context": "nditions: we will assume Ga-rich growth conditions\nand incorporation of Cr at the solubility limit. Cr2O3\n(chromia) is a potential secondary phase that may form\nwhen Cr is present during growth and sets the solubility\nlimit for Cr. Cr2O3 is most stable in",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    },
+    {
+      "paper_id": "arxiv:2501.00561",
+      "entity": "GaN",
+      "label": "supported",
+      "reason": "Explicit chemical/material composition in main text, abstract or title; background material mentions included.",
+      "page": 5,
+      "block_id": "p5-b31",
+      "context": "unced phonon sideband. This\neffect was observed in calculations of transition metal im-\npurities in GaN and AlN.41 While CrGa(I) may also be\nnegatively charged under typical n-type conditions, the\npresence of an additional electron alters the electronic",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    },
+    {
+      "paper_id": "arxiv:2501.00561",
+      "entity": "AlN",
+      "label": "supported",
+      "reason": "Explicit chemical/material composition in main text, abstract or title; background material mentions included.",
+      "page": 5,
+      "block_id": "p5-b31",
+      "context": "onon sideband. This\neffect was observed in calculations of transition metal im-\npurities in GaN and AlN.41 While CrGa(I) may also be\nnegatively charged under typical n-type conditions, the\npresence of an additional electron alters the electronic\nstructu",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    },
+    {
+      "paper_id": "arxiv:2501.00589",
+      "entity": "CuZrAl",
+      "label": "supported",
+      "reason": "Explicit chemical/material composition in main text, abstract or title; background material mentions included.",
+      "page": 1,
+      "block_id": "p1-b0",
+      "context": "Efﬁcient training of machine learning potentials for metallic glasses: CuZrAl validation",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    },
+    {
+      "paper_id": "arxiv:2501.00589",
+      "entity": "ZrCuAl",
+      "label": "supported",
+      "reason": "Explicit chemical/material composition in main text, abstract or title; background material mentions included.",
+      "page": 5,
+      "block_id": "p5-b29",
+      "context": " This suggests that\nMLIP more effectively captures the temperature-dependent\natomic dynamics of the ZrCuAl system, however, further sys-\ntematic study would be desired. Turning to the thermody-\nnamic properties, Fig. 5(b) presents the speciﬁc heat (Cp) ove",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    },
+    {
+      "paper_id": "arxiv:2501.00589",
+      "entity": "CuZr",
+      "label": "supported",
+      "reason": "Explicit chemical/material composition in main text, abstract or title; background material mentions included.",
+      "page": 6,
+      "block_id": "p6-b18",
+      "context": " competitively with EAM for other compositions, pro-\nvided they are not too far from the equiatomic CuZr–Al mix-\nture.\nThe methodology proposed here offers an efﬁcient and trans-\nferable framework for the development of MLIPs for more\ncomplex MG systems,",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    },
+    {
+      "paper_id": "arxiv:2501.00591",
+      "entity": "CrI3",
+      "label": "supported",
+      "reason": "Explicit chemical/material composition in main text, abstract or title; background material mentions included.",
+      "page": 1,
+      "block_id": "p1-b10",
+      "context": "er\nis\ncommon,\nwith\nlayers\naccommodating various structural configurations[15, 16].\nFor instance, in CrI3, three magnetic transitions coexist,\ndefined by structural changes and phase separation\n[17, 18].\nIn such cases, each layer and its interaction\nwith ",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    },
+    {
+      "paper_id": "arxiv:2501.00591",
+      "entity": "NbSe2",
+      "label": "supported",
+      "reason": "Explicit chemical/material composition in main text, abstract or title; background material mentions included.",
+      "page": 1,
+      "block_id": "p1-b10",
+      "context": "ties [23, 24].\nA\ncanonical\nexample\nof\na\nTMD\nhosting\nboth\nsuperconductivity and a CDW is pristine 2H-NbSe2,\nwhich undergoes a superconducting transition at 7 K and\na CDW transition at 31 K [25–27]. Intercalating 3d metal\nions into the van der Waals (vdW) g",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    },
+    {
+      "paper_id": "arxiv:2501.00591",
+      "entity": "CoI2",
+      "label": "supported",
+      "reason": "Explicit chemical/material composition in main text, abstract or title; background material mentions included.",
+      "page": 2,
+      "block_id": "p2-b6",
+      "context": "llowing the furnace to naturally cool.\nDespite\ncompensating for cobalt loss due to the formation of\nCoI2 by adding excess cobalt powder during vapor\ntransport, the resulting composition consistently yielded\nCo0.28±δNbSe2.\nWe verified the composition of t",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    },
+    {
+      "paper_id": "arxiv:2501.00600",
+      "entity": "Li6PS5Cl",
+      "label": "supported",
+      "reason": "Explicit electrode/Li6PS5Cl interface in the abstract; chemically valid argyrodite electrolyte composition.",
+      "page": 1,
+      "block_id": "p1-b9",
+      "context": "areas at the electrode/Li6PS5Cl interface in driving the impedance rise. By control-",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    },
+    {
+      "paper_id": "arxiv:2501.00679",
+      "entity": "MgO",
+      "label": "supported",
+      "reason": "Explicit chemical/material composition in main text, abstract or title; background material mentions included.",
+      "page": 22,
+      "block_id": "p22-b18",
+      "context": "dielectric crystals with diverse structural and compositional complexities, including MgO",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    },
+    {
+      "paper_id": "arxiv:2501.00679",
+      "entity": "MgSiO3",
+      "label": "supported",
+      "reason": "Explicit chemical/material composition in main text, abstract or title; background material mentions included.",
+      "page": 22,
+      "block_id": "p22-b19",
+      "context": "and MgSiO3 under high-pressure conditions [51, 56, 57].\nBoth three-phonon scattering",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    },
+    {
+      "paper_id": "arxiv:2501.00680",
+      "entity": "BiFeO3",
+      "label": "supported",
+      "reason": "Explicit chemical/material composition in main text, abstract or title; background material mentions included.",
+      "page": 1,
+      "block_id": "p1-b0",
+      "context": "BiFeO3 nanoparticles at low-temperature using\natomistic simulations - surface charge distribution\nand terminations",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    },
+    {
+      "paper_id": "arxiv:2501.00680",
+      "entity": "MoS2",
+      "label": "supported",
+      "reason": "Explicit chemical/material composition in main text, abstract or title; background material mentions included.",
+      "page": 2,
+      "block_id": "p2-b0",
+      "context": "is the highest rate ever reported and 3 times higher than\nthe second-highest rate obtained achieved MoS2 nanosheets [14]. When the ultrasonic\nvibrations are combined with sunlight, the BiFeO3 nanoparticles present the highest\npiezo-photocatalytic rate ev",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    },
+    {
+      "paper_id": "arxiv:2501.00680",
+      "entity": "Bi4Ti3O12",
+      "label": "supported",
+      "reason": "Explicit chemical/material composition in main text, abstract or title; background material mentions included.",
+      "page": 2,
+      "block_id": "p2-b0",
+      "context": "t\npiezo-photocatalytic rate ever reported and 3 times higher than the previous record\nobserved with Bi4Ti3O12 nanoplates [15].\nHowever, the arrangement of polarization and oxygen octahedra rotations inside\nthe BiFeO3 nanoparticles remains unclear. In particul",
+      "reviewer": "assistant_context_review; NOT independent human gold"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+test_algorithm_mention_is_not_deep (__main__.PhaseC.test_algorithm_mention_is_not_deep) ... ok
+test_external_parser_fixture_alignment_and_uncertainty (__main__.PhaseC.test_external_parser_fixture_alignment_and_uncertainty) ... ok
+test_grounding_rejects_wrong_hash_span_and_numbers (__main__.PhaseC.test_grounding_rejects_wrong_hash_span_and_numbers) ... ok
+test_no_model_is_not_executed (__main__.PhaseC.test_no_model_is_not_executed) ... ok
+test_real_pymupdf_and_tesseract_fixture (__main__.PhaseC.test_real_pymupdf_and_tesseract_fixture) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.735s
+
+OK

@@ -1,0 +1,13 @@
+WARNING: The directory '/home/agent/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Processing /workspace/paperlens-github
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: paper-extraction-contracts
+  Building wheel for paper-extraction-contracts (pyproject.toml): started
+  Building wheel for paper-extraction-contracts (pyproject.toml): finished with status 'done'
+  Created wheel for paper-extraction-contracts: filename=paper_extraction_contracts-0.3.0-py3-none-any.whl size=189923 sha256=56e124e2e46ad3c2f73d5f5ef84ec081b888a930c9acbc658ac0406dda72bc74
+  Stored in directory: /tmp/pip-ephem-wheel-cache-4706rgz6/wheels/89/b2/8f/faaf91e0c885c827c9120fd12e7133dda4552ae49fc120e82d
+Successfully built paper-extraction-contracts
+
+[notice] A new release of pip is available: 25.0.1 -> 26.3
+[notice] To update, run: python -m pip install --upgrade pip

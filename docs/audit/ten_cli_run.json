@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/workspace/m01-contracts/work/runtime/bin/paperlens",
+    "run",
+    "--manifest",
+    "work/audit/real_metadata_manifest.json",
+    "--online",
+    "--db",
+    "work/audit/ten/state.sqlite3",
+    "--workdir",
+    "work/audit/ten/cache",
+    "--output",
+    "work/audit/ten/results"
+  ],
+  "returncode": 3,
+  "stdout": "{\"submitted\": 10, \"duplicates\": 0, \"success\": 0, \"partial\": 8, \"failed\": 2, \"exported\": 10, \"results\": \"work/audit/ten/results/results.jsonl\"}\n",
+  "stderr": "",
+  "elapsed_seconds": 29.83,
+  "mode": "source metadata from saved official Atom feed; actual arXiv PDF downloads via unmodified fetcher"
+}

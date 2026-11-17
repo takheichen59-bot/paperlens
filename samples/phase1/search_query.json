@@ -1,0 +1,1 @@
+{"endpoint": "https://export.arxiv.org/api/query", "query": "cat:cond-mat.mtrl-sci AND submittedDate:[202401010000 TO 202412312359]", "http_status": 200, "candidate_count": 100}

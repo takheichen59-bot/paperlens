@@ -1,0 +1,8 @@
+{
+  "checked_files": 79,
+  "modified_files": [],
+  "new_implementation_test_script_example_files": [],
+  "network_or_external_model_calls": false,
+  "persisted_pipeline_results_written": false,
+  "scope": "src/, acceptance/, scripts/, examples/ unchanged; diagnosis artifacts only in docs/diagnosis and work/diagnosis"
+}

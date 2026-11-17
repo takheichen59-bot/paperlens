@@ -1,0 +1,34 @@
+[
+  {
+    "entity": "HK0",
+    "dictionary_match": false,
+    "regex": "\\b(?:[A-Z][a-z]?\\d*){2,}\\b",
+    "element_tokens": [
+      "H",
+      "K"
+    ],
+    "digit_gate_passes": true,
+    "page": 3,
+    "block_id": "p3-b4",
+    "raw_start": 107,
+    "raw_end": 110,
+    "before_100_chars": "\nSingle crystal X-ray diffraction results showing\nlattice coexistence. Precession images along the (",
+    "after_100_chars": ") (a),\n(HK1) (b), (H0L) (c), and (HHL) (d) planes.\nGreen\narrows indicate the host unit cell of 2H-Nb"
+  },
+  {
+    "entity": "HK1",
+    "dictionary_match": false,
+    "regex": "\\b(?:[A-Z][a-z]?\\d*){2,}\\b",
+    "element_tokens": [
+      "H",
+      "K"
+    ],
+    "digit_gate_passes": true,
+    "page": 3,
+    "block_id": "p3-b4",
+    "raw_start": 118,
+    "raw_end": 121,
+    "before_100_chars": "stal X-ray diffraction results showing\nlattice coexistence. Precession images along the (HK0) (a),\n(",
+    "after_100_chars": ") (b), (H0L) (c), and (HHL) (d) planes.\nGreen\narrows indicate the host unit cell of 2H-NbSe2 and the"
+  }
+]

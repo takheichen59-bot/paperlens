@@ -1,0 +1,43 @@
+PASS ID parsing merges versions and rejects foreign URLs
+PASS Index deduplication uses source ID and case-insensitive DOI
+PASS One download failure does not interrupt other papers
+PASS Content-identical PDFs are skipped as duplicates
+PASS Resume preserves already verified in-memory PDFs
+PASS Memory limit skips only oversized additions
+PASS Cancellation keeps completed PDFs and leaves remaining jobs pending
+PASS Real corpus index contains 20 unique, CC-licensed records
+PASS CSV and JSONL export all 20 metadata records, with formula-safe CSV
+PASS XLSX and PDF ZIP artifacts are generated for independent archive validation
+PASS Official cached Atom feed is parsed into 100 real records
+PASS API search supports category-only 20-paper pagination
+PASS API rejects invalid identifiers before network access
+PASS API size overflow is skipped while ordinary source errors remain failures
+PASS License lookup preserves an official CC license URL
+PASS Server corpus ingest enforces manifest size and SHA256
+PASS Server corpus status and streaming ZIP contain the seeded file
+PASS Missing corpus object prevents publishing an incomplete ZIP
+PASS Every static application selector exists in the HTML
+PHASE 1 WEB: 19 passed, 0 failed (logic/API/archive generation; browser interaction not tested)
+PASS Python record shares the browser/server evidence validator
+PASS Tampered raw slice is rejected
+PASS Nonempty field without its evidence is rejected
+PASS Evidence placed in excluded sections is rejected
+PASS Browser rules produce bounded, evidence-backed four-field records
+PASS Retrieval returns actual citations and refuses unsupported matches
+PASS Graph edges point to existing source evidence
+PASS Human edits override presentation without mutating original evidence
+PASS Scientific Excel and CSV contain all four primary fields
+PASS Research records persist and round-trip through the API
+PASS API rejects invalid scientific evidence without creating a record
+PASS Saved record summaries appear in the workspace index
+PASS Review saves separately; stale revisions are rejected
+PASS Newly imported local records support review by explicit record ID
+PASS Full bundle refuses missing PDF or science artifacts
+PASS HTML and event bindings cover the visible primary actions
+RESEARCH WEB: 16 passed, 0 failed (offline logic/API/export; browser interaction not tested)
+PASS concurrent_record
+PASS concurrent_review
+PASS failed_publish
+PASS history_and_delete
+PASS chunked_limit
+PHASE A CLOUD: 5 passed, 0 failed

@@ -1,0 +1,441 @@
+{
+  "stats": {
+    "chars": 2018,
+    "snippets": 23,
+    "pages": [
+      1,
+      2,
+      8,
+      15,
+      17,
+      18,
+      19,
+      20,
+      21,
+      23,
+      24,
+      26,
+      28
+    ],
+    "old_section_count": 1,
+    "old_section": "UNKNOWN; snippets.section=null",
+    "current_section_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "keyword_families": {
+      "simulation": 14,
+      "microscopy": 1,
+      "measurement": 9
+    },
+    "matched_lexical_forms": {
+      "simulations": 12,
+      "microscopic": 1,
+      "measure": 5,
+      "measured": 4,
+      "simulation": 2
+    },
+    "total_keyword_occurrences": 24,
+    "per_block_distinct_keyword_families": [
+      1
+    ],
+    "continuous_runs": 22,
+    "longest_continuous_run_blocks": 2,
+    "blocks_satisfying_two_distinct_families": 0
+  },
+  "chunks": [
+    {
+      "page": 1,
+      "block": "p1-b15",
+      "section_before": null,
+      "section_after": [
+        "s1",
+        "",
+        "unknown"
+      ],
+      "words": {
+        "simulation": [
+          "simulations"
+        ]
+      },
+      "body_index": 15,
+      "text": "ids are recovered. We validate our method using several benchmark simulations."
+    },
+    {
+      "page": 2,
+      "block": "p2-b16",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "microscopy": [
+          "microscopic"
+        ]
+      },
+      "body_index": 33,
+      "text": "where v is the microscopic velocity, x is position in space, and t is time. The equilibrium"
+    },
+    {
+      "page": 8,
+      "block": "p8-b4",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "simulation": [
+          "simulations"
+        ]
+      },
+      "body_index": 236,
+      "text": "invariance in LBM simulations of fluids. Note that the dirac delta function has only two"
+    },
+    {
+      "page": 15,
+      "block": "p15-b21",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "simulation": [
+          "simulations"
+        ]
+      },
+      "body_index": 497,
+      "text": "difference schemes of reference18. For the applications shown in Section III all simulations"
+    },
+    {
+      "page": 17,
+      "block": "p17-b31",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "measurement": [
+          "measure"
+        ]
+      },
+      "body_index": 567,
+      "text": "section, we measure the physical properties of our fluid. We also compare these results to"
+    },
+    {
+      "page": 18,
+      "block": "p18-b1",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "measurement": [
+          "measure"
+        ]
+      },
+      "body_index": 570,
+      "text": "In this section, we measure the shear viscosity in a Poiseuille flow and compare it to the"
+    },
+    {
+      "page": 18,
+      "block": "p18-b31",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "simulation": [
+          "simulations"
+        ]
+      },
+      "body_index": 600,
+      "text": "relaxation times τ = 1µs and τ = 2µs, respectively.\nFor these simulations, we observe"
+    },
+    {
+      "page": 19,
+      "block": "p19-b0",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "measurement": [
+          "measure"
+        ]
+      },
+      "body_index": 604,
+      "text": "where τ is the relaxation time. To confirm this relation, we measure the viscosity η from"
+    },
+    {
+      "page": 19,
+      "block": "p19-b4",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "measurement": [
+          "measured"
+        ]
+      },
+      "body_index": 608,
+      "text": "Fig. 3(c) shows the measured η as a function of temperature for both relaxation times."
+    },
+    {
+      "page": 19,
+      "block": "p19-b14",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "measurement": [
+          "measured"
+        ]
+      },
+      "body_index": 615,
+      "text": "τ = 2µs (b). (c) shows the measured viscosity as a function of temperature. A linear relation between"
+    },
+    {
+      "page": 19,
+      "block": "p19-b20",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "measurement": [
+          "measure"
+        ]
+      },
+      "body_index": 621,
+      "text": "measure the shear and bulk viscosity from the decay of such waves. We first compute what"
+    },
+    {
+      "page": 20,
+      "block": "p20-b25",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "measurement": [
+          "measure"
+        ]
+      },
+      "body_index": 652,
+      "text": "Eq. (99) and (101) can be used to measure η from a sound wave analysis. To do so, we"
+    },
+    {
+      "page": 21,
+      "block": "p21-b10",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "simulation": [
+          "simulations"
+        ]
+      },
+      "body_index": 663,
+      "text": "For all the simulations, ρ0 = 1 and A = 0.0001 unless mentioned otherwise."
+    },
+    {
+      "page": 21,
+      "block": "p21-b12",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "simulation": [
+          "simulation"
+        ]
+      },
+      "body_index": 665,
+      "text": "tions, the simulation box dimensions are 20µm × 20µm × 80µm and k = 2π/80 = 0.07854."
+    },
+    {
+      "page": 21,
+      "block": "p21-b13",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "simulation": [
+          "simulation"
+        ]
+      },
+      "body_index": 666,
+      "text": "Fig. 4(a) shows the evolution of the density at the centre of the simulation box. The results"
+    },
+    {
+      "page": 21,
+      "block": "p21-b17",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "measurement": [
+          "measured"
+        ]
+      },
+      "body_index": 670,
+      "text": "ρ versus t data to find the damping factor γ. Fig. 4 shows the measured damping factor as"
+    },
+    {
+      "page": 21,
+      "block": "p21-b25",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "measurement": [
+          "measured"
+        ]
+      },
+      "body_index": 678,
+      "text": "5(a) shows the square of the measured angular frequency as a function of temperature for"
+    },
+    {
+      "page": 23,
+      "block": "p23-b4",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "simulation": [
+          "simulations"
+        ]
+      },
+      "body_index": 705,
+      "text": "We test the Galilean invariance of our system in a Couette flow example. Two simulations"
+    },
+    {
+      "page": 24,
+      "block": "p24-b9",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "simulation": [
+          "simulations"
+        ]
+      },
+      "body_index": 742,
+      "text": "of temporal and spatial resolution on the accuracy of the LB simulations for a flow over a"
+    },
+    {
+      "page": 24,
+      "block": "p24-b11",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "simulation": [
+          "simulations"
+        ]
+      },
+      "body_index": 744,
+      "text": "The simulations are performed in 3D and box dimensions are 0.06 cm × 2.4 cm × 4.8"
+    },
+    {
+      "page": 26,
+      "block": "p26-b15",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "simulation": [
+          "simulations",
+          "simulations"
+        ]
+      },
+      "body_index": 779,
+      "text": "simulations with different lattice spacings. For these simulations, ∆t = 0.0001 s. Lattice"
+    },
+    {
+      "page": 26,
+      "block": "p26-b17",
+      "section_before": null,
+      "section_after": [
+        "s2",
+        "INTRODUCTION",
+        "unknown"
+      ],
+      "words": {
+        "simulation": [
+          "simulations"
+        ]
+      },
+      "body_index": 781,
+      "text": "ground truth. We compare the simulations in the laminar regime. Fig. 10(a) shows the"
+    },
+    {
+      "page": 28,
+      "block": "p28-b25",
+      "section_before": null,
+      "section_after": [
+        "s3",
+        "CONCLUSION",
+        "conclusions"
+      ],
+      "words": {
+        "simulation": [
+          "simulations"
+        ]
+      },
+      "body_index": 817,
+      "text": "mesh resolution on the accuracy of the simulations."
+    }
+  ]
+}

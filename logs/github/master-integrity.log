@@ -1,0 +1,10 @@
+test_1_external_edit_invalidates_history_and_reviews (__main__.IntegrityTests.test_1_external_edit_invalidates_history_and_reviews) ... ok
+test_2_baseline_migration_idempotence_and_refuse_other_db (__main__.IntegrityTests.test_2_baseline_migration_idempotence_and_refuse_other_db) ... ok
+test_3_xml_evidence_has_no_invented_pages_or_latex (__main__.IntegrityTests.test_3_xml_evidence_has_no_invented_pages_or_latex) ... ok
+test_4_exports_escape_spreadsheets_preserve_provenance (__main__.IntegrityTests.test_4_exports_escape_spreadsheets_preserve_provenance) ... ok
+test_5_frozen_legacy_contracts (__main__.IntegrityTests.test_5_frozen_legacy_contracts) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.043s
+
+OK

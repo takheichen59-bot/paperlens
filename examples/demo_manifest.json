@@ -1,0 +1,44 @@
+[
+  {
+    "reference": "2401.00001",
+    "meta": {
+      "paper_id": "arxiv:2401.00001",
+      "source_id": "2401.00001",
+      "doi": null,
+      "title": "Synthetic materials fixture 1; not a real paper",
+      "page_url": "https://arxiv.org/abs/2401.00001",
+      "pdf_url": "https://arxiv.org/pdf/2401.00001",
+      "version": "v1",
+      "fetched_at": "2024-01-01T00:00:00Z"
+    },
+    "pdf": "../samples/m14/paper_1.pdf"
+  },
+  {
+    "reference": "2401.00002",
+    "meta": {
+      "paper_id": "arxiv:2401.00002",
+      "source_id": "2401.00002",
+      "doi": null,
+      "title": "Synthetic materials fixture 2; not a real paper",
+      "page_url": "https://arxiv.org/abs/2401.00002",
+      "pdf_url": "https://arxiv.org/pdf/2401.00002",
+      "version": "v1",
+      "fetched_at": "2024-01-01T00:00:00Z"
+    },
+    "pdf": "../samples/m14/paper_2.pdf"
+  },
+  {
+    "reference": "2401.00003",
+    "meta": {
+      "paper_id": "arxiv:2401.00003",
+      "source_id": "2401.00003",
+      "doi": null,
+      "title": "Synthetic materials fixture 3; not a real paper",
+      "page_url": "https://arxiv.org/abs/2401.00003",
+      "pdf_url": "https://arxiv.org/pdf/2401.00003",
+      "version": "v1",
+      "fetched_at": "2024-01-01T00:00:00Z"
+    },
+    "pdf": "../samples/m14/paper_3.pdf"
+  }
+]

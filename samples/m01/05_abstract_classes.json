@@ -1,0 +1,7 @@
+{
+  "abstract_classes": [
+    "BaseFetcher",
+    "BaseParser",
+    "BaseExtractor"
+  ]
+}

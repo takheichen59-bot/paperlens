@@ -1,0 +1,3 @@
+{"paper_id": "arxiv:2501.01468", "stage": "download", "error_kind": "invalid_download", "attempts": 1, "status": "skipped", "skipped_reason": "size_limit", "limit_bytes": 104857600, "file_bytes": 129565883, "file_bytes_source": "content_length", "bytes_received": 0}
+{"paper_id": "arxiv:2501.00561", "stage": "extract", "error_kind": "extract_failed", "reason": "no_valid_result", "attempts": 1, "status": "failed"}
+{"event_id": "54f4555c-442c-47bc-808d-4deba0029da6", "paper_id": "arxiv:2501.00561", "stage": "validate", "error_kind": "validation_failed", "retryable": false, "safe_message": "Record validation failed.", "attempts": 0, "status": "failed"}

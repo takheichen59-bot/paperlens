@@ -1,0 +1,132 @@
+[
+  {
+    "reference": "2501.00680v1",
+    "meta": {
+      "paper_id": "arxiv:2501.00680",
+      "source_id": "2501.00680",
+      "doi": null,
+      "title": "BiFeO$_3$ nanoparticles at low-temperature using atomistic simulations -- surface charge distribution and terminations",
+      "page_url": "https://arxiv.org/abs/2501.00680v1",
+      "pdf_url": "https://arxiv.org/pdf/2501.00680v1",
+      "version": "v1",
+      "fetched_at": "2026-11-15T12:09:59.505507Z"
+    }
+  },
+  {
+    "reference": "2501.00679v1",
+    "meta": {
+      "paper_id": "arxiv:2501.00679",
+      "source_id": "2501.00679",
+      "doi": "10.1103/p8wg-p1j3",
+      "title": "Theory of Transient Heat Conduction",
+      "page_url": "https://arxiv.org/abs/2501.00679v1",
+      "pdf_url": "https://arxiv.org/pdf/2501.00679v1",
+      "version": "v1",
+      "fetched_at": "2026-11-15T12:09:59.505638Z"
+    }
+  },
+  {
+    "reference": "2501.01468v1",
+    "meta": {
+      "paper_id": "arxiv:2501.01468",
+      "source_id": "2501.01468",
+      "doi": "10.1002/nag.3933",
+      "title": "Phase-Field Modeling of Fracture under Compression and Confinement in Anisotropic Geomaterials",
+      "page_url": "https://arxiv.org/abs/2501.01468v1",
+      "pdf_url": "https://arxiv.org/pdf/2501.01468v1",
+      "version": "v1",
+      "fetched_at": "2026-11-15T12:09:59.505747Z"
+    }
+  },
+  {
+    "reference": "2501.00620v1",
+    "meta": {
+      "paper_id": "arxiv:2501.00620",
+      "source_id": "2501.00620",
+      "doi": "10.1063/5.0255862",
+      "title": "A Novel Velocity Discretization for Lattice Boltzmann Method: Application to Compressible Flow",
+      "page_url": "https://arxiv.org/abs/2501.00620v1",
+      "pdf_url": "https://arxiv.org/pdf/2501.00620v1",
+      "version": "v1",
+      "fetched_at": "2026-11-15T12:09:59.505772Z"
+    }
+  },
+  {
+    "reference": "2501.00600v2",
+    "meta": {
+      "paper_id": "arxiv:2501.00600",
+      "source_id": "2501.00600",
+      "doi": "10.1021/acsenergylett.5c00032",
+      "title": "Constriction and contact impedance of ceramic solid electrolytes",
+      "page_url": "https://arxiv.org/abs/2501.00600v2",
+      "pdf_url": "https://arxiv.org/pdf/2501.00600v2",
+      "version": "v2",
+      "fetched_at": "2026-11-15T12:09:59.505893Z"
+    }
+  },
+  {
+    "reference": "2501.00591v1",
+    "meta": {
+      "paper_id": "arxiv:2501.00591",
+      "source_id": "2501.00591",
+      "doi": "10.1103/physrevmaterials.9.014403",
+      "title": "Coexistence of Commensurate and Incommensurate Antiferromagnetic Groundstates in Co$_x$NbSe$_2$ Single Crystal",
+      "page_url": "https://arxiv.org/abs/2501.00591v1",
+      "pdf_url": "https://arxiv.org/pdf/2501.00591v1",
+      "version": "v1",
+      "fetched_at": "2026-11-15T12:09:59.505916Z"
+    }
+  },
+  {
+    "reference": "2501.00589v2",
+    "meta": {
+      "paper_id": "arxiv:2501.00589",
+      "source_id": "2501.00589",
+      "doi": null,
+      "title": "Efficient training of machine learning potentials for metallic glasses: CuZrAl validation",
+      "page_url": "https://arxiv.org/abs/2501.00589v2",
+      "pdf_url": "https://arxiv.org/pdf/2501.00589v2",
+      "version": "v2",
+      "fetched_at": "2026-11-15T12:09:59.505935Z"
+    }
+  },
+  {
+    "reference": "2501.00564v1",
+    "meta": {
+      "paper_id": "arxiv:2501.00564",
+      "source_id": "2501.00564",
+      "doi": null,
+      "title": "Large Language Model-Driven Database for Thermoelectric Materials",
+      "page_url": "https://arxiv.org/abs/2501.00564v1",
+      "pdf_url": "https://arxiv.org/pdf/2501.00564v1",
+      "version": "v1",
+      "fetched_at": "2026-11-15T12:09:59.505953Z"
+    }
+  },
+  {
+    "reference": "2501.00561v1",
+    "meta": {
+      "paper_id": "arxiv:2501.00561",
+      "source_id": "2501.00561",
+      "doi": "10.1063/5.0255859",
+      "title": "Characterization of Chromium Impurities in $\u03b2$-Ga$_2$O$_3$",
+      "page_url": "https://arxiv.org/abs/2501.00561v1",
+      "pdf_url": "https://arxiv.org/pdf/2501.00561v1",
+      "version": "v1",
+      "fetched_at": "2026-11-15T12:09:59.505969Z"
+    }
+  },
+  {
+    "reference": "2501.00534v2",
+    "meta": {
+      "paper_id": "arxiv:2501.00534",
+      "source_id": "2501.00534",
+      "doi": null,
+      "title": "Non-reciprocal neutral ferroelectric domain walls in BiFeO3",
+      "page_url": "https://arxiv.org/abs/2501.00534v2",
+      "pdf_url": "https://arxiv.org/pdf/2501.00534v2",
+      "version": "v2",
+      "fetched_at": "2026-11-15T12:09:59.505989Z"
+    }
+  }
+]

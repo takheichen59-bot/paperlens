@@ -1,0 +1,1735 @@
+{
+  "query": {
+    "query": "formal verification constraint solving",
+    "doi": null,
+    "author": null,
+    "venue": null,
+    "year_from": 2020,
+    "year_to": null,
+    "min_citations": null,
+    "open_access": null,
+    "target": 20,
+    "providers": [
+      "crossref",
+      "openalex",
+      "semantic_scholar"
+    ]
+  },
+  "providers": {
+    "crossref": {
+      "status": "EXECUTED",
+      "found": 20,
+      "total_reported": 177416
+    },
+    "openalex": {
+      "status": "EXECUTED",
+      "found": 20,
+      "total_reported": 275004
+    },
+    "semantic_scholar": {
+      "status": "FAILED_EXTERNAL",
+      "error": {
+        "code": "RATE_LIMITED",
+        "retryable": true,
+        "http_status": 429
+      }
+    },
+    "springer": {
+      "status": "NOT EXECUTED",
+      "reason": "MISSING_AUTHORIZED_API_KEY"
+    },
+    "elsevier": {
+      "status": "NOT EXECUTED",
+      "reason": "MISSING_AUTHORIZED_API_KEY"
+    }
+  },
+  "raw_count": 40,
+  "deduplicated": 40,
+  "papers": [
+    {
+      "paper_id": "doi:10.2139/ssrn.449420",
+      "doi": "10.2139/ssrn.449420",
+      "title": "The Supremacy Clause as a Constraint on Federal Power",
+      "authors": [
+        {
+          "name": "Bradford R. Clark",
+          "orcid": "https://orcid.org/0009-0005-3061-477X"
+        }
+      ],
+      "venue": null,
+      "year": 2020,
+      "citation_count": 1,
+      "is_open_access": null,
+      "abstract": "Today, it is widely accepted that the Constitution authorizes courts to review and invalidate state laws that conflict with federal statutes. At the same time, prominent commentators and even some judges maintain that courts should not seriously review the constitutionality of federal statutes alleged to exceed the scope of Congress' enumerated powers. In their view, the constitutional structure protects the states (and thereby reduces the need for judicial review of federal power), but establishes no comparable safeguards to deter states from interfering with federal prerogatives. Contrary to this position, there is an express textual basis for judicial review of federal statutes alleged to exceed Congress' enumerated powers. The Supremacy Clause establishes a rule of decision for courts adjudicating the rights and duties of parties under both state and federal law. Under our federal system, the States possess sovereignty concurrent with that of the Federal Government, subject only to limitations imposed by the Supremacy Clause. The Clause, in turn, designates as the supreme Law of the Land only those Laws of the United States . . . made in Pursuance of the Constitution. If a federal statute satisfies this condition, courts must apply the statute notwithstanding contrary state law. If the federal statute fails this condition, however, it does not qualify as the supreme Law of the Land and courts remain free to apply state law. Thus, in order to apply the Supremacy Clause, courts must necessarily consider and resolve challenges to the constitutionality of federal statutes. The text, history, and structure of the Constitution confirm that the Supremacy Clause authorizes judicial review of federal statutes alleged to exceed the scope of federal power. The Founders considered three alternative mechanisms for resolving conflicts between state and federal law: coercive military force, congressional power to negative state laws, and adjudication under the Supremacy Clause. The decision to enlist courts - rather than Congress or the President - indicates that the Founders preferred to treat conflicts between state and federal law as judicial, rather than political questions. In addition, by expressly conditioning the supremacy of federal statutes on their constitutionality, the Supremacy Clause reassured the states that courts (both federal and state) would keep the federal government within the bounds of its assigned powers. Thus, in effect, the Clause reserves all remaining powers to the states, or to the people. These conclusions find support in the Supreme Court's early invocation of the Supremacy Clause to explain judicial review of federal statutes in cases like McCulloch v. Maryland and Gibbons v. Ogden.",
+      "source_url": "https://doi.org/10.2139/ssrn.449420",
+      "fulltext_links": [],
+      "references": [
+        "10.1017/9781108381277.062"
+      ],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.2139/ssrn.449420",
+          "retrieved_at": "2026-11-16T13:54:52.666394+00:00",
+          "citation_count": 1,
+          "venue": null,
+          "year": 2020
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.4208/jcm.2009.09-m2852",
+      "doi": "10.4208/jcm.2009.09-m2852",
+      "title": "On a Moving Mesh Method for Solving Partial Integro-Differential Equations",
+      "authors": [
+        {
+          "name": "Jingtang Ma, Yingjun Jiang & Kaili Xiang",
+          "orcid": null
+        }
+      ],
+      "venue": "Journal of Computational Mathematics",
+      "year": 2021,
+      "citation_count": 16,
+      "is_open_access": null,
+      "abstract": "This paper develops and analyzes a moving mesh finite difference method for solving partial integro-differential equations. First, the time-dependent mapping of the coordinate transformation is approximated by a piecewise quadratic polynomial in space and a piecewise linear function in time. Then, an efficient method to discretize the memory term of the equation is designed using the moving mesh approach. In each time slice, a simple piecewise constant approximation of the integrand is used, and thus a quadrature is constructed for the memory term. The central finite difference scheme for space and the backward Euler scheme for time are used. The paper proves that the accumulation of the quadrature error is uniformly bounded and that the convergence of the method is second order in space and first order in time. Numerical experiments are carried out to confirm the theoretical predictions.",
+      "source_url": "https://doi.org/10.4208/jcm.2009.09-m2852",
+      "fulltext_links": [
+        {
+          "url": "http://www.global-sci.org/index.php/JCM/article/download/11961/23843",
+          "kind": "pdf",
+          "access": "UNKNOWN",
+          "license": null
+        }
+      ],
+      "references": [],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.4208/jcm.2009.09-m2852",
+          "retrieved_at": "2026-11-16T13:54:52.666484+00:00",
+          "citation_count": 16,
+          "venue": "Journal of Computational Mathematics",
+          "year": 2021
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.6000/1927-5129.2012.08.02.65",
+      "doi": "10.6000/1927-5129.2012.08.02.65",
+      "title": "Dosimetric Evaluation and Verification of External Beam 3-D Treatment Plans in Humanoid Phantom Using Thermoluminescent Dosimeters (TLDs)",
+      "authors": [
+        {
+          "name": "Rizwana Siddique",
+          "orcid": null
+        },
+        {
+          "name": "Zaheer Uddin",
+          "orcid": null
+        },
+        {
+          "name": "Muzaffar Hussain",
+          "orcid": null
+        }
+      ],
+      "venue": "Journal of Basic &amp; Applied Sciences",
+      "year": 2021,
+      "citation_count": 2,
+      "is_open_access": null,
+      "abstract": "Dosimetric Evaluation &amp; Verification Of External Beam 3-D Treatment Plans In Humanoid Phantom have been carried out. In this study male anthromorphic phantom, model no.702 D, manufactured by Atom Ltd has been used. The plan was delivered to phantom and TLD- 100 was placed in cavities to evaluate and verify the dose delivered by implementing 3D treatment plans. TLD 100 was calibrated using SIEMENS PRIMUS PLUS Linear Accelerator with calibrated 6 MV X ray beam. We chose phantom skull, abdomen and pelvis region for making treatment plans and then doses by treatment plans have been verified by TLDs. 4%, 3.5% and 3% variation in the results was found for skull, pelvis and abdomen region respectively which is within the safe limit of accuracy i-e from 3% to 5 %. Before working with TLDs, it has also been found that thermoluminescent dosimeters were showing the linear response and results are reproducible for the dose range from 50 cGy to 200 cGy. This study has been performed at Karachi Institute of Radiotherapy and Nuclear Medicine (KIRAN) during the year 2010-2011.",
+      "source_url": "https://doi.org/10.6000/1927-5129.2012.08.02.65",
+      "fulltext_links": [
+        {
+          "url": "https://setpublisher.com/pms/index.php/jbas/article/download/896/797",
+          "kind": "pdf",
+          "access": "UNKNOWN",
+          "license": null
+        }
+      ],
+      "references": [
+        "10.1016/0360-3016(80)90022-x",
+        "10.1259/0007-1285-55-651-217",
+        "10.1201/9781420012026",
+        "10.1093/oxfordjournals.rpd.a006720",
+        "10.1016/j.radmeas.2007.01.003",
+        "10.1016/0969-8043(93)90188-g",
+        "10.1088/0022-3727/11/4/020",
+        "10.1016/s0958-3947(02)00235-2",
+        "10.1088/0022-3727/23/5/016",
+        "10.1088/0031-9155/40/7/004",
+        "10.1118/1.597396"
+      ],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.6000/1927-5129.2012.08.02.65",
+          "retrieved_at": "2026-11-16T13:54:52.666604+00:00",
+          "citation_count": 2,
+          "venue": "Journal of Basic &amp; Applied Sciences",
+          "year": 2021
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.1002/9781405198431.wbeal0430",
+      "doi": "10.1002/9781405198431.wbeal0430",
+      "title": "Formal Models of Bilingual Speech Production",
+      "authors": [
+        {
+          "name": "Daan Hermans",
+          "orcid": null
+        }
+      ],
+      "venue": "The Encyclopedia of Applied Linguistics",
+      "year": 2026,
+      "citation_count": 2,
+      "is_open_access": null,
+      "abstract": "Abstract How do bilinguals manage to produce words in the language in which they intend to speak? This is a puzzling question that has occupied many researchers working in the field of bilingual word production.",
+      "source_url": "https://doi.org/10.1002/9781405198431.wbeal0430",
+      "fulltext_links": [
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781405198431.wbeal0430",
+          "kind": "pdf",
+          "access": "UNKNOWN",
+          "license": null
+        },
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/full-xml/10.1002/9781405198431.wbeal0430",
+          "kind": "xml",
+          "access": "UNKNOWN",
+          "license": null
+        }
+      ],
+      "references": [
+        "10.1016/j.jneuroling.2006.10.003",
+        "10.1080/01690960801916188",
+        "10.1016/j.brainres.2007.01.137"
+      ],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1002/9781405198431.wbeal0430",
+          "retrieved_at": "2026-11-16T13:54:52.666743+00:00",
+          "citation_count": 2,
+          "venue": "The Encyclopedia of Applied Linguistics",
+          "year": 2026
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.12802/relime.13.1633",
+      "doi": "10.12802/relime.13.1633",
+      "title": "RAZONAMIENTO CONFIGURAL Y PROCEDIMIENTOS DE VERIFICACIÓN EN CONTEXTO GEOMÉTRICO",
+      "authors": [
+        {
+          "name": "Juan Prior Martínez",
+          "orcid": "https://orcid.org/0000-0001-8734-6407"
+        },
+        {
+          "name": "Germán Torregrosa Gironés",
+          "orcid": "https://orcid.org/0000-0002-2509-2031"
+        }
+      ],
+      "venue": "Revista Latinoamericana de Investigación en Matemática Educativa",
+      "year": 2023,
+      "citation_count": 6,
+      "is_open_access": null,
+      "abstract": "El objetivo de este estudio es caracterizar los procesos involucrados en la demostración matemática, en el contexto geométrico y desde una perspectiva cognitiva. En particular, el estudio se centra en la caracterización de la interacción entre los procesos de razonamiento y los procedimientos de verificación que utilizan alumnos de secundaria en la resolución de problemas de geometría en contexto de lápiz y papel. Los resultados muestran que la utilización de los distintos procedimientos de verificación para establecer la verdad de una proposición se relaciona con los distintos desenlaces del razonamiento en los problemas que demandan una demostración.",
+      "source_url": "https://doi.org/10.12802/relime.13.1633",
+      "fulltext_links": [
+        {
+          "url": "https://relime.org/index.php/relime/article/download/216/184",
+          "kind": "pdf",
+          "access": "UNKNOWN",
+          "license": null
+        }
+      ],
+      "references": [],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.12802/relime.13.1633",
+          "retrieved_at": "2026-11-16T13:54:52.666808+00:00",
+          "citation_count": 6,
+          "venue": "Revista Latinoamericana de Investigación en Matemática Educativa",
+          "year": 2023
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.13051/ee:doc/voltfrvf0870504a1d",
+      "doi": "10.13051/ee:doc/voltfrvf0870504a1d",
+      "title": "Formal complaint by Charles Ambroise Guillemot d’Alby, Tuesday, 12 June 1736 [voltfrVF0870504a1d]",
+      "authors": [],
+      "venue": "Electronic Enlightenment Scholarly Edition of Correspondence",
+      "year": 2025,
+      "citation_count": 0,
+      "is_open_access": null,
+      "abstract": "",
+      "source_url": "https://doi.org/10.13051/ee:doc/voltfrvf0870504a1d",
+      "fulltext_links": [],
+      "references": [],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.13051/ee:doc/voltfrvf0870504a1d",
+          "retrieved_at": "2026-11-16T13:54:52.666833+00:00",
+          "citation_count": 0,
+          "venue": "Electronic Enlightenment Scholarly Edition of Correspondence",
+          "year": 2025
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.13051/ee:doc/voltfrvf1240455a1d",
+      "doi": "10.13051/ee:doc/voltfrvf1240455a1d",
+      "title": "Formal complaint against Mme Denis by Joseph Marie Balleydier, 1 January 1774 [voltfrVF1240455a1d]",
+      "authors": [],
+      "venue": "Electronic Enlightenment Scholarly Edition of Correspondence",
+      "year": 2025,
+      "citation_count": 0,
+      "is_open_access": null,
+      "abstract": "",
+      "source_url": "https://doi.org/10.13051/ee:doc/voltfrvf1240455a1d",
+      "fulltext_links": [],
+      "references": [],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.13051/ee:doc/voltfrvf1240455a1d",
+          "retrieved_at": "2026-11-16T13:54:52.666854+00:00",
+          "citation_count": 0,
+          "venue": "Electronic Enlightenment Scholarly Edition of Correspondence",
+          "year": 2025
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.13051/ee:doc/voltfrvf1240457a1d",
+      "doi": "10.13051/ee:doc/voltfrvf1240457a1d",
+      "title": "Formal complaint and claim against Mme Denis by Joseph Marie Balleydier, Saturday, 19 February 1774 [voltfrVF1240457a1d]",
+      "authors": [],
+      "venue": "Electronic Enlightenment Scholarly Edition of Correspondence",
+      "year": 2025,
+      "citation_count": 0,
+      "is_open_access": null,
+      "abstract": "",
+      "source_url": "https://doi.org/10.13051/ee:doc/voltfrvf1240457a1d",
+      "fulltext_links": [],
+      "references": [],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.13051/ee:doc/voltfrvf1240457a1d",
+          "retrieved_at": "2026-11-16T13:54:52.666894+00:00",
+          "citation_count": 0,
+          "venue": "Electronic Enlightenment Scholarly Edition of Correspondence",
+          "year": 2025
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.13051/ee:doc/voltfrvf1200485c1d",
+      "doi": "10.13051/ee:doc/voltfrvf1200485c1d",
+      "title": "Formal statement of complaint by Jean François Dalloz and Jean Amédée Poramy, Sunday, 17 June 1770 [voltfrVF1200485c1d]",
+      "authors": [],
+      "venue": "Electronic Enlightenment Scholarly Edition of Correspondence",
+      "year": 2025,
+      "citation_count": 0,
+      "is_open_access": null,
+      "abstract": "",
+      "source_url": "https://doi.org/10.13051/ee:doc/voltfrvf1200485c1d",
+      "fulltext_links": [],
+      "references": [],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.13051/ee:doc/voltfrvf1200485c1d",
+          "retrieved_at": "2026-11-16T13:54:52.666913+00:00",
+          "citation_count": 0,
+          "venue": "Electronic Enlightenment Scholarly Edition of Correspondence",
+          "year": 2025
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.15556/ijsim.01.02.005",
+      "doi": "10.15556/ijsim.01.02.005",
+      "title": "How Turkish Banks Benefit From Social Media: Analyzing Banks Formal Links",
+      "authors": [
+        {
+          "name": "Eda Yasa Özeltürkay",
+          "orcid": null
+        },
+        {
+          "name": "Burcu Mucan",
+          "orcid": null
+        }
+      ],
+      "venue": "International Journal of Strategic Innovative Marketing",
+      "year": 2114,
+      "citation_count": 0,
+      "is_open_access": null,
+      "abstract": "",
+      "source_url": "https://doi.org/10.15556/ijsim.01.02.005",
+      "fulltext_links": [],
+      "references": [],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.15556/ijsim.01.02.005",
+          "retrieved_at": "2026-11-16T13:54:52.666936+00:00",
+          "citation_count": 0,
+          "venue": "International Journal of Strategic Innovative Marketing",
+          "year": 2114
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.1075/prag.23.2.01bla",
+      "doi": "10.1075/prag.23.2.01bla",
+      "title": "Constraint factors in the formulation of questions in conflictual discourse",
+      "authors": [
+        {
+          "name": "José Luis Blas Arroyo",
+          "orcid": null
+        }
+      ],
+      "venue": "Pragmatics. Quarterly Publication of the International Pragmatics Association (IPrA)",
+      "year": 2022,
+      "citation_count": 1,
+      "is_open_access": null,
+      "abstract": "This paper presents a study of the constraint factors that condition the form and functions of questions in a corpus composed of several face-to-face election debates that took place in Spain during different election campaigns. Some of these factors are of a distributional nature, such as the position of the questions in the politician’s turns at talk, with final positions and fragments of simultaneous speech being the most favourable contexts for the formulation of these utterances. Questions are also favoured by stylistic and rhetorical forces, such as those which lead the speaker to repeat questions or question formats within wider inquisitive sequences, which represent almost half the corpus. In addition, these communicative units are also influenced by institutional factors, such as the political role played by the candidates in the debates (government/opposition), as well as the political expectations and identities that the politicians seek to enhance, and which may vary in different moments of the election campaign.",
+      "source_url": "https://doi.org/10.1075/prag.23.2.01bla",
+      "fulltext_links": [],
+      "references": [
+        "10.1525/jlin.1994.4.2.194",
+        "10.1075/pbns.135",
+        "10.1207/s15327973rlsi34-2_1",
+        "10.25115/oralia.v12i.8130",
+        "10.14198/dissoc.4.4.3",
+        "10.1177/1461445608100943",
+        "10.1515/text.1.1993.13.2.159",
+        "10.1017/cbo9780511613623",
+        "10.1016/j.pragma.2007.08.007",
+        "10.1016/0378-2166(95)00052-6",
+        "10.1093/acprof:oso/9780195306897.001.0001",
+        "10.1075/jlp.7.1.05smi",
+        "10.1016/0378-2166(94)90101-5",
+        "10.12795/ph.2012.v26.i01.07",
+        "10.1177/0957926501012004003",
+        "10.1016/s0378-2166(02)00072-3",
+        "10.1207/s15327973rlsi2801_1",
+        "10.1075/pb.vii.4",
+        "10.1016/s0378-2166(99)00056-9",
+        "10.1017/s0954394501131042",
+        "10.1515/jplr.2005.1.2.193",
+        "10.4135/9781452229133",
+        "10.1177/1461445607085581",
+        "10.1177/1461445607085592",
+        "10.1177/1461445608100944",
+        "10.1177/1461445608100941"
+      ],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1075/prag.23.2.01bla",
+          "retrieved_at": "2026-11-16T13:54:52.667049+00:00",
+          "citation_count": 1,
+          "venue": "Pragmatics. Quarterly Publication of the International Pragmatics Association (IPrA)",
+          "year": 2022
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.1075/prag.23.2.02che",
+      "doi": "10.1075/prag.23.2.02che",
+      "title": "Children’s formal division of labor in requests",
+      "authors": [
+        {
+          "name": "Yupin Chen",
+          "orcid": null
+        }
+      ],
+      "venue": "Pragmatics. Quarterly Publication of the International Pragmatics Association (IPrA)",
+      "year": 2022,
+      "citation_count": 1,
+      "is_open_access": null,
+      "abstract": "This study aims to shed a light on children’s pragmatic development by examining Mandarin-speaking children’s requests in interactions with their parents. It is found that children between 24 and 36 months old appear to use various request forms, primarily with simple imperatives and WANT statements. A closer examination reveals that children prefer to use simple imperatives in activity-based interactions while both primary forms are found in unstructured daily conversations. The findings suggest that children’s preference for simple imperatives may be driven by their awareness of parents’ cooperativeness in interactional situations. It is thus speculated that simple imperatives and WANT statements may be children’s two primal request forms, but they may pivot on one request form when the situation is right.",
+      "source_url": "https://doi.org/10.1075/prag.23.2.02che",
+      "fulltext_links": [],
+      "references": [
+        "10.1177/014272379601604803",
+        "10.1177/014272379901905602",
+        "10.1016/s0378-2166(03)00055-9",
+        "10.1016/0271-5309(81)90010-0",
+        "10.1017/s0047404500006849",
+        "10.1016/b978-0-12-241950-8.50015-0",
+        "10.1016/b978-0-08-024696-3.50064-8",
+        "10.1016/0378-2166(90)90085-r",
+        "10.1177/014272379001002905",
+        "10.1017/s030500090000088x",
+        "10.2307/2529309",
+        "10.1111/j.1467-9507.1993.tb00008.x",
+        "10.1016/b978-0-12-241950-8.50016-2",
+        "10.1111/j.1467-9507.1992.tb00135.x",
+        "10.1080/03634528009378424",
+        "10.1016/s0378-2166(02)00144-3"
+      ],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1075/prag.23.2.02che",
+          "retrieved_at": "2026-11-16T13:54:52.667128+00:00",
+          "citation_count": 1,
+          "venue": "Pragmatics. Quarterly Publication of the International Pragmatics Association (IPrA)",
+          "year": 2022
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.1075/prag.24.4.05hal",
+      "doi": "10.1075/prag.24.4.05hal",
+      "title": "The discourse marker znači in Serbian",
+      "authors": [
+        {
+          "name": "Sabina Halupka-Rešetar",
+          "orcid": "https://orcid.org/0000-0003-2373-0797"
+        },
+        {
+          "name": "Biljana Radic-Bojanic",
+          "orcid": null
+        }
+      ],
+      "venue": "Pragmatics. Quarterly Publication of the International Pragmatics Association (IPrA)",
+      "year": 2022,
+      "citation_count": 1,
+      "is_open_access": null,
+      "abstract": "Among the rare treatments of discourse markers in South Slavic languages (Miškovi? 2001, 2003; Fielder 2008; Dedai? and Miškovi?-Lukovi? 2010; Premilovac 2010; Miškovi?-Lukovi? and Dedai? 2012), the Serbian discourse marker zna?i, evolved from the lexical verb zna?iti (‘to mean’), has so far gone unnoticed. Based on a corpus of approximately 6.5 hours of recorded semi-formal student-teacher conversations, the paper analyzes the pragmatic aspects of the discourse marker zna?i. The key questions that are addressed are: (a) what discursive environments zna?i occurs in; and more importantly, (b) what pragmatic effects the speakers intend to achieve by using this discourse marker. The pragmatics of zna?i is explored in order to establish whether in each individual case it is used (a) as a marker of various types of reformulation, such as expansion or compression, (b) as a means of concluding, or (c) whether it serves an interactional function.",
+      "source_url": "https://doi.org/10.1075/prag.24.4.05hal",
+      "fulltext_links": [],
+      "references": [
+        "10.1515/9783110907582",
+        "10.1017/cbo9780511805226",
+        "10.1057/9780230319899",
+        "10.1016/j.pragma.2004.09.002",
+        "10.1075/pbns.197",
+        "10.1075/prag.6.2.03fra",
+        "10.1017/s0022226700016601",
+        "10.46584/lm.v6i2.180",
+        "10.1075/prag.11.1.02mis",
+        "10.1075/pbns.197.06mis",
+        "10.1016/j.pragma.2012.06.013",
+        "10.1016/s0378-2166(96)00086-0",
+        "10.1075/pbns.197.07pre",
+        "10.1017/cbo9780511611841",
+        "10.1016/s0024-3841(96)90026-1"
+      ],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1075/prag.24.4.05hal",
+          "retrieved_at": "2026-11-16T13:54:52.667344+00:00",
+          "citation_count": 1,
+          "venue": "Pragmatics. Quarterly Publication of the International Pragmatics Association (IPrA)",
+          "year": 2022
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.4067/s0716-09172015000100004",
+      "doi": "10.4067/s0716-09172015000100004",
+      "title": "The multi-step homotopy analysis method for solving the Jaulent-Miodek equations",
+      "authors": [
+        {
+          "name": "Mohammad Zurigat",
+          "orcid": null
+        },
+        {
+          "name": "Asad A. Freihat",
+          "orcid": null
+        },
+        {
+          "name": "Ali H. Handam",
+          "orcid": null
+        }
+      ],
+      "venue": "Proyecciones (Antofagasta)",
+      "year": 2025,
+      "citation_count": 2,
+      "is_open_access": null,
+      "abstract": "In this work, the multi-step homotopy analysis method (MHAM) is applied to obtain the explicit analytical solutions for system of the Jaulent Miodek equations. The proposed scheme is only a simple modification of the homotopy analysis method (HAM), in which it is treated as an algorithm in a sequence of small intervals (i.e. time step) for finding accurate approximate solutions to the corresponding problems. Thus, it is valid for both weakly and strongly nonlinear problems. this work verifies the validity and the potential of the MHAM for the study of nonlinear systems. A comparative study between the new algorithm and the exact solution is presented graphically. convenient.",
+      "source_url": "https://doi.org/10.4067/s0716-09172015000100004",
+      "fulltext_links": [
+        {
+          "url": "https://www.revistaproyecciones.cl/index.php/proyecciones/article/download/1264/1136",
+          "kind": "pdf",
+          "access": "UNKNOWN",
+          "license": null
+        }
+      ],
+      "references": [],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.4067/s0716-09172015000100004",
+          "retrieved_at": "2026-11-16T13:54:52.667402+00:00",
+          "citation_count": 2,
+          "venue": "Proyecciones (Antofagasta)",
+          "year": 2025
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.11600/1692715x.1322241014",
+      "doi": "10.11600/1692715x.1322241014",
+      "title": "Jóvenes y política: de la participación formal a la movilización informal",
+      "authors": [
+        {
+          "name": "Ana María Arias-Cardona",
+          "orcid": null
+        },
+        {
+          "name": "Sara Victoria Alvarado",
+          "orcid": null
+        }
+      ],
+      "venue": "Revista Latinoamericana de Ciencias Sociales, Niñez y Juventud",
+      "year": 2025,
+      "citation_count": 12,
+      "is_open_access": null,
+      "abstract": "(descriptivo): Este artículo de revisión de tema está estructurado en dos secciones: en la primera exponemos diversas perspectivas desde las que realizamos el acercamiento teórico al concepto “juventud”, agrupándolas en tres: bio-psicoevolutiva, sociohistórica y cultural- política. En la segunda sintetizamos el estado del arte consolidado a partir de las categorías “jóvenes” y “política”; para ello retomamos investigaciones relacionadas con jóvenes y política formal a través de sus expresiones convencionales (participación, afliación a partidos, conducta de voto, etc.), y estudios sobre jóvenes y política informal en los que se analizan acciones alternativas (movimientos sociales, acción colectiva, etc.) Finalmente proponemos comprender a los sujetos jóvenes desde la transdisciplinariedad, la diversidad y el contexto, trascendiendo miradas adultocéntricas que los señalan de “apáticos y desinteresados”.",
+      "source_url": "https://doi.org/10.11600/1692715x.1322241014",
+      "fulltext_links": [
+        {
+          "url": "http://revistaumanizales.cinde.org.co/rlcsnj/index.php/Revista-Latinoamericana/article/download/1928/568",
+          "kind": "pdf",
+          "access": "UNKNOWN",
+          "license": null
+        }
+      ],
+      "references": [],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.11600/1692715x.1322241014",
+          "retrieved_at": "2026-11-16T13:54:52.667463+00:00",
+          "citation_count": 12,
+          "venue": "Revista Latinoamericana de Ciencias Sociales, Niñez y Juventud",
+          "year": 2025
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.4067/s0716-09172015000400001",
+      "doi": "10.4067/s0716-09172015000400001",
+      "title": "The multi-step homotopy analysis method for solving fractional-order model for HIV infection of CD4+T cells",
+      "authors": [
+        {
+          "name": "Alí H. Handam",
+          "orcid": null
+        },
+        {
+          "name": "Asad A. Freihat",
+          "orcid": null
+        },
+        {
+          "name": "Mohammad Zurigat",
+          "orcid": null
+        }
+      ],
+      "venue": "Proyecciones (Antofagasta)",
+      "year": 2025,
+      "citation_count": 0,
+      "is_open_access": null,
+      "abstract": "HIV infection of CD4+T cells is one of the causes of health problems and continues to be one of the significant health challenges. This paper presents approximate analytical solutions to the model of HIV infection of CD4+T cells of fractional order using the multi-step ho-motopy analysis method (MHAM). The proposed scheme is only a simple modification of the homotopy analysis method (HAM), in which it is treated as an algorithm in a sequence of small intervals (i.e. time step) for finding accurate approximate solutions to the corresponding problems. The fractional derivatives are described in the Caputo sense. A comparative study between the new algorithm and the classical Runge-Kutta method is presented in the case of integer-order derivatives. The solutions obtained are also presented graphically.",
+      "source_url": "https://doi.org/10.4067/s0716-09172015000400001",
+      "fulltext_links": [
+        {
+          "url": "https://www.revistaproyecciones.cl/index.php/proyecciones/article/download/1239/952",
+          "kind": "pdf",
+          "access": "UNKNOWN",
+          "license": null
+        }
+      ],
+      "references": [],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.4067/s0716-09172015000400001",
+          "retrieved_at": "2026-11-16T13:54:52.667516+00:00",
+          "citation_count": 0,
+          "venue": "Proyecciones (Antofagasta)",
+          "year": 2025
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.7862/re.2015.33",
+      "doi": "10.7862/re.2015.33",
+      "title": "METROLOGICAL VERIFICATION OF CYBERPHYSICAL SYSTEMS",
+      "authors": [
+        {
+          "name": "Olha OLESKIV",
+          "orcid": null
+        },
+        {
+          "name": "Ihor MYKYTYN",
+          "orcid": null
+        }
+      ],
+      "venue": "Advances in IT and Electrical Engineering",
+      "year": 2022,
+      "citation_count": 0,
+      "is_open_access": null,
+      "abstract": "W artykule opisano specyfikę systemów cyber-fizycznych i ich komponentów. Przedstawiono schemat blokowy, łączący przyrząd pomiarowy wielkości elektrycznych, przyrząd pomiarowy wielkości nieelektrycznych oraz czujniki z interfejsem danych z systemem cyberfizycznym. Przedstawiono klasyfikację systemów według typu sygnału wyjściowego czujników. Na podstawie klasyfikacji czujników autorzy doszli do wniosku, że systemy cyber-fizyczne najlepiej współpracują z czujnikami inteligentnymi. Biorąc pod uwagę wyniki analizy cech systemów cyber-fizycznych i ich komponentów, zaproponowano wielopoziomową weryfikację metrologiczną tych systemów. Zgodnie z proponowanym algorytmem elementy systemów cyberfizycznych mogą być weryfikowane na wniosek jakiegokolwiek komponentu, podsystemu lub systemu jako całości. Również człowiek może zainicjować proces testowania metrologicznego, jeśli istnieje podejrzenie nieprawidłowej pracy lub nadszedł okres rutynowej kontroli systemów cyber-fizycznych.",
+      "source_url": "https://doi.org/10.7862/re.2015.33",
+      "fulltext_links": [
+        {
+          "url": "https://89.188.199.120/aitee/article/download/573/442",
+          "kind": "pdf",
+          "access": "UNKNOWN",
+          "license": null
+        }
+      ],
+      "references": [],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.7862/re.2015.33",
+          "retrieved_at": "2026-11-16T13:54:52.667571+00:00",
+          "citation_count": 0,
+          "venue": "Advances in IT and Electrical Engineering",
+          "year": 2022
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.1126/science.caredit.a1600048",
+      "doi": "10.1126/science.caredit.a1600048",
+      "title": "Solving scientific mysteries as a medical examiner",
+      "authors": [],
+      "venue": "AAAS Articles DO Group",
+      "year": 2021,
+      "citation_count": 0,
+      "is_open_access": null,
+      "abstract": "",
+      "source_url": "https://doi.org/10.1126/science.caredit.a1600048",
+      "fulltext_links": [],
+      "references": [],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.1126/science.caredit.a1600048",
+          "retrieved_at": "2026-11-16T13:54:52.667588+00:00",
+          "citation_count": 0,
+          "venue": "AAAS Articles DO Group",
+          "year": 2021
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.18574/nyu/9780814788233.003.0003",
+      "doi": "10.18574/nyu/9780814788233.003.0003",
+      "title": "3. Formal Barriers to Citizenship",
+      "authors": [],
+      "venue": "Violence Against Latina Immigrants",
+      "year": 2020,
+      "citation_count": 0,
+      "is_open_access": null,
+      "abstract": "",
+      "source_url": "https://doi.org/10.18574/nyu/9780814788233.003.0003",
+      "fulltext_links": [
+        {
+          "url": "https://www.degruyter.com/document/doi/10.18574/nyu/9780814788233.003.0003/xml",
+          "kind": "xml",
+          "access": "UNKNOWN",
+          "license": null
+        }
+      ],
+      "references": [],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.18574/nyu/9780814788233.003.0003",
+          "retrieved_at": "2026-11-16T13:54:52.667607+00:00",
+          "citation_count": 0,
+          "venue": "Violence Against Latina Immigrants",
+          "year": 2020
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.18574/nyu/9780814771679.003.0008",
+      "doi": "10.18574/nyu/9780814771679.003.0008",
+      "title": "8. Frequencies of Transgression",
+      "authors": [
+        {
+          "name": "Jeffrey S. Juris",
+          "orcid": null
+        }
+      ],
+      "venue": "Radio Fields",
+      "year": 2020,
+      "citation_count": 2,
+      "is_open_access": null,
+      "abstract": "",
+      "source_url": "https://doi.org/10.18574/nyu/9780814771679.003.0008",
+      "fulltext_links": [
+        {
+          "url": "https://www.degruyter.com/document/doi/10.18574/nyu/9780814771679.003.0008/xml",
+          "kind": "xml",
+          "access": "UNKNOWN",
+          "license": null
+        }
+      ],
+      "references": [],
+      "sources": [
+        {
+          "provider": "crossref",
+          "source_id": "10.18574/nyu/9780814771679.003.0008",
+          "retrieved_at": "2026-11-16T13:54:52.667629+00:00",
+          "citation_count": 2,
+          "venue": "Radio Fields",
+          "year": 2020
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.1007/978-3-030-75333-7_7",
+      "doi": "10.1007/978-3-030-75333-7_7",
+      "title": "Formally Verified Transformation of Non-binary Constraints into Binary Constraints",
+      "authors": [
+        {
+          "name": "Catherine Dubois",
+          "orcid": "https://orcid.org/0000-0002-9477-8109"
+        }
+      ],
+      "venue": "Lecture notes in computer science",
+      "year": 2021,
+      "citation_count": 1,
+      "is_open_access": true,
+      "abstract": "",
+      "source_url": "https://doi.org/10.1007/978-3-030-75333-7_7",
+      "fulltext_links": [
+        {
+          "url": "https://arxiv.org/pdf/2009.00583",
+          "kind": "pdf",
+          "access": "OPEN_ACCESS",
+          "license": null
+        }
+      ],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W3084180761",
+          "retrieved_at": "2026-11-16T13:54:52.448065+00:00",
+          "citation_count": 1,
+          "venue": "Lecture notes in computer science",
+          "year": 2021
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.4230/lipics.cp.2026.24",
+      "doi": "10.4230/lipics.cp.2026.24",
+      "title": "Formally Verified Certification of Constraint Programming Proofs",
+      "authors": [
+        {
+          "name": "Maarten Flippo",
+          "orcid": "https://orcid.org/0009-0005-5333-2767"
+        },
+        {
+          "name": "Konstantin Sidorov",
+          "orcid": "https://orcid.org/0009-0009-0655-4200"
+        },
+        {
+          "name": "Tip ten Brink",
+          "orcid": "https://orcid.org/0000-0002-3090-6538"
+        },
+        {
+          "name": "Clément Pit-Claudel",
+          "orcid": "https://orcid.org/0000-0002-1900-3901"
+        },
+        {
+          "name": "Emir Demirović",
+          "orcid": "https://orcid.org/0000-0003-1587-5582"
+        }
+      ],
+      "venue": "DROPS (Schloss Dagstuhl – Leibniz Center for Informatics)",
+      "year": 2026,
+      "citation_count": 0,
+      "is_open_access": true,
+      "abstract": "As constraint programming (CP) solvers are increasingly used in critical applications, there is a growing need for certification of solver claims of infeasibility and optimality. Recent work has demonstrated that certification is feasible for CP solvers using a multi-stage proof-generation framework; however, the underlying proof system was informal, and verification relied on translation into an external proof format, impacting the trustworthiness. We address these issues by formalising a rigorous, solver-agnostic framework for certifying CP solver claims. We present a formal definition of DRCP, a proof system for CP over integer domains that captures core solver operations, including conflict analysis and heterogeneous propagation, by modular inference rules with precise semantics. We also develop FznDrcpCheck, a formally verified proof checker in Rocq that validates DRCP proofs directly against FlatZinc models. Our evaluation shows that our framework enables practical certification across various benchmarks with negligible overhead during solving and modest proof-checking costs.",
+      "source_url": "https://doi.org/10.4230/lipics.cp.2026.24",
+      "fulltext_links": [
+        {
+          "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol379-cp2026/LIPIcs.CP.2026.24/LIPIcs.CP.2026.24.pdf",
+          "kind": "pdf",
+          "access": "OPEN_ACCESS",
+          "license": "cc-by"
+        }
+      ],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W7168143271",
+          "retrieved_at": "2026-11-16T13:54:52.448514+00:00",
+          "citation_count": 0,
+          "venue": "DROPS (Schloss Dagstuhl – Leibniz Center for Informatics)",
+          "year": 2026
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.5281/zenodo.22139580",
+      "doi": "10.5281/zenodo.22139580",
+      "title": "Temporal Logic Verification of Smart Contracts using Symbolic Execution with Constraint Solving",
+      "authors": [
+        {
+          "name": "Jincheng Zhang",
+          "orcid": "https://orcid.org/0009-0001-6890-3076"
+        }
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026,
+      "citation_count": 0,
+      "is_open_access": true,
+      "abstract": "The increasing prevalence of smart contracts in decentralized applications necessitates robust methods for ensuring their correctness and security. Smart contracts, due to their inherent complexity and potential for subtle errors, pose a significant challenge for traditional verification techniques. This paper proposes a novel approach combining symbolic execution with constraint solving and temporal logic verification for the systematic analysis of smart contracts. The core idea is to systematically explore the execution paths of a smart contract using symbolic execution, identifying potential vulnerabilities and execution scenarios. Subsequently, temporal logic is applied to formally verify that the contract's behavior aligns with its intended specifications over time, capturing temporal constraints such as safety and liveness properties. This integrated framework provides a more comprehensive and reliable method for verifying smart contracts compared to relying solely on symbolic execution or temporal logic alone. The approach offers a structured methodology for detecting and mitigating risks associated with smart contract development.",
+      "source_url": "https://doi.org/10.5281/zenodo.22139580",
+      "fulltext_links": [],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W7204572376",
+          "retrieved_at": "2026-11-16T13:54:52.448630+00:00",
+          "citation_count": 0,
+          "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+          "year": 2026
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.1109/tcad.2020.3015441",
+      "doi": "10.1109/tcad.2020.3015441",
+      "title": "Constraint Solving for Synthesis and Verification of Threshold Logic Circuits",
+      "authors": [
+        {
+          "name": "Nian-Ze Lee",
+          "orcid": "https://orcid.org/0000-0002-8096-5595"
+        },
+        {
+          "name": "Jie-Hong Roland Jiang",
+          "orcid": "https://orcid.org/0000-0002-2279-4732"
+        }
+      ],
+      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+      "year": 2020,
+      "citation_count": 6,
+      "is_open_access": false,
+      "abstract": "Threshold logic (TL) circuits gain increasing attention due to their feasible realization with emerging technologies and strong bind to neural network applications. In this work, we devise techniques for automatic synthesis and verification of TL circuits based on constraint solving. For synthesis, we formulate a fundamental operation to collapse TL functions, and derive a necessary and sufficient condition of collapsibility for linear combination of two TL functions. An approach based on solving the subset sum problem is proposed for fast circuit transformation. For verification, we propose a procedure to convert a TL function to a multiplexer (MUX) tree and to pseudo-Boolean (PB) constraints for formal Boolean and PB reasoning, respectively. Experiments on synthesis show that the collapse operation further reduces gate counts of synthesized TL circuits by an average of 18%. Experiments on verification demonstrate good scalability of the MUX-based method for equivalence checking of synthesized TL circuits, and efficiency of PB constraint conversion in cases where the conjunctive normal form (CNF) formula conversion and MUX tree conversion suffer from memory explosion.",
+      "source_url": "https://doi.org/10.1109/tcad.2020.3015441",
+      "fulltext_links": [],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W3048670504",
+          "retrieved_at": "2026-11-16T13:54:52.448768+00:00",
+          "citation_count": 6,
+          "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+          "year": 2020
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.55452/1998-6688-2026-23-2-312-325",
+      "doi": "10.55452/1998-6688-2026-23-2-312-325",
+      "title": "FORMAL VERIFICATION OF DECISION TREE FAIRNESS AND ROBUSTNESS VIA SMT SOLVER",
+      "authors": [
+        {
+          "name": "A. Beishekeyev",
+          "orcid": "https://orcid.org/0009-0006-0845-4551"
+        },
+        {
+          "name": "Timur Umarov",
+          "orcid": "https://orcid.org/0009-0008-0044-7159"
+        }
+      ],
+      "venue": "Herald of Kazakh-British technical university",
+      "year": 2026,
+      "citation_count": 0,
+      "is_open_access": true,
+      "abstract": "As Artificial Intelligence systems are increasingly deployed in safety-critical domains such as healthcare and finance, ensuring their trustworthiness and compliance is paramount. While Deep Neural Networks have received significant attention in formal verification, traditional models such as Decision Trees, often preferred for their interpretability, cannot inherently enforce constraints after training for fairness and stability. This paper presents a novel, comprehensive approach for the formal verification of Decision Tree classifiers using Satisfiability Modulo Theories (SMT). We propose a robust translation scheme that converts trained decision trees into logical constraints, enabling constraint inference that guarantees demographic parity and local robustness at prediction time. We implement this framework by using the z3 SMT solver and validate it on widely recognized fairness benchmarks, including UCI Adult, German Credit, and Loan Approval datasets. Experimental results demonstrate that our constrained model effectively eliminates demographic parity violations with a marginal accuracy trade-off of less than 0.2%. This approach transforms the SMT solver from a simple diagnostic tool into a provably fair inference engine suitable for regulated industries.",
+      "source_url": "https://doi.org/10.55452/1998-6688-2026-23-2-312-325",
+      "fulltext_links": [
+        {
+          "url": "https://vestnik.kbtu.edu.kz/jour/article/download/2913/763",
+          "kind": "pdf",
+          "access": "OPEN_ACCESS",
+          "license": "cc-by"
+        }
+      ],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W7166337842",
+          "retrieved_at": "2026-11-16T13:54:52.449089+00:00",
+          "citation_count": 0,
+          "venue": "Herald of Kazakh-British technical university",
+          "year": 2026
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.23919/date58400.2024.10546556",
+      "doi": "10.23919/date58400.2024.10546556",
+      "title": "Using Formal Verification Methods for Optimization of Circuits Under External Constraints",
+      "authors": [
+        {
+          "name": "Daniel J. Grosse",
+          "orcid": "https://orcid.org/0000-0002-1490-6175"
+        },
+        {
+          "name": "Lucas Klemmer",
+          "orcid": "https://orcid.org/0000-0002-2571-1058"
+        },
+        {
+          "name": "Dominik Bonora",
+          "orcid": null
+        }
+      ],
+      "venue": "Design, Automation, and Test in Europe",
+      "year": 2024,
+      "citation_count": 3,
+      "is_open_access": false,
+      "abstract": "This paper targets the optimization of circuit netlists by eliminating redundant gates under given external constraints. Typical examples for external constraints – which can be viewed as external don't cares – are restrictions on input operands, instruction subsets used by a processor for specific applications, or limited operation modes of an integrated IP block. Targeting external don't cares presents a challenge because the optimization problem changes from a completely specified Boolean function to a Boolean relation. We propose an optimization approach that utilizes formal verification methods. We demonstrate how to formulate Property Checking (PC) and Equivalence Checking (EC) problems to determine if a gate is redundant under given external constraints. Essentially, the validity of up to four rules must be checked per gate. We show that these checks can be solved concurrently, resulting in faster overall optimization. We have implemented our approach as the tool Formal SYNthesis (FSYN). FSYN utilizes open-source tools to scale the solving of formal instances with available hardware resources. We demonstrate that our approach can achieve substantial reductions in the number of gates for combinational circuits under given external constraints.",
+      "source_url": "https://doi.org/10.23919/date58400.2024.10546556",
+      "fulltext_links": [],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W4401567941",
+          "retrieved_at": "2026-11-16T13:54:52.449199+00:00",
+          "citation_count": 3,
+          "venue": "Design, Automation, and Test in Europe",
+          "year": 2024
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "openalex:https://openalex.org/W3020935164",
+      "doi": null,
+      "title": "Formal Verification-based Design Model Repair",
+      "authors": [
+        {
+          "name": "Cheng‐Hao Cai",
+          "orcid": "https://orcid.org/0000-0001-6815-9091"
+        }
+      ],
+      "venue": "ResearchSpace (University of Auckland)",
+      "year": 2020,
+      "citation_count": 0,
+      "is_open_access": true,
+      "abstract": "In computer science, formal verification techniques can assist programmers in designing highly reliable and stable software. Different from traditional testing, which can only find existing bugs by observing a subset of program behaviours, formal verification can use rigorous mathematical reasoning to cover all program behaviours. In formal verification-based software engineering, specifications of software can be represented using design models with a set of required properties. The consistency and completeness of design models can be formally verified using rigorous logical reasoning techniques, so that potential faults can be detected at an abstract level. However, repairing faulty design models is usually a manual process, which requires considerable human effort and reduces the efficiency of software development. To solve this problem, in this thesis, we study automated design model repair techniques based on formal verification and a number of extra repair techniques. Our techniques derive from the B-method, model checking, constraint solving, machine learning and automatic programming. We use the B-method to specify design models as abstract machines. Faults in the abstract machines are detected using model checking techniques. To eliminate detected faults, we suggest three general-purpose repair operators, i.e., modification, deletion and insertion, for repairing state spaces of abstract machines. The repair operators can generate candidate repairs using constraint solving techniques. Moreover, machine learning techniques are used to select highquality repairs. Machine learners can acquire semantic features of abstract machines from their state spaces and then select repairs by comparing the repairs with acquired semantic features. Further, selected repairs may be refactored into simpler forms using automatic programming techniques. We have implemented the automated model repair techniques as the B-repair tool. B-repair can repair invariant satisfiability and goal reachability of abstract machines, which are two of the most important properties in the B-method. We have demonstrated the effectiveness of B-repair on a number of public datasets of abstract machines. Moreover, we have studied how B-repair impacts the quality of abstract machines using the ISO/IEC 25010 international standard of software quality. Our study indicates that automated B model repair is feasible and effective and can improve formal verification-based software development.",
+      "source_url": "https://hdl.handle.net/2292/50603",
+      "fulltext_links": [],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W3020935164",
+          "retrieved_at": "2026-11-16T13:54:52.449607+00:00",
+          "citation_count": 0,
+          "venue": "ResearchSpace (University of Auckland)",
+          "year": 2020
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.1007/978-3-031-75778-5_6",
+      "doi": "10.1007/978-3-031-75778-5_6",
+      "title": "What Is Formal Verification Without Specifications? A Survey on Mining LTL Specifications",
+      "authors": [
+        {
+          "name": "Daniel Neider",
+          "orcid": "https://orcid.org/0000-0001-9276-6342"
+        },
+        {
+          "name": "Rajarshi Roy",
+          "orcid": null
+        }
+      ],
+      "venue": "Lecture notes in computer science",
+      "year": 2024,
+      "citation_count": 11,
+      "is_open_access": true,
+      "abstract": "",
+      "source_url": "https://doi.org/10.1007/978-3-031-75778-5_6",
+      "fulltext_links": [
+        {
+          "url": "https://arxiv.org/pdf/2501.16274",
+          "kind": "pdf",
+          "access": "OPEN_ACCESS",
+          "license": "cc-by"
+        }
+      ],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W4404448311",
+          "retrieved_at": "2026-11-16T13:54:52.449656+00:00",
+          "citation_count": 11,
+          "venue": "Lecture notes in computer science",
+          "year": 2024
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.5281/zenodo.22189769",
+      "doi": "10.5281/zenodo.22189769",
+      "title": "Automated Theorem Proving for Hardware Verification using SAT Solvers",
+      "authors": [
+        {
+          "name": "Jincheng Zhang",
+          "orcid": "https://orcid.org/0009-0001-6890-3076"
+        }
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026,
+      "citation_count": 0,
+      "is_open_access": true,
+      "abstract": "This paper presents a novel approach to hardware verification leveraging the power of SAT solvers within an automated theorem proving system. The core argument is that traditional manual theorem proving for hardware verification is a laborious and error-prone process. This work addresses this limitation by developing a system capable of automatically verifying hardware designs against formal specifications. The system utilizes SAT solvers to efficiently explore the solution space, focusing on critical properties such as timing constraints, power consumption models, and functional correctness assertions. The primary contribution lies in the automation of the verification process, leading to substantial reductions in development time and improved overall reliability of hardware designs. The system is designed to handle complex hardware designs by systematically applying logical deduction and constraint solving. We explore the theoretical foundations of the approach and demonstrate its potential through a series of illustrative examples. The system's architecture, key components, and algorithmic strategies are detailed, providing a clear roadmap for future development and implementation.",
+      "source_url": "https://doi.org/10.5281/zenodo.22189769",
+      "fulltext_links": [],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W7204793576",
+          "retrieved_at": "2026-11-16T13:54:52.449763+00:00",
+          "citation_count": 0,
+          "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+          "year": 2026
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.48550/arxiv.2607.19795",
+      "doi": "10.48550/arxiv.2607.19795",
+      "title": "Towards Automated Formal Verification of zkEVMs Using LLM-Guided Constraint Synthesis",
+      "authors": [
+        {
+          "name": "Sicong Huang",
+          "orcid": "https://orcid.org/0000-0003-0854-4734"
+        },
+        {
+          "name": "Jiang Zj",
+          "orcid": null
+        },
+        {
+          "name": "Jiang, Yi",
+          "orcid": null
+        },
+        {
+          "name": "Ling-I Wu",
+          "orcid": "https://orcid.org/0009-0001-8259-2200"
+        },
+        {
+          "name": "Jingyang Li",
+          "orcid": null
+        },
+        {
+          "name": "Guoqiang Li",
+          "orcid": "https://orcid.org/0000-0001-9005-7112"
+        }
+      ],
+      "venue": "arXiv (Cornell University)",
+      "year": 2026,
+      "citation_count": 0,
+      "is_open_access": true,
+      "abstract": "Zero-Knowledge Ethereum Virtual Machines (zkEVMs) secure Ethereum rollups by generating zero-knowledge proofs that guarantee off-chain execution correctness. However, subtle implementation bugs (e.g., incorrect gas accounting) can lead to valid proofs certifying semantically faulty states, thereby silently defeating cryptographic guarantees. Formal verification via SMT solvers can prevent this, but is bottlenecked by specification: current zkEVM development practice lacks automated methods to translate Rust opcode handlers into verification models. Current practices rely on unsustainable manual specifications, while LLM-based approaches suffer from hallucination and lack formal guarantees. To address this, we propose VeriSynth, a framework that synthesizes executable Python/Z3 verification models from Rust zkEVM code. VeriSynth enforces a hybrid paradigm: an LLM acts strictly as a formalization frontend to translate code into symbolic constraints, while an SMT solver serves as the correctness arbiter. To handle complex multi-component state transitions, VeriSynth integrates semantic decomposition, retrieval-grounded prompting, and verification-guided auto-repair into a closed-loop pipeline. We evaluate VeriSynth on the first source-level zkEVM verification benchmark, encompassing both correct and faulty opcode implementations. VeriSynth achieves a bug detection rate of over 90%, substantially outperforming direct and conversational LLM baselines, as well as a production-grade handwritten mutation-testing suite. Ablation studies confirm that each pipeline component is critical to the framework's overall effectiveness.",
+      "source_url": "https://doi.org/10.48550/arxiv.2607.19795",
+      "fulltext_links": [
+        {
+          "url": "https://arxiv.org/pdf/2607.19795",
+          "kind": "pdf",
+          "access": "OPEN_ACCESS",
+          "license": "cc-by"
+        }
+      ],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W7170169736",
+          "retrieved_at": "2026-11-16T13:54:52.449880+00:00",
+          "citation_count": 0,
+          "venue": "arXiv (Cornell University)",
+          "year": 2026
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.21941/kcss/2025/4",
+      "doi": "10.21941/kcss/2025/4",
+      "title": "SAT-based String Solving: Solving String Constraints by Reduction to Boolean Satisfiability",
+      "authors": [
+        {
+          "name": "Kevin Lotz",
+          "orcid": "https://orcid.org/0000-0001-6759-3304"
+        }
+      ],
+      "venue": null,
+      "year": 2025,
+      "citation_count": 0,
+      "is_open_access": true,
+      "abstract": "String constraint solving is the task of checking whether first-order formulas over strings are satisfiable.Because strings are a core data type in nearly every programming language, reliable and efficient solvers are essential in many areas of formal verification. This thesis studies methods for solving string constraints by reducing them to propositional logic, allowing the satisfiability check to be delegated to a SAT solver. After an introduction to the underlying logical frameworks, it first explores propositional encodings for regular constraints. Although the presented method is not expressive enough to handle meaningful problems, it motivates the following chapter, which develops a general procedure for solving quantifier-free formulas over different types of string constraints. Beyond the propositional encodings, the chapter also investigates how to select an adequate alphabet and how to effectively conclude unsatisfiability. Finally, the thesis concludes with a more formal treatment of string constraint solving by presenting a formalization of the theory in Isabelle, an interactive theorem prover.",
+      "source_url": "https://doi.org/10.21941/kcss/2025/4",
+      "fulltext_links": [
+        {
+          "url": "https://macau.uni-kiel.de/servlets/MCRFileNodeServlet/macau_derivate_00008435/thesis_kevin_lotz.pdf",
+          "kind": "pdf",
+          "access": "OPEN_ACCESS",
+          "license": "cc-by"
+        }
+      ],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W4417265984",
+          "retrieved_at": "2026-11-16T13:54:52.449991+00:00",
+          "citation_count": 0,
+          "venue": null,
+          "year": 2025
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.5281/zenodo.22184317",
+      "doi": "10.5281/zenodo.22184317",
+      "title": "Neuro-Symbolic Verification of Concurrent Constraint Satisfaction Problems",
+      "authors": [
+        {
+          "name": "Jincheng Zhang",
+          "orcid": "https://orcid.org/0009-0001-6890-3076"
+        }
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026,
+      "citation_count": 0,
+      "is_open_access": true,
+      "abstract": "This paper presents a novel approach to the verification of Concurrent Constraint Satisfaction Problems (CSPs) leveraging a neuro-symbolic framework. Traditional formal verification methods for CSPs face significant challenges due to the inherent exponential growth of the state space, rendering them impractical for complex problems. Our proposed method addresses this limitation by integrating a neural network with a symbolic constraint solver. The neural network learns to approximate the constraints and their interactions, effectively translating symbolic constraints into a differentiable representation. This allows for a more efficient and scalable verification process. The core claim of this work is that the formal verification of concurrent CSPs is intractable due to the exponential state space. We demonstrate this by outlining a mechanism that combines the learning capabilities of neural networks with the rigorous verification capabilities of symbolic solvers, offering a pathway to tackling complex verification problems. The key contribution lies in the differentiable bridging of the gap between neural network learning and formal verification, providing a scalable strategy for verifying CSP models.",
+      "source_url": "https://doi.org/10.5281/zenodo.22184317",
+      "fulltext_links": [],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W7204818832",
+          "retrieved_at": "2026-11-16T13:54:52.450065+00:00",
+          "citation_count": 0,
+          "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+          "year": 2026
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.1145/3464421",
+      "doi": "10.1145/3464421",
+      "title": "A Survey of Smart Contract Formal Specification and Verification",
+      "authors": [
+        {
+          "name": "Palina Tolmach",
+          "orcid": "https://orcid.org/0000-0003-1389-6814"
+        },
+        {
+          "name": "Yi Li",
+          "orcid": "https://orcid.org/0000-0003-4562-8208"
+        },
+        {
+          "name": "Shang‐Wei Lin",
+          "orcid": "https://orcid.org/0000-0002-9726-3434"
+        },
+        {
+          "name": "Yang Liu",
+          "orcid": "https://orcid.org/0000-0001-7300-9215"
+        },
+        {
+          "name": "Zengxiang Li",
+          "orcid": "https://orcid.org/0000-0002-1462-9905"
+        }
+      ],
+      "venue": "ACM Computing Surveys",
+      "year": 2021,
+      "citation_count": 290,
+      "is_open_access": true,
+      "abstract": "A smart contract is a computer program that allows users to automate their actions on the blockchain platform. Given the significance of smart contracts in supporting important activities across industry sectors including supply chain, finance, legal, and medical services, there is a strong demand for verification and validation techniques. Yet, the vast majority of smart contracts lack any kind of formal specification, which is essential for establishing their correctness. In this survey, we investigate formal models and specifications of smart contracts presented in the literature and present a systematic overview to understand the common trends. We also discuss the current approaches used in verifying such property specifications and identify gaps with the hope to recognize promising directions for future work.",
+      "source_url": "https://doi.org/10.1145/3464421",
+      "fulltext_links": [
+        {
+          "url": "https://arxiv.org/pdf/2008.02712",
+          "kind": "pdf",
+          "access": "OPEN_ACCESS",
+          "license": null
+        }
+      ],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W3186717497",
+          "retrieved_at": "2026-11-16T13:54:52.450249+00:00",
+          "citation_count": 290,
+          "venue": "ACM Computing Surveys",
+          "year": 2021
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.17048/icai.2026.227",
+      "doi": "10.17048/icai.2026.227",
+      "title": "Formal Verification of Questionnaire Logic Using SMT Solvers",
+      "authors": [
+        {
+          "name": "Péter Sághelyi",
+          "orcid": null
+        },
+        {
+          "name": "Péter Bereczky",
+          "orcid": "https://orcid.org/0000-0003-3183-0712"
+        }
+      ],
+      "venue": "International Conference on Applied Informatics (ICAI)",
+      "year": 2026,
+      "citation_count": 0,
+      "is_open_access": true,
+      "abstract": "Modern computer aided surveys (CAPI/CATI) can contain hundreds of questions with complex conditional logic. In order to guarantee correctness through all possible traversal paths is a computationally demanding challenge. We propose to replace the traditional imperative, command-based questionnaire design with a constraint-based paradigm where correctness is verified statically rather than through path discovery. This work presents a formal, declarative framework for questionnaire specification and SMT-based verification that enables this separation. We formalize questionnaires as tuples of items with preconditions and postconditions inspired by Hoare Logic, classify item reachability and postcondition feasibility through satisfiability checks, and establish a four-level validation hierarchy with five theorems characterizing the relationships between per-item, global, and path-based analysis. The method is evaluated based on real-world questionnaires.",
+      "source_url": "https://doi.org/10.17048/icai.2026.227",
+      "fulltext_links": [
+        {
+          "url": "http://publikacio.uni-eszterhazy.hu/9449/1/ICAI2026-pp227-243.pdf",
+          "kind": "pdf",
+          "access": "OPEN_ACCESS",
+          "license": null
+        }
+      ],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W7214082962",
+          "retrieved_at": "2026-11-16T13:54:52.450380+00:00",
+          "citation_count": 0,
+          "venue": "International Conference on Applied Informatics (ICAI)",
+          "year": 2026
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.5281/zenodo.23559919",
+      "doi": "10.5281/zenodo.23559919",
+      "title": "Topological Navigation in Generative AI: Empirical Proof of Latent Space Physics and Formally Verified Constraints",
+      "authors": [
+        {
+          "name": "outail benhadid",
+          "orcid": null
+        }
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026,
+      "citation_count": 0,
+      "is_open_access": true,
+      "abstract": "This comprehensive multimodal deposit presents a paradigm-shifting discovery in the field of Generative AI: Large-scale text-to-video diffusion models (Runway, Luma, OpenAI, Google) do not merely render stochastic pixels; they function as implicit topological solvers and latent physicists. Through a rigorous, closed-loop formal logic stress test, we demonstrate that when AI models are constrained by strict mathematical invariants, they produce physically coherent, structurally stable outputs. More importantly, when a single mathematical constraint is deliberately violated, the AI does not generate random noise—it precisely simulates a mathematically bounded decoherence cascade, proving absolute sensitivity to latent topology. === CONTENTS OF THIS DEPOSIT === 1. THESIS 1 (PDF): \"The Latent Physicist: How AI Video Generation Models Behave as Implicit Topological Solvers When Constrained by Formal Logic\" - A detailed phenomenological breakdown of the AI's behavior under formal constraints. - Visual and textual proof that AI failure modes are mathematically structured, not random. 2. THESIS 2 (PDF): \"Navigating the Latent Manifold: How Deterministic Architectural Invariants Transform Generative AI Diffusion Engines into Topological Navigators\" - A deep mathematical and architectural analysis of the \"Latent Space\" as a continuous geometric manifold. - The distinction between \"Stochastic Drift\" (unconstrained prompts) and \"Deterministic Steering\" (formally constrained prompts). 3. SIX HIGH-RESOLUTION DIAGNOSTIC PLATES (4K PNG): - Plate 1: The Foggy Map — The problem of Stochastic Drift and structural hallucination. - Plate 2: Stochastic Drift in Unconstrained Latent Spaces — Visualizing the loss function and OOD sampling. - Plate 3: Deterministic Constraint Injection Architecture — The formal verification pipeline. - Plate 4: Sequence A: Deterministic Navigation & Structural Harmony — Proof of constraint success. - Plate 5: Sequence B: The Decoherence Cascade — Proof of topological sensitivity (Geometric Twisting, Spatial Collapse, Phase Disruption). - Plate 6: The Next Frontier: Formally Verified Generative AI — The proposed system architecture for the industry. === IMPLICATIONS FOR THE AI INDUSTRY === This deposit challenges AI system designers to move beyond stochastic rendering. It proves that the bottleneck is not the neural network, but the ambiguity of natural language prompts. By integrating formal verification layers (such as Ada/SPARK-like contract enforcement or DO-178C DAL-A protocols) directly into the generative pipeline, we can mathematically eliminate structural hallucinations and ensure physical consistency in complex simulations. The models are ready; the architectures must catch up. KEYWORDS:",
+      "source_url": "https://doi.org/10.5281/zenodo.23559919",
+      "fulltext_links": [],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W7223220767",
+          "retrieved_at": "2026-11-16T13:54:52.450588+00:00",
+          "citation_count": 0,
+          "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+          "year": 2026
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.1145/3551349.3556916",
+      "doi": "10.1145/3551349.3556916",
+      "title": "QVIP: An ILP-based Formal Verification Approach for Quantized Neural Networks",
+      "authors": [
+        {
+          "name": "Yedi Zhang",
+          "orcid": "https://orcid.org/0000-0003-1005-2114"
+        },
+        {
+          "name": "Zhe Zhao",
+          "orcid": "https://orcid.org/0000-0003-4189-3258"
+        },
+        {
+          "name": "Guangke Chen",
+          "orcid": "https://orcid.org/0000-0001-8277-3119"
+        },
+        {
+          "name": "Fu Song",
+          "orcid": "https://orcid.org/0000-0002-0581-2679"
+        },
+        {
+          "name": "Min Zhang",
+          "orcid": "https://orcid.org/0000-0003-1938-2902"
+        },
+        {
+          "name": "Taolue Chen",
+          "orcid": "https://orcid.org/0000-0002-5993-1665"
+        },
+        {
+          "name": "Jun Sun",
+          "orcid": "https://orcid.org/0000-0002-3545-1392"
+        }
+      ],
+      "venue": "IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+      "year": 2022,
+      "citation_count": 24,
+      "is_open_access": true,
+      "abstract": "Deep learning has become a promising programming paradigm in software development, owing to its surprising performance in solving many challenging tasks. Deep neural networks (DNNs) are increasingly being deployed in practice, but are limited on resource-constrained devices owing to their demand for computational power. Quantization has emerged as a promising technique to reduce the size of DNNs with comparable accuracy as their floating-point numbered counterparts. The resulting quantized neural networks (QNNs) can be implemented energy-efficiently. Similar to their floating-point numbered counterparts, quality assurance techniques for QNNs, such as testing and formal verification, are essential but are currently less explored. In this work, we propose a novel and efficient formal verification approach for QNNs. In particular, we are the first to propose an encoding that reduces the verification problem of QNNs into the solving of integer linear constraints, which can be solved using off-the-shelf solvers. Our encoding is both sound and complete. We demonstrate the application of our approach on local robustness verification and maximum robustness radius computation. We implement our approach in a prototype tool QVIP and conduct a thorough evaluation. Experimental results on QNNs with different quantization bits confirm the effectiveness and efficiency of our approach, e.g., two orders of magnitude faster and able to solve more verification tasks in the same time limit than the state-of-the-art methods.",
+      "source_url": "https://doi.org/10.1145/3551349.3556916",
+      "fulltext_links": [
+        {
+          "url": "https://dl.acm.org/doi/pdf/10.1145/3551349.3556916",
+          "kind": "pdf",
+          "access": "OPEN_ACCESS",
+          "license": "cc-by-nc"
+        }
+      ],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W4313563880",
+          "retrieved_at": "2026-11-16T13:54:52.450698+00:00",
+          "citation_count": 24,
+          "venue": "IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+          "year": 2022
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.1109/tcss.2022.3179659",
+      "doi": "10.1109/tcss.2022.3179659",
+      "title": "Robustness Verification of Swish Neural Networks Embedded in Autonomous Driving Systems",
+      "authors": [
+        {
+          "name": "Zhaodi Zhang",
+          "orcid": "https://orcid.org/0000-0002-0230-0301"
+        },
+        {
+          "name": "Jing Liu",
+          "orcid": "https://orcid.org/0000-0002-5347-8281"
+        },
+        {
+          "name": "Guanjun Liu",
+          "orcid": "https://orcid.org/0000-0002-7523-4827"
+        },
+        {
+          "name": "Jiacun Wang",
+          "orcid": "https://orcid.org/0000-0001-6601-3515"
+        },
+        {
+          "name": "Yingsheng Zhang",
+          "orcid": "https://orcid.org/0000-0003-2520-3923"
+        }
+      ],
+      "venue": "IEEE Transactions on Computational Social Systems",
+      "year": 2022,
+      "citation_count": 45,
+      "is_open_access": false,
+      "abstract": "With the applications of deep learning in safety-critical domains such as autonomous driving systems gaining ground, it demands rigorous verification to guarantee the safety and reliability of corresponding systems. As the intelligent component in such systems, neural networks (NNs) must be robust in that their outputs are not affected by minor perturbation to inputs. Many research studies have shown that formal methods are effective ways to the robustness verification of NNs. However, most of the existing approaches are focused on NNs that contain monotonic activation functions, such as ReLU, Tanh, and Sigmoid. In this work, we propose an approach to verify the robustness of NNs with the nonmonotonic activation function called Swish. Such networks have been proved to have a better performance on image classification than other NNs. In our approach, we turn the robustness verification problem into a constraint-solving problem using the linear approximation technique. We first model the affine function of an NN into a linear constraint model. Then, for nonlinear activation functions, we leverage an efficient approximation strategy to linearly approximate them. Finally, we utilize the constraint solver gurobi to solve the model, which reveals that the model satisfies the robustness property. We develop a prototype tool and evaluate it with open-sourced NNs. Experimental results showed the effectiveness and efficiency of our approach.",
+      "source_url": "https://doi.org/10.1109/tcss.2022.3179659",
+      "fulltext_links": [],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W4285167337",
+          "retrieved_at": "2026-11-16T13:54:52.450810+00:00",
+          "citation_count": 45,
+          "venue": "IEEE Transactions on Computational Social Systems",
+          "year": 2022
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.70777/si.v3i3.18746",
+      "doi": "10.70777/si.v3i3.18746",
+      "title": "Automated Conjecture Resolution with Formal Verification",
+      "authors": [
+        {
+          "name": "Haocheng Ju",
+          "orcid": "https://orcid.org/0009-0005-0429-4805"
+        },
+        {
+          "name": "Guoxiong Gao",
+          "orcid": null
+        },
+        {
+          "name": "Jiedong Jiang",
+          "orcid": null
+        },
+        {
+          "name": "Bin Wu",
+          "orcid": "https://orcid.org/0000-0002-3320-0442"
+        },
+        {
+          "name": "Zeming Sun",
+          "orcid": null
+        },
+        {
+          "name": "Shurui Liu",
+          "orcid": null
+        },
+        {
+          "name": "Leheng Chen",
+          "orcid": null
+        },
+        {
+          "name": "Yuefeng Wang",
+          "orcid": null
+        },
+        {
+          "name": "Zichen Wang",
+          "orcid": "https://orcid.org/0000-0001-8999-6358"
+        },
+        {
+          "name": "Zichen Wang",
+          "orcid": "https://orcid.org/0000-0001-8999-6358"
+        },
+        {
+          "name": "Wanyi He",
+          "orcid": null
+        },
+        {
+          "name": "Peihao Wu",
+          "orcid": null
+        },
+        {
+          "name": "Liang Xiao",
+          "orcid": null
+        },
+        {
+          "name": "Ruochuan Liu",
+          "orcid": "https://orcid.org/0000-0002-2056-2727"
+        },
+        {
+          "name": "Bryan Dai",
+          "orcid": null
+        },
+        {
+          "name": "Bin Dong",
+          "orcid": null
+        }
+      ],
+      "venue": "SuperIntelligence - Robotics - Safety & Alignment",
+      "year": 2026,
+      "citation_count": 85,
+      "is_open_access": true,
+      "abstract": "Recent advances in large language models (LLMs) have significantly improved their ability to perform mathematical reasoning, extending from elementary problem solving to increasingly capable performance on research-level problems. However, reliably solving and verifying such problems remains challenging due to the inherent ambiguity of natural language reasoning. In this paper, we propose an automated framework for tackling research-level mathematical problems that integrates natural language reasoning with formal verification, enabling end-to-end problem solving with minimal human intervention. Our framework consists of two components: an informal reasoning agent, Rethlas, and a formal verification agent, Archon. Rethlas mimics the workflow of human mathematicians by combining reasoning primitives with our mathematical theorem search engine, Matlas, to explore solution strategies and construct candidate proofs. Archon, equipped with our formal theorem search engine LeanSearch, translates informal arguments into fully formalized Lean 4 projects through structured task decomposition, iterative refinement, and automated proof synthesis, ensuring machine-checkable correctness. Using this framework, we automatically resolve an open problem in commutative algebra proposed by D. D. Anderson (2014) and formally verify the resulting proof in Lean 4 with essentially no human involvement. Additional research-level case studies further illustrate the capabilities of Rethlas in informal mathematical reasoning and discovery, as well as the ability of Archon to formalize research-level proofs in Lean 4. Our experiments demonstrate that strong theorem retrieval tools enable the discovery and application of deep, cross-domain mathematical techniques, while the formal agent is capable of autonomously filling nontrivial gaps in informal arguments. More broadly, our work illustrates a promising paradigm for mathematical research in which informal and formal reasoning systems, equipped with theorem retrieval tools, operate in tandem to produce verifiable results, substantially reduce human effort, and offer a concrete instantiation of human–AI collaborative mathematical research with minimal human involvement.",
+      "source_url": "https://doi.org/10.70777/si.v3i3.18746",
+      "fulltext_links": [
+        {
+          "url": "https://s-rsa.com/index.php/agi/article/download/18746/12428",
+          "kind": "pdf",
+          "access": "OPEN_ACCESS",
+          "license": "cc-by"
+        }
+      ],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W7151534166",
+          "retrieved_at": "2026-11-16T13:54:52.451154+00:00",
+          "citation_count": 85,
+          "venue": "SuperIntelligence - Robotics - Safety & Alignment",
+          "year": 2026
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.1007/978-3-032-22723-2_12",
+      "doi": "10.1007/978-3-032-22723-2_12",
+      "title": "A Formally Verified Procedure for Width Inference in FIRRTL",
+      "authors": [
+        {
+          "name": "Keyin Wang",
+          "orcid": "https://orcid.org/0009-0002-6628-4600"
+        },
+        {
+          "name": "Xiaomu Shi",
+          "orcid": "https://orcid.org/0000-0001-6277-2813"
+        },
+        {
+          "name": "Jiaxiang Liu",
+          "orcid": "https://orcid.org/0000-0002-6725-8167"
+        },
+        {
+          "name": "Zhilin Wu",
+          "orcid": "https://orcid.org/0000-0003-0899-628X"
+        },
+        {
+          "name": "Fu Song",
+          "orcid": "https://orcid.org/0000-0002-0581-2679"
+        },
+        {
+          "name": "Taolue Chen",
+          "orcid": "https://orcid.org/0000-0002-5993-1665"
+        },
+        {
+          "name": "David N. Jansen",
+          "orcid": "https://orcid.org/0000-0002-6636-3301"
+        }
+      ],
+      "venue": "Lecture notes in computer science",
+      "year": 2026,
+      "citation_count": 1,
+      "is_open_access": true,
+      "abstract": "",
+      "source_url": "https://doi.org/10.1007/978-3-032-22723-2_12",
+      "fulltext_links": [
+        {
+          "url": "https://arxiv.org/pdf/2601.12813",
+          "kind": "pdf",
+          "access": "OPEN_ACCESS",
+          "license": "cc-by"
+        }
+      ],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W7153088612",
+          "retrieved_at": "2026-11-16T13:54:52.451225+00:00",
+          "citation_count": 1,
+          "venue": "Lecture notes in computer science",
+          "year": 2026
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    },
+    {
+      "paper_id": "doi:10.5281/zenodo.23298705",
+      "doi": "10.5281/zenodo.23298705",
+      "title": "Verified constraint-system solvers catching up in theory and practice",
+      "authors": [
+        {
+          "name": "Kalmer Apinis",
+          "orcid": "https://orcid.org/0009-0006-2395-6584"
+        }
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026,
+      "citation_count": 0,
+      "is_open_access": true,
+      "abstract": "# SLR-TC+ artifact This is the artifact for the paper \"Verified constraint-system solvers catching up in theory and practice\" that introduces the SLR-TC+ ([plus_restarting](https://github.com/kalmera/tc-solvers/tree/catching-up-paper)) side-effecting constraint system solver. This artifact checks the Rocq proofs, OCaml extraction and executable tests forSLR-TC+. It regenerates the paper's benchmark results, tables, figures and aresults PDF, and can run new benchmarks with the included Goblint solvers. ## Requirements - Python 3.9 or later, `make`, and rootful Docker allowing privileged benchmark containers.- At least two CPUs and 8 GiB RAM assigned to Docker for proof checking. For application/FIFO benchmarks, budget 10 GiB with `--jobs 1` or 18 GiB with `--jobs 2`.- About 15 GB of free disk space for the bundle, images and outputs. Docker's storage filesystem needs free space as well as the output filesystem.- Linux or macOS with an ARM64 or x86-64 Docker engine. The launcher automatically uses the images matching Docker's architecture. The commands below work offline with the bundled images. Run them from this directoryas your ordinary user. No host Rocq, OCaml or LaTeX installation is needed. ## Run | Command | What it does | Expected time ||---|---|---:|| `make load` | Imports the Docker images matching the host's architecture. | Depends on Docker cache and disk || `make proofs` | Checks proofs and theorem assumptions, regenerates extraction, runs executable tests. | 3 min 21 s || `make tables` | Rebuilds saved results, HTML tables, figures, prose numbers and `results.pdf`. | 1 min 13 s || `make smoke` | Runs one task per suite with every solver (28 runs across four suites). | 1 min 02 s || `make benchmark` | Runs all four complete suites; selects jobs automatically for each. | See suite estimates below | Measured on Apple M4 Pro (14 logical CPUs, 24 GiB RAM), with 14 CPUs and 20.5 GiB assigned to Docker.Proofs use two jobs. Smoke job counts are recorded in [runtime-baseline.json](contents/runtime-baseline.json).The default smoke command selects jobs automatically. Successful commands report verification or completion. `make tables` matchesregenerated reports against the saved results; it does not rerun the solvers.Each command automatically verifies its required inputs. ## Reviewing the paper's claims The proof snapshot is pinned in [spec.json](contents/spec.json) to `catching-up-paper` commit`30ddfde2ef485a7855975918f456c374d6e6cf6d`. The four review routes belowcorrespond to the paper's verified guarantees, implementation, evaluation anddevelopment-size comparison. Output paths are relative to the fresh directoryprinted by each command. | Claim | Run | Inspect ||---|---|---|| Major proofs and update instances | `make proofs` | [Public theorems](contents/solver/rocq/solvers/slr/plus_restarting/Theorems.v) and their law hypotheses; [named audit](contents/ArtifactAudit.v) and `assumptions.log`, containing statements and Rocq's `Print Assumptions` reports. || Mechanical extraction and adapter generation | `make proofs` | [Extraction root](contents/solver/rocq/extraction/ExtractPlusRestarting.v), [adapter generation](contents/solver/ocaml/adapters/goblint/catching_up/generate.sh), regenerated files under `solver/ocaml/`, and `generation.diff`/`generation.json`. Read the [differential tests](contents/solver/tests/catching_up/plus_restarting.ml) alongside `build.log`. || Empirical results | `make tables`; optionally `make benchmark` | `results.pdf`, `generated/` and `metrics.json`; follow `index.html` to individual BenchExec verdicts, times and logs. Frozen per-task records and configurations are under `work/benchmarks/svcomp/results/`. || Development sizes | `make tables` | `comparison-counts.json` and `generated/solver-sizes.tex`; inspect the [listing manifest](contents/reproduction/experiments/solver-code-metrics/listings/manifest.json), selected sources and folding records, and [formal-source census](contents/reproduction/experiments/solver-code-metrics/proof-sizes.json). | The proofs covers successful-run correctness, semantic termination, sufficientfuel and leastness, plus the constructive[OneBox](contents/solver/rocq/common/ThresholdInterval.v) and[DefaultUpdate](contents/solver/rocq/common/instances/DefaultUpdate.v) laws onthe infinite-height threshold domain. It also verifies SLRTC+ total correctnesswith DefaultUpdate and the measured feature settings. Rocq extracts the reference machine and callback control. The adapters combinethat control with OCaml templates and generators.An empty `generation.diff` means regeneration reproduced the bundled code;`generation.json` lists both hashes for every generated file. Differentialtests compare final stores against extraction on finite test systems. This isthe integration evidence accompanying the machine proofs, rather than a provedrefinement of the entire adapter or an assumption that Goblint and its domainsare bug-free. Size recounting starts from the supplied listings: inspect each listing's`selected-source.txt` or line map and `changes.json` to assess the selectionand configuration folding. The original measured adapters are retained in[the analyzer source archive](contents/benchmark-source/goblint.tar.gz).Formal-development LoC includes definitions, specifications and proofs in therecorded local import closure; `coqwc_proof_lines` is the separate proof-scriptcount. WTO development totals are visibly marked as author-reported.The counting scripts reproduce counts, not semantic equivalence of listings.Proof checking, size snapshots and historical benchmark sources retain theirown revisions; new runs do not overwrite the paper's measurements. ### Solver size comparison sources Algorithm links open the counted listings; proof links open the entry pointsof the counted formal developments. The [source census](contents/reproduction/experiments/solver-code-metrics/proof-sizes.json)records their complete import closures. A dash means no formal-developmentsnapshot was selected; WTO totals are author-reported. | Solver | Counted algorithm listing | Formal-development entry ||---|---|---|| RLD | [OCaml](contents/reproduction/experiments/solver-code-metrics/listings/rld/code.ml) | [RLDtot.v](contents/reproduction/experiments/solver-code-metrics/formal/rld/RLDtot.v) || Spy Game | [HeapLang](contents/reproduction/experiments/solver-code-metrics/listings/spy-game/code.v) | [fix.v](contents/reproduction/experiments/solver-code-metrics/formal/spy-game/fix.v) || Pure TD | [Equations](contents/reproduction/experiments/solver-code-metrics/listings/isabelle-pure/code.thy) | [TD_equiv.thy](contents/reproduction/experiments/solver-code-metrics/formal/isabelle-pure/TD_equiv.thy) || TD warrowing | [Equations](contents/reproduction/experiments/solver-code-metrics/listings/isabelle-warrow/code.thy) | [TD_warrow.thy](contents/reproduction/experiments/solver-code-metrics/formal/isabelle-warrow/TD_warrow.thy) || TD phases | [Equations](contents/reproduction/experiments/solver-code-metrics/listings/isabelle-phases/code.thy) | [TD_wn_phases.thy](contents/reproduction/experiments/solver-code-metrics/formal/isabelle-phases/TD_wn_phases.thy) || TD side rules | [Equations](contents/reproduction/experiments/solver-code-metrics/listings/isabelle-side/code.thy) | [TD_side_upd_rule.thy](contents/reproduction/experiments/solver-code-metrics/formal/isabelle-side/TD_side_upd_rule.thy) || WTO iterative | [Pseudocode](contents/reproduction/experiments/solver-code-metrics/listings/wto-iterative.pseudo) | [Reported total](contents/reproduction/experiments/solver-code-metrics/proof-sizes.json) || WTO recursive | [Pseudocode](contents/reproduction/experiments/solver-code-metrics/listings/wto-recursive.pseudo) | [Reported total](contents/reproduction/experiments/solver-code-metrics/proof-sizes.json) || SLR+ | [Listing](contents/reproduction/experiments/solver-code-metrics/listings/slr-plus.ml) | — || TD side | [Listing](contents/reproduction/experiments/solver-code-metrics/listings/td-side.ml) | — || Goblint `slr3` | [Core](contents/reproduction/experiments/solver-code-metrics/listings/goblint-slr3/code.ml) | — || Goblint `td3` | [Core](contents/reproduction/experiments/solver-code-metrics/listings/goblint-td3/code.ml) + [support](contents/reproduction/experiments/solver-code-metrics/listings/goblint-td3/support.ml) | — || Toxic Trash `ours3` | [Core](contents/reproduction/experiments/solver-code-metrics/listings/toxic-ours3/code.ml) + [support](contents/reproduction/experiments/solver-code-metrics/listings/toxic-ours3/support.ml) | — || SLR-TC Restarting (R) | [Adapter core](contents/reproduction/experiments/solver-code-metrics/listings/qsolver-restarting/code.ml) | [Theorems.v](contents/reproduction/experiments/solver-code-metrics/formal/qsolver-restarting/rocq/solvers/slr/restarting/Theorems.v) || SLR-TC+ (`plus_restarting`) | [Adapter core](contents/reproduction/experiments/solver-code-metrics/listings/qsolver-deferred/code.ml) | [Theorems.v](contents/reproduction/experiments/solver-code-metrics/formal/qsolver-deferred/rocq/solvers/slr/plus_restarting/Theorems.v) || Toxic Trash baseline (control) | [Core](contents/reproduction/experiments/solver-code-metrics/listings/toxic-baseline/code.ml) + [support](contents/reproduction/experiments/solver-code-metrics/listings/toxic-baseline/support.ml) | — || Toxic Trash `ours-bot` (control) | [Core](contents/reproduction/experiments/solver-code-metrics/listings/toxic-ours-bot/code.ml) + [support](contents/reproduction/experiments/solver-code-metrics/listings/toxic-ours-bot/support.ml) | — | ## New benchmarks `make smoke` runs one task per suite; `make benchmark` runs all four completesuites in sequence. Both show their four Python commands and use `--jobs auto` to selectconcurrency from Docker's CPU and memory resources. Use`make benchmark JOBS=1` for sequential runs, or sel",
+      "source_url": "https://doi.org/10.5281/zenodo.23298705",
+      "fulltext_links": [],
+      "references": [],
+      "sources": [
+        {
+          "provider": "openalex",
+          "source_id": "https://openalex.org/W7222143137",
+          "retrieved_at": "2026-11-16T13:54:52.451816+00:00",
+          "citation_count": 0,
+          "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+          "year": 2026
+        }
+      ],
+      "conflicts": [],
+      "access_status": "METADATA_ONLY"
+    }
+  ]
+}

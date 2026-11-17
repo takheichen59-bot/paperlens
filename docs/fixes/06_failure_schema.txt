@@ -1,0 +1,7 @@
+PASS case_complete
+PASS case_partial
+PASS case_failure
+PASS case_repeat_and_latest
+PASS case_interruption
+PASS case_failure_line_parser
+SUMMARY: 6 passed, 0 failed

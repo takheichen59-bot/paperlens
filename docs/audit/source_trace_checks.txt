@@ -1,0 +1,2 @@
+PASS 267 original-block slice/page/section checks; text-field order preserved.
+These checks do NOT establish sentence completeness, chemical identity, or field relevance.

@@ -1,0 +1,655 @@
+{
+  "counts": {
+    "submitted": 10,
+    "duplicates": 0,
+    "success": 0,
+    "partial": 8,
+    "failed": 1,
+    "skipped": 1,
+    "exported": 9,
+    "results": "work/fixes/real-final/results/results.jsonl"
+  },
+  "methods_200_3000_before": 2,
+  "methods_200_3000_after": 3,
+  "methods_papers_before": [
+    "arxiv:2501.00620",
+    "arxiv:2501.00680"
+  ],
+  "methods_papers_after": [
+    "arxiv:2501.00589",
+    "arxiv:2501.00679",
+    "arxiv:2501.00680"
+  ],
+  "parsed_papers": 9,
+  "raw_snippets_checked": 172,
+  "known_leaks_baseline": {
+    "reference_entities": 8,
+    "grant_identifiers": 3
+  },
+  "published_known_leaks_after": [],
+  "candidate_known_leaks_after": [],
+  "download_outcomes": [
+    {
+      "paper_id": "arxiv:2501.01468",
+      "status": "skipped",
+      "file_bytes": 129565883,
+      "file_bytes_source": "content_length",
+      "limit_bytes": 104857600,
+      "bytes_received": 0,
+      "skipped_reason": "size_limit"
+    },
+    {
+      "paper_id": "arxiv:2501.00600",
+      "status": "partial",
+      "download_status": "success",
+      "file_bytes": 40474244,
+      "file_bytes_source": "filesystem_after_full_download",
+      "skipped_reason": null
+    }
+  ],
+  "per_paper": [
+    {
+      "paper_id": "arxiv:2501.00534",
+      "before_status": "partial",
+      "before_partial_reasons": [
+        "长度超限（按本轮上限复核）",
+        "其他：原质量告警/版面问题"
+      ],
+      "after_status": "partial",
+      "methods_before": 6152,
+      "methods_after": 0,
+      "conclusions_before": 3684,
+      "conclusions_after": 3684,
+      "chemicals_before": 1,
+      "chemicals_after": 1,
+      "known_leak_terms_before": [],
+      "warnings_after": [
+        "page_1_possible_multicolumn",
+        "page_2_possible_multicolumn",
+        "page_3_possible_multicolumn",
+        "page_4_possible_multicolumn",
+        "page_5_possible_multicolumn",
+        "methods_fallback_truncated",
+        "conclusions_fallback",
+        "missing_field:methods"
+      ],
+      "root_cause": "M12连续候选超限，清空methods；保留其他有证据字段，仍partial",
+      "candidate_before_validation": {
+        "chemicals": [
+          "BiFeO3"
+        ],
+        "methods_chars": 0,
+        "conclusions_chars": 3684,
+        "methods_warnings": [
+          "methods_fallback_truncated"
+        ],
+        "sections": [
+          [
+            "",
+            "unknown"
+          ],
+          [
+            "References (inferred)",
+            "references"
+          ]
+        ]
+      }
+    },
+    {
+      "paper_id": "arxiv:2501.00561",
+      "before_status": "partial",
+      "before_partial_reasons": [
+        "视图泄漏",
+        "长度超限（按本轮上限复核）",
+        "其他：原质量告警/版面问题"
+      ],
+      "after_status": "failed",
+      "methods_before": 14513,
+      "methods_after": 0,
+      "conclusions_before": 2762,
+      "conclusions_after": 0,
+      "chemicals_before": 10,
+      "chemicals_after": 0,
+      "known_leak_terms_before": [
+        "SC0012704"
+      ],
+      "warnings_after": [
+        "operation_failed"
+      ],
+      "root_cause": "M14拒绝超长methods候选（8229字）；整条结果failed，未保留其他候选字段",
+      "candidate_before_validation": {
+        "chemicals": [
+          "Ga2O3",
+          "Al2O3",
+          "CrO2",
+          "CrGa",
+          "Cr2O3",
+          "GaO4",
+          "GaO6",
+          "GaN",
+          "AlN"
+        ],
+        "methods_chars": 8229,
+        "conclusions_chars": 2763,
+        "methods_warnings": [],
+        "sections": [
+          [
+            "",
+            "unknown"
+          ],
+          [
+            "INTRODUCTION",
+            "unknown"
+          ],
+          [
+            "GROWTH OF β-GA2O3",
+            "methods"
+          ],
+          [
+            "PHOTOLUMINESCENCE SPECTROSCOPY",
+            "methods"
+          ],
+          [
+            "DISCUSSION",
+            "discussion"
+          ],
+          [
+            "CONCLUSIONS",
+            "conclusions"
+          ],
+          [
+            "ACKNOWLEDGMENTS",
+            "references"
+          ]
+        ]
+      }
+    },
+    {
+      "paper_id": "arxiv:2501.00564",
+      "before_status": "partial",
+      "before_partial_reasons": [
+        "视图泄漏",
+        "长度超限（按本轮上限复核）",
+        "其他：原质量告警/版面问题"
+      ],
+      "after_status": "partial",
+      "methods_before": 6570,
+      "methods_after": 0,
+      "conclusions_before": 1980,
+      "conclusions_after": 1715,
+      "chemicals_before": 1,
+      "chemicals_after": 0,
+      "known_leak_terms_before": [
+        "SC0020221"
+      ],
+      "warnings_after": [
+        "page_1_possible_multicolumn",
+        "page_2_possible_multicolumn",
+        "page_3_possible_multicolumn",
+        "page_4_possible_multicolumn",
+        "page_5_possible_multicolumn",
+        "page_6_possible_multicolumn",
+        "methods_fallback_rejected",
+        "missing_field:chemicals",
+        "missing_field:methods"
+      ],
+      "root_cause": "M12正文/双块/关键词/同section条件不满足，拒绝方法回退；仍有字段缺失或告警",
+      "candidate_before_validation": {
+        "chemicals": [],
+        "methods_chars": 0,
+        "conclusions_chars": 1715,
+        "methods_warnings": [
+          "methods_fallback_rejected"
+        ],
+        "sections": [
+          [
+            "",
+            "unknown"
+          ],
+          [
+            "Abstract",
+            "abstract"
+          ],
+          [
+            "1. Introduction",
+            "unknown"
+          ],
+          [
+            "3. Results and Discussion",
+            "discussion"
+          ],
+          [
+            "4. Conclusions",
+            "conclusions"
+          ],
+          [
+            "Acknowledgments",
+            "references"
+          ],
+          [
+            "References",
+            "references"
+          ]
+        ]
+      }
+    },
+    {
+      "paper_id": "arxiv:2501.00589",
+      "before_status": "partial",
+      "before_partial_reasons": [
+        "视图泄漏",
+        "长度超限（按本轮上限复核）",
+        "其他：原质量告警/版面问题"
+      ],
+      "after_status": "partial",
+      "methods_before": 42376,
+      "methods_after": 925,
+      "conclusions_before": 467,
+      "conclusions_after": 11036,
+      "chemicals_before": 4,
+      "chemicals_after": 3,
+      "known_leak_terms_before": [
+        "GeTe"
+      ],
+      "warnings_after": [
+        "page_1_possible_multicolumn",
+        "page_2_possible_multicolumn",
+        "page_3_possible_multicolumn",
+        "page_4_possible_multicolumn",
+        "page_5_possible_multicolumn",
+        "page_6_possible_multicolumn",
+        "page_7_possible_multicolumn",
+        "page_8_possible_multicolumn",
+        "page_9_possible_multicolumn",
+        "page_10_possible_multicolumn",
+        "page_12_possible_multicolumn"
+      ],
+      "root_cause": "章节/边界改善；仍有版面告警，保持partial；非科学语义验收通过",
+      "candidate_before_validation": {
+        "chemicals": [
+          "CuZrAl",
+          "ZrCuAl",
+          "CuZr"
+        ],
+        "methods_chars": 925,
+        "conclusions_chars": 11036,
+        "methods_warnings": [],
+        "sections": [
+          [
+            "",
+            "unknown"
+          ],
+          [
+            "INTRODUCTION",
+            "unknown"
+          ],
+          [
+            "METHODS",
+            "methods"
+          ],
+          [
+            "CONCLUSIONS",
+            "conclusions"
+          ],
+          [
+            "ACKNOWLEDGEMENTS",
+            "references"
+          ],
+          [
+            "Supplementary Information",
+            "supplement"
+          ]
+        ]
+      }
+    },
+    {
+      "paper_id": "arxiv:2501.00591",
+      "before_status": "partial",
+      "before_partial_reasons": [
+        "视图泄漏",
+        "字段缺失",
+        "长度超限（按本轮上限复核）",
+        "其他：原质量告警/版面问题"
+      ],
+      "after_status": "partial",
+      "methods_before": 16238,
+      "methods_after": 0,
+      "conclusions_before": 0,
+      "conclusions_after": 0,
+      "chemicals_before": 14,
+      "chemicals_after": 5,
+      "known_leak_terms_before": [
+        "TaS2",
+        "CrNb3S6",
+        "CoNb3S6",
+        "NiTa4Se8",
+        "TaSe2",
+        "RuCl3",
+        "CoNb4Se8",
+        "SC0016434"
+      ],
+      "warnings_after": [
+        "page_1_possible_multicolumn",
+        "page_2_possible_multicolumn",
+        "page_3_possible_multicolumn",
+        "page_4_possible_multicolumn",
+        "page_5_possible_multicolumn",
+        "page_6_possible_multicolumn",
+        "page_7_possible_multicolumn",
+        "methods_fallback_truncated",
+        "missing_field:conclusions",
+        "missing_field:methods"
+      ],
+      "root_cause": "M12连续候选超限，清空methods；保留其他有证据字段，仍partial",
+      "candidate_before_validation": {
+        "chemicals": [
+          "CrI3",
+          "NbSe2",
+          "CoI2",
+          "HK0",
+          "HK1"
+        ],
+        "methods_chars": 0,
+        "conclusions_chars": 0,
+        "methods_warnings": [
+          "methods_fallback_truncated"
+        ],
+        "sections": [
+          [
+            "",
+            "unknown"
+          ],
+          [
+            "ACKNOWLEDGMENTS",
+            "references"
+          ]
+        ]
+      }
+    },
+    {
+      "paper_id": "arxiv:2501.00600",
+      "before_status": "failed",
+      "before_partial_reasons": [],
+      "after_status": "partial",
+      "methods_before": 0,
+      "methods_after": 0,
+      "conclusions_before": 0,
+      "conclusions_after": 185,
+      "chemicals_before": 0,
+      "chemicals_after": 1,
+      "known_leak_terms_before": [],
+      "warnings_after": [
+        "page_3_possible_multicolumn",
+        "page_11_possible_multicolumn",
+        "page_12_possible_multicolumn",
+        "page_18_possible_multicolumn",
+        "page_26_possible_multicolumn",
+        "methods_fallback_rejected",
+        "conclusions_fallback",
+        "missing_field:methods"
+      ],
+      "root_cause": "M12正文/双块/关键词/同section条件不满足，拒绝方法回退；仍有字段缺失或告警",
+      "candidate_before_validation": {
+        "chemicals": [
+          "Li6PS5Cl"
+        ],
+        "methods_chars": 0,
+        "conclusions_chars": 185,
+        "methods_warnings": [
+          "methods_fallback_rejected"
+        ],
+        "sections": [
+          [
+            "",
+            "unknown"
+          ],
+          [
+            "Abstract",
+            "abstract"
+          ],
+          [
+            "References",
+            "references"
+          ],
+          [
+            "References",
+            "references"
+          ]
+        ]
+      }
+    },
+    {
+      "paper_id": "arxiv:2501.00620",
+      "before_status": "partial",
+      "before_partial_reasons": [
+        "字段缺失",
+        "其他：原质量告警/版面问题"
+      ],
+      "after_status": "partial",
+      "methods_before": 2018,
+      "methods_after": 0,
+      "conclusions_before": 0,
+      "conclusions_after": 2046,
+      "chemicals_before": 0,
+      "chemicals_after": 0,
+      "known_leak_terms_before": [],
+      "warnings_after": [
+        "page_2_possible_multicolumn",
+        "page_3_possible_multicolumn",
+        "page_4_possible_multicolumn",
+        "page_6_possible_multicolumn",
+        "page_7_possible_multicolumn",
+        "page_8_possible_multicolumn",
+        "page_9_possible_multicolumn",
+        "page_11_possible_multicolumn",
+        "page_12_possible_multicolumn",
+        "page_13_possible_multicolumn",
+        "page_14_possible_multicolumn",
+        "page_15_possible_multicolumn",
+        "page_16_possible_multicolumn",
+        "page_17_possible_multicolumn",
+        "page_18_possible_multicolumn",
+        "page_20_possible_multicolumn",
+        "page_23_possible_multicolumn",
+        "page_28_possible_multicolumn",
+        "page_30_possible_multicolumn",
+        "page_31_possible_multicolumn",
+        "methods_fallback_rejected",
+        "missing_field:chemicals",
+        "missing_field:methods"
+      ],
+      "root_cause": "M12正文/双块/关键词/同section条件不满足，拒绝方法回退；仍有字段缺失或告警",
+      "candidate_before_validation": {
+        "chemicals": [],
+        "methods_chars": 0,
+        "conclusions_chars": 2046,
+        "methods_warnings": [
+          "methods_fallback_rejected"
+        ],
+        "sections": [
+          [
+            "",
+            "unknown"
+          ],
+          [
+            "INTRODUCTION",
+            "unknown"
+          ],
+          [
+            "CONCLUSION",
+            "conclusions"
+          ],
+          [
+            "ACKNOWLEDGMENTS",
+            "references"
+          ],
+          [
+            "REFERENCES",
+            "references"
+          ]
+        ]
+      }
+    },
+    {
+      "paper_id": "arxiv:2501.00679",
+      "before_status": "partial",
+      "before_partial_reasons": [
+        "长度超限（按本轮上限复核）",
+        "其他：原质量告警/版面问题"
+      ],
+      "after_status": "partial",
+      "methods_before": 5306,
+      "methods_after": 815,
+      "conclusions_before": 166,
+      "conclusions_after": 5205,
+      "chemicals_before": 2,
+      "chemicals_after": 2,
+      "known_leak_terms_before": [],
+      "warnings_after": [
+        "page_3_possible_multicolumn",
+        "page_6_possible_multicolumn",
+        "page_7_possible_multicolumn",
+        "page_8_possible_multicolumn",
+        "page_9_possible_multicolumn",
+        "page_12_possible_multicolumn",
+        "page_13_possible_multicolumn",
+        "page_14_possible_multicolumn",
+        "page_23_possible_multicolumn",
+        "page_24_possible_multicolumn",
+        "page_25_possible_multicolumn",
+        "page_26_possible_multicolumn",
+        "page_27_possible_multicolumn",
+        "page_29_possible_multicolumn",
+        "page_31_possible_multicolumn",
+        "page_33_possible_multicolumn",
+        "page_34_possible_multicolumn",
+        "page_35_possible_multicolumn"
+      ],
+      "root_cause": "章节/边界改善；仍有版面告警，保持partial；非科学语义验收通过",
+      "candidate_before_validation": {
+        "chemicals": [
+          "MgO",
+          "MgSiO3"
+        ],
+        "methods_chars": 815,
+        "conclusions_chars": 5205,
+        "methods_warnings": [],
+        "sections": [
+          [
+            "",
+            "unknown"
+          ],
+          [
+            "Abstract",
+            "abstract"
+          ],
+          [
+            "INTRODUCTION",
+            "unknown"
+          ],
+          [
+            "SUMMARY AND OUTLOOK",
+            "conclusions"
+          ],
+          [
+            "METHOD",
+            "methods"
+          ],
+          [
+            "ACKNOWLEDGMENTS",
+            "references"
+          ]
+        ]
+      }
+    },
+    {
+      "paper_id": "arxiv:2501.00680",
+      "before_status": "partial",
+      "before_partial_reasons": [
+        "视图泄漏",
+        "其他：原质量告警/版面问题"
+      ],
+      "after_status": "partial",
+      "methods_before": 2491,
+      "methods_after": 1330,
+      "conclusions_before": 789,
+      "conclusions_after": 405,
+      "chemicals_before": 5,
+      "chemicals_after": 5,
+      "known_leak_terms_before": [],
+      "warnings_after": [
+        "page_1_possible_multicolumn"
+      ],
+      "root_cause": "章节/边界改善；仍有版面告警，保持partial；非科学语义验收通过",
+      "candidate_before_validation": {
+        "chemicals": [
+          "BiFeO3",
+          "MoS2",
+          "Bi4Ti3O12",
+          "BiO",
+          "FeO2"
+        ],
+        "methods_chars": 1330,
+        "conclusions_chars": 405,
+        "methods_warnings": [],
+        "sections": [
+          [
+            "",
+            "unknown"
+          ],
+          [
+            "Abstract",
+            "abstract"
+          ],
+          [
+            "1 Introduction",
+            "unknown"
+          ],
+          [
+            "2 Calculation details",
+            "methods"
+          ],
+          [
+            "3 Results and Discussion",
+            "discussion"
+          ],
+          [
+            "4 Conclusion",
+            "conclusions"
+          ],
+          [
+            "Acknowledgments.",
+            "references"
+          ],
+          [
+            "References",
+            "references"
+          ]
+        ]
+      }
+    },
+    {
+      "paper_id": "arxiv:2501.01468",
+      "before_status": "failed",
+      "before_partial_reasons": [],
+      "after_status": "skipped",
+      "methods_before": 0,
+      "methods_after": 0,
+      "conclusions_before": 0,
+      "conclusions_after": 0,
+      "chemicals_before": 0,
+      "chemicals_after": 0,
+      "known_leak_terms_before": [],
+      "warnings_after": [],
+      "root_cause": "默认100MiB；远端Content-Length超限，专用体积异常→skipped",
+      "candidate_before_validation": {}
+    }
+  ],
+  "limitations": [
+    "Length interval is not field correctness.",
+    "Known-leak regression is not a complete precision/recall score.",
+    "2501.00589 methods still includes a figure caption and conclusions spills into method content due to column reading order.",
+    "HK0/HK1 false chemical entities remain; no new NER/chemical ontology rules added.",
+    "2501.00591 previously body-supported NbS2 is absent after conservative boundary exclusion; recall may regress."
+  ]
+}

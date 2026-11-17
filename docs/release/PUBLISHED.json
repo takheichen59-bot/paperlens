@@ -1,0 +1,10 @@
+{
+  "status": "succeeded",
+  "url": "https://matterlens-research-6af992.takheichen59.chatgpt.site",
+  "project_id": "appgprj_6af992a5ce688191877dc4f199312901",
+  "version_id": "appgprj_6af992a5ce688191877dc4f199312901~appgver_577c467e8b448191b7ddeebdb254d9a8",
+  "commit_sha": "9ed84e9f1a3ecc4993158667fdd90dad44f635de",
+  "package_version": "0.1.2",
+  "audience": "owner-private",
+  "browser_interaction_verified": false
+}

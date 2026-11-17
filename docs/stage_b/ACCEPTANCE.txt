@@ -1,0 +1,21 @@
+PASS case_standard
+PASS case_numbered
+PASS case_combined
+PASS case_body_words
+PASS case_unknown_and_supplement
+PASS case_reference_leak
+PASS case_funding_leak
+PASS case_acknowledgement_title
+PASS case_raw_unchanged_coverage
+PASS case_refs_and_ack_coexist
+PASS case_old_cache_reparsed
+PASS case_roman_headers
+PASS case_calculation_details
+PASS case_nested_numbering
+PASS case_two_column_left_first
+PASS case_caption_separation
+PASS case_body_figure_reference
+PASS case_cross_page_continuation
+PASS case_single_column_centered
+PASS case_visual_adjacent_caption
+SUMMARY: 20 passed, 0 failed

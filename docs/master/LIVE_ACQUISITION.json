@@ -1,0 +1,16 @@
+{
+  "sha256": "b979aebce79a4f1c4afb24dc6087c2dc0cc5e7c5d9a5bdec7e112c3153c19a77",
+  "path": "work/master-platform/acquired/b979aebce79a4f1c4afb24dc6087c2dc0cc5e7c5d9a5bdec7e112c3153c19a77.pdf",
+  "bytes": 3702933,
+  "source_url": "https://arxiv.org/pdf/2501.00534v2",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "access_status": "FULLTEXT_AVAILABLE",
+  "acquisition_method": "OFFICIAL_HOST_ALLOWLIST_EGRESS_PDF",
+  "downloaded_at": "2026-11-16T14:01:22.120025+00:00",
+  "reuse_scope": "FOLLOW_RECORDED_LICENSE",
+  "probe": {
+    "pages": 5,
+    "characters": 21280,
+    "needs_ocr": false
+  }
+}

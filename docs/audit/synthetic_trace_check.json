@@ -1,0 +1,98 @@
+[
+  {
+    "paper_id": "arxiv:2401.00001",
+    "chemicals": [
+      "Titanium dioxide"
+    ],
+    "conclusions": "The coating improved corrosion resistance.",
+    "methods": "Titanium dioxide was prepared by hydrothermal synthesis at 180 C.",
+    "status": "success",
+    "traces": [
+      {
+        "field": "chemicals",
+        "block_id": "p1-b4",
+        "start": 0,
+        "end": 65,
+        "slice_matches": true
+      },
+      {
+        "field": "methods",
+        "block_id": "p1-b4",
+        "start": 0,
+        "end": 65,
+        "slice_matches": true
+      },
+      {
+        "field": "conclusions",
+        "block_id": "p1-b8",
+        "start": 0,
+        "end": 42,
+        "slice_matches": true
+      }
+    ]
+  },
+  {
+    "paper_id": "arxiv:2401.00002",
+    "chemicals": [
+      "Graphene"
+    ],
+    "conclusions": "The coating improved corrosion resistance.",
+    "methods": "Graphene was prepared by hydrothermal synthesis at 180 C.",
+    "status": "success",
+    "traces": [
+      {
+        "field": "chemicals",
+        "block_id": "p1-b4",
+        "start": 0,
+        "end": 57,
+        "slice_matches": true
+      },
+      {
+        "field": "methods",
+        "block_id": "p1-b4",
+        "start": 0,
+        "end": 57,
+        "slice_matches": true
+      },
+      {
+        "field": "conclusions",
+        "block_id": "p1-b8",
+        "start": 0,
+        "end": 42,
+        "slice_matches": true
+      }
+    ]
+  },
+  {
+    "paper_id": "arxiv:2401.00003",
+    "chemicals": [
+      "Polyethylene glycol"
+    ],
+    "conclusions": "The coating improved corrosion resistance.",
+    "methods": "Polyethylene glycol was prepared by hydrothermal synthesis at 180 C.",
+    "status": "success",
+    "traces": [
+      {
+        "field": "chemicals",
+        "block_id": "p1-b4",
+        "start": 0,
+        "end": 68,
+        "slice_matches": true
+      },
+      {
+        "field": "methods",
+        "block_id": "p1-b4",
+        "start": 0,
+        "end": 68,
+        "slice_matches": true
+      },
+      {
+        "field": "conclusions",
+        "block_id": "p1-b8",
+        "start": 0,
+        "end": 42,
+        "slice_matches": true
+      }
+    ]
+  }
+]

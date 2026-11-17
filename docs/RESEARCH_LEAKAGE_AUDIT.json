@@ -1,0 +1,3068 @@
+{
+  "summary": {
+    "papers": 20,
+    "fully_decided_papers": 2,
+    "unresolved_papers": 18,
+    "known_view_leaks": 0,
+    "unresolved_snippets": 414,
+    "note": "Known-view checks are not independent layout ground truth; unknown sections remain unresolved."
+  },
+  "papers": [
+    {
+      "id": "2501.00534v2",
+      "decided_snippets": 0,
+      "unresolved_snippets": 33,
+      "leaks": [],
+      "unresolved": [
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e1"
+        },
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e2"
+        },
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e3"
+        },
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e4"
+        },
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e5"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e6"
+        },
+        {
+          "field": "chemicals",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e7"
+        },
+        {
+          "field": "conclusions",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e8"
+        },
+        {
+          "field": "conclusions",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e9"
+        },
+        {
+          "field": "algorithms",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e10"
+        },
+        {
+          "field": "findings",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e11"
+        },
+        {
+          "field": "findings",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e12"
+        },
+        {
+          "field": "findings",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e13"
+        },
+        {
+          "field": "findings",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e14"
+        },
+        {
+          "field": "formulas",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e15"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e16"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e17"
+        },
+        {
+          "field": "experimental_data",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e18"
+        },
+        {
+          "field": "experimental_data",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e19"
+        },
+        {
+          "field": "experimental_data",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e20"
+        },
+        {
+          "field": "experimental_data",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e21"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e22"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e23"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e24"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e25"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e26"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e27"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e28"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e29"
+        },
+        {
+          "field": "experimental_data",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e30"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e31"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e32"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e33"
+        }
+      ]
+    },
+    {
+      "id": "2501.00132v1",
+      "decided_snippets": 58,
+      "unresolved_snippets": 1,
+      "leaks": [],
+      "unresolved": [
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e1"
+        }
+      ]
+    },
+    {
+      "id": "2412.20653v1",
+      "decided_snippets": 88,
+      "unresolved_snippets": 11,
+      "leaks": [],
+      "unresolved": [
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e1"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e5"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e6"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e7"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e8"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e9"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e83"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e84"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e85"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e86"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e87"
+        }
+      ]
+    },
+    {
+      "id": "2501.00453v3",
+      "decided_snippets": 98,
+      "unresolved_snippets": 9,
+      "leaks": [],
+      "unresolved": [
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e1"
+        },
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e2"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e3"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e4"
+        },
+        {
+          "field": "algorithms",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e75"
+        },
+        {
+          "field": "experimental_data",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e82"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e83"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e84"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e85"
+        }
+      ]
+    },
+    {
+      "id": "2501.00591v1",
+      "decided_snippets": 0,
+      "unresolved_snippets": 28,
+      "leaks": [],
+      "unresolved": [
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e1"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e2"
+        },
+        {
+          "field": "chemicals",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e3"
+        },
+        {
+          "field": "chemicals",
+          "page": 5,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e4"
+        },
+        {
+          "field": "findings",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e5"
+        },
+        {
+          "field": "findings",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e6"
+        },
+        {
+          "field": "findings",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e7"
+        },
+        {
+          "field": "findings",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e8"
+        },
+        {
+          "field": "findings",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e9"
+        },
+        {
+          "field": "experimental_data",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e10"
+        },
+        {
+          "field": "experimental_data",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e11"
+        },
+        {
+          "field": "formulas",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e12"
+        },
+        {
+          "field": "formulas",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e13"
+        },
+        {
+          "field": "formulas",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e14"
+        },
+        {
+          "field": "formulas",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e15"
+        },
+        {
+          "field": "experimental_data",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e16"
+        },
+        {
+          "field": "formulas",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e17"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e18"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e19"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e20"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e21"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e22"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e23"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e24"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e25"
+        },
+        {
+          "field": "experimental_data",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e26"
+        },
+        {
+          "field": "experimental_data",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e27"
+        },
+        {
+          "field": "experimental_data",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e28"
+        }
+      ]
+    },
+    {
+      "id": "2501.00447v1",
+      "decided_snippets": 2,
+      "unresolved_snippets": 0,
+      "leaks": [],
+      "unresolved": []
+    },
+    {
+      "id": "2501.00423v1",
+      "decided_snippets": 28,
+      "unresolved_snippets": 0,
+      "leaks": [],
+      "unresolved": []
+    },
+    {
+      "id": "2412.20497v1",
+      "decided_snippets": 38,
+      "unresolved_snippets": 30,
+      "leaks": [],
+      "unresolved": [
+        {
+          "field": "chemicals",
+          "page": 8,
+          "section": "3.1 Comparison with Oxide Systems",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e1"
+        },
+        {
+          "field": "conclusions",
+          "page": 12,
+          "section": "4. Conclusion and Perspectives",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e34"
+        },
+        {
+          "field": "algorithms",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e35"
+        },
+        {
+          "field": "findings",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e38"
+        },
+        {
+          "field": "findings",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e39"
+        },
+        {
+          "field": "findings",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e40"
+        },
+        {
+          "field": "findings",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e41"
+        },
+        {
+          "field": "findings",
+          "page": 3,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e42"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e43"
+        },
+        {
+          "field": "experimental_data",
+          "page": 3,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e44"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e45"
+        },
+        {
+          "field": "experimental_data",
+          "page": 4,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e46"
+        },
+        {
+          "field": "experimental_data",
+          "page": 4,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e47"
+        },
+        {
+          "field": "experimental_data",
+          "page": 5,
+          "section": "2.1 High-Pressure Single Crystal X-Ray Diffraction Measurements",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e48"
+        },
+        {
+          "field": "experimental_data",
+          "page": 5,
+          "section": "2.1 High-Pressure Single Crystal X-Ray Diffraction Measurements",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e49"
+        },
+        {
+          "field": "experimental_data",
+          "page": 5,
+          "section": "2.1 High-Pressure Single Crystal X-Ray Diffraction Measurements",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e50"
+        },
+        {
+          "field": "experimental_data",
+          "page": 5,
+          "section": "2.1 High-Pressure Single Crystal X-Ray Diffraction Measurements",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e51"
+        },
+        {
+          "field": "experimental_data",
+          "page": 5,
+          "section": "2.1 High-Pressure Single Crystal X-Ray Diffraction Measurements",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e52"
+        },
+        {
+          "field": "experimental_data",
+          "page": 5,
+          "section": "2.1 High-Pressure Single Crystal X-Ray Diffraction Measurements",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e53"
+        },
+        {
+          "field": "experimental_data",
+          "page": 5,
+          "section": "2.1 High-Pressure Single Crystal X-Ray Diffraction Measurements",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e54"
+        },
+        {
+          "field": "formulas",
+          "page": 5,
+          "section": "2.1 High-Pressure Single Crystal X-Ray Diffraction Measurements",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e55"
+        },
+        {
+          "field": "experimental_data",
+          "page": 6,
+          "section": "2.1 High-Pressure Single Crystal X-Ray Diffraction Measurements",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e56"
+        },
+        {
+          "field": "experimental_data",
+          "page": 6,
+          "section": "2.1 High-Pressure Single Crystal X-Ray Diffraction Measurements",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e57"
+        },
+        {
+          "field": "experimental_data",
+          "page": 6,
+          "section": "2.1 High-Pressure Single Crystal X-Ray Diffraction Measurements",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e58"
+        },
+        {
+          "field": "experimental_data",
+          "page": 6,
+          "section": "2.1 High-Pressure Single Crystal X-Ray Diffraction Measurements",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e59"
+        },
+        {
+          "field": "formulas",
+          "page": 6,
+          "section": "2.1 High-Pressure Single Crystal X-Ray Diffraction Measurements",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e60"
+        },
+        {
+          "field": "experimental_data",
+          "page": 6,
+          "section": "2.2 Density Functional Theory Modeling",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e61"
+        },
+        {
+          "field": "formulas",
+          "page": 8,
+          "section": "3.2 Atomic Motions in CsPbBr3 Under Pressure",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e62"
+        },
+        {
+          "field": "formulas",
+          "page": 10,
+          "section": "3.3 System Thermodynamics",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e63"
+        },
+        {
+          "field": "formulas",
+          "page": 10,
+          "section": "3.3 System Thermodynamics",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e64"
+        }
+      ]
+    },
+    {
+      "id": "2501.00561v1",
+      "decided_snippets": 38,
+      "unresolved_snippets": 15,
+      "leaks": [],
+      "unresolved": [
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e1"
+        },
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e2"
+        },
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e3"
+        },
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e4"
+        },
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e5"
+        },
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e6"
+        },
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e7"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e8"
+        },
+        {
+          "field": "algorithms",
+          "page": 1,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e27"
+        },
+        {
+          "field": "experimental_data",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e32"
+        },
+        {
+          "field": "experimental_data",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e33"
+        },
+        {
+          "field": "experimental_data",
+          "page": 1,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e34"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e35"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e36"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e37"
+        }
+      ]
+    },
+    {
+      "id": "2501.00680v1",
+      "decided_snippets": 8,
+      "unresolved_snippets": 13,
+      "leaks": [],
+      "unresolved": [
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e1"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": "1 Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e3"
+        },
+        {
+          "field": "chemicals",
+          "page": 4,
+          "section": "3.1 Nanoparticle with opposite faces terminated either with",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e6"
+        },
+        {
+          "field": "chemicals",
+          "page": 8,
+          "section": "3.3 Nanoparticle with mixed termiations",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e7"
+        },
+        {
+          "field": "algorithms",
+          "page": 2,
+          "section": "1 Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e12"
+        },
+        {
+          "field": "limitations",
+          "page": 2,
+          "section": "1 Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e13"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "1 Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e14"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "1 Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e15"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "1 Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e16"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": "3.1 Nanoparticle with opposite faces terminated either with",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e18"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": "3.1 Nanoparticle with opposite faces terminated either with",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e19"
+        },
+        {
+          "field": "experimental_data",
+          "page": 4,
+          "section": "3.1 Nanoparticle with opposite faces terminated either with",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e20"
+        },
+        {
+          "field": "experimental_data",
+          "page": 5,
+          "section": "3.1 Nanoparticle with opposite faces terminated either with",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e21"
+        }
+      ]
+    },
+    {
+      "id": "2501.00091v3",
+      "decided_snippets": 0,
+      "unresolved_snippets": 33,
+      "leaks": [],
+      "unresolved": [
+        {
+          "field": "chemicals",
+          "page": 7,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e1"
+        },
+        {
+          "field": "conclusions",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e2"
+        },
+        {
+          "field": "conclusions",
+          "page": 14,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e3"
+        },
+        {
+          "field": "algorithms",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e4"
+        },
+        {
+          "field": "algorithms",
+          "page": 15,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e5"
+        },
+        {
+          "field": "algorithms",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e6"
+        },
+        {
+          "field": "findings",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e7"
+        },
+        {
+          "field": "findings",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e8"
+        },
+        {
+          "field": "findings",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e9"
+        },
+        {
+          "field": "findings",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e10"
+        },
+        {
+          "field": "findings",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e11"
+        },
+        {
+          "field": "limitations",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e12"
+        },
+        {
+          "field": "limitations",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e13"
+        },
+        {
+          "field": "limitations",
+          "page": 10,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e14"
+        },
+        {
+          "field": "formulas",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e15"
+        },
+        {
+          "field": "formulas",
+          "page": 6,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e16"
+        },
+        {
+          "field": "formulas",
+          "page": 6,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e17"
+        },
+        {
+          "field": "formulas",
+          "page": 6,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e18"
+        },
+        {
+          "field": "formulas",
+          "page": 6,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e19"
+        },
+        {
+          "field": "formulas",
+          "page": 7,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e20"
+        },
+        {
+          "field": "formulas",
+          "page": 7,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e21"
+        },
+        {
+          "field": "formulas",
+          "page": 7,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e22"
+        },
+        {
+          "field": "formulas",
+          "page": 7,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e23"
+        },
+        {
+          "field": "formulas",
+          "page": 7,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e24"
+        },
+        {
+          "field": "formulas",
+          "page": 7,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e25"
+        },
+        {
+          "field": "formulas",
+          "page": 7,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e26"
+        },
+        {
+          "field": "experimental_data",
+          "page": 10,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e27"
+        },
+        {
+          "field": "experimental_data",
+          "page": 15,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e28"
+        },
+        {
+          "field": "experimental_data",
+          "page": 15,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e29"
+        },
+        {
+          "field": "experimental_data",
+          "page": 15,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e30"
+        },
+        {
+          "field": "experimental_data",
+          "page": 15,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e31"
+        },
+        {
+          "field": "experimental_data",
+          "page": 15,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e32"
+        },
+        {
+          "field": "experimental_data",
+          "page": 25,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e33"
+        }
+      ]
+    },
+    {
+      "id": "2412.20448v1",
+      "decided_snippets": 21,
+      "unresolved_snippets": 25,
+      "leaks": [],
+      "unresolved": [
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e1"
+        },
+        {
+          "field": "chemicals",
+          "page": 3,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e2"
+        },
+        {
+          "field": "chemicals",
+          "page": 4,
+          "section": "II. Simulation procedures",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e3"
+        },
+        {
+          "field": "algorithms",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e13"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e22"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e23"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e24"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e25"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e26"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e27"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e28"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e29"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e30"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e31"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e32"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e33"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e34"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e35"
+        },
+        {
+          "field": "experimental_data",
+          "page": 3,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e36"
+        },
+        {
+          "field": "experimental_data",
+          "page": 3,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e37"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e38"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e39"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": "II. Simulation procedures",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e40"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": "II. Simulation procedures",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e41"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": "II. Simulation procedures",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e42"
+        }
+      ]
+    },
+    {
+      "id": "2412.20531v2",
+      "decided_snippets": 0,
+      "unresolved_snippets": 38,
+      "leaks": [],
+      "unresolved": [
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e1"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e2"
+        },
+        {
+          "field": "chemicals",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e3"
+        },
+        {
+          "field": "chemicals",
+          "page": 6,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e4"
+        },
+        {
+          "field": "conclusions",
+          "page": 5,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e5"
+        },
+        {
+          "field": "findings",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e6"
+        },
+        {
+          "field": "findings",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e7"
+        },
+        {
+          "field": "findings",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e8"
+        },
+        {
+          "field": "findings",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e9"
+        },
+        {
+          "field": "findings",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e10"
+        },
+        {
+          "field": "limitations",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e11"
+        },
+        {
+          "field": "experimental_data",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e12"
+        },
+        {
+          "field": "formulas",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e13"
+        },
+        {
+          "field": "formulas",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e14"
+        },
+        {
+          "field": "formulas",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e15"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e16"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e17"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e18"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e19"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e20"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e21"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e22"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e23"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e24"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e25"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e26"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e27"
+        },
+        {
+          "field": "experimental_data",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e28"
+        },
+        {
+          "field": "experimental_data",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e29"
+        },
+        {
+          "field": "experimental_data",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e30"
+        },
+        {
+          "field": "experimental_data",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e31"
+        },
+        {
+          "field": "experimental_data",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e32"
+        },
+        {
+          "field": "experimental_data",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e33"
+        },
+        {
+          "field": "experimental_data",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e34"
+        },
+        {
+          "field": "experimental_data",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e35"
+        },
+        {
+          "field": "experimental_data",
+          "page": 5,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e36"
+        },
+        {
+          "field": "experimental_data",
+          "page": 6,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e37"
+        },
+        {
+          "field": "experimental_data",
+          "page": 6,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e38"
+        }
+      ]
+    },
+    {
+      "id": "2412.21119v2",
+      "decided_snippets": 49,
+      "unresolved_snippets": 24,
+      "leaks": [],
+      "unresolved": [
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e1"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e2"
+        },
+        {
+          "field": "chemicals",
+          "page": 4,
+          "section": "1 Å -1",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e9"
+        },
+        {
+          "field": "chemicals",
+          "page": 5,
+          "section": "1 Å -1",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e10"
+        },
+        {
+          "field": "chemicals",
+          "page": 5,
+          "section": "1 Å -1",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e11"
+        },
+        {
+          "field": "chemicals",
+          "page": 5,
+          "section": "1 Å -1",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e12"
+        },
+        {
+          "field": "chemicals",
+          "page": 5,
+          "section": "1 Å -1",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e13"
+        },
+        {
+          "field": "chemicals",
+          "page": 5,
+          "section": "1 Å -1",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e14"
+        },
+        {
+          "field": "chemicals",
+          "page": 6,
+          "section": "5 Å",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e15"
+        },
+        {
+          "field": "algorithms",
+          "page": 6,
+          "section": "5 Å",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e51"
+        },
+        {
+          "field": "limitations",
+          "page": 1,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e56"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e57"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e58"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": "1 Å -1",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e60"
+        },
+        {
+          "field": "experimental_data",
+          "page": 5,
+          "section": "1 Å -1",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e61"
+        },
+        {
+          "field": "formulas",
+          "page": 5,
+          "section": "1 Å -1",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e62"
+        },
+        {
+          "field": "formulas",
+          "page": 5,
+          "section": "1 Å -1",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e63"
+        },
+        {
+          "field": "formulas",
+          "page": 5,
+          "section": "1 Å -1",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e64"
+        },
+        {
+          "field": "experimental_data",
+          "page": 5,
+          "section": "1 Å -1",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e65"
+        },
+        {
+          "field": "formulas",
+          "page": 5,
+          "section": "1 Å -1",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e66"
+        },
+        {
+          "field": "experimental_data",
+          "page": 5,
+          "section": "1 Å -1",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e67"
+        },
+        {
+          "field": "formulas",
+          "page": 5,
+          "section": "1 Å -1",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e68"
+        },
+        {
+          "field": "formulas",
+          "page": 5,
+          "section": "1 Å -1",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e69"
+        },
+        {
+          "field": "formulas",
+          "page": 5,
+          "section": "1 Å -1",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e70"
+        }
+      ]
+    },
+    {
+      "id": "2501.00589v2",
+      "decided_snippets": 25,
+      "unresolved_snippets": 27,
+      "leaks": [],
+      "unresolved": [
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e1"
+        },
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e2"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e3"
+        },
+        {
+          "field": "chemicals",
+          "page": 3,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e4"
+        },
+        {
+          "field": "chemicals",
+          "page": 3,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e5"
+        },
+        {
+          "field": "chemicals",
+          "page": 4,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e6"
+        },
+        {
+          "field": "chemicals",
+          "page": 5,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e7"
+        },
+        {
+          "field": "algorithms",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e17"
+        },
+        {
+          "field": "algorithms",
+          "page": 3,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e18"
+        },
+        {
+          "field": "algorithms",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e19"
+        },
+        {
+          "field": "limitations",
+          "page": 1,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e24"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e25"
+        },
+        {
+          "field": "experimental_data",
+          "page": 3,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e26"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e27"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e28"
+        },
+        {
+          "field": "experimental_data",
+          "page": 3,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e29"
+        },
+        {
+          "field": "experimental_data",
+          "page": 3,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e30"
+        },
+        {
+          "field": "experimental_data",
+          "page": 3,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e31"
+        },
+        {
+          "field": "experimental_data",
+          "page": 3,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e32"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e33"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e34"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e35"
+        },
+        {
+          "field": "experimental_data",
+          "page": 5,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e36"
+        },
+        {
+          "field": "experimental_data",
+          "page": 5,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e37"
+        },
+        {
+          "field": "experimental_data",
+          "page": 5,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e38"
+        },
+        {
+          "field": "formulas",
+          "page": 6,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e39"
+        },
+        {
+          "field": "formulas",
+          "page": 6,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e40"
+        }
+      ]
+    },
+    {
+      "id": "2412.20938v2",
+      "decided_snippets": 0,
+      "unresolved_snippets": 38,
+      "leaks": [],
+      "unresolved": [
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e1"
+        },
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e2"
+        },
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e3"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e4"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e5"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e6"
+        },
+        {
+          "field": "chemicals",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e7"
+        },
+        {
+          "field": "chemicals",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e8"
+        },
+        {
+          "field": "chemicals",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e9"
+        },
+        {
+          "field": "chemicals",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e10"
+        },
+        {
+          "field": "chemicals",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e11"
+        },
+        {
+          "field": "chemicals",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e12"
+        },
+        {
+          "field": "chemicals",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e13"
+        },
+        {
+          "field": "chemicals",
+          "page": 5,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e14"
+        },
+        {
+          "field": "chemicals",
+          "page": 5,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e15"
+        },
+        {
+          "field": "findings",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e16"
+        },
+        {
+          "field": "findings",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e17"
+        },
+        {
+          "field": "findings",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e18"
+        },
+        {
+          "field": "findings",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e19"
+        },
+        {
+          "field": "findings",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e20"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e21"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e22"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e23"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e24"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e25"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e26"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e27"
+        },
+        {
+          "field": "experimental_data",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e28"
+        },
+        {
+          "field": "experimental_data",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e29"
+        },
+        {
+          "field": "experimental_data",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e30"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e31"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e32"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e33"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e34"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e35"
+        },
+        {
+          "field": "experimental_data",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e36"
+        },
+        {
+          "field": "experimental_data",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e37"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e38"
+        }
+      ]
+    },
+    {
+      "id": "2412.20865v1",
+      "decided_snippets": 65,
+      "unresolved_snippets": 9,
+      "leaks": [],
+      "unresolved": [
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e1"
+        },
+        {
+          "field": "algorithms",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e40"
+        },
+        {
+          "field": "experimental_data",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e47"
+        },
+        {
+          "field": "experimental_data",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e48"
+        },
+        {
+          "field": "experimental_data",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e49"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e50"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e51"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e52"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "INTRODUCTION",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e53"
+        }
+      ]
+    },
+    {
+      "id": "2412.20394v1",
+      "decided_snippets": 0,
+      "unresolved_snippets": 38,
+      "leaks": [],
+      "unresolved": [
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e1"
+        },
+        {
+          "field": "chemicals",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e2"
+        },
+        {
+          "field": "chemicals",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e3"
+        },
+        {
+          "field": "chemicals",
+          "page": 5,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e4"
+        },
+        {
+          "field": "chemicals",
+          "page": 17,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e5"
+        },
+        {
+          "field": "chemicals",
+          "page": 17,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e6"
+        },
+        {
+          "field": "chemicals",
+          "page": 27,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e7"
+        },
+        {
+          "field": "chemicals",
+          "page": 28,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e8"
+        },
+        {
+          "field": "chemicals",
+          "page": 28,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e9"
+        },
+        {
+          "field": "chemicals",
+          "page": 28,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e10"
+        },
+        {
+          "field": "chemicals",
+          "page": 28,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e11"
+        },
+        {
+          "field": "findings",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e12"
+        },
+        {
+          "field": "findings",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e13"
+        },
+        {
+          "field": "findings",
+          "page": 3,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e14"
+        },
+        {
+          "field": "findings",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e15"
+        },
+        {
+          "field": "findings",
+          "page": 5,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e16"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e17"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e18"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e19"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e20"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e21"
+        },
+        {
+          "field": "formulas",
+          "page": 4,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e22"
+        },
+        {
+          "field": "experimental_data",
+          "page": 5,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e23"
+        },
+        {
+          "field": "experimental_data",
+          "page": 5,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e24"
+        },
+        {
+          "field": "experimental_data",
+          "page": 5,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e25"
+        },
+        {
+          "field": "experimental_data",
+          "page": 6,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e26"
+        },
+        {
+          "field": "experimental_data",
+          "page": 6,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e27"
+        },
+        {
+          "field": "experimental_data",
+          "page": 6,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e28"
+        },
+        {
+          "field": "experimental_data",
+          "page": 6,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e29"
+        },
+        {
+          "field": "experimental_data",
+          "page": 7,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e30"
+        },
+        {
+          "field": "experimental_data",
+          "page": 8,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e31"
+        },
+        {
+          "field": "experimental_data",
+          "page": 8,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e32"
+        },
+        {
+          "field": "experimental_data",
+          "page": 8,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e33"
+        },
+        {
+          "field": "formulas",
+          "page": 9,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e34"
+        },
+        {
+          "field": "formulas",
+          "page": 16,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e35"
+        },
+        {
+          "field": "formulas",
+          "page": 23,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e36"
+        },
+        {
+          "field": "formulas",
+          "page": 25,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e37"
+        },
+        {
+          "field": "formulas",
+          "page": 31,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e38"
+        }
+      ]
+    },
+    {
+      "id": "2412.20552v1",
+      "decided_snippets": 17,
+      "unresolved_snippets": 13,
+      "leaks": [],
+      "unresolved": [
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e2"
+        },
+        {
+          "field": "chemicals",
+          "page": 1,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e3"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e4"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e5"
+        },
+        {
+          "field": "chemicals",
+          "page": 2,
+          "section": "2. Experimental procedures",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e6"
+        },
+        {
+          "field": "chemicals",
+          "page": 3,
+          "section": "2. Experimental procedures",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e7"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e20"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e21"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e22"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "2. Experimental procedures",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e23"
+        },
+        {
+          "field": "experimental_data",
+          "page": 2,
+          "section": "2. Experimental procedures",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e24"
+        },
+        {
+          "field": "experimental_data",
+          "page": 3,
+          "section": "2. Experimental procedures",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e25"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": "2. Experimental procedures",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e26"
+        }
+      ]
+    },
+    {
+      "id": "2501.03254v1",
+      "decided_snippets": 7,
+      "unresolved_snippets": 29,
+      "leaks": [],
+      "unresolved": [
+        {
+          "field": "algorithms",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e6"
+        },
+        {
+          "field": "algorithms",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e7"
+        },
+        {
+          "field": "experimental_data",
+          "page": 1,
+          "section": null,
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e9"
+        },
+        {
+          "field": "formulas",
+          "page": 1,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e10"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e11"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e12"
+        },
+        {
+          "field": "formulas",
+          "page": 2,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e13"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e14"
+        },
+        {
+          "field": "experimental_data",
+          "page": 3,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e15"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e16"
+        },
+        {
+          "field": "formulas",
+          "page": 3,
+          "section": "1. Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e17"
+        },
+        {
+          "field": "formulas",
+          "page": 5,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e18"
+        },
+        {
+          "field": "formulas",
+          "page": 6,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e19"
+        },
+        {
+          "field": "formulas",
+          "page": 6,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e20"
+        },
+        {
+          "field": "formulas",
+          "page": 9,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e21"
+        },
+        {
+          "field": "formulas",
+          "page": 9,
+          "section": "Introduction",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e22"
+        },
+        {
+          "field": "experimental_data",
+          "page": 18,
+          "section": "4. Results and Discussions",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e24"
+        },
+        {
+          "field": "experimental_data",
+          "page": 19,
+          "section": "4. Results and Discussions",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e25"
+        },
+        {
+          "field": "experimental_data",
+          "page": 19,
+          "section": "4. Results and Discussions",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e26"
+        },
+        {
+          "field": "experimental_data",
+          "page": 19,
+          "section": "4. Results and Discussions",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e27"
+        },
+        {
+          "field": "experimental_data",
+          "page": 25,
+          "section": "4. Results and Discussions",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e28"
+        },
+        {
+          "field": "experimental_data",
+          "page": 25,
+          "section": "4. Results and Discussions",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e29"
+        },
+        {
+          "field": "experimental_data",
+          "page": 25,
+          "section": "4. Results and Discussions",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e30"
+        },
+        {
+          "field": "experimental_data",
+          "page": 25,
+          "section": "4. Results and Discussions",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e31"
+        },
+        {
+          "field": "experimental_data",
+          "page": 25,
+          "section": "4. Results and Discussions",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e32"
+        },
+        {
+          "field": "experimental_data",
+          "page": 27,
+          "section": "4. Results and Discussions",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e33"
+        },
+        {
+          "field": "experimental_data",
+          "page": 27,
+          "section": "4. Results and Discussions",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e34"
+        },
+        {
+          "field": "experimental_data",
+          "page": 27,
+          "section": "4. Results and Discussions",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e35"
+        },
+        {
+          "field": "experimental_data",
+          "page": 29,
+          "section": "4. Results and Discussions",
+          "reason": "section_attribution_unknown",
+          "evidence_id": "e36"
+        }
+      ]
+    }
+  ]
+}

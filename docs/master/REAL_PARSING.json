@@ -1,0 +1,248 @@
+{
+  "papers": [
+    {
+      "id": "2501.00680v1",
+      "status": "PARSED",
+      "segments": 81,
+      "equation_candidates": 2,
+      "tables": 0,
+      "figures": 5,
+      "external": {
+        "grobid": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "docling": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "dual_parser": {
+          "status": "NOT EXECUTED",
+          "reason": "BOTH_REAL_PARSERS_REQUIRED"
+        }
+      },
+      "deep_ai": "NOT_EXECUTED",
+      "seconds": 4.97
+    },
+    {
+      "id": "2501.00591v1",
+      "status": "PARSED",
+      "segments": 75,
+      "equation_candidates": 22,
+      "tables": 0,
+      "figures": 4,
+      "external": {
+        "grobid": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "docling": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "dual_parser": {
+          "status": "NOT EXECUTED",
+          "reason": "BOTH_REAL_PARSERS_REQUIRED"
+        }
+      },
+      "deep_ai": "NOT_EXECUTED",
+      "seconds": 18.78
+    },
+    {
+      "id": "2501.00589v2",
+      "status": "PARSED",
+      "segments": 477,
+      "equation_candidates": 37,
+      "tables": 5,
+      "figures": 128,
+      "external": {
+        "grobid": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "docling": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "dual_parser": {
+          "status": "NOT EXECUTED",
+          "reason": "BOTH_REAL_PARSERS_REQUIRED"
+        }
+      },
+      "deep_ai": "NOT_EXECUTED",
+      "seconds": 26.4
+    },
+    {
+      "id": "2501.00561v1",
+      "status": "PARSED",
+      "segments": 173,
+      "equation_candidates": 8,
+      "tables": 2,
+      "figures": 5,
+      "external": {
+        "grobid": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "docling": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "dual_parser": {
+          "status": "NOT EXECUTED",
+          "reason": "BOTH_REAL_PARSERS_REQUIRED"
+        }
+      },
+      "deep_ai": "NOT_EXECUTED",
+      "seconds": 6.62
+    },
+    {
+      "id": "2501.00534v2",
+      "status": "PARSED",
+      "segments": 32,
+      "equation_candidates": 13,
+      "tables": 0,
+      "figures": 4,
+      "external": {
+        "grobid": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "docling": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "dual_parser": {
+          "status": "NOT EXECUTED",
+          "reason": "BOTH_REAL_PARSERS_REQUIRED"
+        }
+      },
+      "deep_ai": "NOT_EXECUTED",
+      "seconds": 3.03
+    },
+    {
+      "id": "2501.00453v3",
+      "status": "PARSED",
+      "segments": 772,
+      "equation_candidates": 62,
+      "tables": 0,
+      "figures": 300,
+      "external": {
+        "grobid": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "docling": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "dual_parser": {
+          "status": "NOT EXECUTED",
+          "reason": "BOTH_REAL_PARSERS_REQUIRED"
+        }
+      },
+      "deep_ai": "NOT_EXECUTED",
+      "seconds": 17.76
+    },
+    {
+      "id": "2501.00447v1",
+      "status": "PARSED",
+      "segments": 32,
+      "equation_candidates": 1,
+      "tables": 0,
+      "figures": 3,
+      "external": {
+        "grobid": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "docling": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "dual_parser": {
+          "status": "NOT EXECUTED",
+          "reason": "BOTH_REAL_PARSERS_REQUIRED"
+        }
+      },
+      "deep_ai": "NOT_EXECUTED",
+      "seconds": 0.5
+    },
+    {
+      "id": "2501.00423v1",
+      "status": "PARSED",
+      "segments": 307,
+      "equation_candidates": 7,
+      "tables": 0,
+      "figures": 9,
+      "external": {
+        "grobid": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "docling": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "dual_parser": {
+          "status": "NOT EXECUTED",
+          "reason": "BOTH_REAL_PARSERS_REQUIRED"
+        }
+      },
+      "deep_ai": "NOT_EXECUTED",
+      "seconds": 0.94
+    },
+    {
+      "id": "2501.03254v1",
+      "status": "PARSED",
+      "segments": 431,
+      "equation_candidates": 35,
+      "tables": 2,
+      "figures": 29,
+      "external": {
+        "grobid": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "docling": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "dual_parser": {
+          "status": "NOT EXECUTED",
+          "reason": "BOTH_REAL_PARSERS_REQUIRED"
+        }
+      },
+      "deep_ai": "NOT_EXECUTED",
+      "seconds": 3.82
+    },
+    {
+      "id": "2501.00132v1",
+      "status": "PARSED",
+      "segments": 308,
+      "equation_candidates": 0,
+      "tables": 0,
+      "figures": 5,
+      "external": {
+        "grobid": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "docling": {
+          "status": "NOT EXECUTED",
+          "reason": "NOT_CONFIGURED"
+        },
+        "dual_parser": {
+          "status": "NOT EXECUTED",
+          "reason": "BOTH_REAL_PARSERS_REQUIRED"
+        }
+      },
+      "deep_ai": "NOT_EXECUTED",
+      "seconds": 7.08
+    }
+  ],
+  "parsed": 10,
+  "total": 10,
+  "human_gold": "NOT EXECUTED_NO_HUMAN_GOLD",
+  "real_llm": "NOT EXECUTED_NO_CREDENTIALS"
+}

@@ -1,0 +1,166 @@
+
+$ python acceptance/m01_contracts.py
+PASS 01_complete.json/complete_valid: valid record accepted
+PASS 02_null_doi.json/null_doi_valid: valid record accepted
+PASS 03_invalid_nulls.json/chemicals_null: invalid record rejected
+PASS 03_invalid_nulls.json/conclusions_null: invalid record rejected
+PASS 04_inconsistent_status.json/success_without_methods: invalid record rejected
+PASS 05_abstract_classes.json/BaseFetcher: TypeError raised
+PASS 05_abstract_classes.json/BaseParser: TypeError raised
+PASS 05_abstract_classes.json/BaseExtractor: TypeError raised
+PASS 06_stage_enum.json/stage_enum_compatibility: storage/export constructible; original members preserved; unknown rejected
+SUMMARY: 9 passed, 0 failed; 6 fixture files
+
+$ python acceptance/m02_storage.py
+PASS case_first_write
+PASS case_upserts
+PASS case_rollback
+PASS case_reopen
+PASS case_migration
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m03_arxiv_metadata.py
+PASS case_keyword
+PASS case_id
+PASS case_url
+PASS case_doi_missing
+PASS case_invalid_and_ambiguous
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m04_http_policy.py
+PASS case_pacing
+PASS case_rate_limit
+PASS case_service_retry
+PASS case_timeout_budget
+PASS case_permanent_and_cancel
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m05_pdf_download.py
+PASS case_valid
+PASS case_html
+PASS case_interrupted
+PASS case_cache
+PASS case_limit
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m06_resume.py
+PASS case_after_download
+PASS case_after_parse
+PASS case_completed
+PASS case_corrupt
+PASS case_version_and_recover
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m07_pdf_text.py
+PASS case_single_column
+PASS case_multicolumn
+PASS case_multiple_pages
+PASS case_corrupted
+PASS case_scan
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m08_layout_cleaning.py
+PASS case_repeated_margins
+PASS case_page_numbers
+PASS case_join_mapping
+PASS case_chemical_hyphen
+PASS case_unique_body
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m09_sections.py
+PASS case_standard
+PASS case_numbered
+PASS case_combined
+PASS case_body_words
+PASS case_unknown_and_supplement
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m10_chemicals.py
+PASS case_names
+PASS case_formulas
+PASS case_polymer
+PASS case_units_and_references
+PASS case_deduplicate
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m11_ner_adapter.py
+PASS case_disabled
+PASS case_duplicate_and_new
+PASS case_overlap
+PASS case_invalid_offset
+PASS case_failure
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m12_methods.py
+PASS case_experimental
+PASS case_computational
+PASS case_no_heading
+PASS case_abstract
+PASS case_references_only
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m13_conclusions.py
+PASS case_conclusion_section
+PASS case_summary_heading
+PASS case_discussion_fallback
+PASS case_purpose_only
+PASS case_negative_limitations
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m14_extraction_validation.py
+PASS case_complete
+PASS case_missing_field
+PASS case_no_evidence
+PASS case_invalid_location
+PASS case_duplicate
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m15_llm_contract.py
+PASS case_valid
+PASS case_hallucination
+PASS case_invalid_schema
+PASS case_timeout_and_limit
+PASS case_untrusted_document
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m16_single_pipeline.py
+PASS case_complete
+PASS case_download_failure
+PASS case_parse_failure
+PASS case_partial
+PASS case_resume
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m17_batch_pipeline.py
+PASS case_mixed
+PASS case_duplicates
+PASS case_limits
+PASS case_cancel
+PASS case_restart
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m18_exports.py
+PASS case_complete
+PASS case_partial
+PASS case_failure
+PASS case_repeat_and_latest
+PASS case_interruption
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m19_cli.py
+PASS case_single
+PASS case_search
+PASS case_resume
+PASS case_invalid_parameters
+PASS case_partial_batch
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m20_end_to_end.py
+PASS test_standard_source_to_jsonl
+PASS test_multicolumn_pdf
+PASS test_missing_conclusion
+PASS test_image_only_pdf
+PASS test_mixed_failure_and_restart
+SUMMARY: 5 passed, 0 failed
+
+ALL MODULES: PASS (20 scripts; 104 acceptance checks)

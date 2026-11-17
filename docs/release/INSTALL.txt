@@ -1,0 +1,5 @@
+PASS isolated wheel imports from site-packages: 0.1.2
+PASS both installed CLI entrypoints
+PASS isolated CLI: submitted=3 success=3 partial=0 failed=0 skipped=0
+PASS installed web UI assets and actual PDF extraction over HTTP
+INSTALL SUMMARY: 4 passed, 0 failed

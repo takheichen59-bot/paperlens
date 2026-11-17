@@ -1,0 +1,30 @@
+{
+  "Stage": {
+    "SEARCH": "search",
+    "METADATA": "metadata",
+    "DOWNLOAD": "download",
+    "PARSE": "parse",
+    "EXTRACT": "extract",
+    "VALIDATE": "validate",
+    "EXPORT": "export",
+    "STORAGE": "storage"
+  },
+  "tasks_indexes": [
+    {
+      "name": "sqlite_autoindex_tasks_2",
+      "unique": true,
+      "columns": [
+        "paper_id",
+        "stage"
+      ]
+    },
+    {
+      "name": "sqlite_autoindex_tasks_1",
+      "unique": true,
+      "columns": [
+        "task_id"
+      ]
+    }
+  ],
+  "error_conversion_checks": "additional_checks.txt; PK/FK/CHECK all verified via sqlite3.IntegrityError cause"
+}

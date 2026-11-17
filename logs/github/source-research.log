@@ -1,0 +1,12 @@
+PASS complete_scientific_record
+PASS all_raw_slices_and_tamper_rejection
+PASS references_and_captions_excluded
+PASS candidates_are_evidence_backed
+PASS unsupported_findings_rejected
+SCIENCE SUMMARY: 5 passed, 0 failed
+PASS case_vectors
+PASS case_no_evidence
+PASS case_answer
+PASS case_graph
+PASS case_compare
+INTELLIGENCE SUMMARY: 5 passed, 0 failed

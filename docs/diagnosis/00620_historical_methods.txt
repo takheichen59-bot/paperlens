@@ -1,0 +1,46 @@
+ids are recovered. We validate our method using several benchmark simulations.
+
+where v is the microscopic velocity, x is position in space, and t is time. The equilibrium
+
+invariance in LBM simulations of fluids. Note that the dirac delta function has only two
+
+difference schemes of reference18. For the applications shown in Section III all simulations
+
+section, we measure the physical properties of our fluid. We also compare these results to
+
+In this section, we measure the shear viscosity in a Poiseuille flow and compare it to the
+
+relaxation times τ = 1µs and τ = 2µs, respectively.
+For these simulations, we observe
+
+where τ is the relaxation time. To confirm this relation, we measure the viscosity η from
+
+Fig. 3(c) shows the measured η as a function of temperature for both relaxation times.
+
+τ = 2µs (b). (c) shows the measured viscosity as a function of temperature. A linear relation between
+
+measure the shear and bulk viscosity from the decay of such waves. We first compute what
+
+Eq. (99) and (101) can be used to measure η from a sound wave analysis. To do so, we
+
+For all the simulations, ρ0 = 1 and A = 0.0001 unless mentioned otherwise.
+
+tions, the simulation box dimensions are 20µm × 20µm × 80µm and k = 2π/80 = 0.07854.
+
+Fig. 4(a) shows the evolution of the density at the centre of the simulation box. The results
+
+ρ versus t data to find the damping factor γ. Fig. 4 shows the measured damping factor as
+
+5(a) shows the square of the measured angular frequency as a function of temperature for
+
+We test the Galilean invariance of our system in a Couette flow example. Two simulations
+
+of temporal and spatial resolution on the accuracy of the LB simulations for a flow over a
+
+The simulations are performed in 3D and box dimensions are 0.06 cm × 2.4 cm × 4.8
+
+simulations with different lattice spacings. For these simulations, ∆t = 0.0001 s. Lattice
+
+ground truth. We compare the simulations in the laminar regime. Fig. 10(a) shows the
+
+mesh resolution on the accuracy of the simulations.

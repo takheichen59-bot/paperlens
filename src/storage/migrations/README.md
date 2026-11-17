@@ -1,0 +1,2 @@
+# Migration format
+Numbered contiguous files: 0001_init.sql, 0002_name.sql. Statements end with semicolon immediately followed by newline. Only -- line comments; no block comments, triggers, transaction control, PRAGMA, or semicolons inside string/quoted identifiers. The loader validates lexical boundaries and splits at semicolon-newline, then executes statements individually. Each file and user_version update commit atomically. Never use executescript. schema.sql is documentation, not an additional initialization path.

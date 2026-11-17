@@ -1,0 +1,1 @@
+{"name": "matterlens", "private": true, "type": "module", "scripts": {"build": "node build.mjs", "test": "node verify-site.mjs"}}

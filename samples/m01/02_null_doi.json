@@ -1,0 +1,54 @@
+{
+  "cases": [
+    {
+      "name": "null_doi_valid",
+      "record": {
+        "doi": null,
+        "title": "Synthetic contract fixture: titanium dioxide coating",
+        "source_url": "https://example.org/papers/m01",
+        "chemicals": [
+          "Titanium dioxide"
+        ],
+        "conclusions": "The coating improved corrosion resistance.",
+        "methods": "Samples were prepared by hydrothermal synthesis.",
+        "extraction_method": "rules-v0.1",
+        "source_snippets": [
+          {
+            "field": "chemicals",
+            "text": "Titanium dioxide was used.",
+            "page_start": 1,
+            "page_end": 1,
+            "section": null,
+            "block_id": "b1",
+            "start_offset": 0,
+            "end_offset": 26,
+            "strategy": "rules-v0.1"
+          },
+          {
+            "field": "methods",
+            "text": "Samples were prepared by hydrothermal synthesis.",
+            "page_start": 1,
+            "page_end": 1,
+            "section": "Methods",
+            "block_id": "b2",
+            "start_offset": 0,
+            "end_offset": 48,
+            "strategy": "rules-v0.1"
+          },
+          {
+            "field": "conclusions",
+            "text": "The coating improved corrosion resistance.",
+            "page_start": 1,
+            "page_end": 1,
+            "section": "Conclusions",
+            "block_id": "b3",
+            "start_offset": 0,
+            "end_offset": 42,
+            "strategy": "rules-v0.1"
+          }
+        ],
+        "status": "success"
+      }
+    }
+  ]
+}

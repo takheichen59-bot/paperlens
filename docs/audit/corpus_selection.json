@@ -1,0 +1,105 @@
+{
+  "selection": "First 10 results from arXiv cat:cond-mat.mtrl-sci AND submittedDate:[202301010000 TO 202412312359], submittedDate descending; not representative or random.",
+  "papers": [
+    {
+      "id": "http://arxiv.org/abs/2501.00680v1",
+      "title": "BiFeO$_3$ nanoparticles at low-temperature using atomistic simulations -- surface charge distribution and terminations",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cond-mat.mes-hall"
+      ],
+      "published": "2024-12-31T23:36:12Z",
+      "summary": "This paper analyzes how the ferroelectric properties of cubic-like BiFeO$_3$ nanoparticles are affected by different terminations and charge distributions at the surface using ab-initio-based atomistic computational experiments. Our findings unveil multiple multidomain configurations and illustrate how the different order parameters evolve towards the surface. Interestingly, for neutral terminations, a non-rhombohedral phase of BiFeO$_3$ with a stripe-like polarization arrangement was stabilized. We evaluate the polarization, oxygen octahedra rotation, and volume variation for all the configurations obtained, taking advantage of the atomic-scale details provided by the methods used in this study."
+    },
+    {
+      "id": "http://arxiv.org/abs/2501.00679v1",
+      "title": "Theory of Transient Heat Conduction",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cond-mat.mes-hall",
+        "physics.comp-ph"
+      ],
+      "published": "2024-12-31T23:31:57Z",
+      "summary": "Ultrafast and nanoscale heat conduction demands a unified theoretical framework that rigorously bridges macroscopic transport equations with microscopic material properties derived from statistical physics.Existing empirical generalizations of Fourier's law often lack a solid microscopic foundation, failing to connect observed non-Fourier behavior with underlying atomic scale mechanisms. In this work, we present a time-domain theory of transient heat conduction rooted in Zwanzig's statistical theory of irreversible processes. Central to this framework is the time-domain transport function, Z(t), defined through equilibrium time-correlation functions of heat fluxes. This function generalizes the conventional concept of steady-state thermal conductivity, governing the transition of conduction dynamics from onset second sound type wave propagation at finite speeds to diffusion-dominated behavior across broad temporal and spatial scales. Unlike phonon hydrodynamic models that rely on mesoscopic constructs such as phonon drift velocity, our approach provides a quantitative and microscopic description of intrinsic memory effects in transient heat fluxes and applies universally to bulk materials at any temperature or length scale. By integrating atomistic-scale first-principles calculations with continuum-level macroscopic equations, this framework offers a robust foundation for numerical simulations of transient temperature fields. Furthermore, it facilitates the interpretation and design of transient thermal grating experiments using nanometer-scale heat sources and ultrafast laser systems in the extreme ultraviolet and x-ray wavelength ranges, advancing our understanding of heat dissipation dynamics."
+    },
+    {
+      "id": "http://arxiv.org/abs/2501.01468v1",
+      "title": "Phase-Field Modeling of Fracture under Compression and Confinement in Anisotropic Geomaterials",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "math.AP"
+      ],
+      "published": "2024-12-31T21:39:43Z",
+      "summary": "Strongly anisotropic geomaterials undergo fracture under compressive loading. This paper applies a phase-field fracture model to study this fracture process. While phase-field fracture models have several advantages, they provide unphysical predictions when the stress state is complex and includes compression that can cause crack faces to contact.\n  Building on a phase-field model that accounts for compressive traction across the crack face, this paper extends the model to anisotropic fracture. The key features include: (1) a homogenized anisotropic elastic response and strongly-anisotropic model for the work to fracture; (2) an effective damage response that accounts consistently for compressive traction across the crack face, that is derived from the anisotropic elastic response; (3) a regularized crack normal field that overcomes the shortcomings of the isotropic setting, and enables the correct crack response, both across and transverse to the crack face.\n  To test the model, we first compare the predictions to phase-field fracture evolution calculations in a fully-resolved layered specimen with spatial inhomogeneity, and show that it captures the overall patterns of crack growth. We then apply the model to previously-reported experimental observations of fracture evolution in laboratory specimens of shales under compression with confinement, and find that it predicts well the observed crack patterns in a broad range of loading conditions. We further apply the model to predict the growth of wing cracks under compression and confinement. The effective crack response model enables us to treat the initial crack simply as a non-singular damaged zone within the computational domain, thereby allowing for easy and general computations."
+    },
+    {
+      "id": "http://arxiv.org/abs/2501.00620v1",
+      "title": "A Novel Velocity Discretization for Lattice Boltzmann Method: Application to Compressible Flow",
+      "categories": [
+        "cond-mat.soft",
+        "cond-mat.mtrl-sci",
+        "physics.flu-dyn"
+      ],
+      "published": "2024-12-31T19:42:06Z",
+      "summary": "The Lattice Boltzmann Method (LBM) has emerged as a powerful tool in computational fluid dynamics and material science. However, standard LBM formulation imposes some limitations on the applications of the method, particularly compressible fluids. In this paper, we introduce a new velocity discretization method to overcome some of these challenges. In this new formulation, the particle populations are discretized using a bump function that has a mean and a variance. This introduces enough independent degrees of freedom to set the equilibrium moments to the moments of Maxwell-Boltzmann distribution up to and including the third moments. Consequently, the correct macroscopic fluid dynamics equations for compressible fluids are recovered. We validate our method using several benchmark simulations."
+    },
+    {
+      "id": "http://arxiv.org/abs/2501.00600v2",
+      "title": "Constriction and contact impedance of ceramic solid electrolytes",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "physics.app-ph"
+      ],
+      "published": "2024-12-31T18:57:37Z",
+      "summary": "The development of solid-state batteries (SSBs) is hindered by degradation at solid-solid interfaces due to void formation and contact loss, resulting in increased impedance. Here, we systematically investigate the roles of real and unrecoverable interfacial contact areas at the electrode/Li$_6$PS$_5$Cl interface in driving the impedance rise. By controlling contact geometries and applied pressures, we identify their distinct contributions to the impedance spectra and quantify their influence on the interfacial resistance and transport. Experiments reveal that interfacial resistance varies strongly with recoverable contact area and applied pressure following power law scaling, with exponents of -1 and -0.5, respectively. Moreover, distributed contacts result in lower impedance due to smaller potential gradients and a more uniform potential distribution. Continuum simulations of the contact geometries predict interfacial resistances in agreement with experiments. Our work highlights the influence of unrecoverable and recoverable contact losses on SSB impedance while quantifying the effectiveness of mitigation strategies."
+    },
+    {
+      "id": "http://arxiv.org/abs/2501.00591v1",
+      "title": "Coexistence of Commensurate and Incommensurate Antiferromagnetic Groundstates in Co$_x$NbSe$_2$ Single Crystal",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cond-mat.str-el"
+      ],
+      "published": "2024-12-31T18:32:33Z",
+      "summary": "In Co$_x$NbSe$_2$, crystal symmetry, and cobalt site occupation drive the formation of two distinct magnetic phases. At $x = 1/4$, the centrosymmetric structure ($P$6$_3$/$mmc$) promotes Co-Co interactions leading to the formation of an $A$-type antiferromagnetic structure phase with a transition temperature of $T_N^A$ = 169 K. At $x = 1/3$, the non-centrosymmetric structure ($P$6$_3$22) induces a lower-temperature magnetic phase with $T_N^S$ = 28 K. We report the coexistence of both substructures within a superlattice, with a nuclear propagation vector of (1/3, 1/3, 0) relative to the host lattice. Single crystals of Co$_{0.28}$NbSe$_2$ exhibit both magnetic transitions, with $T_N^A$ corresponding to the $x \\sim 1/4$ phase and $T_N^S$ corresponding to the $x \\sim 1/3$ phase. Magnetic susceptibility and specific heat measurements confirm these transitions, although only the high-temperature $T_N^A$ phase significantly affects resistivity. We successfully isolate each phase in powder samples, while single crystals with an intercalation ratio of $x = 0.28$ display the coexistence of both phases in a single sample. Using single-crystal neutron diffraction, we solved the magnetic structure of the high-temperature centrosymmetric phase ($T_N^A$), and neutron powder diffraction revealed the double-$q$ magnetic structure of the low-temperature noncentrosymmetric phase ($T_N^S$)"
+    },
+    {
+      "id": "http://arxiv.org/abs/2501.00589v2",
+      "title": "Efficient training of machine learning potentials for metallic glasses: CuZrAl validation",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cond-mat.dis-nn"
+      ],
+      "published": "2024-12-31T18:26:34Z",
+      "summary": "Interatomic potentials are key to uncovering microscopic structure-property relationships, essential for multiscale simulations and high-throughput experiments. For metallic glasses, their disordered atomic structure makes the development of potentials particularly challenging, resulting in the scarcity of chemistry-specific parametrizations for this important class of materials. We address this gap by introducing an efficient methodology to design machine learning interatomic potentials (MLIPs), benchmarked on the CuZrAl system. Using a Lennard-Jones surrogate model, swap-Monte Carlo sampling, and single-point Density Functional Theory (DFT) corrections, we capture amorphous structures spanning 14 decades of supercooling. These representative configurations, competing with the experimental time scale, enable robust model training across diverse states, while minimizing the need for extensive DFT datasets. The resulting MLIP matches the experimental data and predictions of the classical embedded atom method (EAM) for structural, dynamical, energetic, and mechanical properties. This approach offers a scalable path to develop accurate MLIPs for complex metallic glasses, including emerging multi-component and high-entropy systems."
+    },
+    {
+      "id": "http://arxiv.org/abs/2501.00564v1",
+      "title": "Large Language Model-Driven Database for Thermoelectric Materials",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cs.DL"
+      ],
+      "published": "2024-12-31T17:50:46Z",
+      "summary": "Thermoelectric materials provide a sustainable way to convert waste heat into electricity. However, data-driven discovery and optimization of these materials are challenging because of a lack of a reliable database. Here we developed a comprehensive database of 7,123 thermoelectric compounds, containing key information such as chemical composition, structural detail, seebeck coefficient, electrical and thermal conductivity, power factor, and figure of merit (ZT). We used the GPTArticleExtractor workflow, powered by large language models (LLM), to extract and curate data automatically from the scientific literature published in Elsevier journals. This process enabled the creation of a structured database that addresses the challenges of manual data collection. The open access database could stimulate data-driven research and advance thermoelectric material analysis and discovery."
+    },
+    {
+      "id": "http://arxiv.org/abs/2501.00561v1",
+      "title": "Characterization of Chromium Impurities in $\u03b2$-Ga$_2$O$_3$",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2024-12-31T17:48:10Z",
+      "summary": "Chromium is a common transition-metal impurity that is easily incorporated during crystal growth. It is perhaps best known for giving rise to the 694.3 nm (1.786 eV) emission in Cr-doped Al$_2$O$_3$, exploited in ruby lasers. Chromium has also been found in monoclinic gallium oxide, a wide-bandgap semiconductor being pursued for power electronics. In this work, we thoroughly characterize the behavior of Cr in Ga$_2$O$_3$ through theoretical and experimental techniques. $\u03b2$-Ga$_2$O$_3$ samples are grown with the floating zone method and show evidence of a sharp photoluminescence signal, reminiscent of ruby. We calculate the energetics of formation of Cr from first principles, demonstrating that Cr preferentially incorporates as a neutral impurity on the octahedral site. Cr possesses a quartet ground-state spin and has an internal transition with a zero-phonon line near 1.8 eV. By comparing the calculated and experimentally measured luminescence lineshape function, we elucidate the role of coupling to phonons and uncover features beyond the Franck-Condon approximation. The combination of strong emission with a small Huang-Rhys factor of 0.05 and a technologically relevant host material render Cr in Ga$_2$O$_3$ attractive as a quantum defect."
+    },
+    {
+      "id": "http://arxiv.org/abs/2501.00534v2",
+      "title": "Non-reciprocal neutral ferroelectric domain walls in BiFeO3",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2024-12-31T16:39:19Z",
+      "summary": "This paper analyzes a peculiar phenomenon of non-reciprocal domain wall pairs and illustrate the implications in ab-initio-based atomistic computational experiments with (112)-oriented planar R180 domain walls within the canonical multiferroic ferroelectric crystal of BiFeO3. Results show that parallel walls on the opposite sides of a given domain within a simply twinned lamellar domain structure can have considerably different polarization and oxygen octahedra tilt profiles, different thickness and energy densities. The spontaneous formation of zigzag walls and triangular domains suggests that these domain walls are actually the lowest energy planar R180 walls in pure insulating BiFeO3 crystals and films."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv:2501.00589": [
+    {
+      "block_id": "p8-b1",
+      "start": 0,
+      "end": 920,
+      "actual_section": "Acknowledgements",
+      "note": "Confirmed against PDF page 8, right-column funding continuation; diagnosis REPORT section 4. Current cached CONCLUSIONS label is wrong. pdf_sha256=5cccf74b18850c3ccde9c65e1d59c5da59966d406dbdd2c31b74c33fd53c474a; raw_sha256=6a196aeb84b0fa27e85b509a6c6696b4d9eab7bebc435fe33518608fd39de33d"
+    }
+  ]
+}

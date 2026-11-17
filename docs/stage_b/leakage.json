@@ -1,0 +1,122 @@
+{
+  "version_id": "20261115T155710810368Z-da8c3819714146ba82ed476bef02bdc8",
+  "published_at": "2026-11-15T15:57:10.810360+00:00",
+  "decided_papers": 4,
+  "unresolved_papers": 5,
+  "not_applicable_papers": 1,
+  "decided_snippets": 140,
+  "unresolved_snippets": 32,
+  "leaks": 0,
+  "papers": [
+    {
+      "paper_id": "arxiv:2501.00534",
+      "status": "partial",
+      "snippets": 9,
+      "decided": 0,
+      "unresolved": 9,
+      "leaks": [],
+      "unresolved_reasons": [
+        "区间无法判定：章节为unknown"
+      ],
+      "audit_status": "unresolved"
+    },
+    {
+      "paper_id": "arxiv:2501.00561",
+      "status": "partial",
+      "snippets": 25,
+      "decided": 17,
+      "unresolved": 8,
+      "leaks": [],
+      "unresolved_reasons": [
+        "区间无法判定：章节为unknown"
+      ],
+      "audit_status": "unresolved"
+    },
+    {
+      "paper_id": "arxiv:2501.00564",
+      "status": "partial",
+      "snippets": 1,
+      "decided": 1,
+      "unresolved": 0,
+      "leaks": [],
+      "unresolved_reasons": [],
+      "audit_status": "decided"
+    },
+    {
+      "paper_id": "arxiv:2501.00589",
+      "status": "partial",
+      "snippets": 10,
+      "decided": 3,
+      "unresolved": 7,
+      "leaks": [],
+      "unresolved_reasons": [
+        "区间无法判定：章节为unknown"
+      ],
+      "audit_status": "unresolved"
+    },
+    {
+      "paper_id": "arxiv:2501.00591",
+      "status": "partial",
+      "snippets": 4,
+      "decided": 0,
+      "unresolved": 4,
+      "leaks": [],
+      "unresolved_reasons": [
+        "区间无法判定：章节为unknown"
+      ],
+      "audit_status": "unresolved"
+    },
+    {
+      "paper_id": "arxiv:2501.00600",
+      "status": "partial",
+      "snippets": 9,
+      "decided": 9,
+      "unresolved": 0,
+      "leaks": [],
+      "unresolved_reasons": [],
+      "audit_status": "decided"
+    },
+    {
+      "paper_id": "arxiv:2501.00620",
+      "status": "partial",
+      "snippets": 26,
+      "decided": 26,
+      "unresolved": 0,
+      "leaks": [],
+      "unresolved_reasons": [],
+      "audit_status": "decided"
+    },
+    {
+      "paper_id": "arxiv:2501.00679",
+      "status": "success",
+      "snippets": 70,
+      "decided": 70,
+      "unresolved": 0,
+      "leaks": [],
+      "unresolved_reasons": [],
+      "audit_status": "decided"
+    },
+    {
+      "paper_id": "arxiv:2501.00680",
+      "status": "success",
+      "snippets": 18,
+      "decided": 14,
+      "unresolved": 4,
+      "leaks": [],
+      "unresolved_reasons": [
+        "区间无法判定：章节为unknown"
+      ],
+      "audit_status": "unresolved"
+    },
+    {
+      "paper_id": "arxiv:2501.01468",
+      "status": "skipped",
+      "audit_status": "not_applicable",
+      "snippets": 0,
+      "decided": 0,
+      "unresolved": 0,
+      "leaks": [],
+      "unresolved_reasons": []
+    }
+  ]
+}

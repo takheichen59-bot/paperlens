@@ -1,0 +1,15 @@
+{
+  "papers": 20,
+  "with_materials": 18,
+  "with_methods": 10,
+  "methods_200_3000": 10,
+  "with_conclusions": 15,
+  "with_findings": 17,
+  "with_algorithms": 13,
+  "with_formulas": 19,
+  "with_data_candidates": 19,
+  "evidence": 956,
+  "unknown_section_snippets": 414,
+  "reviewed": 0,
+  "accuracy_independently_evaluated": false
+}

@@ -1,0 +1,531 @@
+{
+  "counts": {
+    "submitted": 10,
+    "success": 4,
+    "partial": 5,
+    "failed": 0,
+    "skipped": 1,
+    "failed_internal_classification": 0,
+    "failed_content_or_processing": 0
+  },
+  "version_id": "20261115T161156376048Z-c5fa1e271a80483a9adf932ee333dfc3",
+  "published_at": "2026-11-15T16:11:56.376040+00:00",
+  "methods_200_3000": 6,
+  "sections_contain_unknown_papers": 9,
+  "parsed_papers": 9,
+  "parser_unavailable": {},
+  "informational": 232,
+  "blocking": 9,
+  "audit": {
+    "decided_papers": 3,
+    "unresolved_papers": 6,
+    "not_applicable_papers": 1,
+    "decided_snippets": 189,
+    "unresolved_snippets": 34,
+    "leaks": 0
+  },
+  "papers": [
+    {
+      "paper_id": "arxiv:2501.00534",
+      "before_status": "partial",
+      "status": "partial",
+      "chemicals": [
+        "BiFeO3"
+      ],
+      "methods_chars": 0,
+      "conclusions_chars": 3684,
+      "methods_before_first": "",
+      "methods_after_first": "",
+      "methods_candidate_chars": 0,
+      "methods_candidate_first": "",
+      "conclusions_before_first": "domain wall.\nSummarizing, we have shown that the DW2 differs\nfrom DW1 by the thickness, by the amplitudes of the\nin-wall order parameters and also by the stability. The\nensemble of all these findings implies that DW1 and DW2\nare not related by any symmetry operation and so these\nwalls are clearly non-reciprocal ones.\nTo facilitate the discussion, let us introduce a more pre-\ncise domain wall symbol [A|n⟩B]. Here A and B stand\nfor domain states, while the oriented domain wall nor-\nmal n points in",
+      "conclusions_after_first": "domain wall.\nSummarizing, we have shown that the DW2 differs\nfrom DW1 by the thickness, by the amplitudes of the\nin-wall order parameters and also by the stability. The\nensemble of all these findings implies that DW1 and DW2\nare not related by any symmetry operation and so these\nwalls are clearly non-reciprocal ones.\nTo facilitate the discussion, let us introduce a more pre-\ncise domain wall symbol [A|n⟩B]. Here A and B stand\nfor domain states, while the oriented domain wall nor-\nmal n points in",
+      "unknown_sections": [
+        "(untitled)"
+      ],
+      "captions": 4,
+      "status_only_change": true,
+      "warnings": {
+        "informational": [
+          "page_1_possible_multicolumn",
+          "page_2_possible_multicolumn",
+          "page_3_possible_multicolumn",
+          "page_4_possible_multicolumn",
+          "page_5_possible_multicolumn",
+          "caption_block:p1-b6",
+          "caption_block:p2-b3",
+          "caption_block:p3-b3",
+          "caption_block:p4-b2",
+          "conclusions_fallback"
+        ],
+        "blocking": [
+          "methods_fallback_rejected",
+          "missing_field:methods"
+        ]
+      }
+    },
+    {
+      "paper_id": "arxiv:2501.00561",
+      "before_status": "success",
+      "status": "success",
+      "chemicals": [
+        "Ga2O3",
+        "Al2O3",
+        "O2",
+        "CrO2",
+        "Cr2O3",
+        "GaN",
+        "AlN"
+      ],
+      "methods_chars": 2240,
+      "conclusions_chars": 1312,
+      "methods_before_first": "A single crystal sample of β-Ga2O3 was grown via the\nfloating zone method, using a locally designed laser float-\ning zone furnace “LOKII” in the Wilson lab at UC Santa\nBarbara.23 In preparation for the crystal growth, poly-\ncrystalline powder of Ga2O3 (99.99 %, Alfa Aesar) was\ndried overnight at 1200 ◦C and then packed in a rubber\nballoon with a diameter of 4 mm. The packed powder in\nthe balloon was pressed into a 90 mm long rod using a\ncold isostatic press. The rod was then broken into two\npiec",
+      "methods_after_first": "A single crystal sample of β-Ga2O3 was grown via the\nfloating zone method, using a locally designed laser float-\ning zone furnace “LOKII” in the Wilson lab at UC Santa\nBarbara.23 In preparation for the crystal growth, poly-\ncrystalline powder of Ga2O3 (99.99 %, Alfa Aesar) was\ndried overnight at 1200 ◦C and then packed in a rubber\nballoon with a diameter of 4 mm. The packed powder in\nthe balloon was pressed into a 90 mm long rod using a\ncold isostatic press. The rod was then broken into two\npiec",
+      "methods_candidate_chars": 2240,
+      "methods_candidate_first": "A single crystal sample of β-Ga2O3 was grown via the\nfloating zone method, using a locally designed laser float-\ning zone furnace “LOKII” in the Wilson lab at UC Santa\nBarbara.23 In preparation for the crystal growth, poly-\ncrystalline powder of Ga2O3 (99.99 %, Alfa Aesar) was\ndried overnight at 1200 ◦C and then packed in a rubber\nballoon with a diameter of 4 mm. The packed powder in\nthe balloon was pressed into a 90 mm long rod using a\ncold isostatic press. The rod was then broken into two\npiec",
+      "conclusions_before_first": "In summary, we have reported a thorough theoretical\nand experimental investigation of Cr in β-Ga2O3. Using\nfirst-principles calculations with a hybrid functional, we\ndemonstrated that Cr prefers incorporating as a substi-\ntutional impurity on the octahedral Ga site in a neutral\ncharge state. The center has a d3 electron configuration\nand a high-spin quartet ground state, compatible with\nuse as a spin qubit. It exhibits a spin-flip internal transi-\ntion with a ZPL at 1.8 eV, for which we calculat",
+      "conclusions_after_first": "In summary, we have reported a thorough theoretical\nand experimental investigation of Cr in β-Ga2O3. Using\nfirst-principles calculations with a hybrid functional, we\ndemonstrated that Cr prefers incorporating as a substi-\ntutional impurity on the octahedral Ga site in a neutral\ncharge state. The center has a d3 electron configuration\nand a high-spin quartet ground state, compatible with\nuse as a spin qubit. It exhibits a spin-flip internal transi-\ntion with a ZPL at 1.8 eV, for which we calculat",
+      "unknown_sections": [
+        "(untitled)",
+        "INTRODUCTION"
+      ],
+      "captions": 6,
+      "status_only_change": false,
+      "warnings": {
+        "informational": [
+          "page_1_possible_multicolumn",
+          "page_2_possible_multicolumn",
+          "page_3_possible_multicolumn",
+          "page_4_possible_multicolumn",
+          "page_5_possible_multicolumn",
+          "page_6_possible_multicolumn",
+          "page_7_possible_multicolumn",
+          "page_8_possible_multicolumn",
+          "page_9_possible_multicolumn",
+          "caption_block:p2-b2",
+          "caption_block:p3-b21",
+          "caption_block:p4-b5",
+          "caption_block:p4-b9",
+          "caption_block:p5-b30",
+          "caption_block:p6-b14",
+          "methods_primary_bounded"
+        ],
+        "blocking": []
+      }
+    },
+    {
+      "paper_id": "arxiv:2501.00564",
+      "before_status": "partial",
+      "status": "partial",
+      "chemicals": [],
+      "methods_chars": 2511,
+      "conclusions_chars": 688,
+      "methods_before_first": "To begin our study, we systematically gathered DOIs of\nscientific articles related to thermoelectric materials, focusing\nspecifically on publications in Elsevier journals. We employed\n\ntargeted keywords, including “Thermoelectric,” “Seebeck Co-\nefficient,” and “Figure of Merit,” to filter relevant articles from\nElsevier’s extensive journal database. Through this process, we\ncompiled approximately 20,000 DOIs pertinent to thermoelec-\ntric materials. Using these keywords, we accessed Elsevier’s\njo",
+      "methods_after_first": "To begin our study, we systematically gathered DOIs of\nscientific articles related to thermoelectric materials, focusing\nspecifically on publications in Elsevier journals. We employed\n\ntargeted keywords, including “Thermoelectric,” “Seebeck Co-\nefficient,” and “Figure of Merit,” to filter relevant articles from\nElsevier’s extensive journal database. Through this process, we\ncompiled approximately 20,000 DOIs pertinent to thermoelec-\ntric materials. Using these keywords, we accessed Elsevier’s\njo",
+      "methods_candidate_chars": 2511,
+      "methods_candidate_first": "To begin our study, we systematically gathered DOIs of\nscientific articles related to thermoelectric materials, focusing\nspecifically on publications in Elsevier journals. We employed\n\ntargeted keywords, including “Thermoelectric,” “Seebeck Co-\nefficient,” and “Figure of Merit,” to filter relevant articles from\nElsevier’s extensive journal database. Through this process, we\ncompiled approximately 20,000 DOIs pertinent to thermoelec-\ntric materials. Using these keywords, we accessed Elsevier’s\njo",
+      "conclusions_before_first": "We developed a comprehensive database of 7,123 ther-\nmoelectric compounds, incorporating key thermoelectric and\nstructural properties using the automated data extraction ca-\npabilities of the GPTArticleExtractor. By including structural\ninformation, our database is well-suited for future use with\nadvanced methods such as graph neural networks, enabling\npredictive modeling and material analysis.\nThe database is\nopenly accessible at nemad.org and is continually updated and\nexpanded. This work prov",
+      "conclusions_after_first": "We developed a comprehensive database of 7,123 ther-\nmoelectric compounds, incorporating key thermoelectric and\nstructural properties using the automated data extraction ca-\npabilities of the GPTArticleExtractor. By including structural\ninformation, our database is well-suited for future use with\nadvanced methods such as graph neural networks, enabling\npredictive modeling and material analysis.\nThe database is\nopenly accessible at nemad.org and is continually updated and\nexpanded. This work prov",
+      "unknown_sections": [
+        "(untitled)",
+        "1. Introduction"
+      ],
+      "captions": 8,
+      "status_only_change": true,
+      "warnings": {
+        "informational": [
+          "page_1_possible_multicolumn",
+          "page_2_possible_multicolumn",
+          "page_3_possible_multicolumn",
+          "page_4_possible_multicolumn",
+          "page_5_possible_multicolumn",
+          "page_6_possible_multicolumn",
+          "caption_block:p3-b1",
+          "caption_block:p3-b5",
+          "caption_block:p3-b7",
+          "caption_block:p4-b2",
+          "caption_block:p4-b6",
+          "caption_block:p4-b9",
+          "caption_block:p5-b3",
+          "caption_block:p5-b10"
+        ],
+        "blocking": [
+          "missing_field:chemicals"
+        ]
+      }
+    },
+    {
+      "paper_id": "arxiv:2501.00589",
+      "before_status": "success",
+      "status": "success",
+      "chemicals": [
+        "CuZrAl",
+        "ZrCuAl",
+        "CuZr"
+      ],
+      "methods_chars": 2197,
+      "conclusions_chars": 2318,
+      "methods_before_first": "Lennard-Jones surrogate model— To develop the interac-\ntion potential between elements of multicomponent alloys of\nCu0.46Zr0.46Al0.08 consisting of N = 150 atoms with unit mass\n(m), we use a surrogate interaction described by the Lennard-\nJones (LJ) potential as\n\nwhere ε and σ are the energy scale and interaction range,\nrespectively.\nThe potential is truncated and shifted at\nthe cutoff distance rcut, i j = 2σαi,βj.\nWe specify the\natom index by Roman indices and the type by Greek in-\ndices.\nWe us",
+      "methods_after_first": "Lennard-Jones surrogate model— To develop the interac-\ntion potential between elements of multicomponent alloys of\nCu0.46Zr0.46Al0.08 consisting of N = 150 atoms with unit mass\n(m), we use a surrogate interaction described by the Lennard-\nJones (LJ) potential as\n\nwhere ε and σ are the energy scale and interaction range,\nrespectively.\nThe potential is truncated and shifted at\nthe cutoff distance rcut, i j = 2σαi,βj.\nWe specify the\natom index by Roman indices and the type by Greek in-\ndices.\nWe us",
+      "methods_candidate_chars": 2197,
+      "methods_candidate_first": "Lennard-Jones surrogate model— To develop the interac-\ntion potential between elements of multicomponent alloys of\nCu0.46Zr0.46Al0.08 consisting of N = 150 atoms with unit mass\n(m), we use a surrogate interaction described by the Lennard-\nJones (LJ) potential as\n\nwhere ε and σ are the energy scale and interaction range,\nrespectively.\nThe potential is truncated and shifted at\nthe cutoff distance rcut, i j = 2σαi,βj.\nWe specify the\natom index by Roman indices and the type by Greek in-\ndices.\nWe us",
+      "conclusions_before_first": "This work introduces an efﬁcient approach for developing\nmachine learning interatomic potentials (MLIPs) for metallic\nglasses, applicable to any multicomponent system. As a test\ncase, we apply it to the ternary Cu-Zr-Al system. The method\ncombines a Lennard-Jones surrogate model for accelerated\nswap Monte Carlo sampling of the potential energy landscape\n(PEL) with single-point DFT corrections. Structural analysis\nreveals that these DFT corrections do not signiﬁcantly alter\nthe underlying LJ-base",
+      "conclusions_after_first": "This work introduces an efﬁcient approach for developing\nmachine learning interatomic potentials (MLIPs) for metallic\nglasses, applicable to any multicomponent system. As a test\ncase, we apply it to the ternary Cu-Zr-Al system. The method\ncombines a Lennard-Jones surrogate model for accelerated\nswap Monte Carlo sampling of the potential energy landscape\n(PEL) with single-point DFT corrections. Structural analysis\nreveals that these DFT corrections do not signiﬁcantly alter\nthe underlying LJ-base",
+      "unknown_sections": [
+        "(untitled)",
+        "INTRODUCTION"
+      ],
+      "captions": 13,
+      "status_only_change": true,
+      "warnings": {
+        "informational": [
+          "page_1_possible_multicolumn",
+          "page_2_possible_multicolumn",
+          "page_3_possible_multicolumn",
+          "page_4_possible_multicolumn",
+          "page_5_possible_multicolumn",
+          "page_6_possible_multicolumn",
+          "page_7_possible_multicolumn",
+          "page_8_possible_multicolumn",
+          "page_9_possible_multicolumn",
+          "page_10_possible_multicolumn",
+          "page_12_possible_multicolumn",
+          "caption_block:p2-b61",
+          "caption_block:p2-b62",
+          "caption_block:p2-b65",
+          "caption_block:p3-b19",
+          "caption_block:p4-b118",
+          "caption_block:p4-b132",
+          "caption_block:p5-b42",
+          "caption_block:p5-b49",
+          "caption_block:p6-b20",
+          "caption_block:p11-b17",
+          "caption_block:p12-b12",
+          "caption_block:p12-b25",
+          "caption_block:p12-b46",
+          "methods_primary_bounded"
+        ],
+        "blocking": []
+      }
+    },
+    {
+      "paper_id": "arxiv:2501.00591",
+      "before_status": "partial",
+      "status": "partial",
+      "chemicals": [
+        "CrI3",
+        "NbSe2",
+        "CoI2"
+      ],
+      "methods_chars": 0,
+      "conclusions_chars": 0,
+      "methods_before_first": "",
+      "methods_after_first": "",
+      "methods_candidate_chars": 0,
+      "methods_candidate_first": "",
+      "conclusions_before_first": "",
+      "conclusions_after_first": "",
+      "unknown_sections": [
+        "(untitled)"
+      ],
+      "captions": 4,
+      "status_only_change": true,
+      "warnings": {
+        "informational": [
+          "page_1_possible_multicolumn",
+          "page_2_possible_multicolumn",
+          "page_3_possible_multicolumn",
+          "page_4_possible_multicolumn",
+          "page_5_possible_multicolumn",
+          "page_6_possible_multicolumn",
+          "page_7_possible_multicolumn",
+          "caption_block:p2-b3",
+          "caption_block:p3-b3",
+          "caption_block:p3-b4",
+          "caption_block:p4-b2"
+        ],
+        "blocking": [
+          "methods_fallback_rejected",
+          "missing_field:conclusions",
+          "missing_field:methods"
+        ]
+      }
+    },
+    {
+      "paper_id": "arxiv:2501.00600",
+      "before_status": "partial",
+      "status": "partial",
+      "chemicals": [
+        "Li6PS5Cl"
+      ],
+      "methods_chars": 0,
+      "conclusions_chars": 185,
+      "methods_before_first": "",
+      "methods_after_first": "",
+      "methods_candidate_chars": 0,
+      "methods_candidate_first": "",
+      "conclusions_before_first": "caused by large unrecoverable voids at the electrode-SE interface. These findings highlight\n\ndistribution obtained from experiments. Our findings, which quantify the variation in inter-",
+      "conclusions_after_first": "caused by large unrecoverable voids at the electrode-SE interface. These findings highlight\n\ndistribution obtained from experiments. Our findings, which quantify the variation in inter-",
+      "unknown_sections": [
+        "(untitled)",
+        "270 MPa",
+        "270 MPa",
+        "270 MPa"
+      ],
+      "captions": 24,
+      "status_only_change": true,
+      "warnings": {
+        "informational": [
+          "page_3_possible_multicolumn",
+          "page_11_possible_multicolumn",
+          "page_12_possible_multicolumn",
+          "page_18_possible_multicolumn",
+          "page_26_possible_multicolumn",
+          "caption_block:p3-b20",
+          "caption_block:p3-b21",
+          "caption_block:p5-b23",
+          "caption_block:p6-b8",
+          "caption_block:p8-b6",
+          "caption_block:p11-b10",
+          "caption_block:p12-b20",
+          "caption_block:p12-b118",
+          "caption_block:p23-b1",
+          "caption_block:p23-b12",
+          "caption_block:p24-b1",
+          "caption_block:p24-b3",
+          "caption_block:p25-b1",
+          "caption_block:p26-b9",
+          "caption_block:p27-b1",
+          "caption_block:p28-b2",
+          "caption_block:p29-b1",
+          "caption_block:p29-b3",
+          "caption_block:p30-b1",
+          "caption_block:p31-b1",
+          "caption_block:p32-b1",
+          "caption_block:p33-b1",
+          "caption_block:p34-b1",
+          "caption_block:p35-b1",
+          "conclusions_fallback"
+        ],
+        "blocking": [
+          "methods_fallback_rejected",
+          "missing_field:methods"
+        ]
+      }
+    },
+    {
+      "paper_id": "arxiv:2501.00620",
+      "before_status": "partial",
+      "status": "partial",
+      "chemicals": [],
+      "methods_chars": 2919,
+      "conclusions_chars": 2046,
+      "methods_before_first": "We saw that an expansion of the particle distribution function f using Dirac delta func-\n\ntions produced evolution equations similar to the standard LBM. The standard LBM in-\n\nestimated by bump functions that not only have a mean but also have a variance.\n\ntroduces error terms in the hydrodynamic limit leading to issues such as lack of Galilean\n\ninvariance in LBM simulations of fluids. Note that the dirac delta function has only two\n\nnonzero moments, the zero and first. All higher moments are ze",
+      "methods_after_first": "We saw that an expansion of the particle distribution function f using Dirac delta func-\n\ntions produced evolution equations similar to the standard LBM. The standard LBM in-\n\nestimated by bump functions that not only have a mean but also have a variance.\n\ntroduces error terms in the hydrodynamic limit leading to issues such as lack of Galilean\n\ninvariance in LBM simulations of fluids. Note that the dirac delta function has only two\n\nnonzero moments, the zero and first. All higher moments are ze",
+      "methods_candidate_chars": 2919,
+      "methods_candidate_first": "We saw that an expansion of the particle distribution function f using Dirac delta func-\n\ntions produced evolution equations similar to the standard LBM. The standard LBM in-\n\nestimated by bump functions that not only have a mean but also have a variance.\n\ntroduces error terms in the hydrodynamic limit leading to issues such as lack of Galilean\n\ninvariance in LBM simulations of fluids. Note that the dirac delta function has only two\n\nnonzero moments, the zero and first. All higher moments are ze",
+      "conclusions_before_first": "The Lattice Botlzmann Method (LBM) has been a powerful tool for modeling fluid dy-\n\nnamics. The standard LBM on a standard lattice (i.e. eiα = ∆x) results in error terms of\n\nform uβ∂αρ and ∂γ(ρuαuβuγ) in the macroscopic equation. This is typically addressed by\n\napplying the equation of state Pαβ = ρ c3\n\n3 δαβ. However, it results in a coupling between the\n\nequation of state and the lattice velocity limiting the application of LBM. In this paper,\n\nwe introduce a new velocity discretization method",
+      "conclusions_after_first": "The Lattice Botlzmann Method (LBM) has been a powerful tool for modeling fluid dy-\n\nnamics. The standard LBM on a standard lattice (i.e. eiα = ∆x) results in error terms of\n\nform uβ∂αρ and ∂γ(ρuαuβuγ) in the macroscopic equation. This is typically addressed by\n\napplying the equation of state Pαβ = ρ c3\n\n3 δαβ. However, it results in a coupling between the\n\nequation of state and the lattice velocity limiting the application of LBM. In this paper,\n\nwe introduce a new velocity discretization method",
+      "unknown_sections": [
+        "(untitled)",
+        "INTRODUCTION",
+        "2 Bαβ(x, t)"
+      ],
+      "captions": 14,
+      "status_only_change": true,
+      "warnings": {
+        "informational": [
+          "page_2_possible_multicolumn",
+          "page_3_possible_multicolumn",
+          "page_4_possible_multicolumn",
+          "page_6_possible_multicolumn",
+          "page_7_possible_multicolumn",
+          "page_8_possible_multicolumn",
+          "page_9_possible_multicolumn",
+          "page_11_possible_multicolumn",
+          "page_12_possible_multicolumn",
+          "page_13_possible_multicolumn",
+          "page_14_possible_multicolumn",
+          "page_15_possible_multicolumn",
+          "page_16_possible_multicolumn",
+          "page_17_possible_multicolumn",
+          "page_18_possible_multicolumn",
+          "page_20_possible_multicolumn",
+          "page_23_possible_multicolumn",
+          "page_28_possible_multicolumn",
+          "page_30_possible_multicolumn",
+          "page_31_possible_multicolumn",
+          "caption_block:p8-b1",
+          "caption_block:p10-b1",
+          "caption_block:p18-b30",
+          "caption_block:p19-b4",
+          "caption_block:p19-b13",
+          "caption_block:p21-b4",
+          "caption_block:p21-b13",
+          "caption_block:p22-b4",
+          "caption_block:p24-b1",
+          "caption_block:p25-b1",
+          "caption_block:p26-b1",
+          "caption_block:p27-b1",
+          "caption_block:p27-b4",
+          "caption_block:p32-b153",
+          "methods_primary_bounded"
+        ],
+        "blocking": [
+          "missing_field:chemicals"
+        ]
+      }
+    },
+    {
+      "paper_id": "arxiv:2501.00679",
+      "before_status": "success",
+      "status": "success",
+      "chemicals": [
+        "MgO",
+        "MgSiO3"
+      ],
+      "methods_chars": 1706,
+      "conclusions_chars": 5205,
+      "methods_before_first": "A.\nFirst-principle calculations\n\nWe computed the steady-state lattice thermal conductivity (κ) and the equilibrium time-\n\ncorrelation functions of phonon heat ﬂux for bulk silicon (Si) crystals using ﬁrst-principles\n\nlattice dynamics. Harmonic and third-order anharmonic force constants were derived via\n\ndensity functional theory (DFT) calculations performed with the Vienna Ab initio Simula-\n\ntion Package (VASP) [85]. The Perdew-Burke-Ernzerhof (PBE) exchange-correlation func-\n\ntional within the ",
+      "methods_after_first": "A.\nFirst-principle calculations\n\nWe computed the steady-state lattice thermal conductivity (κ) and the equilibrium time-\n\ncorrelation functions of phonon heat ﬂux for bulk silicon (Si) crystals using ﬁrst-principles\n\nlattice dynamics. Harmonic and third-order anharmonic force constants were derived via\n\ndensity functional theory (DFT) calculations performed with the Vienna Ab initio Simula-\n\ntion Package (VASP) [85]. The Perdew-Burke-Ernzerhof (PBE) exchange-correlation func-\n\ntional within the ",
+      "methods_candidate_chars": 1706,
+      "methods_candidate_first": "A.\nFirst-principle calculations\n\nWe computed the steady-state lattice thermal conductivity (κ) and the equilibrium time-\n\ncorrelation functions of phonon heat ﬂux for bulk silicon (Si) crystals using ﬁrst-principles\n\nlattice dynamics. Harmonic and third-order anharmonic force constants were derived via\n\ndensity functional theory (DFT) calculations performed with the Vienna Ab initio Simula-\n\ntion Package (VASP) [85]. The Perdew-Burke-Ernzerhof (PBE) exchange-correlation func-\n\ntional within the ",
+      "conclusions_before_first": "This work introduces a time-domain Zwanzig theory for transient heat conduction, oﬀer-\n\ning a uniﬁed framework that extends Fourier’s law and deepens our understanding of heat\n\ntransport in homogeneous materials across a broad range of temporal and spatial scales.\n\nCentral to this framework is the time-domain transport function, ←→\nZ (t), rigorously deﬁned\n\nin terms of equilibrium time-correlation functions of heat ﬂuxes. This ←→\nZ (t)-centered theory\n\ngeneralizes the classical concept of therma",
+      "conclusions_after_first": "This work introduces a time-domain Zwanzig theory for transient heat conduction, oﬀer-\n\ning a uniﬁed framework that extends Fourier’s law and deepens our understanding of heat\n\ntransport in homogeneous materials across a broad range of temporal and spatial scales.\n\nCentral to this framework is the time-domain transport function, ←→\nZ (t), rigorously deﬁned\n\nin terms of equilibrium time-correlation functions of heat ﬂuxes. This ←→\nZ (t)-centered theory\n\ngeneralizes the classical concept of therma",
+      "unknown_sections": [
+        "(untitled)",
+        "INTRODUCTION",
+        "3 (a–e) present the one-dimensional temperature proﬁles"
+      ],
+      "captions": 66,
+      "status_only_change": true,
+      "warnings": {
+        "informational": [
+          "page_3_possible_multicolumn",
+          "page_6_possible_multicolumn",
+          "page_7_possible_multicolumn",
+          "page_8_possible_multicolumn",
+          "page_9_possible_multicolumn",
+          "page_12_possible_multicolumn",
+          "page_13_possible_multicolumn",
+          "page_14_possible_multicolumn",
+          "page_23_possible_multicolumn",
+          "page_24_possible_multicolumn",
+          "page_25_possible_multicolumn",
+          "page_26_possible_multicolumn",
+          "page_27_possible_multicolumn",
+          "page_29_possible_multicolumn",
+          "page_31_possible_multicolumn",
+          "page_33_possible_multicolumn",
+          "page_34_possible_multicolumn",
+          "page_35_possible_multicolumn",
+          "caption_block:p2-b28",
+          "caption_block:p2-b29",
+          "caption_block:p3-b3",
+          "caption_block:p6-b6",
+          "caption_block:p6-b7",
+          "caption_block:p6-b18",
+          "caption_block:p6-b33",
+          "caption_block:p6-b35",
+          "caption_block:p6-b47",
+          "caption_block:p6-b54",
+          "caption_block:p6-b72",
+          "caption_block:p6-b74",
+          "caption_block:p10-b15",
+          "caption_block:p12-b13",
+          "caption_block:p12-b14",
+          "caption_block:p13-b14",
+          "caption_block:p13-b16",
+          "caption_block:p13-b37",
+          "caption_block:p13-b41",
+          "caption_block:p14-b5",
+          "caption_block:p14-b12",
+          "caption_block:p15-b21",
+          "caption_block:p23-b5",
+          "caption_block:p23-b8",
+          "caption_block:p24-b12",
+          "caption_block:p24-b23",
+          "caption_block:p24-b34",
+          "caption_block:p24-b36",
+          "caption_block:p24-b45",
+          "caption_block:p24-b46",
+          "caption_block:p24-b50",
+          "caption_block:p25-b12",
+          "caption_block:p25-b31",
+          "caption_block:p25-b32",
+          "caption_block:p25-b34",
+          "caption_block:p25-b51",
+          "caption_block:p25-b67",
+          "caption_block:p25-b75",
+          "caption_block:p25-b77",
+          "caption_block:p25-b79",
+          "caption_block:p25-b87",
+          "caption_block:p26-b9",
+          "caption_block:p26-b23",
+          "caption_block:p27-b7",
+          "caption_block:p27-b8",
+          "caption_block:p27-b19",
+          "caption_block:p27-b30",
+          "caption_block:p27-b51",
+          "caption_block:p27-b56",
+          "caption_block:p32-b100",
+          "caption_block:p32-b101",
+          "caption_block:p33-b30",
+          "caption_block:p33-b32",
+          "caption_block:p34-b108",
+          "caption_block:p34-b109",
+          "caption_block:p34-b110",
+          "caption_block:p34-b138",
+          "caption_block:p34-b139",
+          "caption_block:p34-b142",
+          "caption_block:p34-b157",
+          "caption_block:p34-b216",
+          "caption_block:p34-b217",
+          "caption_block:p34-b232",
+          "caption_block:p35-b32",
+          "caption_block:p35-b34",
+          "caption_block:p35-b88",
+          "methods_primary_bounded"
+        ],
+        "blocking": []
+      }
+    },
+    {
+      "paper_id": "arxiv:2501.00680",
+      "before_status": "success",
+      "status": "success",
+      "chemicals": [
+        "BiFeO3",
+        "MoS2",
+        "Bi4Ti3O12"
+      ],
+      "methods_chars": 1676,
+      "conclusions_chars": 405,
+      "methods_before_first": "To study BiFeO3 nanoparticles, we used an interatomic potential with parameters fit-\nted from ab-initio calculations [21, 22]. The potential utilizes the framework of the\nshell model, representing each atom in the system with a core and a shell, mimicking\nthe atomic polarizability and with the anharmonic core-shell interaction is particularly\n\nwell-suited in reproducing ferroelectric behavior [23]. The low-temperature multido-\nmain configuration was stabilized using nanoparticles made of 40×40×4",
+      "methods_after_first": "To study BiFeO3 nanoparticles, we used an interatomic potential with parameters fit-\nted from ab-initio calculations [21, 22]. The potential utilizes the framework of the\nshell model, representing each atom in the system with a core and a shell, mimicking\nthe atomic polarizability and with the anharmonic core-shell interaction is particularly\n\nwell-suited in reproducing ferroelectric behavior [23]. The low-temperature multido-\nmain configuration was stabilized using nanoparticles made of 40×40×4",
+      "methods_candidate_chars": 1676,
+      "methods_candidate_first": "To study BiFeO3 nanoparticles, we used an interatomic potential with parameters fit-\nted from ab-initio calculations [21, 22]. The potential utilizes the framework of the\nshell model, representing each atom in the system with a core and a shell, mimicking\nthe atomic polarizability and with the anharmonic core-shell interaction is particularly\n\nwell-suited in reproducing ferroelectric behavior [23]. The low-temperature multido-\nmain configuration was stabilized using nanoparticles made of 40×40×4",
+      "conclusions_before_first": "In summary, we have explored how different sets of terminations affect the arrange-\nment of polarization and oxygen octahedra rotations inside BiFeO3 nanoparti-\ncles. We observed various polarization arrangements, ranging from a homogeneous\nmonodomain to complex configurations with vortex formations. Interestingly, for\nnanoparticles with neutral terminations, a stripe-like configuration was stabilized.",
+      "conclusions_after_first": "In summary, we have explored how different sets of terminations affect the arrange-\nment of polarization and oxygen octahedra rotations inside BiFeO3 nanoparti-\ncles. We observed various polarization arrangements, ranging from a homogeneous\nmonodomain to complex configurations with vortex formations. Interestingly, for\nnanoparticles with neutral terminations, a stripe-like configuration was stabilized.",
+      "unknown_sections": [
+        "(untitled)",
+        "1 Introduction",
+        "3.1 Nanoparticle with opposite faces terminated either with",
+        "3.3 Nanoparticle with mixed termiations"
+      ],
+      "captions": 5,
+      "status_only_change": false,
+      "warnings": {
+        "informational": [
+          "page_1_possible_multicolumn",
+          "caption_block:p3-b2",
+          "caption_block:p5-b2",
+          "caption_block:p6-b1",
+          "caption_block:p7-b1",
+          "caption_block:p8-b1"
+        ],
+        "blocking": []
+      }
+    }
+  ]
+}

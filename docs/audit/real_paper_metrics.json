@@ -1,0 +1,264 @@
+[
+  {
+    "paper_id": "arxiv:2501.00534",
+    "title": "Non-reciprocal neutral ferroelectric domain walls in BiFeO3",
+    "status": "partial",
+    "chemicals": [
+      "BiFeO3"
+    ],
+    "methods_chars": 6152,
+    "conclusions_chars": 3684,
+    "pages": 5,
+    "sections": [
+      {
+        "title": "",
+        "kind": "unknown",
+        "block_count": 24
+      }
+    ],
+    "snippets_checked": 13
+  },
+  {
+    "paper_id": "arxiv:2501.00561",
+    "title": "Characterization of Chromium Impurities in $β$-Ga$_2$O$_3$",
+    "status": "partial",
+    "chemicals": [
+      "Ga2O3",
+      "Al2O3",
+      "CrO2",
+      "CrGa",
+      "Cr2O3",
+      "GaO4",
+      "GaO6",
+      "GaN",
+      "AlN",
+      "SC0012704"
+    ],
+    "methods_chars": 14513,
+    "conclusions_chars": 2762,
+    "pages": 9,
+    "sections": [
+      {
+        "title": "",
+        "kind": "unknown",
+        "block_count": 145
+      }
+    ],
+    "snippets_checked": 49
+  },
+  {
+    "paper_id": "arxiv:2501.00564",
+    "title": "Large Language Model-Driven Database for Thermoelectric Materials",
+    "status": "partial",
+    "chemicals": [
+      "SC0020221"
+    ],
+    "methods_chars": 6570,
+    "conclusions_chars": 1980,
+    "pages": 6,
+    "sections": [
+      {
+        "title": "",
+        "kind": "unknown",
+        "block_count": 3
+      },
+      {
+        "title": "Abstract",
+        "kind": "abstract",
+        "block_count": 3
+      },
+      {
+        "title": "1. Introduction",
+        "kind": "unknown",
+        "block_count": 14
+      },
+      {
+        "title": "3. Results and Discussion",
+        "kind": "discussion",
+        "block_count": 25
+      },
+      {
+        "title": "4. Conclusions",
+        "kind": "conclusions",
+        "block_count": 8
+      },
+      {
+        "title": "References",
+        "kind": "references",
+        "block_count": 5
+      }
+    ],
+    "snippets_checked": 11
+  },
+  {
+    "paper_id": "arxiv:2501.00589",
+    "title": "Efficient training of machine learning potentials for metallic glasses: CuZrAl validation",
+    "status": "partial",
+    "chemicals": [
+      "CuZrAl",
+      "ZrCuAl",
+      "CuZr",
+      "GeTe"
+    ],
+    "methods_chars": 42376,
+    "conclusions_chars": 467,
+    "pages": 13,
+    "sections": [
+      {
+        "title": "",
+        "kind": "unknown",
+        "block_count": 294
+      }
+    ],
+    "snippets_checked": 58
+  },
+  {
+    "paper_id": "arxiv:2501.00591",
+    "title": "Coexistence of Commensurate and Incommensurate Antiferromagnetic Groundstates in Co$_x$NbSe$_2$ Single Crystal",
+    "status": "partial",
+    "chemicals": [
+      "CrI3",
+      "NbSe2",
+      "CoI2",
+      "HK0",
+      "HK1",
+      "SC0016434",
+      "NbS2",
+      "CrNb3S6",
+      "RuCl3",
+      "CoNb4Se8",
+      "TaSe2",
+      "CoNb3S6",
+      "TaS2",
+      "NiTa4Se8"
+    ],
+    "methods_chars": 16238,
+    "conclusions_chars": 0,
+    "pages": 7,
+    "sections": [
+      {
+        "title": "",
+        "kind": "unknown",
+        "block_count": 64
+      }
+    ],
+    "snippets_checked": 25
+  },
+  {
+    "paper_id": "arxiv:2501.00600",
+    "title": "Constriction and contact impedance of ceramic solid electrolytes",
+    "status": "failed",
+    "chemicals": [],
+    "methods_chars": 0,
+    "conclusions_chars": 0,
+    "pages": 0,
+    "sections": [],
+    "snippets_checked": 0
+  },
+  {
+    "paper_id": "arxiv:2501.00620",
+    "title": "A Novel Velocity Discretization for Lattice Boltzmann Method: Application to Compressible Flow",
+    "status": "partial",
+    "chemicals": [],
+    "methods_chars": 2018,
+    "conclusions_chars": 0,
+    "pages": 33,
+    "sections": [
+      {
+        "title": "",
+        "kind": "unknown",
+        "block_count": 888
+      },
+      {
+        "title": "REFERENCES",
+        "kind": "references",
+        "block_count": 175
+      }
+    ],
+    "snippets_checked": 23
+  },
+  {
+    "paper_id": "arxiv:2501.00679",
+    "title": "Theory of Transient Heat Conduction",
+    "status": "partial",
+    "chemicals": [
+      "MgO",
+      "MgSiO3"
+    ],
+    "methods_chars": 5306,
+    "conclusions_chars": 166,
+    "pages": 35,
+    "sections": [
+      {
+        "title": "",
+        "kind": "unknown",
+        "block_count": 9
+      },
+      {
+        "title": "Abstract",
+        "kind": "abstract",
+        "block_count": 1264
+      }
+    ],
+    "snippets_checked": 64
+  },
+  {
+    "paper_id": "arxiv:2501.00680",
+    "title": "BiFeO$_3$ nanoparticles at low-temperature using atomistic simulations -- surface charge distribution and terminations",
+    "status": "partial",
+    "chemicals": [
+      "BiFeO3",
+      "MoS2",
+      "Bi4Ti3O12",
+      "BiO",
+      "FeO2"
+    ],
+    "methods_chars": 2491,
+    "conclusions_chars": 789,
+    "pages": 11,
+    "sections": [
+      {
+        "title": "",
+        "kind": "unknown",
+        "block_count": 4
+      },
+      {
+        "title": "Abstract",
+        "kind": "abstract",
+        "block_count": 2
+      },
+      {
+        "title": "1 Introduction",
+        "kind": "unknown",
+        "block_count": 10
+      },
+      {
+        "title": "3 Results and Discussion",
+        "kind": "discussion",
+        "block_count": 16
+      },
+      {
+        "title": "4 Conclusion",
+        "kind": "conclusions",
+        "block_count": 3
+      },
+      {
+        "title": "References",
+        "kind": "references",
+        "block_count": 27
+      }
+    ],
+    "snippets_checked": 24
+  },
+  {
+    "paper_id": "arxiv:2501.01468",
+    "title": "Phase-Field Modeling of Fracture under Compression and Confinement in Anisotropic Geomaterials",
+    "status": "failed",
+    "chemicals": [],
+    "methods_chars": 0,
+    "conclusions_chars": 0,
+    "pages": 0,
+    "sections": [],
+    "snippets_checked": 0
+  }
+]

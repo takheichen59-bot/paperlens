@@ -1,0 +1,223 @@
+
+$ python acceptance/m01_contracts.py
+PASS 01_complete.json/complete_valid: valid record accepted
+PASS 02_null_doi.json/null_doi_valid: valid record accepted
+PASS 03_invalid_nulls.json/chemicals_null: invalid record rejected
+PASS 03_invalid_nulls.json/conclusions_null: invalid record rejected
+PASS 04_inconsistent_status.json/success_without_methods: invalid record rejected
+PASS 05_abstract_classes.json/BaseFetcher: TypeError raised
+PASS 05_abstract_classes.json/BaseParser: TypeError raised
+PASS 05_abstract_classes.json/BaseExtractor: TypeError raised
+PASS 06_stage_enum.json/stage_enum_compatibility: storage/export constructible; original members preserved; unknown rejected
+SUMMARY: 9 passed, 0 failed; 6 fixture files
+
+$ python acceptance/m02_storage.py
+PASS case_first_write
+PASS case_upserts
+PASS case_rollback
+PASS case_reopen
+PASS case_migration
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m03_arxiv_metadata.py
+PASS case_keyword
+PASS case_id
+PASS case_url
+PASS case_doi_missing
+PASS case_invalid_and_ambiguous
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m04_http_policy.py
+PASS case_pacing
+PASS case_rate_limit
+PASS case_service_retry
+PASS case_timeout_budget
+PASS case_permanent_and_cancel
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m05_pdf_download.py
+PASS case_valid
+PASS case_html
+PASS case_interrupted
+PASS case_cache
+PASS case_limit
+PASS case_size_is_skipped
+PASS case_non_size_stays_failed
+SUMMARY: 7 passed, 0 failed
+
+$ python acceptance/m06_resume.py
+PASS case_after_download
+PASS case_after_parse
+PASS case_completed
+PASS case_corrupt
+PASS case_version_and_recover
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m07_pdf_text.py
+PASS case_single_column
+PASS case_multicolumn
+PASS case_multiple_pages
+PASS case_corrupted
+PASS case_scan
+PASS case_single_column_centered_numbers
+SUMMARY: 6 passed, 0 failed
+
+$ python acceptance/m08_layout_cleaning.py
+PASS case_repeated_margins
+PASS case_page_numbers
+PASS case_join_mapping
+PASS case_chemical_hyphen
+PASS case_unique_body
+PASS case_whitespace_raw_snippets
+PASS case_dehyphenation_raw_snippets
+SUMMARY: 7 passed, 0 failed
+
+$ python acceptance/m09_sections.py
+PASS case_standard
+PASS case_numbered
+PASS case_combined
+PASS case_body_words
+PASS case_unknown_and_supplement
+PASS case_reference_leak
+PASS case_funding_leak
+PASS case_acknowledgement_title
+PASS case_raw_unchanged_coverage
+PASS case_refs_and_ack_coexist
+PASS case_old_cache_reparsed
+PASS case_roman_headers
+PASS case_calculation_details
+PASS case_nested_numbering
+PASS case_two_column_left_first
+PASS case_caption_separation
+PASS case_body_figure_reference
+PASS case_cross_page_continuation
+PASS case_single_column_centered
+PASS case_visual_adjacent_caption
+SUMMARY: 20 passed, 0 failed
+
+$ python acceptance/m10_chemicals.py
+PASS case_names
+PASS case_formulas
+PASS case_polymer
+PASS case_units_and_references
+PASS case_deduplicate
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m11_ner_adapter.py
+PASS case_disabled
+PASS case_duplicate_and_new
+PASS case_overlap
+PASS case_invalid_offset
+PASS case_failure
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m12_methods.py
+SKIP historical_single_block_positive_skipped: rule tightened; original assertion retained
+SKIP historical_abstract_single_block_positive_skipped: abstract is not fallback body
+PASS case_experimental
+PASS case_computational
+PASS case_single_block_rejected
+PASS case_two_adjacent_blocks
+PASS case_references_only
+PASS case_fallback_too_long
+PASS case_cross_section_rejected
+PASS case_primary_region_without_keywords
+PASS case_experimental_section_alias
+PASS case_no_section_fallback_unchanged
+PASS case_primary_bounded_whole_blocks
+SUMMARY: 11 passed, 0 failed
+
+$ python acceptance/m13_conclusions.py
+PASS case_conclusion_section
+PASS case_summary_heading
+PASS case_discussion_fallback
+PASS case_purpose_only
+PASS case_negative_limitations
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m14_extraction_validation.py
+PASS case_complete
+PASS case_missing_field
+PASS case_no_evidence
+PASS case_invalid_location
+PASS case_duplicate
+PASS case_wrong_slice
+PASS case_field_evidence_mismatch
+PASS case_long_methods
+PASS case_production_checks_not_exposed
+PASS case_info_success
+PASS case_blocking_classification_error
+PASS case_unknown_warning
+PASS case_long_methods_only
+SUMMARY: 13 passed, 0 failed
+
+$ python acceptance/m15_llm_contract.py
+PASS case_valid
+PASS case_hallucination
+PASS case_invalid_schema
+PASS case_timeout_and_limit
+PASS case_untrusted_document
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m16_single_pipeline.py
+PASS case_complete
+PASS case_download_failure
+PASS case_parse_failure
+PASS case_partial
+PASS case_resume
+PASS case_classification_identity
+SUMMARY: 6 passed, 0 failed
+
+$ python acceptance/m17_batch_pipeline.py
+PASS case_mixed
+PASS case_duplicates
+PASS case_limits
+PASS case_cancel
+PASS case_restart
+PASS case_classification_isolation
+SUMMARY: 6 passed, 0 failed
+
+$ python acceptance/m18_exports.py
+PASS case_alignment
+PASS case_complete
+PASS case_partial
+PASS case_failure
+PASS case_repeat_and_latest
+PASS case_failure_line_parser
+PASS case_interruption
+PASS case_main_write_failure
+PASS case_severity_write_failure
+PASS case_pointer_failure
+PASS 11a
+PASS 11b
+PASS case_snapshot
+SUMMARY: 11 passed, 0 failed
+
+$ python acceptance/m19_cli.py
+PASS case_single
+PASS case_search
+PASS case_resume
+PASS case_invalid_parameters
+PASS case_partial_batch
+SUMMARY: 5 passed, 0 failed
+
+$ python acceptance/m20_end_to_end.py
+M20 output: version=20261115T160444799111Z-53c84dc08926429dad02ab94285fdcba published_at=2026-11-15T16:04:44.799104+00:00 informational=0 blocking=0 failed_internal_classification=0 failed_content_or_processing=0 skipped=0
+PASS test_standard_source_to_jsonl
+M20 output: version=20261115T160444837754Z-1c22935ecad44634ab80a245bb0b3fd4 published_at=2026-11-15T16:04:44.837747+00:00 informational=1 blocking=0 failed_internal_classification=0 failed_content_or_processing=0 skipped=0
+PASS test_multicolumn_pdf
+PASS test_missing_conclusion
+PASS test_image_only_pdf
+M20 mixed: submitted=2 success=1 partial=0 failed=1 skipped=0
+M20 output: version=20261115T160445013520Z-d1d32bb3217941a4aaee7f2a37cb7a8f published_at=2026-11-15T16:04:45.013512+00:00 informational=0 blocking=1 failed_internal_classification=0 failed_content_or_processing=1 skipped=0
+M20 output: version=20261115T160445063827Z-a044f702259842fdb5434965164730b4 published_at=2026-11-15T16:04:45.063820+00:00 informational=0 blocking=0 failed_internal_classification=0 failed_content_or_processing=0 skipped=0
+M20 output: version=20261115T160445063827Z-a044f702259842fdb5434965164730b4 published_at=2026-11-15T16:04:45.063820+00:00 informational=0 blocking=0 failed_internal_classification=0 failed_content_or_processing=0 skipped=0
+M20 output: version=20261115T160445073800Z-cf6b0f71421942b892f32c7391f86885 published_at=2026-11-15T16:04:45.073793+00:00 informational=0 blocking=0 failed_internal_classification=0 failed_content_or_processing=0 skipped=0
+PASS test_mixed_failure_and_restart
+SUMMARY: 5 passed, 0 failed
+PASS slice: disabled accepts corrupt evidence / enabled rejects
+PASS evidence: disabled accepts corrupt evidence / enabled rejects
+PASS length: disabled retains / enabled downgrades
+MUTATION SUMMARY: 3 passed, 0 failed
+
+ALL MODULES: PASS (20 scripts; 146 active checks; historical skips excluded)

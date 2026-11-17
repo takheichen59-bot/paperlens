@@ -1,0 +1,6 @@
+pydantic==2.13.4
+httpx==0.28.1
+feedparser==6.0.14
+PyMuPDF==1.26.6
+typer==0.29.1
+pytest==9.2.0

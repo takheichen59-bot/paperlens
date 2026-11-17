@@ -1,0 +1,379 @@
+{
+  "reviewer": "assistant textual/contextual inspection, not independent scientific gold",
+  "rubric": "See REPORT.md; no recall or scientific-truth grading",
+  "distribution": {
+    "chemicals": {
+      "可用": 4,
+      "部分可用": 2,
+      "不可用": 2
+    },
+    "conclusions": {
+      "可用": 1,
+      "部分可用": 4,
+      "不可用": 3
+    },
+    "methods": {
+      "可用": 0,
+      "部分可用": 2,
+      "不可用": 6
+    }
+  },
+  "all_three_nonempty": [
+    "arxiv:2501.00589",
+    "arxiv:2501.00679",
+    "arxiv:2501.00680"
+  ],
+  "papers": [
+    {
+      "paper_id": "arxiv:2501.00534",
+      "source_url": "https://arxiv.org/abs/2501.00534v2",
+      "status": "partial",
+      "chemicals": {
+        "nonempty": true,
+        "count": 1,
+        "values": [
+          "BiFeO3"
+        ],
+        "grade": "可用",
+        "notes": "BiFeO3；未见晶面、编号或单位误报。"
+      },
+      "conclusions": {
+        "nonempty": true,
+        "chars": 3684,
+        "grade": "部分可用",
+        "sentence_completeness": "否，首尾残句",
+        "order": "未证实倒序；局部总结、定义和讨论被混入同一字段",
+        "acknowledgements_or_references": "未见",
+        "notes": "p3-b4 + p4-b3；首为domain wall.残片，尾止于among the R180◦。"
+      },
+      "methods": {
+        "nonempty": false,
+        "chars": 0,
+        "grade": "不可用",
+        "caption": "否",
+        "notes": "空；methods_fallback_truncated"
+      },
+      "persisted_warnings": [
+        "page_1_possible_multicolumn",
+        "page_2_possible_multicolumn",
+        "page_3_possible_multicolumn",
+        "page_4_possible_multicolumn",
+        "page_5_possible_multicolumn",
+        "methods_fallback_truncated",
+        "conclusions_fallback",
+        "missing_field:methods"
+      ]
+    },
+    {
+      "paper_id": "arxiv:2501.00564",
+      "source_url": "https://arxiv.org/abs/2501.00564v1",
+      "status": "partial",
+      "chemicals": {
+        "nonempty": false,
+        "count": 0,
+        "values": [],
+        "grade": "不可用",
+        "notes": "空列表；没有可供使用的化学物摘录，不能据此断言原文应有化学物。"
+      },
+      "conclusions": {
+        "nonempty": true,
+        "chars": 1715,
+        "grade": "部分可用",
+        "sentence_completeness": "混合：真正结论段完整，前段不是结论",
+        "order": "不是倒序；跨栏边界把左栏结果/公式解释归入右栏Conclusions",
+        "acknowledgements_or_references": "未见",
+        "notes": "1025字结果段 + 688字真正结论 + 分隔符。"
+      },
+      "methods": {
+        "nonempty": false,
+        "chars": 0,
+        "grade": "不可用",
+        "caption": "否",
+        "notes": "空；methods_fallback_rejected"
+      },
+      "persisted_warnings": [
+        "page_1_possible_multicolumn",
+        "page_2_possible_multicolumn",
+        "page_3_possible_multicolumn",
+        "page_4_possible_multicolumn",
+        "page_5_possible_multicolumn",
+        "page_6_possible_multicolumn",
+        "methods_fallback_rejected",
+        "missing_field:chemicals",
+        "missing_field:methods"
+      ]
+    },
+    {
+      "paper_id": "arxiv:2501.00589",
+      "source_url": "https://arxiv.org/abs/2501.00589v2",
+      "status": "partial",
+      "chemicals": {
+        "nonempty": true,
+        "count": 3,
+        "values": [
+          "CuZrAl",
+          "ZrCuAl",
+          "CuZr"
+        ],
+        "grade": "可用",
+        "notes": "CuZrAl、ZrCuAl、CuZr均有材料语境；前两者存在命名/排序冗余，未做标准化，不按误报计。"
+      },
+      "conclusions": {
+        "nonempty": true,
+        "chars": 11036,
+        "grade": "不可用",
+        "sentence_completeness": "部分句子完整，但字段整体类型错误",
+        "order": "明确跨栏错序，详见第4节",
+        "acknowledgements_or_references": "有致谢续段；未见引用列表段",
+        "notes": "18条片段；实际结论、方法、资金支持、作者贡献、代码可用性混合。"
+      },
+      "methods": {
+        "nonempty": true,
+        "chars": 925,
+        "grade": "不可用",
+        "caption": "是，FIG.6",
+        "notes": "2条均在左栏结果区；其中图注占515字，详见第4节。"
+      },
+      "persisted_warnings": [
+        "page_1_possible_multicolumn",
+        "page_2_possible_multicolumn",
+        "page_3_possible_multicolumn",
+        "page_4_possible_multicolumn",
+        "page_5_possible_multicolumn",
+        "page_6_possible_multicolumn",
+        "page_7_possible_multicolumn",
+        "page_8_possible_multicolumn",
+        "page_9_possible_multicolumn",
+        "page_10_possible_multicolumn",
+        "page_12_possible_multicolumn"
+      ]
+    },
+    {
+      "paper_id": "arxiv:2501.00591",
+      "source_url": "https://arxiv.org/abs/2501.00591v1",
+      "status": "partial",
+      "chemicals": {
+        "nonempty": true,
+        "count": 5,
+        "values": [
+          "CrI3",
+          "NbSe2",
+          "CoI2",
+          "HK0",
+          "HK1"
+        ],
+        "grade": "部分可用",
+        "notes": "CrI3、NbSe2、CoI2有材料语境；HK0/HK1是晶面索引，2/5明确误报；未见基金号或单位误报。"
+      },
+      "conclusions": {
+        "nonempty": false,
+        "chars": 0,
+        "grade": "不可用",
+        "sentence_completeness": "不适用，空",
+        "order": "不适用",
+        "acknowledgements_or_references": "不适用",
+        "notes": "没有输出结论；不能据此判定原文没有结论。"
+      },
+      "methods": {
+        "nonempty": false,
+        "chars": 0,
+        "grade": "不可用",
+        "caption": "否",
+        "notes": "空；methods_fallback_truncated"
+      },
+      "persisted_warnings": [
+        "page_1_possible_multicolumn",
+        "page_2_possible_multicolumn",
+        "page_3_possible_multicolumn",
+        "page_4_possible_multicolumn",
+        "page_5_possible_multicolumn",
+        "page_6_possible_multicolumn",
+        "page_7_possible_multicolumn",
+        "methods_fallback_truncated",
+        "missing_field:conclusions",
+        "missing_field:methods"
+      ]
+    },
+    {
+      "paper_id": "arxiv:2501.00600",
+      "source_url": "https://arxiv.org/abs/2501.00600v2",
+      "status": "partial",
+      "chemicals": {
+        "nonempty": true,
+        "count": 1,
+        "values": [
+          "Li6PS5Cl"
+        ],
+        "grade": "可用",
+        "notes": "Li6PS5Cl有固态电解质语境；未见所列噪声。"
+      },
+      "conclusions": {
+        "nonempty": true,
+        "chars": 185,
+        "grade": "不可用",
+        "sentence_completeness": "否，两段均为截断短句",
+        "order": "不是页码倒序；从不同正文位置拼接",
+        "acknowledgements_or_references": "未见",
+        "notes": "185字：第一段止于These findings highlight；第二段止于inter-。"
+      },
+      "methods": {
+        "nonempty": false,
+        "chars": 0,
+        "grade": "不可用",
+        "caption": "否",
+        "notes": "空；methods_fallback_rejected"
+      },
+      "persisted_warnings": [
+        "page_3_possible_multicolumn",
+        "page_11_possible_multicolumn",
+        "page_12_possible_multicolumn",
+        "page_18_possible_multicolumn",
+        "page_26_possible_multicolumn",
+        "methods_fallback_rejected",
+        "conclusions_fallback",
+        "missing_field:methods"
+      ]
+    },
+    {
+      "paper_id": "arxiv:2501.00620",
+      "source_url": "https://arxiv.org/abs/2501.00620v1",
+      "status": "partial",
+      "chemicals": {
+        "nonempty": false,
+        "count": 0,
+        "values": [],
+        "grade": "不可用",
+        "notes": "空列表；该理论流体论文未必需要化学物字段，空值不自动等于漏检。"
+      },
+      "conclusions": {
+        "nonempty": true,
+        "chars": 2046,
+        "grade": "部分可用",
+        "sentence_completeness": "主体结论大体完整，公式/连字有排版损伤",
+        "order": "主体顺序基本连续，尾混入后置数据声明",
+        "acknowledgements_or_references": "未见致谢/参考文献；含DATA AVAILABILITY",
+        "notes": "p27–28，末两条p28-b26/b27不属于结论。"
+      },
+      "methods": {
+        "nonempty": false,
+        "chars": 0,
+        "grade": "不可用",
+        "caption": "否，当前为空",
+        "notes": "历史候选2018字含图注/零散行，详见第3节。"
+      },
+      "persisted_warnings": [
+        "page_2_possible_multicolumn",
+        "page_3_possible_multicolumn",
+        "page_4_possible_multicolumn",
+        "page_6_possible_multicolumn",
+        "page_7_possible_multicolumn",
+        "page_8_possible_multicolumn",
+        "page_9_possible_multicolumn",
+        "page_11_possible_multicolumn",
+        "page_12_possible_multicolumn",
+        "page_13_possible_multicolumn",
+        "page_14_possible_multicolumn",
+        "page_15_possible_multicolumn",
+        "page_16_possible_multicolumn",
+        "page_17_possible_multicolumn",
+        "page_18_possible_multicolumn",
+        "page_20_possible_multicolumn",
+        "page_23_possible_multicolumn",
+        "page_28_possible_multicolumn",
+        "page_30_possible_multicolumn",
+        "page_31_possible_multicolumn",
+        "methods_fallback_rejected",
+        "missing_field:chemicals",
+        "missing_field:methods"
+      ]
+    },
+    {
+      "paper_id": "arxiv:2501.00679",
+      "source_url": "https://arxiv.org/abs/2501.00679v1",
+      "status": "partial",
+      "chemicals": {
+        "nonempty": true,
+        "count": 2,
+        "values": [
+          "MgO",
+          "MgSiO3"
+        ],
+        "grade": "可用",
+        "notes": "MgO、MgSiO3是文中材料组成；未见所列噪声。"
+      },
+      "conclusions": {
+        "nonempty": true,
+        "chars": 5205,
+        "grade": "部分可用",
+        "sentence_completeness": "大部分可读，但至少漏掉短块conduction.",
+        "order": "章节及页码顺序正常；存在短块过滤缺词",
+        "acknowledgements_or_references": "未见",
+        "notes": "p20-b25句末应接p20-b26(conduction.)，后者因len<=20被遗漏。"
+      },
+      "methods": {
+        "nonempty": true,
+        "chars": 815,
+        "grade": "部分可用",
+        "caption": "无FIG图注；有TABLE I表注",
+        "notes": "含DFT/时间步等方法事实，但从句中开始、漏掉后续行，混入小节标题和表注。"
+      },
+      "persisted_warnings": [
+        "page_3_possible_multicolumn",
+        "page_6_possible_multicolumn",
+        "page_7_possible_multicolumn",
+        "page_8_possible_multicolumn",
+        "page_9_possible_multicolumn",
+        "page_12_possible_multicolumn",
+        "page_13_possible_multicolumn",
+        "page_14_possible_multicolumn",
+        "page_23_possible_multicolumn",
+        "page_24_possible_multicolumn",
+        "page_25_possible_multicolumn",
+        "page_26_possible_multicolumn",
+        "page_27_possible_multicolumn",
+        "page_29_possible_multicolumn",
+        "page_31_possible_multicolumn",
+        "page_33_possible_multicolumn",
+        "page_34_possible_multicolumn",
+        "page_35_possible_multicolumn"
+      ]
+    },
+    {
+      "paper_id": "arxiv:2501.00680",
+      "source_url": "https://arxiv.org/abs/2501.00680v1",
+      "status": "partial",
+      "chemicals": {
+        "nonempty": true,
+        "count": 5,
+        "values": [
+          "BiFeO3",
+          "MoS2",
+          "Bi4Ti3O12",
+          "BiO",
+          "FeO2"
+        ],
+        "grade": "部分可用",
+        "notes": "3个明确材料名BiFeO3/MoS2/Bi4Ti3O12；BiO、FeO2是表面终止层组成，属于待裁定口径，不作为已确认误报。"
+      },
+      "conclusions": {
+        "nonempty": true,
+        "chars": 405,
+        "grade": "可用",
+        "sentence_completeness": "是，3个完整总结句，只有原文行末连字",
+        "order": "顺序正确",
+        "acknowledgements_or_references": "未见",
+        "notes": "p8-b4一条405字；与PDF第8页4 Conclusion正文吻合，致谢不在本字段。"
+      },
+      "methods": {
+        "nonempty": true,
+        "chars": 1330,
+        "grade": "部分可用",
+        "caption": "否",
+        "notes": "主体为参数、分子动力学和弛豫方法；开头well-suited...是前一段残句，需补齐语境或删去。"
+      },
+      "persisted_warnings": [
+        "page_1_possible_multicolumn"
+      ]
+    }
+  ]
+}

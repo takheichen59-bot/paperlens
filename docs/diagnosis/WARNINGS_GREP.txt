@@ -1,0 +1,116 @@
+./acceptance/m06_resume.py:31:            p=ParsedPaper(paper_id='p',pdf_hash='a'*64,pages=(),raw_blocks=(),cleaned_text='',sections=(),warnings=('empty_fixture',))
+./acceptance/_text_fixtures.py:9:        cleaned_text='\n\n'.join(lines),sections=(),warnings=()))
+./acceptance/m08_layout_cleaning.py:10:    return ParsedPaper(paper_id='fixture',pdf_hash='a'*64,pages=tuple(PageText(page_number=p,text='fixture') for p in range(1,max(x[0] for x in items)+1)),raw_blocks=blocks,cleaned_text='',sections=(),warnings=())
+./acceptance/m12_methods.py:10:    assert '180 C' in r.methods and not r.conclusions and not r.warnings
+./acceptance/m12_methods.py:17:    assert '500 C' in r.methods and any('fallback' in w for w in r.warnings)
+./acceptance/m12_methods.py:20:    assert '3000 rpm' in r.methods and 'methods_fallback:abstract' in r.warnings
+./acceptance/m12_methods.py:28:    assert not r.methods and not r.source_snippets and 'methods_fallback_rejected' in r.warnings
+./acceptance/m12_methods.py:32:    assert '500 C' in r.methods and 'washed' in r.methods and 'methods_fallback:unknown' in r.warnings
+./acceptance/m12_methods.py:37:    assert not r.methods and not r.source_snippets and 'methods_fallback_truncated' in r.warnings
+./acceptance/m09_sections.py:19:    p=ParsedPaper(paper_id='p',pdf_hash='a'*64,pages=(PageText(page_number=1,text='\n'.join(lines)),),raw_blocks=blocks,cleaned_text='\n'.join(lines),sections=(),warnings=())
+./acceptance/m09_sections.py:34:    p=paper(['Untitled paper','Ordinary text']);assert 'sections_unknown' in p.warnings
+./acceptance/m09_sections.py:39:    return ParsedPaper(paper_id='p',pdf_hash='a'*64,pages=(PageText(page_number=1,text=text),),raw_blocks=(TextBlock(block_id='b',page_number=1,text=text,bbox=None),),cleaned_text=text,sections=(),warnings=())
+./acceptance/m11_ner_adapter.py:17:    assert r.chemicals==('Titanium dioxide',) and 'ner_overlap:b0' in r.warnings
+./acceptance/m11_ner_adapter.py:20:    assert r.chemicals==('Titanium dioxide',) and 'ner_invalid_offset:b0' in r.warnings
+./acceptance/m11_ner_adapter.py:23:    assert r.chemicals==('Titanium dioxide',) and 'ner_failed:b0' in r.warnings
+./acceptance/m07_pdf_text.py:19:        assert any('multicolumn' in w for w in p.warnings)
+./acceptance/m07_pdf_text.py:45:        assert not any('multicolumn' in w for w in paper.warnings)
+./acceptance/m07_pdf_text.py:51:        assert not any('multicolumn' in w for w in PDFParser().parse(path).warnings)
+./acceptance/m15_llm_contract.py:12:    assert r.chemicals==base.chemicals and r.methods==base.methods and not r.warnings
+./acceptance/m15_llm_contract.py:17:    assert r.chemicals==base.chemicals and 'llm_evidence_rejected' in r.warnings
+./acceptance/m15_llm_contract.py:20:    assert r.chemicals==('Titanium dioxide',) and 'llm_response_rejected' in r.warnings
+./acceptance/m15_llm_contract.py:23:    assert 'llm_timeout' in r.warnings
+./acceptance/m15_llm_contract.py:25:    assert 'llm_input_limit' in r.warnings and not client.calls
+./scripts/report_p0p1.py:40:            'methods_warnings':list(m.warnings),'sections':[(s.title,s.kind.value) for s in p.sections]}
+./scripts/report_p0p1.py:55:        after=new.get(pid);candidate=candidates.get(pid,{});warnings=list(after_metadata[pid].warnings) if pid in after_metadata else []
+./scripts/report_p0p1.py:64:        elif any('methods_fallback_truncated' in w for w in warnings):root='M12连续候选超限，清空methods；保留其他有证据字段，仍partial'
+./scripts/report_p0p1.py:65:        elif any('methods_fallback_rejected' in w for w in warnings):root='M12正文/双块/关键词/同section条件不满足，拒绝方法回退；仍有字段缺失或告警'
+./scripts/report_p0p1.py:71:            'known_leak_terms_before':old_leaks,'warnings_after':warnings,'root_cause':root,
+./acceptance/m13_conclusions.py:10:    assert '20 percent' in r.conclusions and not r.methods and not r.warnings
+./acceptance/m13_conclusions.py:14:def case_discussion_fallback():
+./acceptance/m13_conclusions.py:16:    assert r.conclusions and 'conclusions_fallback' in r.warnings
+./acceptance/m02_storage.py:21:        r=ExtractionResult(chemicals=(),conclusions='',methods='',extraction_method='test-v1',source_snippets=(),field_status=tuple((f,FieldStatus.MISSING) for f in ExtractionField),warnings=())
+./acceptance/m02_storage.py:34:        r=ExtractionResult(chemicals=(),conclusions='',methods='',extraction_method='test',source_snippets=(),field_status=tuple((f,FieldStatus.MISSING) for f in ExtractionField),warnings=())
+./acceptance/m02_storage.py:36:        newer=r.model_copy(update={'warnings':('updated',)})
+./src/parsers/sections.py:78:        removed={w.removeprefix('removed_block:') for w in paper.warnings if w.startswith('removed_block:')}
+./src/parsers/sections.py:110:        warnings=tuple(w for w in paper.warnings if w!='sections_unknown')
+./src/parsers/sections.py:111:        if not any(s.kind!=SectionKind.UNKNOWN for s in sections):warnings+=('sections_unknown',)
+./src/parsers/sections.py:112:        output=paper.model_copy(update={'sections':tuple(sections),'warnings':warnings})
+./build/lib/parsers/sections.py:78:        removed={w.removeprefix('removed_block:') for w in paper.warnings if w.startswith('removed_block:')}
+./build/lib/parsers/sections.py:110:        warnings=tuple(w for w in paper.warnings if w!='sections_unknown')
+./build/lib/parsers/sections.py:111:        if not any(s.kind!=SectionKind.UNKNOWN for s in sections):warnings+=('sections_unknown',)
+./build/lib/parsers/sections.py:112:        output=paper.model_copy(update={'sections':tuple(sections),'warnings':warnings})
+./src/parsers/pdf.py:26:            pages=[];blocks=[];warnings=[]
+./src/parsers/pdf.py:32:                    if not text.strip():warnings.append(f'page_{index}_no_text')
+./src/parsers/pdf.py:47:                    if pairs:warnings.append(f'page_{index}_possible_multicolumn')
+./src/parsers/pdf.py:49:            return ParsedPaper(paper_id='local:'+sha256(path.read_bytes()).hexdigest(),pdf_hash=sha256(path.read_bytes()).hexdigest(),pages=tuple(pages),raw_blocks=tuple(blocks),cleaned_text='\n\n'.join(b.text for b in blocks),sections=(),warnings=tuple(warnings))
+./src/parsers/cleaning.py:87:        return paper.model_copy(update={'cleaned_text':'\n\n'.join(b.text for b in view.blocks),'warnings':paper.warnings+tuple('removed_block:'+bid for bid in view.removed)})
+./src/contracts/models.py:167:    warnings: tuple[NonEmpty, ...]
+./src/contracts/models.py:199:    warnings: tuple[NonEmpty, ...]
+./build/lib/parsers/pdf.py:26:            pages=[];blocks=[];warnings=[]
+./build/lib/parsers/pdf.py:32:                    if not text.strip():warnings.append(f'page_{index}_no_text')
+./build/lib/parsers/pdf.py:47:                    if pairs:warnings.append(f'page_{index}_possible_multicolumn')
+./build/lib/parsers/pdf.py:49:            return ParsedPaper(paper_id='local:'+sha256(path.read_bytes()).hexdigest(),pdf_hash=sha256(path.read_bytes()).hexdigest(),pages=tuple(pages),raw_blocks=tuple(blocks),cleaned_text='\n\n'.join(b.text for b in blocks),sections=(),warnings=tuple(warnings))
+./src/exports/jsonl.py:113:            if checked.record.status==ResultStatus.PARTIAL or value.warnings:
+./src/exports/jsonl.py:114:                reviews.append({'paper_id':row['paper_id'],'status':row['status'],'reasons':list(value.warnings) or ['partial_result']})
+./build/lib/parsers/cleaning.py:87:        return paper.model_copy(update={'cleaned_text':'\n\n'.join(b.text for b in view.blocks),'warnings':paper.warnings+tuple('removed_block:'+bid for bid in view.removed)})
+./src/extractors/conclusions.py:18:        warnings=[]
+./src/extractors/conclusions.py:21:            if selected:warnings.append('conclusions_fallback')
+./src/extractors/conclusions.py:22:        return result(conclusions='\n\n'.join(b.text for b in selected),snippets=tuple(snippet(parsed_paper,b,ExtractionField.CONCLUSIONS,self.version) for b in selected),method=self.version,warnings=warnings)
+./build/lib/contracts/models.py:167:    warnings: tuple[NonEmpty, ...]
+./build/lib/contracts/models.py:199:    warnings: tuple[NonEmpty, ...]
+./src/extractors/common.py:26:def result(*,chemicals=(),conclusions='',methods='',snippets=(),method,warnings=()):
+./src/extractors/common.py:29:        source_snippets=tuple(snippets),field_status=tuple((f,FieldStatus.FOUND if ok else FieldStatus.MISSING) for f,ok in zip(ExtractionField,present)),warnings=tuple(warnings))
+./src/extractors/llm.py:25:        def fallback(reason):return baseline.model_copy(update={'extraction_method':self.version,'warnings':baseline.warnings+(reason,)})
+./src/extractors/llm.py:27:        if len(raw)>self.max_input_chars:return fallback('llm_input_limit')
+./src/extractors/llm.py:39:                return fallback('llm_evidence_rejected')
+./src/extractors/llm.py:41:        except ContractError:return fallback('llm_evidence_rejected')
+./src/extractors/llm.py:42:        except TimeoutError:return fallback('llm_timeout')
+./src/extractors/llm.py:43:        except Exception:return fallback('llm_response_rejected')
+./src/extractors/methods.py:32:        warnings=[]
+./src/extractors/methods.py:46:                selected=valid[0];warnings.append('methods_fallback:'+selected[0].kind.value)
+./src/extractors/methods.py:47:            elif groups:warnings.append('methods_fallback_truncated')
+./src/extractors/methods.py:48:            else:warnings.append('methods_fallback_rejected')
+./src/extractors/methods.py:50:        return result(methods='\n\n'.join(s.text for s in refs),snippets=refs,method=self.version,warnings=warnings)
+./src/extractors/composite.py:12:    return ResultStatus.SUCCESS if count==3 and not value.warnings else ResultStatus.PARTIAL
+./src/extractors/composite.py:39:    warnings=list(value.warnings)
+./src/extractors/composite.py:41:        if not getattr(value,field.value):warnings.append('missing_field:'+field.value)
+./src/extractors/composite.py:43:        method=value.extraction_method,warnings=tuple(dict.fromkeys(warnings)))
+./src/extractors/composite.py:63:        warnings=tuple(w for w in parsed_paper.warnings if not w.startswith('removed_block:'))+c.warnings+m.warnings+s.warnings
+./src/extractors/composite.py:64:        combined=result(chemicals=c.chemicals,conclusions=s.conclusions,methods=m.methods,snippets=c.source_snippets+m.source_snippets+s.source_snippets,method=self.version,warnings=warnings)
+./src/extractors/ner.py:37:        names=list(base.chemicals);snippets=list(base.source_snippets);warnings=list(base.warnings)
+./src/extractors/ner.py:41:            except Exception:warnings.append('ner_failed:'+block.block_id);continue
+./src/extractors/ner.py:44:                    warnings.append('ner_invalid_offset:'+block.block_id);continue
+./src/extractors/ner.py:50:                if overlap:warnings.append('ner_overlap:'+block.block_id);continue
+./src/extractors/ner.py:54:        return base.model_copy(update={'chemicals':tuple(names),'source_snippets':tuple(snippets),'warnings':tuple(warnings),'field_status':statuses,'extraction_method':self.version})
+./build/lib/exports/jsonl.py:113:            if checked.record.status==ResultStatus.PARTIAL or value.warnings:
+./build/lib/exports/jsonl.py:114:                reviews.append({'paper_id':row['paper_id'],'status':row['status'],'reasons':list(value.warnings) or ['partial_result']})
+./src/pipeline/single.py:77:            failed=result(method=self.extractor.version,warnings=('operation_failed',))
+./build/lib/extractors/conclusions.py:18:        warnings=[]
+./build/lib/extractors/conclusions.py:21:            if selected:warnings.append('conclusions_fallback')
+./build/lib/extractors/conclusions.py:22:        return result(conclusions='\n\n'.join(b.text for b in selected),snippets=tuple(snippet(parsed_paper,b,ExtractionField.CONCLUSIONS,self.version) for b in selected),method=self.version,warnings=warnings)
+./build/lib/extractors/common.py:26:def result(*,chemicals=(),conclusions='',methods='',snippets=(),method,warnings=()):
+./build/lib/extractors/common.py:29:        source_snippets=tuple(snippets),field_status=tuple((f,FieldStatus.FOUND if ok else FieldStatus.MISSING) for f,ok in zip(ExtractionField,present)),warnings=tuple(warnings))
+./build/lib/extractors/llm.py:25:        def fallback(reason):return baseline.model_copy(update={'extraction_method':self.version,'warnings':baseline.warnings+(reason,)})
+./build/lib/extractors/llm.py:27:        if len(raw)>self.max_input_chars:return fallback('llm_input_limit')
+./build/lib/extractors/llm.py:39:                return fallback('llm_evidence_rejected')
+./build/lib/extractors/llm.py:41:        except ContractError:return fallback('llm_evidence_rejected')
+./build/lib/extractors/llm.py:42:        except TimeoutError:return fallback('llm_timeout')
+./build/lib/extractors/llm.py:43:        except Exception:return fallback('llm_response_rejected')
+./build/lib/extractors/methods.py:32:        warnings=[]
+./build/lib/extractors/methods.py:46:                selected=valid[0];warnings.append('methods_fallback:'+selected[0].kind.value)
+./build/lib/extractors/methods.py:47:            elif groups:warnings.append('methods_fallback_truncated')
+./build/lib/extractors/methods.py:48:            else:warnings.append('methods_fallback_rejected')
+./build/lib/extractors/methods.py:50:        return result(methods='\n\n'.join(s.text for s in refs),snippets=refs,method=self.version,warnings=warnings)
+./build/lib/extractors/composite.py:12:    return ResultStatus.SUCCESS if count==3 and not value.warnings else ResultStatus.PARTIAL
+./build/lib/extractors/composite.py:39:    warnings=list(value.warnings)
+./build/lib/extractors/composite.py:41:        if not getattr(value,field.value):warnings.append('missing_field:'+field.value)
+./build/lib/extractors/composite.py:43:        method=value.extraction_method,warnings=tuple(dict.fromkeys(warnings)))
+./build/lib/extractors/composite.py:63:        warnings=tuple(w for w in parsed_paper.warnings if not w.startswith('removed_block:'))+c.warnings+m.warnings+s.warnings
+./build/lib/extractors/composite.py:64:        combined=result(chemicals=c.chemicals,conclusions=s.conclusions,methods=m.methods,snippets=c.source_snippets+m.source_snippets+s.source_snippets,method=self.version,warnings=warnings)
+./build/lib/extractors/ner.py:37:        names=list(base.chemicals);snippets=list(base.source_snippets);warnings=list(base.warnings)
+./build/lib/extractors/ner.py:41:            except Exception:warnings.append('ner_failed:'+block.block_id);continue
+./build/lib/extractors/ner.py:44:                    warnings.append('ner_invalid_offset:'+block.block_id);continue
+./build/lib/extractors/ner.py:50:                if overlap:warnings.append('ner_overlap:'+block.block_id);continue
+./build/lib/extractors/ner.py:54:        return base.model_copy(update={'chemicals':tuple(names),'source_snippets':tuple(snippets),'warnings':tuple(warnings),'field_status':statuses,'extraction_method':self.version})
+./build/lib/pipeline/single.py:77:            failed=result(method=self.extractor.version,warnings=('operation_failed',))

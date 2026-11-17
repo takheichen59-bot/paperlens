@@ -1,0 +1,7 @@
+PASS case_single_column
+PASS case_multicolumn
+PASS case_multiple_pages
+PASS case_corrupted
+PASS case_scan
+PASS case_single_column_centered_numbers
+SUMMARY: 6 passed, 0 failed

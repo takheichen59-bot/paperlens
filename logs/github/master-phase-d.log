@@ -1,0 +1,10 @@
+test_1_real_bm25_threshold_and_exclusions (__main__.ResearchTests.test_1_real_bm25_threshold_and_exclusions) ... ok
+test_2_compare_preserves_missing (__main__.ResearchTests.test_2_compare_preserves_missing) ... ok
+test_3_gaps_no_global_novelty_claim (__main__.ResearchTests.test_3_gaps_no_global_novelty_claim) ... ok
+test_4_graph_only_actual_relations (__main__.ResearchTests.test_4_graph_only_actual_relations) ... ok
+test_5_assistant_abstains_without_evidence (__main__.ResearchTests.test_5_assistant_abstains_without_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.055s
+
+OK

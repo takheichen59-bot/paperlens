@@ -1,0 +1,10 @@
+SKIP historical_single_block_positive_skipped: rule tightened; original assertion retained
+SKIP historical_abstract_single_block_positive_skipped: abstract is not fallback body
+PASS case_experimental
+PASS case_computational
+PASS case_single_block_rejected
+PASS case_two_adjacent_blocks
+PASS case_references_only
+PASS case_fallback_too_long
+PASS case_cross_section_rejected
+SUMMARY: 7 passed, 0 failed

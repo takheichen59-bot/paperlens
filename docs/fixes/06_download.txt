@@ -1,0 +1,8 @@
+PASS case_valid
+PASS case_html
+PASS case_interrupted
+PASS case_cache
+PASS case_limit
+PASS case_size_is_skipped
+PASS case_non_size_stays_failed
+SUMMARY: 7 passed, 0 failed

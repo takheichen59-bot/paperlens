@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/workspace/m01-contracts/work/runtime/bin/paperlens",
+    "run",
+    "--manifest",
+    "docs/audit/real_manifest.json",
+    "--online",
+    "--max-pdf-mib",
+    "100",
+    "--methods-max-chars",
+    "3000",
+    "--db",
+    "work/fixes/real/state.sqlite3",
+    "--workdir",
+    "work/fixes/real/cache",
+    "--output",
+    "work/fixes/real/results"
+  ],
+  "returncode": 3,
+  "stdout": "{\"submitted\": 10, \"duplicates\": 0, \"success\": 0, \"partial\": 8, \"failed\": 1, \"skipped\": 1, \"exported\": 9, \"results\": \"work/fixes/real/results/results.jsonl\"}\n",
+  "stderr": "",
+  "elapsed_seconds": 81.05,
+  "fresh_database": true,
+  "fresh_cache": true
+}

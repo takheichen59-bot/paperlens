@@ -1,0 +1,10 @@
+test_corrupt_pdf (__main__.AcquisitionTests.test_corrupt_pdf) ... ok
+test_html (__main__.AcquisitionTests.test_html) ... ok
+test_official_mode_rejects_unknown_host (__main__.AcquisitionTests.test_official_mode_rejects_unknown_host) ... ok
+test_private_redirect (__main__.AcquisitionTests.test_private_redirect) ... ok
+test_real_pdf_validation_and_duplicate (__main__.AcquisitionTests.test_real_pdf_validation_and_duplicate) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.302s
+
+OK

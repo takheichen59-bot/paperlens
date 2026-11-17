@@ -1,0 +1,142 @@
+[
+  {
+    "module": "M01",
+    "file": "acceptance/m01_contracts.py",
+    "assert_nodes": 0,
+    "explicit_assertion_errors": 0,
+    "grep_density": 3
+  },
+  {
+    "module": "M02",
+    "file": "acceptance/m02_storage.py",
+    "assert_nodes": 24,
+    "explicit_assertion_errors": 4,
+    "grep_density": 35
+  },
+  {
+    "module": "M03",
+    "file": "acceptance/m03_arxiv_metadata.py",
+    "assert_nodes": 6,
+    "explicit_assertion_errors": 3,
+    "grep_density": 10
+  },
+  {
+    "module": "M04",
+    "file": "acceptance/m04_http_policy.py",
+    "assert_nodes": 5,
+    "explicit_assertion_errors": 3,
+    "grep_density": 8
+  },
+  {
+    "module": "M05",
+    "file": "acceptance/m05_pdf_download.py",
+    "assert_nodes": 8,
+    "explicit_assertion_errors": 4,
+    "grep_density": 12
+  },
+  {
+    "module": "M06",
+    "file": "acceptance/m06_resume.py",
+    "assert_nodes": 11,
+    "explicit_assertion_errors": 0,
+    "grep_density": 11
+  },
+  {
+    "module": "M07",
+    "file": "acceptance/m07_pdf_text.py",
+    "assert_nodes": 8,
+    "explicit_assertion_errors": 2,
+    "grep_density": 10
+  },
+  {
+    "module": "M08",
+    "file": "acceptance/m08_layout_cleaning.py",
+    "assert_nodes": 8,
+    "explicit_assertion_errors": 0,
+    "grep_density": 8
+  },
+  {
+    "module": "M09",
+    "file": "acceptance/m09_sections.py",
+    "assert_nodes": 7,
+    "explicit_assertion_errors": 0,
+    "grep_density": 7
+  },
+  {
+    "module": "M10",
+    "file": "acceptance/m10_chemicals.py",
+    "assert_nodes": 6,
+    "explicit_assertion_errors": 0,
+    "grep_density": 6
+  },
+  {
+    "module": "M11",
+    "file": "acceptance/m11_ner_adapter.py",
+    "assert_nodes": 5,
+    "explicit_assertion_errors": 0,
+    "grep_density": 5
+  },
+  {
+    "module": "M12",
+    "file": "acceptance/m12_methods.py",
+    "assert_nodes": 5,
+    "explicit_assertion_errors": 0,
+    "grep_density": 5
+  },
+  {
+    "module": "M13",
+    "file": "acceptance/m13_conclusions.py",
+    "assert_nodes": 5,
+    "explicit_assertion_errors": 0,
+    "grep_density": 5
+  },
+  {
+    "module": "M14",
+    "file": "acceptance/m14_extraction_validation.py",
+    "assert_nodes": 8,
+    "explicit_assertion_errors": 0,
+    "grep_density": 10
+  },
+  {
+    "module": "M15",
+    "file": "acceptance/m15_llm_contract.py",
+    "assert_nodes": 7,
+    "explicit_assertion_errors": 0,
+    "grep_density": 7
+  },
+  {
+    "module": "M16",
+    "file": "acceptance/m16_single_pipeline.py",
+    "assert_nodes": 9,
+    "explicit_assertion_errors": 0,
+    "grep_density": 12
+  },
+  {
+    "module": "M17",
+    "file": "acceptance/m17_batch_pipeline.py",
+    "assert_nodes": 6,
+    "explicit_assertion_errors": 1,
+    "grep_density": 8
+  },
+  {
+    "module": "M18",
+    "file": "acceptance/m18_exports.py",
+    "assert_nodes": 9,
+    "explicit_assertion_errors": 1,
+    "grep_density": 11
+  },
+  {
+    "module": "M19",
+    "file": "acceptance/m19_cli.py",
+    "assert_nodes": 15,
+    "explicit_assertion_errors": 0,
+    "grep_density": 15
+  },
+  {
+    "module": "M20",
+    "file": "acceptance/m20_end_to_end.py",
+    "assert_nodes": 17,
+    "explicit_assertion_errors": 1,
+    "grep_density": 20
+  }
+]

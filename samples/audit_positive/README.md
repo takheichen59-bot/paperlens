@@ -1,0 +1,1 @@
+Intentionally leaking frozen 00589 result, retained only as an audit positive fixture. Not a research result. Self-check it against a fresh parse cache of the same PDF. Never use it in production extraction.

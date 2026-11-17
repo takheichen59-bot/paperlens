@@ -1,0 +1,29 @@
+[
+  {
+    "paper_id": "arxiv:2401.00001",
+    "chemicals": [
+      "Titanium dioxide"
+    ],
+    "methods": "Titanium dioxide was prepared by hydrothermal synthesis at 180 C.",
+    "conclusions": "The coating improved corrosion resistance.",
+    "status": "success"
+  },
+  {
+    "paper_id": "arxiv:2401.00002",
+    "chemicals": [
+      "Graphene"
+    ],
+    "methods": "Graphene was prepared by hydrothermal synthesis at 180 C.",
+    "conclusions": "The coating improved corrosion resistance.",
+    "status": "success"
+  },
+  {
+    "paper_id": "arxiv:2401.00003",
+    "chemicals": [
+      "Polyethylene glycol"
+    ],
+    "methods": "Polyethylene glycol was prepared by hydrothermal synthesis at 180 C.",
+    "conclusions": "The coating improved corrosion resistance.",
+    "status": "success"
+  }
+]

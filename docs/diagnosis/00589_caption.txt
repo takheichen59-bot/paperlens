@@ -1,0 +1,10 @@
+FIG. 6.
+The predicted MLIP PEL aligns more closely with
+DFT than EAM for different supercooling. a) Shear modulus G
+and b) potential energy from MLIP and EAM vs the energy of a
+DFT-minimized structure. The shear modulus G systematically in-
+creases with the degree of supercooling. Compared with EAM, the
+MLIP shows a relatively better description of the potential energy
+with the DFT, i.e., e(MLIP) ≃e(DFT). Note that to show the en-
+ergy data within a single plot, the EAM dataset is shifted downwards
+by 1.11 eV.

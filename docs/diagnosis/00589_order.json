@@ -1,0 +1,355 @@
+{
+  "page_sequence_monotonic": true,
+  "conclusions_source_order": [
+    {
+      "output_index": 1,
+      "page": 6,
+      "block_id": "p6-b31",
+      "column": "右",
+      "bbox": [
+        317.0137939453125,
+        459.2982177734375,
+        562.0994873046875,
+        639.4271240234375
+      ],
+      "start_offset": 0,
+      "end_offset": 840,
+      "source_role": "方法：LJ参数",
+      "assigned_section": "CONCLUSIONS"
+    },
+    {
+      "output_index": 2,
+      "page": 6,
+      "block_id": "p6-b32",
+      "column": "左",
+      "bbox": [
+        54.00000762939453,
+        506.22125244140625,
+        299.08087158203125,
+        723.7357177734375
+      ],
+      "start_offset": 0,
+      "end_offset": 1084,
+      "source_role": "真正结论左栏段落",
+      "assigned_section": "CONCLUSIONS"
+    },
+    {
+      "output_index": 3,
+      "page": 6,
+      "block_id": "p6-b33",
+      "column": "右",
+      "bbox": [
+        317.0140075683594,
+        632.2492065429688,
+        562.0945434570312,
+        723.8811645507812
+      ],
+      "start_offset": 0,
+      "end_offset": 471,
+      "source_role": "方法：邻域变化",
+      "assigned_section": "CONCLUSIONS"
+    },
+    {
+      "output_index": 4,
+      "page": 7,
+      "block_id": "p7-b1",
+      "column": "左",
+      "bbox": [
+        54.0,
+        52.921207427978516,
+        299.08349609375,
+        98.57937622070312
+      ],
+      "start_offset": 0,
+      "end_offset": 203,
+      "source_role": "方法：邻域续段",
+      "assigned_section": "CONCLUSIONS"
+    },
+    {
+      "output_index": 5,
+      "page": 7,
+      "block_id": "p7-b4",
+      "column": "右",
+      "bbox": [
+        317.01416015625,
+        52.921024322509766,
+        562.0986938476562,
+        145.6969757080078
+      ],
+      "start_offset": 0,
+      "end_offset": 488,
+      "source_role": "方法：DFT参数",
+      "assigned_section": "CONCLUSIONS"
+    },
+    {
+      "output_index": 6,
+      "page": 7,
+      "block_id": "p7-b5",
+      "column": "左",
+      "bbox": [
+        54.00042724609375,
+        141.67010498046875,
+        299.0821228027344,
+        198.78561401367188
+      ],
+      "start_offset": 0,
+      "end_offset": 316,
+      "source_role": "方法：邻域公式解释",
+      "assigned_section": "CONCLUSIONS"
+    },
+    {
+      "output_index": 7,
+      "page": 7,
+      "block_id": "p7-b9",
+      "column": "左",
+      "bbox": [
+        157.3154296875,
+        202.82179260253906,
+        211.36105346679688,
+        239.9432373046875
+      ],
+      "start_offset": 0,
+      "end_offset": 21,
+      "source_role": "方法公式",
+      "assigned_section": "CONCLUSIONS"
+    },
+    {
+      "output_index": 8,
+      "page": 7,
+      "block_id": "p7-b10",
+      "column": "左",
+      "bbox": [
+        53.99964904785156,
+        250.43560791015625,
+        299.0809326171875,
+        273.1798400878906
+      ],
+      "start_offset": 0,
+      "end_offset": 95,
+      "source_role": "方法：平均量解释",
+      "assigned_section": "CONCLUSIONS"
+    },
+    {
+      "output_index": 9,
+      "page": 7,
+      "block_id": "p7-b11",
+      "column": "右",
+      "bbox": [
+        317.01422119140625,
+        144.5767822265625,
+        562.09521484375,
+        396.4615783691406
+      ],
+      "start_offset": 0,
+      "end_offset": 1174,
+      "source_role": "方法：AIMD",
+      "assigned_section": "CONCLUSIONS"
+    },
+    {
+      "output_index": 10,
+      "page": 7,
+      "block_id": "p7-b12",
+      "column": "右",
+      "bbox": [
+        317.0139465332031,
+        396.6322021484375,
+        562.09814453125,
+        442.2904357910156
+      ],
+      "start_offset": 0,
+      "end_offset": 206,
+      "source_role": "方法：黏度计算",
+      "assigned_section": "CONCLUSIONS"
+    },
+    {
+      "output_index": 11,
+      "page": 7,
+      "block_id": "p7-b17",
+      "column": "右",
+      "bbox": [
+        317.01373291015625,
+        483.30712890625,
+        562.0990600585938,
+        551.8806762695312
+      ],
+      "start_offset": 0,
+      "end_offset": 355,
+      "source_role": "方法：公式参数",
+      "assigned_section": "CONCLUSIONS"
+    },
+    {
+      "output_index": 12,
+      "page": 7,
+      "block_id": "p7-b18",
+      "column": "左",
+      "bbox": [
+        53.999725341796875,
+        273.6852111816406,
+        299.0857238769531,
+        562.7701416015625
+      ],
+      "start_offset": 0,
+      "end_offset": 1415,
+      "source_role": "方法：swap-MC",
+      "assigned_section": "CONCLUSIONS"
+    },
+    {
+      "output_index": 13,
+      "page": 7,
+      "block_id": "p7-b19",
+      "column": "左",
+      "bbox": [
+        54.000144958496094,
+        546.936279296875,
+        299.08123779296875,
+        723.7356567382812
+      ],
+      "start_offset": 0,
+      "end_offset": 858,
+      "source_role": "方法：时间尺度",
+      "assigned_section": "CONCLUSIONS"
+    },
+    {
+      "output_index": 14,
+      "page": 7,
+      "block_id": "p7-b20",
+      "column": "右",
+      "bbox": [
+        317.0140380859375,
+        552.0502319335938,
+        562.0975341796875,
+        723.7359008789062
+      ],
+      "start_offset": 0,
+      "end_offset": 910,
+      "source_role": "方法：NEP训练",
+      "assigned_section": "CONCLUSIONS"
+    },
+    {
+      "output_index": 15,
+      "page": 8,
+      "block_id": "p8-b1",
+      "column": "右",
+      "bbox": [
+        317.01409912109375,
+        52.918582916259766,
+        562.0946044921875,
+        247.51858520507812
+      ],
+      "start_offset": 0,
+      "end_offset": 920,
+      "source_role": "致谢续段：资助信息",
+      "assigned_section": "CONCLUSIONS"
+    },
+    {
+      "output_index": 16,
+      "page": 8,
+      "block_id": "p8-b2",
+      "column": "左",
+      "bbox": [
+        53.999969482421875,
+        52.921268463134766,
+        299.0853576660156,
+        258.9764099121094
+      ],
+      "start_offset": 0,
+      "end_offset": 1063,
+      "source_role": "方法：NEP训练续段",
+      "assigned_section": "CONCLUSIONS"
+    },
+    {
+      "output_index": 17,
+      "page": 8,
+      "block_id": "p8-b5",
+      "column": "右",
+      "bbox": [
+        317.01409912109375,
+        312.18487548828125,
+        562.094482421875,
+        369.3005065917969
+      ],
+      "start_offset": 0,
+      "end_offset": 268,
+      "source_role": "作者贡献",
+      "assigned_section": "CONCLUSIONS"
+    },
+    {
+      "output_index": 18,
+      "page": 8,
+      "block_id": "p8-b6",
+      "column": "左",
+      "bbox": [
+        54.000091552734375,
+        306.456787109375,
+        299.0883483886719,
+        375.0290222167969
+      ],
+      "start_offset": 0,
+      "end_offset": 315,
+      "source_role": "代码可用性",
+      "assigned_section": "CONCLUSIONS"
+    }
+  ],
+  "critical_raw_order": [
+    {
+      "raw_index": 182,
+      "block_id": "p6-b19",
+      "page": 6,
+      "bbox": [
+        408.4461975097656,
+        329.1076354980469,
+        470.66375732421875,
+        338.07403564453125
+      ],
+      "text": "V.\nMETHODS"
+    },
+    {
+      "raw_index": 183,
+      "block_id": "p6-b20",
+      "page": 6,
+      "bbox": [
+        53.99967956542969,
+        264.6287536621094,
+        299.0853271484375,
+        358.4735412597656
+      ],
+      "text": "FIG. 6.\nThe predicted MLIP PEL aligns more closely with\nDFT than EAM for differe"
+    },
+    {
+      "raw_index": 193,
+      "block_id": "p6-b30",
+      "page": 6,
+      "bbox": [
+        133.725830078125,
+        482.086181640625,
+        219.35494995117188,
+        491.0525817871094
+      ],
+      "text": "IV.\nCONCLUSIONS"
+    },
+    {
+      "raw_index": 219,
+      "block_id": "p8-b1",
+      "page": 8,
+      "bbox": [
+        317.01409912109375,
+        52.918582916259766,
+        562.0946044921875,
+        247.51858520507812
+      ],
+      "text": "ment no. 857470 and from the European Regional Devel-\nopment Fund via the Founda"
+    },
+    {
+      "raw_index": 225,
+      "block_id": "p8-b7",
+      "page": 8,
+      "bbox": [
+        124.20399475097656,
+        399.0813903808594,
+        228.87754821777344,
+        408.04779052734375
+      ],
+      "text": "ACKNOWLEDGEMENTS"
+    }
+  ]
+}

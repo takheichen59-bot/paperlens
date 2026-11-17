@@ -1,0 +1,4 @@
+/workspace/m01-contracts/work/fixes/wheel-install/contracts/__init__.py
+/workspace/m01-contracts/work/fixes/wheel-install/parsers/__init__.py
+{"submitted": 3, "duplicates": 0, "success": 3, "partial": 0, "failed": 0, "skipped": 0, "exported": 3, "results": "/workspace/m01-contracts/work/fixes/isolated-wheel/results/results.jsonl"}
+exit_code=0; three demo papers success; offline installed wheel

@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "venues": [
+    {
+      "id": "neurips",
+      "name": "NeurIPS",
+      "domain": "AI",
+      "aliases": [
+        "Advances in Neural Information Processing Systems",
+        "NIPS"
+      ],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "icml",
+      "name": "ICML",
+      "domain": "AI",
+      "aliases": [
+        "International Conference on Machine Learning"
+      ],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "iclr",
+      "name": "ICLR",
+      "domain": "AI",
+      "aliases": [
+        "International Conference on Learning Representations"
+      ],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "aaai",
+      "name": "AAAI",
+      "domain": "AI",
+      "aliases": [],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "ijcai",
+      "name": "IJCAI",
+      "domain": "AI",
+      "aliases": [],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "cav",
+      "name": "CAV",
+      "domain": "Formal Methods",
+      "aliases": [
+        "Computer Aided Verification"
+      ],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "kr",
+      "name": "KR",
+      "domain": "Formal Methods",
+      "aliases": [
+        "Principles of Knowledge Representation and Reasoning"
+      ],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "ijcar",
+      "name": "IJCAR",
+      "domain": "Formal Methods",
+      "aliases": [
+        "International Joint Conference on Automated Reasoning"
+      ],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "sat",
+      "name": "SAT",
+      "domain": "Formal Methods",
+      "aliases": [
+        "Theory and Applications of Satisfiability Testing"
+      ],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "cp",
+      "name": "CP",
+      "domain": "Formal Methods",
+      "aliases": [
+        "Principles and Practice of Constraint Programming"
+      ],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "aamas",
+      "name": "AAMAS",
+      "domain": "Formal Methods",
+      "aliases": [],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "nature_machine_intelligence",
+      "name": "Nature Machine Intelligence",
+      "domain": "Scientific AI",
+      "aliases": [],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "nature_computational_science",
+      "name": "Nature Computational Science",
+      "domain": "Scientific AI",
+      "aliases": [],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "npj_computational_materials",
+      "name": "npj Computational Materials",
+      "domain": "Scientific AI",
+      "aliases": [],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "nature_materials",
+      "name": "Nature Materials",
+      "domain": "Materials",
+      "aliases": [],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "advanced_materials",
+      "name": "Advanced Materials",
+      "domain": "Materials",
+      "aliases": [],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "acs_nano",
+      "name": "ACS Nano",
+      "domain": "Materials",
+      "aliases": [],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "chemistry_of_materials",
+      "name": "Chemistry of Materials",
+      "domain": "Materials",
+      "aliases": [],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "jacs",
+      "name": "JACS",
+      "domain": "Materials",
+      "aliases": [
+        "Journal of the American Chemical Society"
+      ],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "physical_review_letters",
+      "name": "Physical Review Letters",
+      "domain": "Materials",
+      "aliases": [
+        "PRL"
+      ],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    },
+    {
+      "id": "physical_review_b",
+      "name": "Physical Review B",
+      "domain": "Materials",
+      "aliases": [
+        "PRB"
+      ],
+      "curation": "User-provided initial registry; not an inferred ranking"
+    }
+  ]
+}

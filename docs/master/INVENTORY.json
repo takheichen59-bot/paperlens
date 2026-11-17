@@ -1,0 +1,955 @@
+{
+  "backup": "/workspace/m01-contracts/work/master-upgrade/20261116T134217Z/before-code-and-records.tar.gz",
+  "files": [
+    {
+      "file": "/workspace/m01-contracts/src/checkpoints/__init__.py",
+      "sha256": "5a2102173b21c8c22ecc668a72c0a48a3061856e2296c92a62106fbc5e8257bc",
+      "bytes": 44,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/src/checkpoints/resume.py",
+      "sha256": "efc8a413ccc13b6fca6233546602cbb82b050c128f5619cb5023a9ce6b46e5f7",
+      "bytes": 4829,
+      "classes": [
+        "ResumeStore"
+      ],
+      "functions": 10
+    },
+    {
+      "file": "/workspace/m01-contracts/src/contracts/__init__.py",
+      "sha256": "e0fdef25e04f1acec6d023d20d98637354261bdf3d8ca88d14dade1c13080279",
+      "bytes": 1050,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/src/contracts/enums.py",
+      "sha256": "65bf61a28079c0c83c20a6ccb702a9d39f9dd6d08671aa0976fd58ac03773656",
+      "bytes": 1610,
+      "classes": [
+        "InputType",
+        "Source",
+        "Stage",
+        "StageStatus",
+        "ResultStatus",
+        "ErrorKind",
+        "ExtractionField",
+        "FieldStatus",
+        "SectionKind"
+      ],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/src/contracts/errors.py",
+      "sha256": "84abe75257c8e2c6df80cc17a988eaadff4085be0b75d9f384471a1ef3e3c03f",
+      "bytes": 3626,
+      "classes": [
+        "ContractError"
+      ],
+      "functions": 3
+    },
+    {
+      "file": "/workspace/m01-contracts/src/contracts/interfaces.py",
+      "sha256": "a08119f18023353e1814488c68e44db80777a2410907d6d3bb85eea99a70f848",
+      "bytes": 1467,
+      "classes": [
+        "BaseFetcher",
+        "BaseParser",
+        "BaseExtractor"
+      ],
+      "functions": 8
+    },
+    {
+      "file": "/workspace/m01-contracts/src/contracts/jsonl_schema.py",
+      "sha256": "e40a68707b759f8a15b3324b36afe2e9d7e78b65b17218f54728d8d1b50ac358",
+      "bytes": 4521,
+      "classes": [
+        "JSONLRecord",
+        "RecordValidationResult"
+      ],
+      "functions": 4
+    },
+    {
+      "file": "/workspace/m01-contracts/src/contracts/models.py",
+      "sha256": "c98a6021019a861cf8f61de9e9c5a0c1307a219304abce13f21e3ed008c29334",
+      "bytes": 7762,
+      "classes": [
+        "PageText",
+        "TextBlock",
+        "Section",
+        "SourceSnippet",
+        "PaperQuery",
+        "PaperRef",
+        "PaperMeta",
+        "DownloadArtifact",
+        "ParsedPaper",
+        "ExtractionResult",
+        "TaskRecord"
+      ],
+      "functions": 9
+    },
+    {
+      "file": "/workspace/m01-contracts/src/exports/__init__.py",
+      "sha256": "98ae4efceb5425ba1e19ceeebf9057e8abb7331851bed0553008e5d77a99da7a",
+      "bytes": 356,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/src/exports/jsonl.py",
+      "sha256": "5864d1449b8d37539c66e22a702f589b0e6b56583d876f11d2c8cb50c074bd42",
+      "bytes": 8521,
+      "classes": [
+        "FailureStatus",
+        "FailureRecord",
+        "ExportSummary"
+      ],
+      "functions": 6
+    },
+    {
+      "file": "/workspace/m01-contracts/src/exports/snapshots.py",
+      "sha256": "041202a0101893699d27c65df34ab0dceaff1aad3622174ad1f15ebb8dc1cbd1",
+      "bytes": 10056,
+      "classes": [
+        "ExportSnapshot",
+        "WarningsBySeverityRecord"
+      ],
+      "functions": 16
+    },
+    {
+      "file": "/workspace/m01-contracts/src/extractors/__init__.py",
+      "sha256": "29be60b7d751d89a05c0fa08ada424f478b873bd1abe0422ab73a9aabaf60a20",
+      "bytes": 41,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/src/extractors/chemicals.json",
+      "sha256": "ff5c7c927a93204e512876a74f6e981fb92610b4429e3d3cd4e6b71d363c34fc",
+      "bytes": 211
+    },
+    {
+      "file": "/workspace/m01-contracts/src/extractors/chemicals.py",
+      "sha256": "d34d998e5a4635c43b4aa87c131d9518fa825d793253f48728da31ce22079acc",
+      "bytes": 1836,
+      "classes": [
+        "ChemicalExtractor"
+      ],
+      "functions": 4
+    },
+    {
+      "file": "/workspace/m01-contracts/src/extractors/common.py",
+      "sha256": "d907acddae630131c5e17a2f1728a3da2c93b686efd9123d5addf75e5c1e4a17",
+      "bytes": 1850,
+      "classes": [],
+      "functions": 4
+    },
+    {
+      "file": "/workspace/m01-contracts/src/extractors/composite.py",
+      "sha256": "1471177435d256f694ee4e0a7187947a65f5cbb82aa02ae1fc735b5487a54ed7",
+      "bytes": 4995,
+      "classes": [
+        "CompositeExtractor"
+      ],
+      "functions": 8
+    },
+    {
+      "file": "/workspace/m01-contracts/src/extractors/conclusions.py",
+      "sha256": "0b7a258910f54f6367ae98cc93eb2427f91afd7996949d4e4302f8652a229571",
+      "bytes": 1290,
+      "classes": [
+        "ConclusionExtractor"
+      ],
+      "functions": 4
+    },
+    {
+      "file": "/workspace/m01-contracts/src/extractors/formula_rules.py",
+      "sha256": "6949622d221726a55dbe746f7263551533d339eed4a7362c361eabd78757ebbd",
+      "bytes": 1627,
+      "classes": [],
+      "functions": 1
+    },
+    {
+      "file": "/workspace/m01-contracts/src/extractors/llm.py",
+      "sha256": "dcc1a5202b1598b9fd3bf8939072719d5291f50f68440de7f2764826a1227173",
+      "bytes": 2823,
+      "classes": [
+        "MockLLMClient",
+        "LLMEnhancedExtractor"
+      ],
+      "functions": 7
+    },
+    {
+      "file": "/workspace/m01-contracts/src/extractors/methods.py",
+      "sha256": "3aa421547e5442b96953ae43601233e7beb10daf44399bf84b2eff2a0c27ae70",
+      "bytes": 3969,
+      "classes": [
+        "MethodExtractor"
+      ],
+      "functions": 5
+    },
+    {
+      "file": "/workspace/m01-contracts/src/extractors/ner.py",
+      "sha256": "023235aeadfe4b85ccc135ce13892640cd9374582cf309f71a3bc9259332936d",
+      "bytes": 2919,
+      "classes": [
+        "Entity",
+        "NERAdapter",
+        "MockNER",
+        "NERChemicalExtractor"
+      ],
+      "functions": 7
+    },
+    {
+      "file": "/workspace/m01-contracts/src/extractors/warning_policy.py",
+      "sha256": "9141298aa9757e5e26ed94a60df90c5940df00e819d57b2d0cc249bceb9b12e9",
+      "bytes": 2443,
+      "classes": [
+        "WarningClassificationError",
+        "WarningsBySeverity"
+      ],
+      "functions": 2
+    },
+    {
+      "file": "/workspace/m01-contracts/src/fetchers/__init__.py",
+      "sha256": "7518fea97c06a0668142da869c33b0922e71facd6bc7963b0647e1d0d8604b5a",
+      "bytes": 32,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/src/fetchers/arxiv.py",
+      "sha256": "9ad0e21a6df788e8d07bbd9d42cc1d773ffb8857d044262882c5d96ffb0a5132",
+      "bytes": 4358,
+      "classes": [
+        "ArxivFetcher"
+      ],
+      "functions": 8
+    },
+    {
+      "file": "/workspace/m01-contracts/src/fetchers/http_policy.py",
+      "sha256": "177fa3ef8faf9311c3500ee04f08055dd8ddaef51533a7e908495b82df805abe",
+      "bytes": 2441,
+      "classes": [
+        "HttpPolicy"
+      ],
+      "functions": 4
+    },
+    {
+      "file": "/workspace/m01-contracts/src/fetchers/pdf_download.py",
+      "sha256": "b93dcd6fd204959f4daec961a6078539d8c32007b6b39c91ee12ae003beaf38f",
+      "bytes": 3525,
+      "classes": [
+        "DownloadSizeLimit"
+      ],
+      "functions": 5
+    },
+    {
+      "file": "/workspace/m01-contracts/src/paper_platform/__init__.py",
+      "sha256": "5226570115b9c8571a120a060524c9f50b3808ff2d54aa38b628e9578004ccd1",
+      "bytes": 61,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/src/paper_platform/__main__.py",
+      "sha256": "1632f52838e072ade53b3d1f4eb081260288cd1cff080504b0bc5acffc179368",
+      "bytes": 27,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/src/paper_platform/cli.py",
+      "sha256": "f29b55b9cab3326bf9adf45a39d4c8b6fb13ffb1409c627cf1c60531008bc554",
+      "bytes": 10651,
+      "classes": [
+        "OfflineFetcher"
+      ],
+      "functions": 17
+    },
+    {
+      "file": "/workspace/m01-contracts/src/paper_platform/web.py",
+      "sha256": "c7b4845d54b46b9b053aa8d5430f2b94ba9619926e0ef3b189f9240d527bd1aa",
+      "bytes": 11254,
+      "classes": [
+        "WebEngine",
+        "Handler"
+      ],
+      "functions": 13
+    },
+    {
+      "file": "/workspace/m01-contracts/src/paper_platform/web_assets/app.js",
+      "sha256": "d3a923eebaf5add7505df6276bb4838613e5c94f9b6e1cf0da4c8ce4d941f388",
+      "bytes": 14673
+    },
+    {
+      "file": "/workspace/m01-contracts/src/paper_platform/web_assets/corpus.json",
+      "sha256": "6e30876c05923b04968e89fa9e92a3a99b418528a320334de811b9ebcc43eb17",
+      "bytes": 172847
+    },
+    {
+      "file": "/workspace/m01-contracts/src/paper_platform/web_assets/index.html",
+      "sha256": "3365c2a001bd3c0661773337a02384f907b004e83e24b0c69cb6dbb0fa6b8b8d",
+      "bytes": 7000
+    },
+    {
+      "file": "/workspace/m01-contracts/src/paper_platform/web_assets/policy.json",
+      "sha256": "2b387df330d9660e4ccdde7fccce8294b2e9751d48108052a4fec70f5127aacc",
+      "bytes": 2625
+    },
+    {
+      "file": "/workspace/m01-contracts/src/paper_platform/web_assets/preview.js",
+      "sha256": "23d6e20a654935540541d6bc59504876e9322a459f92187e6dc9bfbfd3072b72",
+      "bytes": 3291
+    },
+    {
+      "file": "/workspace/m01-contracts/src/paper_platform/web_assets/style.css",
+      "sha256": "c1b49570a820adfadaac8f71dbc3a2bdf3d64e43c696b6cb6d02c27dec319d11",
+      "bytes": 9011
+    },
+    {
+      "file": "/workspace/m01-contracts/src/parsers/__init__.py",
+      "sha256": "b55276b6298e0ee2d832d9a21a5921898535f838f232a2f33014302f691f5e0a",
+      "bytes": 27,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/src/parsers/cleaning.py",
+      "sha256": "2ffd000a5c08864fab7dffc49bbd048cf0952d2c1d6b6f872e02f0e36fc3f8c0",
+      "bytes": 3827,
+      "classes": [
+        "CleanedBlock",
+        "CleanedView",
+        "LayoutCleaner"
+      ],
+      "functions": 6
+    },
+    {
+      "file": "/workspace/m01-contracts/src/parsers/heading_config.py",
+      "sha256": "d0e87364e288ed6f7ad46bcf6290ad1782fd84b44180fde297a53a082e6a270a",
+      "bytes": 2535,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/src/parsers/pdf.py",
+      "sha256": "1dad05ca80441e74922ca15bb56ad32d693988cef08acd1bf7e58a1e8b5851fc",
+      "bytes": 5626,
+      "classes": [
+        "PDFParser"
+      ],
+      "functions": 5
+    },
+    {
+      "file": "/workspace/m01-contracts/src/parsers/reading_order.py",
+      "sha256": "1302c7555ebed119c974005632578bf142a83645bb6f9b43b4cd0531d59ffc63",
+      "bytes": 4460,
+      "classes": [
+        "ReadingBlock"
+      ],
+      "functions": 5
+    },
+    {
+      "file": "/workspace/m01-contracts/src/parsers/sections.py",
+      "sha256": "3dc8e24e959707da9ed120128c2f9e859e70bcc6978d02131787d1be74c652e0",
+      "bytes": 9158,
+      "classes": [
+        "ViewSection",
+        "SectionView",
+        "BodySpan",
+        "SectionIdentifier",
+        "StructuredPDFParser"
+      ],
+      "functions": 12
+    },
+    {
+      "file": "/workspace/m01-contracts/src/pipeline/__init__.py",
+      "sha256": "552491f874c8c3e0cf169b8b8bfcd3439180230b2a7d6e41426bb31ee89c2033",
+      "bytes": 34,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/src/pipeline/batch.py",
+      "sha256": "9385a443825e5c8be97616221c8e5c2dda3356d3e49d35e53dddd519a5d3e88a",
+      "bytes": 4286,
+      "classes": [
+        "BatchItem",
+        "BatchReport",
+        "BatchRunner"
+      ],
+      "functions": 8
+    },
+    {
+      "file": "/workspace/m01-contracts/src/pipeline/single.py",
+      "sha256": "ed28abefdaef37843e04e48f0e6a75485eafccb3c598bdae4edc01bca242603e",
+      "bytes": 6481,
+      "classes": [
+        "PaperPipeline"
+      ],
+      "functions": 7
+    },
+    {
+      "file": "/workspace/m01-contracts/src/research/__init__.py",
+      "sha256": "564a33356422a96511216bd705d834efe0ab2b392d91449ec39a44ef582a48e1",
+      "bytes": 100,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/src/research/__main__.py",
+      "sha256": "e1928d4ec0632d0a769bf584dbdacb30f54cbe2fbc216e881a3daa00a8e2d357",
+      "bytes": 7948,
+      "classes": [],
+      "functions": 3
+    },
+    {
+      "file": "/workspace/m01-contracts/src/research/analysis.py",
+      "sha256": "f264d42003ed86c28ba888c0e9a058acc18f33d45220ed541f7a5cf96930723f",
+      "bytes": 4972,
+      "classes": [],
+      "functions": 6
+    },
+    {
+      "file": "/workspace/m01-contracts/src/research/extraction.py",
+      "sha256": "81395d8978aeda8bdf1943f9d6cbda31078f4293c559b0741e1ae32efe5c0964",
+      "bytes": 11923,
+      "classes": [
+        "ScientificBaselineAdapter"
+      ],
+      "functions": 9
+    },
+    {
+      "file": "/workspace/m01-contracts/src/research/library.py",
+      "sha256": "1a168889bb8697825cb7fa048dee2b2f95cd643b747da55c1475fb8aa610189b",
+      "bytes": 15293,
+      "classes": [
+        "Library"
+      ],
+      "functions": 18
+    },
+    {
+      "file": "/workspace/m01-contracts/src/storage/__init__.py",
+      "sha256": "e25434e4ee93f856431f9918d5905b7c6e2be0cbf1ceff0ea5c3a1bf3ae9069f",
+      "bytes": 208,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/src/storage/db.py",
+      "sha256": "40202ac47839791d1ccaa8b6de412c865130775c6ee7ee220bae6035c6f21b26",
+      "bytes": 6899,
+      "classes": [
+        "Database"
+      ],
+      "functions": 14
+    },
+    {
+      "file": "/workspace/m01-contracts/src/storage/migrations/0001_init.sql",
+      "sha256": "7d6761b164c0db0fe9bca1eac92518ef900bfc26947c1abc29489fe4b76d7a33",
+      "bytes": 2350
+    },
+    {
+      "file": "/workspace/m01-contracts/src/storage/repositories.py",
+      "sha256": "7d649a2fe68b09e0bc0775c4fe9761dc6add8097c160775101ec378c3095c92d",
+      "bytes": 4592,
+      "classes": [
+        "PaperRepository",
+        "TaskRepository",
+        "ResultRepository",
+        "ErrorRepository"
+      ],
+      "functions": 16
+    },
+    {
+      "file": "/workspace/m01-contracts/src/storage/schema.sql",
+      "sha256": "7d6761b164c0db0fe9bca1eac92518ef900bfc26947c1abc29489fe4b76d7a33",
+      "bytes": 2350
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/_pdf_fixtures.py",
+      "sha256": "9089a8848729bc3e073b5b2a437e7ee4559894b287aa782b13b5b2d69cb8aaad",
+      "bytes": 1156,
+      "classes": [],
+      "functions": 2
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/_pipeline_fixtures.py",
+      "sha256": "b7bac6311643c51f83b482180e54a02d3d5a5baca25375f0f3d9ed7025c06b1a",
+      "bytes": 1305,
+      "classes": [
+        "LocalFetcher"
+      ],
+      "functions": 6
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/_research_fixture.py",
+      "sha256": "a210451969b3a8022380f6233938f895d07361c73141ef308266efcb80ea1c68",
+      "bytes": 2043,
+      "classes": [],
+      "functions": 1
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/_support.py",
+      "sha256": "0d3264841f450bfadee75758c6b4ea86e8df820fd7f29fa0666e27c10649c0fd",
+      "bytes": 511,
+      "classes": [],
+      "functions": 1
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/_text_fixtures.py",
+      "sha256": "de0a556e04f887f3ee5710bad5790bb394974fdae0b764c172da218384b635f9",
+      "bytes": 581,
+      "classes": [],
+      "functions": 2
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m01_contracts.py",
+      "sha256": "4fad7717c19345c01427dd4dde6900d18666fe8ae9fa685eebc9d7d238ee9547",
+      "bytes": 5196,
+      "classes": [],
+      "functions": 2
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m02_storage.py",
+      "sha256": "d9f9fda2bfdc76373c4e94c14615b54c15ac20bcb9d42db76e9817a873c18da4",
+      "bytes": 6583,
+      "classes": [],
+      "functions": 7
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m03_arxiv_metadata.py",
+      "sha256": "8b6cd96c50f732a9be1f784f361b4df1ae17ea8d8be41e7f4e1f0db19a44de49",
+      "bytes": 2580,
+      "classes": [],
+      "functions": 8
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m04_http_policy.py",
+      "sha256": "30799ffa65f589ebd03eec372ca7fdd6113c95aa3c7ab014d8387738323c4599",
+      "bytes": 3069,
+      "classes": [
+        "Clock"
+      ],
+      "functions": 16
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m05_pdf_download.py",
+      "sha256": "3b2b78c877fb0e16b44019ff296e5f62a35fd142baf96e1f51ad303199ae06e9",
+      "bytes": 4666,
+      "classes": [
+        "Broken"
+      ],
+      "functions": 13
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m06_resume.py",
+      "sha256": "a4877b452fe794512f426da237a73d871390775705eafc908992bd7016f9c445",
+      "bytes": 3567,
+      "classes": [],
+      "functions": 7
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m07_pdf_text.py",
+      "sha256": "013c8748ab5ed08ad9d8f15f3ae1fb5a43114ca2ce7d041ce5c7712b705bfa78",
+      "bytes": 3025,
+      "classes": [],
+      "functions": 6
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m08_layout_cleaning.py",
+      "sha256": "6f04ea00581d2ff992383bcb93121bd2ea74be7166f78bfd9ab806d97e90673f",
+      "bytes": 2986,
+      "classes": [],
+      "functions": 8
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m09_sections.py",
+      "sha256": "7e4ccb119a78c51df0e750e354944bd670f09c87df38d248d0e0092c8d980fb1",
+      "bytes": 12478,
+      "classes": [],
+      "functions": 23
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m10_chemicals.py",
+      "sha256": "b36abdad0b1fdb085e7eddb9e46d26dcf45d04065b84abb85e001f936ff1780e",
+      "bytes": 2527,
+      "classes": [],
+      "functions": 9
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m11_ner_adapter.py",
+      "sha256": "60ffb5a9b88bed3bcc63d463bfe5b75e9c6c335c81295e9d9c65dd5926eaf9fe",
+      "bytes": 1527,
+      "classes": [],
+      "functions": 5
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m12_methods.py",
+      "sha256": "189cff9a65cd0fc6df1d59b158f3f67d76f22c931badaab265fd506abb0a947b",
+      "bytes": 4802,
+      "classes": [],
+      "functions": 13
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m13_conclusions.py",
+      "sha256": "0bc39af65b79c62148ba4f7741769977bd4c0a40bb9c002c0e00f9db39c1106c",
+      "bytes": 1591,
+      "classes": [],
+      "functions": 5
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m14_extraction_validation.py",
+      "sha256": "f40df17fb3d8252673b79f98883fed03b579abe8994c366a85d8db96f67ba11c",
+      "bytes": 6882,
+      "classes": [],
+      "functions": 16
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m15_llm_contract.py",
+      "sha256": "a6627faa0d24d64a3c89992c7c5389389ef384a0ee4d2aa482aa72f172d8589e",
+      "bytes": 2233,
+      "classes": [],
+      "functions": 6
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m16_single_pipeline.py",
+      "sha256": "7dfaabd08d06b92f35c61cf025ac380ff6be53d4c6ff7dad7d5870830c9ae6c2",
+      "bytes": 4614,
+      "classes": [
+        "_ForTestingExtractor"
+      ],
+      "functions": 9
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m17_batch_pipeline.py",
+      "sha256": "039e8d1a2a467973cd5664e945cc1e66a7dc1a67dc201027e523e96db86f8f57",
+      "bytes": 4624,
+      "classes": [
+        "_ForTestingClassificationExtractor",
+        "FakePipeline"
+      ],
+      "functions": 16
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m18_exports.py",
+      "sha256": "0bd9828d8ca98b44f0d40154a2db5e6b5b271a487c105009c3f5a4b87b8df8f8",
+      "bytes": 10740,
+      "classes": [],
+      "functions": 18
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m19_cli.py",
+      "sha256": "e1860ca7baef574696c20a1d6f68031d0bc6616a16d65142c92aeb4d31ebf297",
+      "bytes": 3475,
+      "classes": [],
+      "functions": 7
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/m20_end_to_end.py",
+      "sha256": "95afe2cc24e7e530be3226425c82d88c707835e18d8a4ee9bc2871d5f12388aa",
+      "bytes": 6586,
+      "classes": [],
+      "functions": 8
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/phase1_acquisition.py",
+      "sha256": "1a57161ab792dfa45b582d397eef53104622822c49d6478d33ca499589272065",
+      "bytes": 4001,
+      "classes": [],
+      "functions": 7
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/repair_e_views.py",
+      "sha256": "b3bcfec4f1a51e4f3b5540deb0ccf5901e73770c40c6d08eb54b79035ac02669",
+      "bytes": 2654,
+      "classes": [],
+      "functions": 7
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/repair_web.py",
+      "sha256": "e481db789c3666df713399889547a2deefbd454bd618e8cef96b7b798b09825d",
+      "bytes": 4748,
+      "classes": [
+        "VersionedFetcherForTesting"
+      ],
+      "functions": 9
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/research_batch.py",
+      "sha256": "2551558e934d6849ab348ce225fc0efbdf289f6e38faa27712a20ad04edded74",
+      "bytes": 5001,
+      "classes": [],
+      "functions": 9
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/research_intelligence.py",
+      "sha256": "c7d2bbe49e973f8766f47779652f93d802143316565a727cbc3cd77a9f27245d",
+      "bytes": 1928,
+      "classes": [],
+      "functions": 6
+    },
+    {
+      "file": "/workspace/m01-contracts/acceptance/research_science.py",
+      "sha256": "a40e69ccb6985d31725e0d83c944877a6710bd641793ca2ffb777ebe8647eb92",
+      "bytes": 4247,
+      "classes": [],
+      "functions": 6
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/audit_contract_checks.py",
+      "sha256": "8563090e2fd9beffd5ccc5a6e3c73fce19b723462dcc448de24fa32ec6e35c4f",
+      "bytes": 3325,
+      "classes": [],
+      "functions": 6
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/audit_demo_trace.py",
+      "sha256": "844b6658bb6052e68c0c6873fdbc7c88d395a9c3df2d94b1009f961492a6a8a0",
+      "bytes": 2466,
+      "classes": [],
+      "functions": 1
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/audit_ground_truth.json",
+      "sha256": "47f20570002eecafa421a0903423750448e27dcc5d9b0c566b849316a2b876c1",
+      "bytes": 456
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/audit_leakage.py",
+      "sha256": "2fc9ca4a747d3fb4a0d03ad2ba36653dab7068e3ed32235492cd15f5d85e464f",
+      "bytes": 11893,
+      "classes": [],
+      "functions": 9
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/audit_leakage_selfcheck.py",
+      "sha256": "73b39ba3d69dae1c0af1e14dcdf9068562c5743c1d65338ab478bfb2915fcea4",
+      "bytes": 550,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/audit_saved_evidence.py",
+      "sha256": "e02b8aad83c0aad386f2ef2c10c454ccb9944bf732c0cf93b179463c39bc2abb",
+      "bytes": 1446,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/build_release.py",
+      "sha256": "e0b6ddadcb3b2fede648494594fbefa952f7477be62f3e80640e2b3cf8f31866",
+      "bytes": 1902,
+      "classes": [],
+      "functions": 3
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/build_web_data.py",
+      "sha256": "561395b016c2bc4c971698b6b4bdf72e922464b68bc480f58db14c720fba6a5b",
+      "bytes": 2240,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/check_real_anchors.py",
+      "sha256": "a98ecf4aa2d80c83c3044cd27f49de830ba6dda1d68a1dcb1f59c9c0196b0d74",
+      "bytes": 1575,
+      "classes": [],
+      "functions": 1
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/phase1_acquire.py",
+      "sha256": "e61caec82048614f3a7ffe275ce4c31f864b62873bce8260519ba81b3438c2e8",
+      "bytes": 7342,
+      "classes": [],
+      "functions": 3
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/phase1_package.py",
+      "sha256": "3dbfeaac51401336198d5b45e12938123f823c822531264191a479eda0d25042",
+      "bytes": 2069,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/report_p0p1.py",
+      "sha256": "1589489551da88043e692a62bbaab80b69df33f4883f071c85ffddf831bba2e0",
+      "bytes": 11550,
+      "classes": [],
+      "functions": 2
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/report_quality.py",
+      "sha256": "718acb6baac4d52a2be346a0946985daf2b6ad6100e9b89c03fb15edec4738aa",
+      "bytes": 6123,
+      "classes": [],
+      "functions": 2
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/report_stage_a.py",
+      "sha256": "2e0b84a80814242e78d37c4353827c6ddcb6de58496b399f97754cb78e061339",
+      "bytes": 8979,
+      "classes": [],
+      "functions": 1
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/research_audit.py",
+      "sha256": "980241130ef84cbc94730a2be98240ceed42654797ebda559d55224d288c150c",
+      "bytes": 1930,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/research_corpus.py",
+      "sha256": "dfe7259c2c60bbc58eb77800b41f72f2ffcde7452860623f507eaddfcd3dfe3a",
+      "bytes": 1858,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/research_publish_data.py",
+      "sha256": "e3588a8e3785b68138f863004d6ea8e3ca6988a6064a677fb062ad68d36e5424",
+      "bytes": 3477,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/research_release.py",
+      "sha256": "d4c539aefac9c4160c9bf92a7be2548ca7061d9d2be28cca2cd9098434755999",
+      "bytes": 2416,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/verify_all.py",
+      "sha256": "bbc1350105e1a290aab0c2e5d6ce7b45f534e23f017b25e0e2ad504d03e2ba2b",
+      "bytes": 2799,
+      "classes": [],
+      "functions": 0
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/verify_install.py",
+      "sha256": "7b18d643074fbb36eb0ab8d511e96637dfc30be7a23c68c8c5e88e350eaa8d40",
+      "bytes": 3253,
+      "classes": [],
+      "functions": 2
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/verify_m14_checks.py",
+      "sha256": "621b668377b31d04eac77c102e2e1108a5a4a97ff79b36842407556a9dfe174b",
+      "bytes": 1754,
+      "classes": [],
+      "functions": 1
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/verify_resume.py",
+      "sha256": "418e8461522fefcc80cf77a919eca2408cac9106746eda256f3b0e4970e6e8f2",
+      "bytes": 3885,
+      "classes": [],
+      "functions": 1
+    },
+    {
+      "file": "/workspace/m01-contracts/scripts/verify_web_assets.mjs",
+      "sha256": "16af228854b935c52b11a0a0168bcbdc4905a680d751757c40784ce8feb15474",
+      "bytes": 4248
+    },
+    {
+      "file": "/workspace/sites/matterlens/web_assets/acquisition.js",
+      "sha256": "f6cb670b51ee1b15d3085a778379d60593855cd6ada313074893413063a6808d",
+      "bytes": 4577
+    },
+    {
+      "file": "/workspace/sites/matterlens/web_assets/app.js",
+      "sha256": "4f1d45ab7a569c81fc31f656dc7bca28d2344be3b9c90261174e81c3202d6d4e",
+      "bytes": 31050
+    },
+    {
+      "file": "/workspace/sites/matterlens/web_assets/exports.js",
+      "sha256": "9258236091c6cec73ec34a1f55d7c0034d96171ac8b2d222d5617c7d8772f58d",
+      "bytes": 8928
+    },
+    {
+      "file": "/workspace/sites/matterlens/web_assets/formula-rules.js",
+      "sha256": "c75f935fe379c5f1feac48fc3e06ccba17a0f9a502198c6d7a48ba769ba71979",
+      "bytes": 923
+    },
+    {
+      "file": "/workspace/sites/matterlens/web_assets/index.html",
+      "sha256": "00001b4723588d6795d599002256e06c284b6709e449a4a146923f110377cfb5",
+      "bytes": 16357
+    },
+    {
+      "file": "/workspace/sites/matterlens/web_assets/pdf-inspect.js",
+      "sha256": "65007c19e369226afbcc6d8bcccff7df315c9d2da8f2648b565aa9999b2b33e1",
+      "bytes": 1477
+    },
+    {
+      "file": "/workspace/sites/matterlens/web_assets/pdf-reader-phase1.js",
+      "sha256": "d1bcc96fb86601d86cfb675640846af5d5aee3c428e336ae80b6f5cf29e88915",
+      "bytes": 1553
+    },
+    {
+      "file": "/workspace/sites/matterlens/web_assets/pdf-reader-research.js",
+      "sha256": "87777ffd6d6e1c8e7b94814971772dc1193cf449c8c5772066e7d9e0237f3f37",
+      "bytes": 4700
+    },
+    {
+      "file": "/workspace/sites/matterlens/web_assets/phase1-index.json",
+      "sha256": "3d837981434624e11fe80f0fffe9f3ff48b3bc3c46df6b85f9c9b6480db07c87",
+      "bytes": 45775
+    },
+    {
+      "file": "/workspace/sites/matterlens/web_assets/policy.json",
+      "sha256": "2b387df330d9660e4ccdde7fccce8294b2e9751d48108052a4fec70f5127aacc",
+      "bytes": 2625
+    },
+    {
+      "file": "/workspace/sites/matterlens/web_assets/research-core.js",
+      "sha256": "6516a021a3c46062826b761702f88d890496cfa15dc8b909829975a88b2ff9f6",
+      "bytes": 4235
+    },
+    {
+      "file": "/workspace/sites/matterlens/web_assets/research-exports.js",
+      "sha256": "66346ba146437fdcac4f3e6174a9334ac0c60df052abebc119bc00b0267df712",
+      "bytes": 6620
+    },
+    {
+      "file": "/workspace/sites/matterlens/web_assets/research-index.json",
+      "sha256": "48334206e396d6553e7342afb3d1c1fb881de58dea9da9428cb1267781e1651a",
+      "bytes": 704312
+    },
+    {
+      "file": "/workspace/sites/matterlens/web_assets/research-policy.json",
+      "sha256": "2b387df330d9660e4ccdde7fccce8294b2e9751d48108052a4fec70f5127aacc",
+      "bytes": 2625
+    },
+    {
+      "file": "/workspace/sites/matterlens/web_assets/research-shared.js",
+      "sha256": "3cc8374dd31d8b60acaedf3d989c104f1eb5c0ad9ce93e5d23a85477d1f26f57",
+      "bytes": 5884
+    },
+    {
+      "file": "/workspace/sites/matterlens/web_assets/screening.js",
+      "sha256": "cc380c8267e190bc805eb46a39ec2a133e2b73e15b973b89d9dbec8e066d9be6",
+      "bytes": 7753
+    },
+    {
+      "file": "/workspace/sites/matterlens/web_assets/style.css",
+      "sha256": "84cd261341722f6c12b598de9602cf22110c6eced98f110542e39c13b9627672",
+      "bytes": 19867
+    },
+    {
+      "file": "/workspace/sites/matterlens/worker/api.mjs",
+      "sha256": "d127b9b80b8866f988742a8a488c5c2c8c8502f8c1d3dc7b8f804c1ca3c56696",
+      "bytes": 11592
+    },
+    {
+      "file": "/workspace/sites/matterlens/worker/research-api.mjs",
+      "sha256": "94a9acc0404f767f37dd1917fc0f39b2d9ff66f6226a58c00cee52c89e18d94b",
+      "bytes": 7244
+    }
+  ]
+}

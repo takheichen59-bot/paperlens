@@ -1,0 +1,231 @@
+﻿paper_id,source_url,entity,identity_label,eligible_context_label,category,reason,page,block_id,evidence_start,evidence_end,context,reviewer
+arxiv:2501.00534,https://arxiv.org/abs/2501.00534v2,BiFeO3,true,true,supported_material,"Explicit chemical/material composition in main text, abstract or title; background material mentions included.",1,p1-b0,53,59,Non-reciprocal neutral ferroelectric domain walls in BiFeO3,assistant_context_review; NOT independent human gold
+arxiv:2501.00561,https://arxiv.org/abs/2501.00561v1,Ga2O3,true,true,supported_material,"Explicit chemical/material composition in main text, abstract or title; background material mentions included.",1,p1-b0,45,50,"Characterization of Chromium Impurities in β-Ga2O3
+Mark E. Turiansky,1, a) Sai Mu,1, 2, b) Lukas Razinkovas,3, 4 Kamyar Parto,5 Sahil D. Patel,5 Sean Doan,6 Ganesh
+Pokharel,1, 7 Steven J. Gomez Alvarado,1 Stephen D. Wilson,1 Galan",assistant_context_review; NOT independent human gold
+arxiv:2501.00561,https://arxiv.org/abs/2501.00561v1,Al2O3,true,true,supported_material,"Explicit chemical/material composition in main text, abstract or title; background material mentions included.",1,p1-b3,187,192,"al growth. It is
+perhaps best known for giving rise to the 694.3 nm (1.786 eV) emission in Cr-doped Al2O3, exploited in ruby
+lasers. Chromium has also been found in monoclinic gallium oxide, a wide-bandgap semiconductor being
+pursued for power electronics. In this work, we thoroughly ",assistant_context_review; NOT independent human gold
+arxiv:2501.00561,https://arxiv.org/abs/2501.00561v1,CrO2,true,true,supported_material,"Explicit chemical/material composition in main text, abstract or title; background material mentions included.",2,p2-b5,415,419,"sources of
+Cr contamination during the growth. X-ray diffraction
+shows evidence for the presence of CrO2 in the polycrys-
+talline Ga2O3 source material. In addition, the alumina
+seed rod was relatively low purity and may also be a
+source of contamination.",assistant_context_review; NOT independent human gold
+arxiv:2501.00561,https://arxiv.org/abs/2501.00561v1,CrGa,ambiguous,ambiguous,ontology_boundary,"Substitutional Cr-on-Ga defect notation, not a standalone substance.",3,p3-b25,67,71,"where Etot(Crq
+Ga) is the total energy of a supercell con-
+taining CrGa in charge state q, Etot(Ga2O3) is the total
+energy of a bulk supercell, and EF is the Fermi energy
+referenced to the valence-band maximum (VBM). ∆q is
+a finite-size correction ter",assistant_context_review; NOT independent human gold
+arxiv:2501.00561,https://arxiv.org/abs/2501.00561v1,Cr2O3,true,true,supported_material,"Explicit chemical/material composition in main text, abstract or title; background material mentions included.",3,p3-b28,268,273,"nditions: we will assume Ga-rich growth conditions
+and incorporation of Cr at the solubility limit. Cr2O3
+(chromia) is a potential secondary phase that may form
+when Cr is present during growth and sets the solubility
+limit for Cr. Cr2O3 is most stable in the rhombohedral
+phase and is",assistant_context_review; NOT independent human gold
+arxiv:2501.00561,https://arxiv.org/abs/2501.00561v1,GaO4,ambiguous,ambiguous,ontology_boundary,Coordination polyhedron; ontology boundary.,3,p3-b28,993,997,"dral site (denoted as II). O(I) are
+three-fold coordinated (on a shared corner of two edge-
+sharing GaO4 octahedra and one GaO6 tetrahedron), and",assistant_context_review; NOT independent human gold
+arxiv:2501.00561,https://arxiv.org/abs/2501.00561v1,GaO6,ambiguous,ambiguous,ontology_boundary,Coordination polyhedron; ontology boundary.,3,p3-b28,1016,1020,"I). O(I) are
+three-fold coordinated (on a shared corner of two edge-
+sharing GaO4 octahedra and one GaO6 tetrahedron), and",assistant_context_review; NOT independent human gold
+arxiv:2501.00561,https://arxiv.org/abs/2501.00561v1,GaN,true,true,supported_material,"Explicit chemical/material composition in main text, abstract or title; background material mentions included.",5,p5-b31,603,606,"unced phonon sideband. This
+effect was observed in calculations of transition metal im-
+purities in GaN and AlN.41 While CrGa(I) may also be
+negatively charged under typical n-type conditions, the
+presence of an additional electron alters the electronic
+structure, making it unlikely",assistant_context_review; NOT independent human gold
+arxiv:2501.00561,https://arxiv.org/abs/2501.00561v1,AlN,true,true,supported_material,"Explicit chemical/material composition in main text, abstract or title; background material mentions included.",5,p5-b31,611,614,"onon sideband. This
+effect was observed in calculations of transition metal im-
+purities in GaN and AlN.41 While CrGa(I) may also be
+negatively charged under typical n-type conditions, the
+presence of an additional electron alters the electronic
+structure, making it unlikely to expl",assistant_context_review; NOT independent human gold
+arxiv:2501.00561,https://arxiv.org/abs/2501.00561v1,SC0012704,false,false,grant_identifier,"DOE funding/contract identifier, not a chemical.",7,p7-b10,357,366,"on Science Research Centers, Co-design Center for
+Quantum Advantage (C2QA) under contract number
+DE-SC0012704. SM was supported by the GAME MURI
+of the Air Force Office of Scientific Research (FA9550-
+18-1-0479). CVdW acknowledges a Vannevar Bush Fac-
+ulty Fellowship (Office of Naval Rese",assistant_context_review; NOT independent human gold
+arxiv:2501.00564,https://arxiv.org/abs/2501.00564v1,SC0020221,false,false,grant_identifier,"DOE funding/contract identifier, not a chemical.",5,p5-b8,160,169,"nces, Division of Materials Sciences and Engineering, U.S.
+Department of Energy, under Award No. DE-SC0020221.",assistant_context_review; NOT independent human gold
+arxiv:2501.00589,https://arxiv.org/abs/2501.00589v2,CuZrAl,true,true,supported_material,"Explicit chemical/material composition in main text, abstract or title; background material mentions included.",1,p1-b0,71,77,Efﬁcient training of machine learning potentials for metallic glasses: CuZrAl validation,assistant_context_review; NOT independent human gold
+arxiv:2501.00589,https://arxiv.org/abs/2501.00589v2,ZrCuAl,true,true,supported_material,"Explicit chemical/material composition in main text, abstract or title; background material mentions included.",5,p5-b29,614,620," This suggests that
+MLIP more effectively captures the temperature-dependent
+atomic dynamics of the ZrCuAl system, however, further sys-
+tematic study would be desired. Turning to the thermody-
+namic properties, Fig. 5(b) presents the speciﬁc heat (Cp) over
+a range of temperatures, com",assistant_context_review; NOT independent human gold
+arxiv:2501.00589,https://arxiv.org/abs/2501.00589v2,CuZr,true,true,supported_material,"Explicit chemical/material composition in main text, abstract or title; background material mentions included.",6,p6-b18,755,759," competitively with EAM for other compositions, pro-
+vided they are not too far from the equiatomic CuZr–Al mix-
+ture.
+The methodology proposed here offers an efﬁcient and trans-
+ferable framework for the development of MLIPs for more
+complex MG systems, including multicomponent and ",assistant_context_review; NOT independent human gold
+arxiv:2501.00589,https://arxiv.org/abs/2501.00589v2,GeTe,true,false,reference_leak,Chemical/material name occurs only in reference-list evidence; PLAN excludes references.,9,p9-b1,1792,1796,"i,
+J. Behler, and
+M. Bernasconi, Neural network interatomic potential for the
+phase change material GeTe, Physical Review B—Condensed
+Matter and Materials Physics 85, 174103 (2012).
+[26] K. Xie, C. Qiao, H. Shen, R. Yang, M. Xu, C. Zhang, Y. Zheng,
+R. Zhang, L. Chen, K.-M. Ho, et al.",assistant_context_review; NOT independent human gold
+arxiv:2501.00591,https://arxiv.org/abs/2501.00591v1,CrI3,true,true,supported_material,"Explicit chemical/material composition in main text, abstract or title; background material mentions included.",1,p1-b10,177,181,"er
+is
+common,
+with
+layers
+accommodating various structural configurations[15, 16].
+For instance, in CrI3, three magnetic transitions coexist,
+defined by structural changes and phase separation
+[17, 18].
+In such cases, each layer and its interaction
+with neighboring layers can be cons",assistant_context_review; NOT independent human gold
+arxiv:2501.00591,https://arxiv.org/abs/2501.00591v1,NbSe2,true,true,supported_material,"Explicit chemical/material composition in main text, abstract or title; background material mentions included.",1,p1-b10,1214,1219,"ties [23, 24].
+A
+canonical
+example
+of
+a
+TMD
+hosting
+both
+superconductivity and a CDW is pristine 2H-NbSe2,
+which undergoes a superconducting transition at 7 K and
+a CDW transition at 31 K [25–27]. Intercalating 3d metal
+ions into the van der Waals (vdW) gaps of NbSe2 has
+further expan",assistant_context_review; NOT independent human gold
+arxiv:2501.00591,https://arxiv.org/abs/2501.00591v1,CoI2,true,true,supported_material,"Explicit chemical/material composition in main text, abstract or title; background material mentions included.",2,p2-b6,967,971,"llowing the furnace to naturally cool.
+Despite
+compensating for cobalt loss due to the formation of
+CoI2 by adding excess cobalt powder during vapor
+transport, the resulting composition consistently yielded
+Co0.28±δNbSe2.
+We verified the composition of the
+crystals using single-cryst",assistant_context_review; NOT independent human gold
+arxiv:2501.00591,https://arxiv.org/abs/2501.00591v1,HK0,false,false,crystallographic_index,"Diffraction reciprocal-space plane index, not a chemical.",3,p3-b4,107,110,"
+Single crystal X-ray diffraction results showing
+lattice coexistence. Precession images along the (HK0) (a),
+(HK1) (b), (H0L) (c), and (HHL) (d) planes.
+Green
+arrows indicate the host unit cell of 2H-NbSe2 and the
+yellow vector points toward the observed satellite reflections
+index",assistant_context_review; NOT independent human gold
+arxiv:2501.00591,https://arxiv.org/abs/2501.00591v1,HK1,false,false,crystallographic_index,"Diffraction reciprocal-space plane index, not a chemical.",3,p3-b4,118,121,"stal X-ray diffraction results showing
+lattice coexistence. Precession images along the (HK0) (a),
+(HK1) (b), (H0L) (c), and (HHL) (d) planes.
+Green
+arrows indicate the host unit cell of 2H-NbSe2 and the
+yellow vector points toward the observed satellite reflections
+indexed by the n",assistant_context_review; NOT independent human gold
+arxiv:2501.00591,https://arxiv.org/abs/2501.00591v1,SC0016434,false,false,grant_identifier,"DOE funding/contract identifier, not a chemical.",5,p5-b6,83,92,"The authors thank the U.S. Department of Energy
+(DOE), Office of Science (Grant DE-SC0016434), for
+financial support. Use of the High Flux Isotope Reactor
+(DEMAND experiment IPTS-31569) and Spallation
+Neutron Source (POWGEN experiment IPTS-31862)
+at Oak Ridge National Lab",assistant_context_review; NOT independent human gold
+arxiv:2501.00591,https://arxiv.org/abs/2501.00591v1,NbS2,true,true,supported_material,"Explicit chemical/material composition in main text, abstract or title; background material mentions included.",5,p5-b7,70,74,"[1] F. Hulliger and E. Pobitschka, On the magnetic behavior
+of new 2H-NbS2-type derivatives, Journal of Solid State
+Chemistry 1, 117 (1970).
+[2] S.
+Naik,
+A.
+Pradhan,
+A.
+Mishra,
+and
+S.
+L.
+Samal,
+Evolution
+of
+structural
+properties
+in
+Fe
+intercalated
+2H-NbS",assistant_context_review; NOT independent human gold
+arxiv:2501.00591,https://arxiv.org/abs/2501.00591v1,CrNb3S6,true,false,reference_leak,Chemical/material name occurs only in reference-list evidence; PLAN excludes references.,6,p6-b1,469,476,"mergence
+of chiral helimagnetism or ferromagnetism governed by
+Cr intercalation in a dichalcogenide CrNb3S6, APL
+Materials 10, 090704 (2022).
+[14] A. F. Gubkin, E. P. Proskurina, Y. Kousaka, E. M.
+Sherokalova, N. V. Selezneva, P. Miao, S. Lee, J. Zhang,
+Y.
+Ishikawa,
+S.
+Torii,
+T.
+Kamiyam",assistant_context_review; NOT independent human gold
+arxiv:2501.00591,https://arxiv.org/abs/2501.00591v1,RuCl3,true,false,reference_leak,Chemical/material name occurs only in reference-list evidence; PLAN excludes references.,6,p6-b1,1977,1982,". Tennant,
+B. C. Chakoumakos, and S. E. Nagler, Low-temperature
+crystal and magnetic structure of α-RuCl3, Phys. Rev. B
+93, 134423 (2016).
+[20] S.
+Kim,
+E.
+Horsley,
+C.
+Nelson,
+J.
+Ruff,
+and
+Y.-J. Kim, Re-investigation of moment direction in
+a Kitaev material α-RuCl3 (2024), arXiv:2403.0",assistant_context_review; NOT independent human gold
+arxiv:2501.00591,https://arxiv.org/abs/2501.00591v1,CoNb4Se8,true,false,reference_leak,Chemical/material name occurs only in reference-list evidence; PLAN excludes references.,6,p6-b2,1449,1457,"azin, and N. J. Ghimire, Altermagnetism in the layered
+intercalated transition metal dichalcogenide CoNb4Se8
+(2024), arXiv:2408.08835 [cond-mat.str-el].
+[30] N. Dale, O. A. Ashour, M. Vila, R. B. Regmi, J. Fox,
+C. W. Johnson, A. Fedorov, A. Stibor, N. J. Ghimire,
+and S. M. Griffin, Non-r",assistant_context_review; NOT independent human gold
+arxiv:2501.00591,https://arxiv.org/abs/2501.00591v1,TaSe2,true,false,reference_leak,Chemical/material name occurs only in reference-list evidence; PLAN excludes references.,7,p7-b1,223,228,"52] D. E. Moncton, J. D. Axe, and F. J. DiSalvo, Study
+of superlattice formation in 2H-NbSe2 and 2H-TaSe2 by
+neutron scattering, Phys. Rev. Lett. 34, 734 (1975).
+[53] Y. An, P. Park, C. Kim, K. Zhang, H. Kim, M. Avdeev,
+J. Kim, M.-J. Han, H.-J. Noh, S. Seong, J.-S. Kang,
+H.-D. Kim, an",assistant_context_review; NOT independent human gold
+arxiv:2501.00591,https://arxiv.org/abs/2501.00591v1,CoNb3S6,true,false,reference_leak,Chemical/material name occurs only in reference-list evidence; PLAN excludes references.,7,p7-b2,181,188,", Y.-S.
+Chen, and J. F. Mitchell, Large anomalous Hall effect
+in the chiral-lattice antiferromagnet CoNb3S6, Nature
+Communications 9, 3280 (2018).
+[39] G. Tenasini, E. Martino, N. Ubrig, N. J. Ghimire,
+H. Berger, O. Zaharko, F. Wu, J. F. Mitchell, I. Martin,
+L. Forr´o, and A. F. Morpurg",assistant_context_review; NOT independent human gold
+arxiv:2501.00591,https://arxiv.org/abs/2501.00591v1,TaS2,true,false,reference_leak,Chemical/material name occurs only in reference-list evidence; PLAN excludes references.,7,p7-b2,2237,2241," Motizuki, N. Suzuki, and S. Tomishima, Itinerant
+magnetism of Mn-intercalated compounds of 2H-type
+TaS2, Journal of Magnetism and Magnetic Materials
+104-107, 681 (1992).
+[48] N. Maksimovic, R. Day, A. Liebman-Pel´aez, F. Wan,
+N.-H. Jo,
+C. Jozwiak,
+A. Bostwick,
+E. Rotenberg,
+S. Griff",assistant_context_review; NOT independent human gold
+arxiv:2501.00591,https://arxiv.org/abs/2501.00591v1,NiTa4Se8,true,false,reference_leak,Chemical/material name occurs only in reference-list evidence; PLAN excludes references.,7,p7-b2,2525,2533,"J. Singleton, and J. G. Analytis, Strongly
+correlated itinerant magnetism near superconductivity in
+NiTa4Se8, Phys. Rev. B 106, 224429 (2022).
+[49] A. Pelissetto and E. Vicari, Critical phenomena and
+renormalization-group theory, Physics Reports 368, 549
+(2002).
+[50] K.-T. Ko, K. Kim, S.",assistant_context_review; NOT independent human gold
+arxiv:2501.00679,https://arxiv.org/abs/2501.00679v1,MgO,true,true,supported_material,"Explicit chemical/material composition in main text, abstract or title; background material mentions included.",22,p22-b18,86,89,"dielectric crystals with diverse structural and compositional complexities, including MgO",assistant_context_review; NOT independent human gold
+arxiv:2501.00679,https://arxiv.org/abs/2501.00679v1,MgSiO3,true,true,supported_material,"Explicit chemical/material composition in main text, abstract or title; background material mentions included.",22,p22-b19,4,10,"and MgSiO3 under high-pressure conditions [51, 56, 57].
+Both three-phonon scattering",assistant_context_review; NOT independent human gold
+arxiv:2501.00680,https://arxiv.org/abs/2501.00680v1,BiFeO3,true,true,supported_material,"Explicit chemical/material composition in main text, abstract or title; background material mentions included.",1,p1-b0,0,6,"BiFeO3 nanoparticles at low-temperature using
+atomistic simulations - surface charge distribution
+and terminations",assistant_context_review; NOT independent human gold
+arxiv:2501.00680,https://arxiv.org/abs/2501.00680v1,MoS2,true,true,supported_material,"Explicit chemical/material composition in main text, abstract or title; background material mentions included.",2,p2-b0,2090,2094,"is the highest rate ever reported and 3 times higher than
+the second-highest rate obtained achieved MoS2 nanosheets [14]. When the ultrasonic
+vibrations are combined with sunlight, the BiFeO3 nanoparticles present the highest
+piezo-photocatalytic rate ever reported and 3 times higher",assistant_context_review; NOT independent human gold
+arxiv:2501.00680,https://arxiv.org/abs/2501.00680v1,Bi4Ti3O12,true,true,supported_material,"Explicit chemical/material composition in main text, abstract or title; background material mentions included.",2,p2-b0,2314,2323,"t
+piezo-photocatalytic rate ever reported and 3 times higher than the previous record
+observed with Bi4Ti3O12 nanoplates [15].
+However, the arrangement of polarization and oxygen octahedra rotations inside
+the BiFeO3 nanoparticles remains unclear. In particular, the impact of different ch",assistant_context_review; NOT independent human gold
+arxiv:2501.00680,https://arxiv.org/abs/2501.00680v1,BiO,ambiguous,ambiguous,ontology_boundary,Surface termination plane composition; ontology boundary.,2,p2-b0,3627,3630,"esented by a core and a shell, each
+with its respective charge. In the model used in this work, the BiO plane is positively",assistant_context_review; NOT independent human gold
+arxiv:2501.00680,https://arxiv.org/abs/2501.00680v1,FeO2,ambiguous,ambiguous,ontology_boundary,Surface termination plane composition; ontology boundary.,3,p3-b0,19,23,"charged, while the FeO2 plane has the exact opposite charge. Therefore, by construct-
+ing nanoparticles with different terminations, we simulate various charge distributions
+at the nanoparticle surface. ",assistant_context_review; NOT independent human gold

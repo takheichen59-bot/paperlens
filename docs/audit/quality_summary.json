@@ -1,0 +1,29 @@
+{
+  "papers_attempted": 10,
+  "papers_parsed": 8,
+  "predicted_document_unique_entities": 37,
+  "identity_labels": {
+    "true": 27,
+    "ambiguous": 5,
+    "false": 5
+  },
+  "eligible_context_labels": {
+    "true": 19,
+    "ambiguous": 5,
+    "false": 13
+  },
+  "categories": {
+    "supported_material": 19,
+    "ontology_boundary": 5,
+    "grant_identifier": 3,
+    "reference_leak": 8,
+    "crystallographic_index": 2
+  },
+  "eligible_precision_lower": 0.5135135135135135,
+  "eligible_precision_upper": 0.6486486486486487,
+  "eligible_precision_excluding_ambiguous": 0.59375,
+  "identity_precision_lower": 0.7297297297297297,
+  "identity_precision_upper": 0.8648648648648649,
+  "recall": null,
+  "interpretation": "Provisional assistant review, not a human gold-set estimate or representative performance claim."
+}

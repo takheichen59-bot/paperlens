@@ -1,0 +1,18 @@
+{
+  "paper_id": "arxiv:2501.00680",
+  "page": 2,
+  "visual_layout": "single-column (render inspected)",
+  "page_width": 595.2760009765625,
+  "same_line_counts_as_both_left_and_right": [
+    {
+      "text": "2",
+      "bbox": [
+        307.408935546875,
+        644.8909301757812,
+        312.3902282714844,
+        654.853515625
+      ]
+    }
+  ],
+  "cause": "M07 left/right thresholds overlap; centered page number can satisfy both lists and trigger multicolumn warning."
+}

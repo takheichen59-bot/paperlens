@@ -1,0 +1,22 @@
+{
+  "research_index": {
+    "records": 20,
+    "evidence": 956,
+    "all_full_records_validate": true
+  },
+  "full_bundle": {
+    "pdfs": 20,
+    "research_records": 20,
+    "review_records": 20,
+    "processing_failures": 0,
+    "bytes": 90322176,
+    "sha256": "88df5a408cbe08c20dd9870e9e9127f080aa01a22effd18bed189e66fc3688d5",
+    "all_pdf_and_artifact_hashes_match": true,
+    "xlsx_xml_valid": true
+  },
+  "live_search": {
+    "http_status": 200,
+    "results": 20
+  },
+  "browser_qa": "not available; HTTP, logic, archives and installed wheel tested"
+}

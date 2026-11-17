@@ -1,0 +1,11 @@
+PASS browser_complete_and_raw_evidence
+PASS browser_crystal_noise
+PASS browser_unicode_offsets
+PASS browser_references_excluded
+PASS browser_missing_fields
+PASS worker_status
+PASS worker_invalid_id
+PASS worker_arxiv_metadata
+PASS worker_size_limit
+PASS worker_source_failure
+WEB ASSET SUMMARY: 10 passed, 0 failed (logic/API, not browser interaction)

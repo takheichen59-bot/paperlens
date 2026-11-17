@@ -1,0 +1,106 @@
+{
+  "status": {
+    "engine": "literature-acquisition",
+    "phase": 1,
+    "source": "arxiv",
+    "corpus_count": 20,
+    "storage": true
+  },
+  "storage": {
+    "total": 20,
+    "available": 20,
+    "checks": [
+      {
+        "id": "2501.00680v1",
+        "present": true
+      },
+      {
+        "id": "2501.00591v1",
+        "present": true
+      },
+      {
+        "id": "2501.00589v2",
+        "present": true
+      },
+      {
+        "id": "2501.00561v1",
+        "present": true
+      },
+      {
+        "id": "2501.00534v2",
+        "present": true
+      },
+      {
+        "id": "2501.00453v3",
+        "present": true
+      },
+      {
+        "id": "2501.00447v1",
+        "present": true
+      },
+      {
+        "id": "2501.00423v1",
+        "present": true
+      },
+      {
+        "id": "2501.03254v1",
+        "present": true
+      },
+      {
+        "id": "2501.00132v1",
+        "present": true
+      },
+      {
+        "id": "2501.00091v3",
+        "present": true
+      },
+      {
+        "id": "2412.21119v2",
+        "present": true
+      },
+      {
+        "id": "2412.20938v2",
+        "present": true
+      },
+      {
+        "id": "2412.20865v1",
+        "present": true
+      },
+      {
+        "id": "2412.20653v1",
+        "present": true
+      },
+      {
+        "id": "2412.20552v1",
+        "present": true
+      },
+      {
+        "id": "2412.20531v2",
+        "present": true
+      },
+      {
+        "id": "2412.20497v1",
+        "present": true
+      },
+      {
+        "id": "2412.20448v1",
+        "present": true
+      },
+      {
+        "id": "2412.20394v1",
+        "present": true
+      }
+    ]
+  },
+  "remote_bundle": {
+    "pdfs": 20,
+    "bytes": 87338027,
+    "sha256": "f75ee99873174a945b93b5ccfdde1de40eb09ee78255f6fe2f7e0831dbf008b2",
+    "zip_crc_valid": true,
+    "every_pdf_hash_matches": true
+  },
+  "live_search": {
+    "http_status": 200,
+    "count": 20
+  }
+}
