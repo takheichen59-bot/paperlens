@@ -1,0 +1,35 @@
+name: Import exact PaperLens hosted source
+on:
+  push:
+    branches:
+      - codex/import-impeccable-site-10257f4
+permissions:
+  contents: write
+jobs:
+  import:
+    if: github.repository == 'takheichen59-bot/paperlens'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Verify bundle and preserve the hosted source history
+        shell: bash
+        env:
+          IMPORT_SHA: 10257f4847d7cc2a57e0220cf6f391cf7024d873
+          IMPORT_REF: refs/heads/codex/impeccable-site
+          BUNDLE_SHA256: 75742468e933f84b4a75b1b3a350378e22b46f4d0f0acb67183d54bcbc584d69
+        run: |
+          set -euo pipefail
+          printf '%s  %s\n' "$BUNDLE_SHA256" .codex-handoff/PaperLens-impeccable-site.bundle | sha256sum --check -
+          git fetch --no-tags origin refs/heads/codex/material-numeric-attribution:refs/remotes/origin/attribution-source
+          git bundle verify .codex-handoff/PaperLens-impeccable-site.bundle
+          git fetch .codex-handoff/PaperLens-impeccable-site.bundle "$IMPORT_REF":refs/import/paperlens-hosted
+          test "$(git rev-parse refs/import/paperlens-hosted)" = "$IMPORT_SHA"
+          git merge-base --is-ancestor 17113833cb76595123e012551c58de95bfa053e3 "$IMPORT_SHA"
+          IMPORT_MAIN_BEFORE="$(git ls-remote origin refs/heads/main | cut -f1)"
+          git push origin "$IMPORT_SHA:$IMPORT_REF"
+          test "$(git ls-remote origin "$IMPORT_REF" | cut -f1)" = "$IMPORT_SHA"
+          test "$(git ls-remote origin refs/heads/main | cut -f1)" = "$IMPORT_MAIN_BEFORE"
+          printf 'Published exact hosted commit %s; main unchanged.\n' "$IMPORT_SHA"
