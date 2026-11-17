@@ -1,0 +1,35 @@
+name: Import exact PaperLens attribution commit
+on:
+  push:
+    branches:
+      - codex/import-material-numeric-attribution
+permissions:
+  contents: write
+jobs:
+  import:
+    if: github.repository == 'takheichen59-bot/paperlens'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Verify bundle and publish only the requested branch
+        shell: bash
+        env:
+          IMPORT_SHA: 17113833cb76595123e012551c58de95bfa053e3
+          IMPORT_REF: refs/heads/codex/material-numeric-attribution
+          BUNDLE_SHA256: 9df8a493c445e4a78609a5424bbc276fb675b1736d27aa42b9e092f7a052af0f
+        run: |
+          set -euo pipefail
+          printf '%s  %s\n' "$BUNDLE_SHA256" .codex-handoff/PaperLens-handoff.bundle | sha256sum --check -
+          git fetch --no-tags origin refs/heads/main:refs/remotes/origin/main refs/heads/codex/batch-workflow-e2e:refs/remotes/origin/codex/batch-workflow-e2e refs/heads/codex/one-real-paper-demo:refs/remotes/origin/codex/one-real-paper-demo
+          git bundle verify .codex-handoff/PaperLens-handoff.bundle
+          git fetch .codex-handoff/PaperLens-handoff.bundle "$IMPORT_REF":refs/import/paperlens-attribution
+          test "$(git rev-parse refs/import/paperlens-attribution)" = "$IMPORT_SHA"
+          test "$(git cat-file -t "$IMPORT_SHA")" = commit
+          IMPORT_MAIN_BEFORE="$(git ls-remote origin refs/heads/main | cut -f1)"
+          git push origin "$IMPORT_SHA:$IMPORT_REF"
+          test "$(git ls-remote origin "$IMPORT_REF" | cut -f1)" = "$IMPORT_SHA"
+          test "$(git ls-remote origin refs/heads/main | cut -f1)" = "$IMPORT_MAIN_BEFORE"
+          printf 'Published exact commit %s; main unchanged.\n' "$IMPORT_SHA"
