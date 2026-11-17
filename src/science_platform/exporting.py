@@ -6,10 +6,19 @@ from .models import ScientificRecord
 
 def safe_cell(value):
  text=value if isinstance(value,str) else json.dumps(value,ensure_ascii=False)
- return "'"+text if text[:1] in '=+-@\t\r' else text
+ return "'"+text if text.startswith(('\t','\r')) or text.lstrip().startswith(('=','+','-','@')) else text
 
 def encode_export(rows,format):
  if format=='jsonl':return ('\n'.join(json.dumps(r,ensure_ascii=False,allow_nan=False) for r in rows)+'\n').encode(),'application/x-ndjson'
+ # Spreadsheets keep readable columns alongside the complete nested source.
+ if format in {'csv','xlsx'}:
+  def readable(row):
+   if 'paper' not in row:return row
+   p=row['paper'];r=row.get('extraction') or {}
+   text=lambda name:'\n'.join(c['text'] for c in r.get(name,[]))
+   return {'paper_id':p['paper_id'],'doi':p.get('doi') or '', 'title':p['title'],'source_url':p.get('source_url') or '',
+    'extraction_status':r.get('execution_status','NOT_EXTRACTED'),'methodology':text('methodology'),'conclusions':text('conclusions'),'results':text('results'),**row}
+  rows=[readable(row) for row in rows]
  keys=list(dict.fromkeys(k for r in rows for k in r))
  if format=='csv':
   out=StringIO(newline='');writer=csv.writer(out);writer.writerow(keys)

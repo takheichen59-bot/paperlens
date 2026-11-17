@@ -68,8 +68,8 @@ def create_app(directory=None,*,start_worker=True):
  async def validation_error(request,exc):return JSONResponse({'error':'SCHEMA_VALIDATION_FAILED','fields':[{'loc':e['loc'],'type':e['type']} for e in exc.errors()]},status_code=422)
  @app.exception_handler(PlatformError)
  async def platform_error(request,exc):return JSONResponse({'error':exc.safe()},status_code=409 if exc.code in {'REVIEW_CONFLICT','STALE_DOCUMENT','REFUSE_UNRELATED_DATABASE'} else 422)
- def paper_row(pid):
-  store.ensure_current(pid)
+ def paper_row(pid,*,verify=True):
+  if verify:store.ensure_current(pid)
   row=store.paper(pid)
   if not row:raise HTTPException(404,'PAPER_NOT_FOUND')
   return row
@@ -77,6 +77,10 @@ def create_app(directory=None,*,start_worker=True):
   if not job:raise HTTPException(404,'JOB_NOT_FOUND')
   return {k:json.loads(v) if k.endswith('_json') and v else v for k,v in job.items() if k not in {'owner','lease_until'}}
  def records(ids=()):return [ScientificRecord.model_validate_json(json.dumps(r['extraction'])) for r in store.current_snapshot(ids) if r['extraction']]
+ def selected_records(ids):
+  rs=records(ids)
+  if len(rs)!=len(set(ids)):raise PlatformError('EXTRACTION_NOT_AVAILABLE_FOR_SELECTION')
+  return rs
  @app.get('/api/v1/health')
  def health():return {'status':'ok','version':__version__,'database':'sqlite-wal','worker':'embedded-serial' if start_worker else 'external','scientific_accuracy':'NOT_INDEPENDENTLY_EVALUATED'}
  @app.get('/api/v1/capabilities')
@@ -121,7 +125,11 @@ def create_app(directory=None,*,start_worker=True):
    rows.append({**p,'access_status':r['access_status'],'document_id':r['current_document']})
   return {'items':rows[offset:offset+limit],'total':len(rows),'offset':offset,'limit':limit}
  @app.post('/api/v1/papers',status_code=201)
- def add_paper(p:Paper=Depends(input_for(Paper))):return store.upsert_paper(p).model_dump(mode='json')
+ def add_paper(p:Paper=Depends(input_for(Paper))):
+  from .discovery import normalize_doi
+  try:doi=normalize_doi(p.doi) if p.doi else None
+  except ValueError:raise PlatformError('INVALID_DOI') from None
+  return store.upsert_paper(p.model_copy(update={'doi':doi})).model_dump(mode='json')
  @app.get('/api/v1/papers/{pid:path}/detail')
  def detail(pid:str):
   row=paper_row(pid);doc=store.document(row['current_document']) if row['current_document'] else None;parsed=store.latest_parse(row['current_document']) if doc else None;extraction=store.extraction(pid)
@@ -135,7 +143,7 @@ def create_app(directory=None,*,start_worker=True):
   return FileResponse(doc['path'],media_type='application/pdf' if doc['kind']=='pdf' else 'application/xml',headers={'Content-Disposition':'inline'})
  @app.post('/api/v1/papers/{pid:path}/document',status_code=201)
  async def upload(pid:str,request:Request):
-  paper_row(pid)
+  paper_row(pid,verify=False)
   if request.headers.get('content-type','').split(';')[0]!='application/pdf':raise HTTPException(415,'PDF_REQUIRED')
   temp=root/'documents'/(uuid4().hex+'.part');temp.parent.mkdir(parents=True,exist_ok=True);size=0;hasher=sha256()
   try:
@@ -167,11 +175,10 @@ def create_app(directory=None,*,start_worker=True):
   return {'items':items,'note':'Validated structured extraction only; no keyword mentions promoted to algorithms.'}
  @app.post('/api/v1/compare')
  def comparison(body:Selection=Depends(input_for(Selection))):
-  rs=records(body.paper_ids)
-  if len(rs)!=len(set(body.paper_ids)):raise PlatformError('EXTRACTION_NOT_AVAILABLE_FOR_SELECTION')
+  rs=selected_records(body.paper_ids)
   return {'rows':compare(rs)}
  @app.post('/api/v1/gaps')
- def gap_analysis(body:Selection=Depends(input_for(Selection))):return gaps(records(body.paper_ids))
+ def gap_analysis(body:Selection=Depends(input_for(Selection))):return gaps(selected_records(body.paper_ids))
  @app.get('/api/v1/graph')
  def knowledge_graph():
   snap=store.current_snapshot();return graph([Paper.model_validate_json(json.dumps(r['paper'])) for r in snap],[ScientificRecord.model_validate_json(json.dumps(r['extraction'])) for r in snap if r['extraction']])
@@ -182,18 +189,26 @@ def create_app(directory=None,*,start_worker=True):
  @app.post('/api/v1/venues',status_code=201)
  def add_venue(body:VenueInput=Depends(input_for(VenueInput))):
   registry=VenueRegistry(root/'custom-venues.json');registry.add(body.name,body.domain,body.aliases);return {'saved':True}
+ def export_selection(ids):
+  if ids is not None:
+   if not ids or len(ids)>5000 or any(not pid for pid in ids):raise PlatformError('INVALID_EXPORT_SELECTION')
+   selected=tuple(dict.fromkeys(ids))
+   if any(not store.paper(pid) for pid in selected):raise PlatformError('EXPORT_PAPER_NOT_FOUND')
+   return store.current_snapshot(selected)
+  return store.current_snapshot()
  @app.get('/api/v1/export')
- def export(format:Literal['jsonl','csv','xlsx']='jsonl'):
-  data,mime=encode_export(store.current_snapshot(),format);return Response(data,media_type=mime,headers={'Content-Disposition':'attachment; filename="research.'+format+'"'})
+ def export(format:Literal['jsonl','csv','xlsx']='jsonl',paper_id:list[str]|None=Query(None)):
+  selected=export_selection(paper_id)
+  data,mime=encode_export(selected,format);return Response(data,media_type=mime,headers={'Content-Disposition':'attachment; filename="research.'+format+'"'})
  @app.get('/api/v1/export/pdf')
- def pdf_bundle():
+ def pdf_bundle(paper_id:list[str]|None=Query(None)):
   import tempfile,zipfile
   from starlette.background import BackgroundTask
   from .parsing import digest
   folder=root/'exports';folder.mkdir(exist_ok=True);handle=tempfile.NamedTemporaryFile(suffix='.zip',dir=folder,delete=False);path=Path(handle.name);handle.close();manifest=[]
   try:
    with zipfile.ZipFile(path,'w',zipfile.ZIP_STORED) as z:
-    for item in store.current_snapshot():
+    for item in export_selection(paper_id):
      d=store.document(item['document_id']) if item['document_id'] else None
      license=(d or {}).get('license') or '';permitted=any(v in license.casefold() for v in ['creativecommons.org','cc-by','cc0','public domain'])
      if not d or d['kind']!='pdf' or not permitted:
@@ -207,6 +222,6 @@ def create_app(directory=None,*,start_worker=True):
   except BaseException:path.unlink(missing_ok=True);raise
  @app.post('/api/v1/compare/export')
  def export_comparison(format:Literal['jsonl','csv','xlsx']='csv',body:Selection=Depends(input_for(Selection))):
-  data,mime=encode_export(compare(records(body.paper_ids)),format);return Response(data,media_type=mime,headers={'Content-Disposition':'attachment; filename="comparison.'+format+'"'})
+  data,mime=encode_export(compare(selected_records(body.paper_ids)),format);return Response(data,media_type=mime,headers={'Content-Disposition':'attachment; filename="comparison.'+format+'"'})
  assets=Path(__file__).with_name('web');app.mount('/',StaticFiles(directory=assets,html=True),name='workspace')
  return app

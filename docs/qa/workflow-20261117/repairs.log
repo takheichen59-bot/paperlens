@@ -1,0 +1,19 @@
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+test_01_doi_upsert_returns_canonical_id (__main__.WorkflowTests.test_01_doi_upsert_returns_canonical_id) ... ok
+test_02_invalid_doi_safe_error (__main__.WorkflowTests.test_02_invalid_doi_safe_error) ... ok
+test_03_failed_batch_retry_keeps_success_checkpoint (__main__.WorkflowTests.test_03_failed_batch_retry_keeps_success_checkpoint) ... ok
+test_04_completed_good_job_not_requeued (__main__.WorkflowTests.test_04_completed_good_job_not_requeued) ... ok
+test_05_export_selection_and_default_all (__main__.WorkflowTests.test_05_export_selection_and_default_all) ... ok
+test_06_unknown_or_empty_selection_not_entire_library (__main__.WorkflowTests.test_06_unknown_or_empty_selection_not_entire_library) ... ok
+test_07_review_survives_all_export_formats (__main__.WorkflowTests.test_07_review_survives_all_export_formats) ... ok
+test_08_corrupt_source_can_be_replaced (__main__.WorkflowTests.test_08_corrupt_source_can_be_replaced) ... ok
+test_09_pdf_selection_does_not_include_other_metadata (__main__.WorkflowTests.test_09_pdf_selection_does_not_include_other_metadata) ... ok
+test_10_favicon_and_security_policy (__main__.WorkflowTests.test_10_favicon_and_security_policy) ... ok
+test_11_comparison_export_and_gap_do_not_silently_drop_missing_paper (__main__.WorkflowTests.test_11_comparison_export_and_gap_do_not_silently_drop_missing_paper) ... ok
+test_12_flat_spreadsheet_columns_guard_whitespace_formula (__main__.WorkflowTests.test_12_flat_spreadsheet_columns_guard_whitespace_formula) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 3.396s
+
+OK
