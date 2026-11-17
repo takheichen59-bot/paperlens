@@ -15,7 +15,7 @@ from extractors.composite import CompositeExtractor, status_for
 from extractors.common import result
 from parsers.sections import StructuredPDFParser, eligible_blocks
 
-VERSION = "scientific-evidence-v1"
+VERSION = "scientific-evidence-v1.1"
 
 
 class ScientificBaselineAdapter(BaseExtractor):
@@ -56,7 +56,7 @@ ALGORITHMS = {
     "PBE functional": r"\b(?:PBE|Perdew.Burke.Ernzerhof)\b",
     "HSE functional": r"\bHSE(?:06)?\b",
 }
-FINDING = re.compile(r"\b(?:we (?:find|found|show|observe)|results? (?:show|indicate|suggest)|demonstrat\w*|reveal\w*|improv\w*|enhanc\w*|achiev\w*|exhibit\w*|increas\w*|decreas\w*)\b", re.I)
+FINDING = re.compile(r"\b(?:we(?: have)? (?:find|found|show(?:ed|n)?|observ(?:e|ed))|results? (?:show|indicate|suggest)|demonstrat\w*|reveal\w*|improv\w*|enhanc\w*|achiev\w*|exhibit\w*|increas\w*|decreas\w*)\b", re.I)
 LIMITATION = re.compile(r"\b(?:limitation|limited by|remain(?:s)? (?:unclear|unknown)|future work|further (?:work|research)|not (?:considered|included)|beyond the scope)\b", re.I)
 MEASUREMENT = re.compile(r"(?<![\w.])([−-]?\d+(?:\.\d+)?(?:\s*[×x]\s*10[−-]?\d+)?)\s*(GPa|MPa|kPa|mAh\s*g[−-]?1|mAh|mS\s*cm[−-]?1|S\s*cm[−-]?1|W\s*m[−-]?1\s*K[−-]?1|meV|eV|nm|μm|µm|mm|cm|mV|mA|GHz|THz|MHz|kHz|Hz|°C|K|%|Å|wt\.?\s*%)\b|(?<!\w)(\d+(?:\.\d+)?)\s*(%)", re.I)
 EQUATION = re.compile(r"[=≡≈∝].*(?:\d|[α-ωΑ-Ω∂∇Σ∑∫]|\b[A-Za-z]\b)")
