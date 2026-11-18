@@ -25,12 +25,16 @@ QUANTITIES = re.compile(r'(?<![\w.])([−-]?\d+(?:\.\d+)?)\s*(meV|eV|GPa|MPa|nm|
 FIELD_LABELS = {'question':'研究问题', 'methods':'方法路线', 'findings':'主要发现', 'conclusions':'作者结论', 'limitations':'作者明确局限'}
 
 
-def normalize_text(text):
+def normalize_text(text, *, browser_compatible=False):
     """Reflow prose, joining only known broken words; retain ambiguous hyphens."""
     def join(match):
         a, b = match.group(1), match.group(2)
         return a+b if (a+b).lower() in JOIN_WORDS else a+'-'+b
     text = re.sub(r'([A-Za-zα-ωΑ-Ω]+)-[ \t]*\n\s*([A-Za-zα-ωΑ-Ω]+)', join, text)
+    if browser_compatible:
+        # ECMAScript whitespace excludes PDF control characters U+001C..U+001F.
+        whitespace=r'[\t\n\v\f\r \u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]'
+        return re.sub(whitespace+'+', ' ', text).strip(' ')
     return re.sub(r'\s+', ' ', text).strip()
 
 
@@ -57,8 +61,8 @@ def sentences(text):
     if a<len(text):yield a,len(text.rstrip())
 
 
-def complete_sentence(text):
-    return not re.search(r'(?:Fig|Sec|Ref|Dr)\.$',text) and len(text.split())>=4 and len(text)>24 and bool(re.search(r'[.!?][”\'"]?$|(?<![0-9])[.!?][0-9,–−-]+$',text)) and not re.match(r'^(?:And|Which|That|Of)\b',text) and not re.match(r'^[a-z]',text) and bool(PREDICATE.search(text))
+def complete_sentence(text, *, browser_compatible=False):
+    return not re.search(r'(?:Fig|Sec|Ref|Dr)\.$',text) and len(text.split())>=4 and len(text)>24 and bool(re.search(r'[.!?][”\'"]?$|(?<![0-9])[.!?][0-9,–−-]+$',text)) and not re.match(r'^(?:And|Which|That|Of)\b',text) and not re.match(r'^[a-z]',text) and bool(PREDICATE.search(text) or browser_compatible and re.search(r'\b(?:calculat\w*|address\w*)\b',text,re.I))
 
 
 def _heading(text):
@@ -179,6 +183,7 @@ def validate_reading(record,layer=None):
     if layer.get('schema_version')!=SCHEMA or layer['pdf_hash']!=record['pdf_hash'] or layer['review_status']!='unreviewed':raise ValueError('Invalid reading layer identity')
     if layer.get('version') not in {VERSION,'reading-evidence-v1','reading-evidence-browser-v1','reading-evidence-browser-v2','reading-evidence-browser-v2.1'} or layer.get('paper_id')!=record['paper_id'] or not isinstance(layer.get('article_type',{}).get('label'),str):raise ValueError('Invalid reading metadata')
     if set(layer.get('fields',{}))!=set(FIELD_LABELS):raise ValueError('Missing reading fields')
+    browser_compatible=layer['version'].startswith('reading-evidence-browser-')
     raw={b['block_id']:b for b in record['raw_blocks']};paragraphs={p['id']:p for p in layer['paragraphs']};evidence={s['id']:s for s in layer['evidence']}
     if len(paragraphs)!=len(layer['paragraphs']) or len(evidence)!=len(layer['evidence']):raise ValueError('Duplicate reading evidence')
     def source(part):
@@ -188,12 +193,12 @@ def validate_reading(record,layer=None):
         return b['text'][a:z]
     for p in paragraphs.values():
         chunks=[source(part) for part in p['parts']]
-        if normalize_text('\n'.join(chunks))!=p['text']:raise ValueError('Reading normalization/source mismatch')
+        if normalize_text('\n'.join(chunks),browser_compatible=browser_compatible)!=p['text']:raise ValueError('Reading normalization/source mismatch')
     for s in evidence.values():
         p=paragraphs[s['paragraph_id']]
-        if p['text'][s['start']:s['end']]!=s['text'] or not complete_sentence(s['text']):raise ValueError('Incomplete or mismatched reading sentence')
+        if p['text'][s['start']:s['end']]!=s['text'] or not complete_sentence(s['text'],browser_compatible=browser_compatible):raise ValueError('Incomplete or mismatched reading sentence')
         chunks=[source(v) for v in s['parts']]
-        if normalize_text('\n'.join(chunks))!=s['text'] or s['pages']!=sorted({v['page'] for v in s['parts']}):raise ValueError('Reading sentence source map mismatch')
+        if normalize_text('\n'.join(chunks),browser_compatible=browser_compatible)!=s['text'] or s['pages']!=sorted({v['page'] for v in s['parts']}):raise ValueError('Reading sentence source map mismatch')
     for field in layer['fields'].values():
         if any(eid not in evidence for eid in field['evidence_ids']):raise ValueError('Reading field lacks evidence')
     review=layer.get('source_review')

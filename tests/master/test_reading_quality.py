@@ -25,6 +25,13 @@ class ReadingQualityTests(unittest.TestCase):
         self.assertTrue(complete_sentence('To study the synthetic sample, we used Raman spectroscopy.'))
     def test_normalization_keeps_chemical_hyphens_and_joins_known_split_words(self):
         self.assertEqual(normalize_text('net-\nworking and low-\ntemperature Cu-O bonds'),'networking and low-temperature Cu-O bonds')
+    def test_browser_validation_keeps_pdf_control_characters_and_calculation_predicates(self):
+        source='The synthetic relation r \x1c L holds in this software fixture.'
+        self.assertEqual(normalize_text(source,browser_compatible=True),source)
+        self.assertNotEqual(normalize_text(source),source)
+        self.assertTrue(complete_sentence('We calculated the synthetic vibrational structure using DFT.',browser_compatible=True))
+        self.assertTrue(complete_sentence('We address this issue using synthetic calculations.',browser_compatible=True))
+        self.assertFalse(complete_sentence('The synthetic calculations in the figure',browser_compatible=True))
     def test_cross_block_exact_sources_do_not_mutate_original_fields(self):
         r=record([(1,'😀 We used Raman spectroscopy to study electron-',(50,100,280,120)),(1,'phonon interactions in the synthetic samples.',(50,125,280,145))]);before=copy.deepcopy(r)
         c=build_reading(r);r['reading_card']=c;validate_reading(r)
