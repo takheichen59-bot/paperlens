@@ -3,7 +3,7 @@ import {analyzeBlocks,headingKind} from './screening.js';
 import {validateResearch} from './research-shared.js';
 import {buildAttribution,validateAttribution,sentenceRanges} from './research-attribution.js';
 const CP=s=>Array.from(s).length;
-export const BROWSER_SCIENTIFIC_VERSION='browser-scientific-rules-v1.4';
+export const BROWSER_SCIENTIFIC_VERSION='browser-scientific-rules-v1.5';
 const ALG={'density functional theory':/\b(?:DFT|density[ -]functional theory)\b/i,'molecular dynamics':/\bmolecular dynamics\b/i,'Monte Carlo':/\bMonte[ -]Carlo\b/i,'finite element method':/\b(?:finite element|FEM)\b/i,'random forest':/\brandom forests?\b/i,'neural network':/\b(?:neural networks?|deep learning)\b/i,'support vector machine':/\b(?:support vector machines?|SVM)\b/i,'Gaussian process':/\bGaussian process(?:es)?\b/i,'gradient boosting':/\b(?:gradient boosting|XGBoost)\b/i,'PBE functional':/\bPBE\b/i};
 export function scientificFromBlocks(blocks,meta,policy,pdfHash){
  const base=analyzeBlocks(blocks,meta,policy),body=[];let kind='unknown',title=null,terminal=false;

@@ -177,7 +177,7 @@ def validate_reading(record,layer=None):
     layer=layer or record.get('reading_card')
     if layer is None:return record
     if layer.get('schema_version')!=SCHEMA or layer['pdf_hash']!=record['pdf_hash'] or layer['review_status']!='unreviewed':raise ValueError('Invalid reading layer identity')
-    if layer.get('version') not in {VERSION,'reading-evidence-v1','reading-evidence-browser-v1','reading-evidence-browser-v2'} or layer.get('paper_id')!=record['paper_id'] or not isinstance(layer.get('article_type',{}).get('label'),str):raise ValueError('Invalid reading metadata')
+    if layer.get('version') not in {VERSION,'reading-evidence-v1','reading-evidence-browser-v1','reading-evidence-browser-v2','reading-evidence-browser-v2.1'} or layer.get('paper_id')!=record['paper_id'] or not isinstance(layer.get('article_type',{}).get('label'),str):raise ValueError('Invalid reading metadata')
     if set(layer.get('fields',{}))!=set(FIELD_LABELS):raise ValueError('Missing reading fields')
     raw={b['block_id']:b for b in record['raw_blocks']};paragraphs={p['id']:p for p in layer['paragraphs']};evidence={s['id']:s for s in layer['evidence']}
     if len(paragraphs)!=len(layer['paragraphs']) or len(evidence)!=len(layer['evidence']):raise ValueError('Duplicate reading evidence')
