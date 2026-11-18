@@ -1,0 +1,122 @@
+[
+  {
+    "record": "2501.00591v1",
+    "status": 201,
+    "source_review": "source_bound",
+    "evidence": 77,
+    "user_review": "unreviewed"
+  },
+  {
+    "record": "2501.00447v1",
+    "status": 201,
+    "source_review": "source_bound",
+    "evidence": 92,
+    "user_review": "unreviewed"
+  },
+  {
+    "record": "2501.00423v1",
+    "status": 201,
+    "source_review": "source_bound",
+    "evidence": 97,
+    "user_review": "unreviewed"
+  },
+  {
+    "record": "2501.00561v1",
+    "status": 201,
+    "source_review": "source_bound",
+    "evidence": 139,
+    "user_review": "unreviewed"
+  },
+  {
+    "record": "2501.00680v1",
+    "status": 201,
+    "source_review": "source_bound",
+    "evidence": 85,
+    "user_review": "unreviewed"
+  },
+  {
+    "artifact": "research.xlsx",
+    "status": 201,
+    "sha256": "46225a0c273acc139e9ed629dd9bff164c11d48bbfbcb602bdaa3db797352103",
+    "bytes": 63048
+  },
+  {
+    "artifact": "research.jsonl",
+    "status": 201,
+    "sha256": "1bf5e956beed9ce727a05c3c148dca505e181ddbc98e24f7b84afa4c9b6905f6",
+    "bytes": 934548
+  },
+  {
+    "artifact": "research.csv",
+    "status": 201,
+    "sha256": "2f47a539638e19d91a75123d49b8d736dee217b7f8f155a74455332b338e16ee",
+    "bytes": 22556
+  },
+  {
+    "artifact": "evidence.csv",
+    "status": 201,
+    "sha256": "aed06100f511cb6a421a01126304e32770247923b5f7962ea090549d1bb60812",
+    "bytes": 117382
+  },
+  {
+    "artifact": "material_roles.csv",
+    "status": 201,
+    "sha256": "865207f7d29edc7bca909ef5b7dccdb706ba9ad2efab07348877043c26cd83b6",
+    "bytes": 46300
+  },
+  {
+    "artifact": "numeric_attribution.csv",
+    "status": 201,
+    "sha256": "772adb2c13bf33cad375e58bdd68e99f5128a2afeee47320b3394f0268bf0d18",
+    "bytes": 17805
+  },
+  {
+    "artifact": "processing-report.pdf",
+    "status": 201,
+    "sha256": "5af01bd5fb200ec51416cc28bfa268d2a8b8774b4bed5890572d8b82088e7f62",
+    "bytes": 181149
+  },
+  {
+    "artifact": "research-cards.xlsx",
+    "status": 201,
+    "sha256": "fad113588e7e0266a3afa3af47a6c7123238f03db87b429a3a39b108d9719605",
+    "bytes": 140152
+  },
+  {
+    "artifact": "reading.jsonl",
+    "status": 201,
+    "sha256": "7757a4d0ccbe87526597faf00e8b70caf070e1e6a0d4269a27271ef6ad5e44db",
+    "bytes": 411879
+  },
+  {
+    "artifact": "reading-evidence.csv",
+    "status": 201,
+    "sha256": "e35e5dfd2ff331905d6c305101bfb880b197dedbfa6f784b944ca42490c361f0",
+    "bytes": 272886
+  },
+  {
+    "artifact": "preview.html",
+    "status": 201,
+    "sha256": "72236fbf6546bedce8e1801c466588a9dbb0db434a9bc07da535610d8ac4e73c",
+    "bytes": 266116
+  },
+  {
+    "review_overlays_preserved": 24,
+    "live_records": 24,
+    "bundle_bytes": 22773645,
+    "bundle_sha256": "ec64a5b22be6705ad8bfedbf5695cd4ce06a91833525b56365fa9d60520ce5e2",
+    "health": {
+      "status": "ok",
+      "product": "PaperLens",
+      "version": "0.3.1-hosted",
+      "storage": true,
+      "parser": "PDF.js in browser",
+      "record_format": "research-1",
+      "llm": "NOT_CONFIGURED",
+      "scientific_accuracy": "NOT_INDEPENDENTLY_EVALUATED",
+      "seed_count": 5
+    },
+    "production_browser_authentication": "NOT_TESTED",
+    "scientific_accuracy": "NOT_INDEPENDENTLY_EVALUATED"
+  }
+]

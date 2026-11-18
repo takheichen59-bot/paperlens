@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "scope": "REAL_BROWSER_WITH_SYNTHETIC_ENGINEERING_FIXTURES",
+  "upstream_discovery": "NOT_EXECUTED_IN_OFFLINE_SUITE",
+  "real_llm": "NOT_EXECUTED",
+  "scientific_accuracy": "NOT_EVALUATED",
+  "checks": [
+    {
+      "name": "01 authentication recovery and dashboard",
+      "status": "PASS"
+    },
+    {
+      "name": "02 all navigation pages and empty states",
+      "status": "PASS"
+    },
+    {
+      "name": "03 actual library filter and empty-state recovery",
+      "status": "PASS"
+    },
+    {
+      "name": "04 evidence slicing, PDF page controls and review persistence",
+      "status": "PASS"
+    },
+    {
+      "name": "05 duplicate DOI upload resolves canonical paper ID",
+      "status": "PASS"
+    },
+    {
+      "name": "06 batch failure isolation and retry only failed checkpoint",
+      "status": "PASS"
+    },
+    {
+      "name": "07 selected JSONL CSV Excel PDF downloads preserve review and scope",
+      "status": "PASS"
+    },
+    {
+      "name": "08 comparison matrix and export missing-data behavior",
+      "status": "PASS"
+    },
+    {
+      "name": "09 derived graph interaction and insufficient-evidence refusal",
+      "status": "PASS"
+    },
+    {
+      "name": "10 no-model extraction is visibly NOT_EXECUTED",
+      "status": "PASS"
+    },
+    {
+      "name": "11 mobile layout has no page-level overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "12 no uncaught JavaScript or CSP violations",
+      "status": "PASS"
+    }
+  ],
+  "events": [],
+  "seconds": 6.9
+}
