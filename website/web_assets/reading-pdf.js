@@ -178,6 +178,7 @@ export async function readingPDF(records,{fontBytes,batch,fetchImpl=globalThis.f
   const returned=Number.isFinite(Number(batch.source_returned))?Math.max(0,Number(batch.source_returned)):items.length;
   const failed=items.filter(i=>i.state==='failed'||i.error),pending=items.filter(i=>i.state!=='done'&&i.state!=='duplicate'&&i.state!=='failed'&&!i.error),missing=Math.max(0,requested-items.length);
   text('检索词：'+clean(batch.query||'未提供'));
+  if(batch.source_notice)text('元数据来源：'+clean(batch.source_notice),{color:MUTED});
   text('目标 '+requested+' 篇 · 来源实际返回 '+returned+' 篇 · 本批保留 '+items.length+' 篇 · 已提取并纳入正文 '+plan.length+' 篇 · 失败 '+failed.length+' 篇 · 内容去重 '+items.filter(i=>i.state==='duplicate').length+' 条 · 未完成 '+pending.length+' 篇 · 未取得目标名额 '+missing+' 篇。');
   if(batch.error)text('批次异常：'+clean(batch.error),{color:MUTED});
   for(const item of failed)text('失败：'+clean(item.id||item.meta?.id||'未提供ID')+' · 阶段 '+clean(item.stage||'未提供')+' · '+clean(typeof item.error==='object'?item.error?.message||JSON.stringify(item.error):item.error||'未记录具体原因'),{color:MUTED});
