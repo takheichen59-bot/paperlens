@@ -1,10 +1,10 @@
 // Browser-only rule candidates. This is not model output or scientific validation.
 // Quoted text stays raw; every stored offset counts Unicode code points, as Python does.
-export const ATTRIBUTION_VERSION='browser-context-roles-v1';
+export const ATTRIBUTION_VERSION='browser-context-roles-v1.1';
 export const MATERIAL_ROLE_LABELS={study_subject:'本文研究对象（规则候选）',background:'背景提及',comparator:'本文对照材料（规则候选）',reagent_or_environment:'试剂 / 环境',uncertain:'归属不确定'};
 export const NUMERIC_ROLE_LABELS={own_result:'本文结果（规则候选）',simulation_parameter:'模拟参数',experimental_condition:'实验条件',cited_result:'引用 / 背景数值',uncertain:'归属不确定'};
 const PRIOR=/\b(?:in (?:recent|previous|prior|earlier) (?:work|studies|research)|(?:previous|prior|earlier|other) (?:stud\w*|work|report\w*)|(?:[A-Z][a-z]+ et al\.|collaborators)\s*(?:\[.{1,25}?\])?\s*(?:have |has )?(?:report\w*|investigat\w*|found|show\w*)|(?:has|have) been (?:reported|demonstrated|found)|previous record|best known|well known|canonical example)\b/i;
-const OWN=/\b(?:we (?:have )?(?:stud\w*|investigat\w*|analy[sz]\w*|explor\w*|observ\w*|find|found|show\w*|report\w*|synthesi[sz]\w*|compar\w*|simulat\w*|measur\w*|used?)|(?:this|our) (?:paper|work|study|results?|simulations?|measurements?)\s+(?:\w+\s+){0,3}(?:analy[sz]\w*|investigat\w*|show\w*|demonstrat\w*|reveal\w*|report\w*))\b/i;
+const OWN=/\b(?:we (?:have )?(?:stud\w*|investigat\w*|analy[sz]\w*|explor\w*|observ\w*|find|found|show\w*|report\w*|synthesi[sz]\w*|compar\w*|simulat\w*|measur\w*|calculat\w*|characteriz\w*|combin\w*|used?)|(?:this|our) (?:paper|work|study|results?|simulations?|measurements?)\s+(?:\w+\s+){0,3}(?:analy[sz]\w*|investigat\w*|show\w*|demonstrat\w*|reveal\w*|report\w*))\b/i;
 const CITATION=/\[\d[\d\s,–−-]*\]/;
 const PARAMETER=/\b(?:chosen|set to|used|using|cutoff|cut-off|basis|sampling|thermaliz\w*|time step|excitation|laser|temperature.dependent|growth conditions|anneal\w*|dried|ampul\w*|rod|diameter|wavelength|filter|kept constant)\b/i;
 const COMPUTATIONAL=/\b(?:simulat\w*|molecular dynamics|comput\w*|plane.wave|cutoff|cut-off|supercell|Brillouin|density functional|relaxation|thermal noise)\b/i;
@@ -41,11 +41,12 @@ export function materialRole(name,sentence,preceding,section,title){
 }
 
 export function numericRole(sentence,preceding,section,methodsContext=''){
- const text=normalize(sentence),before=normalize(resetPrior(preceding)),own=OWN.test(text),prior=PRIOR.test(text)||(PRIOR.test(before)&&!own);
+ const text=normalize(sentence),originalBefore=normalize(preceding),previousOwn=matches(OWN,originalBefore),previousPrior=matches(PRIOR,originalBefore),inheritedOwn=previousOwn.length&&(!previousPrior.length||previousOwn.at(-1).index>previousPrior.at(-1).index),before=normalize(resetPrior(preceding)),own=OWN.test(text),prior=PRIOR.test(text)||(PRIOR.test(before)&&!own);
  if(prior)return own?['uncertain','mixed_current_and_prior_work']:['cited_result','explicit_prior_work_context'];
  if(own&&CITATION.test(text))return ['uncertain','current_statement_with_citation_requires_review'];
  if(section==='introduction'&&CITATION.test(text))return ['cited_result','background_citation'];
  if((RESULT.test(text)&&PARAMETER.test(text))||/\b(?:resulting in|experimental value|compared with|compared to|versus)\b/i.test(text))return ['uncertain','mixed_result_condition_or_comparison'];
+ if((own||inheritedOwn)&&!CITATION.test(text)&&/\b(?:find|found|possesses|has an internal transition)\b/i.test(text)&&section!=='methods')return ['own_result','current_work_result_with_local_context'];
  if(RESULT.test(text)&&(own||['results','discussion','conclusions','inferred_results'].includes(section)))return ['own_result','current_result_statement'];
  if(PARAMETER.test(text)&&section==='methods'){
   if(/\b(?:laser|growth|anneal\w*|dried|ampul\w*|rod|diameter|filter|wavelength)\b/i.test(text))return ['experimental_condition','experimental_procedure'];
@@ -95,7 +96,7 @@ export function buildAttribution(record,body,add){
 
 export function validateAttribution(record){
  const layer=record.attribution;if(!layer)return record;
- if(![ATTRIBUTION_VERSION,'context-roles-v1'].includes(layer.version)||layer.review_status!=='unreviewed')throw Error('Unsupported attribution layer');
+ if(![ATTRIBUTION_VERSION,'browser-context-roles-v1','context-roles-v1','context-roles-v1.1'].includes(layer.version)||layer.review_status!=='unreviewed')throw Error('Unsupported attribution layer');
  const byId=new Map(record.source_snippets.map(s=>[s.evidence_id,s]));
  if(!Array.isArray(layer.materials)||JSON.stringify(layer.materials.map(m=>m.name))!==JSON.stringify(record.materials))throw Error('Attribution material candidate mismatch');
  function context(item){for(const eid of item.context_evidence_ids||[])if(byId.get(eid)?.field!=='attribution_context')throw Error('Attribution context evidence mismatch');}

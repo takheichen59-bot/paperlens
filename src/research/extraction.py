@@ -15,8 +15,10 @@ from extractors.composite import CompositeExtractor, status_for
 from extractors.common import result
 from parsers.sections import StructuredPDFParser, eligible_blocks
 from .attribution import build_attribution, validate_attribution
+from .reading import build_reading, validate_reading
+from .source_reviews import attach_source_review
 
-VERSION = "scientific-evidence-v1.2"
+VERSION = "scientific-evidence-v1.3"
 
 
 class ScientificBaselineAdapter(BaseExtractor):
@@ -160,12 +162,14 @@ def enrich(paper, view, base, meta):
         "findings": "\n\n".join(x["text"] for x in findings), "algorithms": algorithms,
         "formulas": formulas, "experimental_data": data,
         "limitations": "\n\n".join(x["text"] for x in limitations), "source_snippets": evidence,
-        "raw_blocks": [{"block_id": b.block_id, "page": b.page_number, "text": b.text} for b in paper.raw_blocks],
+        "raw_blocks": [{"block_id": b.block_id, "page": b.page_number, "text": b.text, "bbox": list(b.bbox) if b.bbox else None} for b in paper.raw_blocks],
         "eligible_ranges": [{"block_id": b.block_id, "start": b.raw_start, "end": b.raw_end,
                              "section_kind": b.kind.value} for b in body],
         "status": legacy["status"], "review_status": "unreviewed", "warnings": list(base.warnings),
         "legacy_record": legacy}
     record["attribution"] = build_attribution(record, body, quote, sentence_ranges)
+    record["reading_card"] = build_reading(record)
+    attach_source_review(record)
     validate_scientific_record(record)
     return record
 
@@ -206,6 +210,7 @@ def validate_scientific_record(record):
     if len(record["methods"]) > 3000:
         raise ValueError("Methods passage exceeds policy")
     validate_attribution(record)
+    validate_reading(record)
     return record
 
 

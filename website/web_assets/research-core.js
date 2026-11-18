@@ -1,8 +1,9 @@
+import {buildBrowserReading} from './research-reading.js';
 import {analyzeBlocks,headingKind} from './screening.js';
 import {validateResearch} from './research-shared.js';
 import {buildAttribution,validateAttribution,sentenceRanges} from './research-attribution.js';
 const CP=s=>Array.from(s).length;
-export const BROWSER_SCIENTIFIC_VERSION='browser-scientific-rules-v1.2';
+export const BROWSER_SCIENTIFIC_VERSION='browser-scientific-rules-v1.3';
 const ALG={'density functional theory':/\b(?:DFT|density[ -]functional theory)\b/i,'molecular dynamics':/\bmolecular dynamics\b/i,'Monte Carlo':/\bMonte[ -]Carlo\b/i,'finite element method':/\b(?:finite element|FEM)\b/i,'random forest':/\brandom forests?\b/i,'neural network':/\b(?:neural networks?|deep learning)\b/i,'support vector machine':/\b(?:support vector machines?|SVM)\b/i,'Gaussian process':/\bGaussian process(?:es)?\b/i,'gradient boosting':/\b(?:gradient boosting|XGBoost)\b/i,'PBE functional':/\bPBE\b/i};
 export function scientificFromBlocks(blocks,meta,policy,pdfHash){
  const base=analyzeBlocks(blocks,meta,policy),body=[];let kind='unknown',title=null,terminal=false;
@@ -15,5 +16,6 @@ export function scientificFromBlocks(blocks,meta,policy,pdfHash){
  for(const [a,z] of sentenceRanges(b.text)){const text=b.text.slice(a,z);if(text.length<12||text.length>900)continue;const values=[...text.matchAll(/(?<!\w)([−-]?\d+(?:\.\d+)?)\s*(GPa|MPa|kPa|meV|eV|nm|μm|µm|mm|mV|GHz|THz|MHz|Hz|°C|K|%|Å)(?!\w)/g)].slice(0,8).map(n=>({value:n[1],unit:n[2]}));if(values.length&&experimental_data.length<16){const s=add(b,'experimental_data',a,z);experimental_data.push({text,value:values[0].value,unit:values[0].unit,values,kind:'measurement_candidate',evidence_ids:[s.evidence_id]});}if(limitations.length<4&&/\b(?:limitation|limited by|future work|not considered|beyond the scope)\b/i.test(text)){limitations.push(add(b,'limitations',a,z));}}}
  const record={schema_version:'research-1',paper_id:meta.paper_id||(meta.source==='local'?'local:'+pdfHash:'arxiv:'+meta.id.replace(/v\d+$/,'')),id:meta.id,meta,pdf_hash:pdfHash,parser_version:'pdfjs-layout-v1',extractor_version:BROWSER_SCIENTIFIC_VERSION,created_at:new Date().toISOString(),materials:base.record.chemicals,methods:base.record.methods,conclusions:base.record.conclusions,findings:[...new Set(evidence.filter(s=>s.field==='findings').map(s=>s.text))].join('\n\n'),algorithms,formulas,experimental_data,limitations:[...new Set(limitations.map(s=>s.text))].join('\n\n'),source_snippets:evidence,raw_blocks:blocks.map(b=>({block_id:b.block_id,page:b.page,text:b.text})),eligible_ranges:body.map(b=>({block_id:b.block_id,start:0,end:CP(b.text),section_kind:b.kind})),status:base.record.status,review_status:'unreviewed',warnings:base.notes,legacy_record:base.record};
  record.attribution=buildAttribution(record,body,add);
+ record.reading_card=buildBrowserReading(record);
  return validateAttribution(validateResearch(record));
 }

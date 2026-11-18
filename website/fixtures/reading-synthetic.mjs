@@ -1,0 +1,11 @@
+// Entirely fictional engineering records; never represent scientific validation.
+import {scientificFromBlocks} from '../web_assets/research-core.js';
+export function syntheticReadingRecords(policy){return [false,true].map(perspective=>{
+ const id='synthetic-reading-'+(perspective?'perspective':'experiment');
+ const rows=[['SYNTHETIC reading fixture',true],['Introduction',true],[perspective?'We outline and discuss outstanding challenges for quantum matter and the development of theories in this synthetic fixture.':'We study synthetic samples using a fictional protocol with no scientific claim.',false],['Methods',true],['We used synthetic Raman spectroscopy in this fictional engineering test at 4.2 K.',false],['Results',true],['We observed synthetic signals of 1.80 eV and 1.79 eV in this fictional engineering test.',false],['Conclusions',true],['In conclusion, this synthetic record tests interface behavior and makes no scientific claim.',false]];
+ const meta={id,paper_id:id,title:perspective?'SYNTHETIC Challenges in understanding Quantum Matter':'SYNTHETIC reading experiment',source:'local',url:'',authors:['SYNTHETIC engineering fixture']};
+ const r=scientificFromBlocks(rows.map(([text,heading],i)=>({block_id:'s'+i,page:1,text,heading,caption:false})),meta,policy,'b'.repeat(64)),c=r.reading_card;
+ const e=c.evidence[0].id,claim={text:'合成 UI 导读，仅用于工程测试，没有真实科研主张。',evidence_ids:[e]};
+ c.source_review={version:'SYNTHETIC-guide-test',origin:'assistant_source_review',human_review_status:'unreviewed',independent_gold:false,pdf_hash:r.pdf_hash,status:'source_bound',title_zh:meta.title,type_zh:perspective?'合成观点测试':'合成实验测试',question:[claim],objects:[claim],methods:perspective?[]:[claim],steps:perspective?[]:[claim,claim,claim],arguments:perspective?[claim]:[],findings:perspective?[]:[claim],conclusion:[claim],author_limitations:[],boundaries:[claim],suggestions:[claim],numbers:perspective?[]:['1.80','1.79'].map(value=>({...claim,value,unit:'eV',quantity:'合成测试值',object:'合成对象',conditions:'4.2 K，虚构条件',ownership:'合成数据，无科研意义'}))};
+ return r;
+ });}

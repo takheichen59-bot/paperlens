@@ -1,4 +1,5 @@
 // Shared data-integrity and deterministic retrieval. No model service is used.
+import {validateReading} from './research-reading.js';
 import {validateAttribution} from './research-attribution.js';
 export const RESEARCH_FIELDS=['materials','methods','findings','conclusions','algorithms','formulas','experimental_data','limitations'];
 export const researchSummary=r=>Object.fromEntries(Object.entries(r).filter(([k])=>!['raw_blocks','eligible_ranges','legacy_record'].includes(k)));
@@ -10,7 +11,7 @@ export function validateResearch(r){
  for(const f of RESEARCH_FIELDS){const isArray=['materials','algorithms','formulas','experimental_data'].includes(f);if(isArray?!Array.isArray(r[f]):typeof r[f]!=='string')throw Error('Field type mismatch: '+f);const ev=r.source_snippets.filter(s=>s.field===(f==='materials'?'chemicals':f)),present=isArray?r[f].length>0:!!r[f].trim();if(present!==!!ev.length)throw Error('Field evidence mismatch: '+f);if(!isArray&&r[f]!==[...new Set(ev.map(s=>s.text))].join('\n\n'))throw Error('Field contradicts evidence: '+f);}
  if(r.materials.some(c=>typeof c!=='string'||!r.source_snippets.some(s=>s.field==='chemicals'&&s.text.toLowerCase().includes(c.toLowerCase()))))throw Error('Unsupported material');
  for(const f of ['algorithms','formulas','experimental_data'])for(const item of r[f])if(!Array.isArray(item.evidence_ids)||!item.evidence_ids.length||item.evidence_ids.some(id=>!ids.has(id)||ids.get(id).field!==f)||(f!=='algorithms'&&!item.evidence_ids.some(id=>ids.get(id).text===item.text)))throw Error('Unsupported candidate');
- if(Array.from(r.methods).length>3000)throw Error('Methods limit exceeded');if(r.attribution)validateAttribution(r);return r;
+ if(Array.from(r.methods).length>3000)throw Error('Methods limit exceeded');if(r.attribution)validateAttribution(r);if(r.reading_card)validateReading(r);return r;
 }
 const R_STOP=new Set('the a an and of to in for by with is are was were this that from on as at we our it be or these which have has using used study paper show results method methods'.split(' '));
 const R_ALIASES={'石墨烯':'graphene','密度泛函':'density functional DFT','分子动力学':'molecular dynamics','钙钛矿':'perovskite','神经网络':'neural network','有限元':'finite element','电导率':'conductivity','带隙':'band gap','强度':'strength'};

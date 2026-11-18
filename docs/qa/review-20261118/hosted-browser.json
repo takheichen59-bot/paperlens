@@ -1,0 +1,76 @@
+{
+  "scope": "ACTUAL_CHROMIUM_WITH_SYNTHETIC_ENGINEERING_FIXTURES",
+  "production_authentication": "NOT_TESTED",
+  "scientific_accuracy": "NOT_EVALUATED",
+  "reading_scope": "SYNTHETIC_GUIDE_AND_PERSPECTIVE_UI_FIXTURES",
+  "checks": [
+    {
+      "name": "Homepage prioritizes search and pins genuine examples without labelling synthetic imports as examples",
+      "status": "PASS"
+    },
+    {
+      "name": "Search form submits and renders metadata-only source actions using a labelled engineering fixture",
+      "status": "PASS"
+    },
+    {
+      "name": "Comparison contains selected methods and conclusions",
+      "status": "PASS"
+    },
+    {
+      "name": "Selection survives navigation and JSONL contains exactly the selected records",
+      "status": "PASS"
+    },
+    {
+      "name": "UI Excel download has nine reading/audit sheets and excludes unselected real-example records",
+      "status": "PASS"
+    },
+    {
+      "name": "UI report renders as a real browser-generated PDF from labelled synthetic data",
+      "status": "PASS"
+    },
+    {
+      "name": "Evidence controls render exact source text and original page/block offsets",
+      "status": "PASS"
+    },
+    {
+      "name": "Review notes and manual overlays persist without rewriting or confirming automatic fields",
+      "status": "PASS"
+    },
+    {
+      "name": "Import of an already-viewed ID refreshes cached detail and evidence",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual PDF.js processing saves a vector PDF; invalid PDF recovery/replacement and failed-only retry preserve completed work",
+      "status": "PASS"
+    },
+    {
+      "name": "Mobile composition fits width and closed navigation leaves keyboard/assistive focus order",
+      "status": "PASS"
+    },
+    {
+      "name": "Synthetic reading-card origin, typed sections and evidence interaction synthetic-reading-experiment",
+      "status": "PASS"
+    },
+    {
+      "name": "Synthetic reading-card origin, typed sections and evidence interaction synthetic-reading-perspective",
+      "status": "PASS"
+    },
+    {
+      "name": "Hosted UI completes the exercised flows without uncaught browser JavaScript errors",
+      "status": "PASS"
+    }
+  ],
+  "screenshots": [
+    "homepage-desktop.png",
+    "evidence-desktop.png",
+    "failed-pdf-desktop.png",
+    "jobs-desktop.png",
+    "homepage-mobile.png",
+    "reading-synthetic-reading-experiment.png",
+    "reading-synthetic-reading-perspective.png",
+    "reading-mobile.png"
+  ],
+  "passed": 14,
+  "failed": 0
+}

@@ -69,3 +69,5 @@ OCR用例要求`tesseract`英文数据。GitHub Actions工作流已编写，但�
 ## Chromium workflow verification — 2026-11-17 follow-up
 
 Actual browser execution is now available:12 deterministic Chromium cases and5 real upstream/PDF workflow checks passed. [Report, receipts and actual screenshots](qa/workflow-20261117/REPORT.md). This supersedes only the earlier blanket “browser NOT EXECUTED” statement for this small Chromium scope; model quality, human gold, other browsers/devices and production remain unverified.
+
+2026-11-18 reading-quality verification: [issue disposition and actual receipts](qa/review-20261118/REPORT.md). `node website/verify-reading.mjs` checks synthetic source/role/export safety. `scripts/validate_reading_corpus.py` requires actual licensed PDF files and reports real processing separately. Neither is a scientific-accuracy benchmark.

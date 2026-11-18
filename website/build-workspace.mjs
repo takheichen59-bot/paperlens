@@ -14,7 +14,7 @@ assets['/']={data:(await readFile('web_assets/workspace.html')).toString('base64
 assets['/phase1-index.json']={data:Buffer.from(JSON.stringify(corpus)).toString('base64'),mime:'application/json;charset=utf-8'};
 assets['/research-index.json']={data:Buffer.from(JSON.stringify(index)).toString('base64'),mime:'application/json;charset=utf-8'};
 const sources=[];
-for(const file of ['worker/api.mjs','web_assets/research-attribution.js','web_assets/research-shared.js','worker/research-api.mjs','worker/workspace-api.mjs']){
+for(const file of ['worker/api.mjs','web_assets/research-attribution.js','web_assets/research-reading.js','web_assets/research-shared.js','worker/research-api.mjs','worker/workspace-api.mjs']){
  sources.push((await readFile(file,'utf8')).replace(/^import .*;\s*$/gm,'').replace(/^export /gm,''));
 }
 const security={"X-Content-Type-Options":"nosniff","Referrer-Policy":"strict-origin-when-cross-origin","Content-Security-Policy":"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; worker-src 'self' blob:; frame-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'"};

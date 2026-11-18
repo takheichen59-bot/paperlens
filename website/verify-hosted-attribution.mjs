@@ -93,7 +93,7 @@ await test('numeric-index, role, material and context evidence tampering are rej
 const position=process.argv.indexOf('--real-jsonl');
 if(position>=0)await test('five real Python records remain schema-compatible without reclassifying them',async()=>{
  const rows=(await readFile(process.argv[position+1],'utf8')).trim().split('\n').map(line=>JSON.parse(line));assert.equal(rows.length,5);
- for(const row of rows){const before=JSON.stringify(row);validateAttribution(validateResearch(row));assert.equal(JSON.stringify(row),before);assert.equal(row.attribution.version,'context-roles-v1');}
+ for(const row of rows){const before=JSON.stringify(row);validateAttribution(validateResearch(row));assert.equal(JSON.stringify(row),before);assert.ok(['context-roles-v1','context-roles-v1.1'].includes(row.attribution.version));}
  console.log('REAL RECORD COMPATIBILITY: 5 actual records; source-span validation only, browser extraction not asserted.');
 });
 console.log(`HOSTED ATTRIBUTION: ${passed} passed, ${failed} failed; rule candidates, no scientific accuracy claim`);

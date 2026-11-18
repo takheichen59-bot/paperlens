@@ -1,0 +1,52 @@
+{
+  "source_parts_checked": 648,
+  "csv_formula_escaped_parts": 1,
+  "csv_note": "Leading formula characters receive an apostrophe; JSONL retains exact raw strings. CSV checked against csv_safe(raw_slice).",
+  "pdf_pages": 11,
+  "word_bounds_violations": 0,
+  "pdf_replacement_glyphs": 0,
+  "pdf_bookmarks": [
+    [
+      1,
+      "批量概览",
+      1
+    ],
+    [
+      1,
+      "CoₓNbSe₂ 中共存的反铁磁相与结构",
+      2
+    ],
+    [
+      1,
+      "Quantum 2.0：理解量子物质面临的挑战",
+      4
+    ],
+    [
+      1,
+      "卤化物双钙钛矿中缺陷介导的电子–声子耦合",
+      6
+    ],
+    [
+      1,
+      "β-Ga₂O₃ 中 Cr 杂质的结构、能级与发光",
+      8
+    ],
+    [
+      1,
+      "BiFeO₃ 纳米颗粒的表面终止与极化构型",
+      10
+    ]
+  ],
+  "workbook_sheets": [
+    "阅读概览",
+    "研究卡片",
+    "关键数值",
+    "规则数字候选",
+    "来源证据",
+    "原始字段",
+    "审计与边界",
+    "说明"
+  ],
+  "render_runtime": "1.28.2",
+  "scientific_accuracy": "NOT_INDEPENDENTLY_EVALUATED"
+}

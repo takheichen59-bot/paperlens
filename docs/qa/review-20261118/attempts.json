@@ -1,0 +1,25 @@
+[
+  {
+    "stage": "public_source_upload",
+    "result": "AUTO_REVIEW_REJECTED",
+    "reason": "Full extracted records, extensive source text and author contact details were not covered by project-source upload authorization.",
+    "resolution": "Excluded fulltext fixtures and replaced public seed records with metadata and receipts. Full processing data stays in private storage."
+  },
+  {
+    "commit": "c756d0eca10bd9ce65f04923c18a256edf157116",
+    "run": 44239981138,
+    "result": "FAILED",
+    "python": "PDF exact-page expectation differed on new PyMuPDF; further full-source rendering exposed collapsed numeric table columns.",
+    "browser": "Comparison omitted a complete conclusion because its predicate was not in the browser reading filter.",
+    "resolution": "Explicit numeric column widths; bounded 1–2 page card assertions plus source/bounds checks; broadened complete concluding predicates with an export regression."
+  },
+  {
+    "commit": "bb777077ee32b3bf5b366b777c09ae081fa0c615",
+    "run": 44240493256,
+    "result": "FAILED",
+    "python_311": "PASS",
+    "python_312": "PASS",
+    "worker": "PASS",
+    "browser": "Test locator matched both the review tab and a new folded-audit action; scoped tab selectors to .detail-tabs."
+  }
+]
