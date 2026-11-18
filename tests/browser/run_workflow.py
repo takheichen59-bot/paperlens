@@ -68,7 +68,31 @@ def main():
     check('01 authentication recovery and dashboard',auth)
     def all_pages():
      for route,title in [('library','我的文献库'),('discovery','发现真实文献'),('algorithms','算法浏览器'),('comparison','跨论文比较'),('gaps','研究空白与局限'),('graph','来源于真实记录的关联图'),('assistant','向文献库提问'),('jobs','任务监控'),('settings','配置与能力状态')]:go(route,title)
-    check('02 all navigation pages and empty states',all_pages)
+     # Delay consumption of one genuine API response body across navigation.
+     # This covers the headers/body race without replacing any HTTP records.
+     page.evaluate("""() => {
+      const original=window.fetch;
+      window.fetch=async (...args) => {
+       const response=await original(...args);
+       if(String(args[0]).startsWith('/api/v1/algorithms?')) {
+        const json=response.json.bind(response);
+        response.json=async () => {
+         const body=await json();window.__bodyHeld=true;
+         await new Promise(resolve=>window.__releaseBody=resolve);
+         return body;
+        };
+       }
+       return response;
+      };
+      window.__restoreFetch=()=>window.fetch=original;
+      location.hash='algorithms';
+     }""")
+     page.wait_for_function('window.__bodyHeld === true')
+     go('comparison','跨论文比较')
+     page.evaluate('async () => { window.__releaseBody(); window.__restoreFetch(); await new Promise(resolve=>setTimeout(resolve,0)); }')
+     page.wait_for_function("document.querySelector('#connection').textContent.includes('本地 API 已连接')")
+     expect(page.locator('main h1')).to_have_text('跨论文比较')
+    check('02 all navigation pages, empty states and delayed response isolation',all_pages)
     def filter_case():
      go('library','我的文献库');page.locator('#library-filter input').fill('NO_MATCH_FOR_ENGINEERING_TEST');page.locator('#library-filter button').click();expect(page.locator('.empty')).to_contain_text('尚无符合条件');page.locator('#library-filter input').fill('');page.locator('#library-filter button').click();expect(page.locator('[data-select]')).to_have_count(3)
     check('03 actual library filter and empty-state recovery',filter_case)
