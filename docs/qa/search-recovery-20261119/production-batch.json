@@ -1,0 +1,213 @@
+{
+  "scope": "ACTUAL_PRIVATE_PRODUCTION_HTTP_BATCH_WITH_NODE_PDFJS",
+  "browser_interaction": "NOT_THIS_RUN",
+  "production_authentication": "SERVER_BEARER_ONLY_NOT_BROWSER_LOGIN",
+  "scientific_accuracy": "NOT_INDEPENDENTLY_EVALUATED",
+  "llm": "NOT_CONFIGURED_NOT_EXECUTED",
+  "health": {
+    "status": "ok",
+    "product": "PaperLens",
+    "version": "0.4.2-recovery",
+    "storage": true,
+    "parser": "PDF.js in browser",
+    "record_format": "research-1",
+    "llm": "NOT_CONFIGURED",
+    "scientific_accuracy": "NOT_INDEPENDENTLY_EVALUATED",
+    "seed_count": 5
+  },
+  "batch_id": "024c6231-f147-4e46-8512-a4e58f5ae395",
+  "query": "2D",
+  "source_scope": "REAL_UPSTREAM_METADATA",
+  "status": "complete",
+  "counts": {
+    "total": 20,
+    "done": 20,
+    "duplicates": 0,
+    "failed": 0,
+    "pdfs": 20,
+    "pending": 0
+  },
+  "downloads": [
+    {
+      "name": "research.xlsx",
+      "bytes": 7315020,
+      "sha256": "9c9967bc64123980641d0b3606ef66e649fe81c3aafcc63e4ed9a2bb3f5d79cb"
+    },
+    {
+      "name": "research.jsonl",
+      "bytes": 7281802,
+      "sha256": "d914302d639c259c630fdc773e870e77d5bdda8c8452f36f6aabdecb48c85a4c"
+    },
+    {
+      "name": "reading-evidence.csv",
+      "bytes": 1735483,
+      "sha256": "298ec14d4ccb7a0d144da813448edb4c1c35f9513ea68d01e9130d9686fad711"
+    },
+    {
+      "name": "report.pdf",
+      "bytes": 6880867,
+      "sha256": "2a440ba0ccde4de0c450948c1a0a560e161d261f78351391f96cd6a2851fe223"
+    },
+    {
+      "name": "PaperLens-batch.zip",
+      "bytes": 128280973,
+      "sha256": "2897644f0b92fae3231d818e47a366e68a4337c1c38913e65743a76801ac1e0a"
+    }
+  ],
+  "validated_at": "2026-11-18T16:52:41.012067+00:00",
+  "source_provider": "arxiv",
+  "source_cache": {
+    "state": "fresh",
+    "fetched_at": "2026-11-18T16:29:04.288Z",
+    "age_seconds": 3
+  },
+  "initial_run": {
+    "done": 19,
+    "failed": 1,
+    "pdf_downloads": 20,
+    "report_pdf": "FAILED_MISSING_U+02DC"
+  },
+  "retry": {
+    "only_failed_item": "2512.14973v1",
+    "previous_completed_records_unchanged": 19,
+    "extractor_versions": {
+      "browser-scientific-rules-v1.5": 19,
+      "browser-scientific-rules-v1.6": 1
+    }
+  },
+  "checks": {
+    "zip_crc": "PASS",
+    "bundle_files_match_downloads": true,
+    "pdf_hashes_match": 20,
+    "source_snippet_slices_equal": 1386,
+    "all_records_unreviewed": true,
+    "report_pages": 43,
+    "report_bookmarks": 21,
+    "report_words_outside_pages": 0,
+    "report_literal_U+02DC_copyable": true,
+    "xlsx_sheets": [
+      "阅读卡片",
+      "关键数值与条件",
+      "阅读证据映射",
+      "批次执行",
+      "科研汇总",
+      "原始自动结果",
+      "材料角色",
+      "数值归属",
+      "证据",
+      "说明"
+    ],
+    "xlsx_summary_data_rows": 20
+  },
+  "original_pdfs": [
+    {
+      "id": "2308.15820v1",
+      "pages": 30,
+      "sha256": "a1839bdf3b0f8fc64c0315e204ff781a42c02a766ded888f0fb2f13b1abc284f"
+    },
+    {
+      "id": "2503.22476v2",
+      "pages": 97,
+      "sha256": "e012d9ab6733cdbfd906ded7ece7006581a29cb8c1cba89d9dc5fc5623ad32ed"
+    },
+    {
+      "id": "1704.08862v1",
+      "pages": 19,
+      "sha256": "26a895fbac222c5cb74dab5e81c02e8aa37f4987c43a4a9d6df7574fe28c538d"
+    },
+    {
+      "id": "2011.00844v4",
+      "pages": 18,
+      "sha256": "21988751153f628d2cd0efa23c97034e70ce6d981c00ae2311e408a16f4d61ba"
+    },
+    {
+      "id": "2405.11098v2",
+      "pages": 7,
+      "sha256": "c1fa96eeabfde03a3311f456d44eb3757eaff942d6c7c819808882a762cdbefa"
+    },
+    {
+      "id": "2603.01427v1",
+      "pages": 80,
+      "sha256": "7341e6630dba35780b6e2edf51df987c32a00a14b634a8d43f389854427f6b85"
+    },
+    {
+      "id": "2512.14973v1",
+      "pages": 81,
+      "sha256": "1e8e49ea753467a281570de122d255c7e31ca6828cd4f089da67cc2d4f3ef488"
+    },
+    {
+      "id": "2005.14374v1",
+      "pages": 40,
+      "sha256": "a3a47898577e880222b30d6a2bb12942412b4eda360ea1d8836a83a788efb057"
+    },
+    {
+      "id": "2608.15984v1",
+      "pages": 25,
+      "sha256": "917a88108f566e253907aee2f5e59b493cbc3ef78d11106d30e8bab27126d0c0"
+    },
+    {
+      "id": "2112.13150v1",
+      "pages": 16,
+      "sha256": "930999d60693140ce1b50ad5391d0e8987ee87cef486c3fafe8f7612d45ff6ba"
+    },
+    {
+      "id": "2108.03746v1",
+      "pages": 12,
+      "sha256": "3530905e860f0f40b1abec6fc9aa5cc4bd17a04eaf91308cbc765061379acad9"
+    },
+    {
+      "id": "1511.07117v1",
+      "pages": 13,
+      "sha256": "37d11f0b03442fcc31ea9344f00067e737c2eabc8d74032c5ac5cbcfbdd87f05"
+    },
+    {
+      "id": "2606.20130v1",
+      "pages": 6,
+      "sha256": "d79b786092633a5dd3acda78716dd0f9ab4719a85e633edaef09872118b44e7f"
+    },
+    {
+      "id": "2105.07489v1",
+      "pages": 39,
+      "sha256": "b5c8e1337fcce39af0c64f72eedde56888f37c83253777b5684e106ea7ca5f47"
+    },
+    {
+      "id": "1908.11115v1",
+      "pages": 10,
+      "sha256": "ee55b4cba62c4e958d81130f8e8e39c158b433556440977f4b1316ad4975f052"
+    },
+    {
+      "id": "1704.00975v1",
+      "pages": 36,
+      "sha256": "14e014051039e92be28bee7502713044ab7fb7a83a8be2a2d126138d649bb730"
+    },
+    {
+      "id": "2305.17611v1",
+      "pages": 4,
+      "sha256": "9e950c3f03a3460ae5bbc061ab43c28b856122d50aceb3bd79ee9e4ce7dabcb5"
+    },
+    {
+      "id": "2608.11485v1",
+      "pages": 61,
+      "sha256": "fcee240d582f530eb1a92c479fc88ffa1a5c0328c56552ca42f8debf4a863625"
+    },
+    {
+      "id": "1903.05971v1",
+      "pages": 5,
+      "sha256": "cb82998570f22e854a0e4be19d6585ed8923cdbb6bc64419f1a9b594c6686561"
+    },
+    {
+      "id": "2204.00264v1",
+      "pages": 13,
+      "sha256": "876e930d37367232ef0d707896364b1ba9b8fe340016732f76b4f1dbea870ca9"
+    }
+  ],
+  "preservation": {
+    "existing_unique_records": 28,
+    "automatic_records_reprocessed": 6,
+    "existing_manual_reviews_unchanged": true,
+    "existing_artifacts": 11,
+    "existing_artifacts_unchanged": true,
+    "local_prechange_backup": "PRESERVED_PRIVATE_NOT_COMMITTED",
+    "record_revision_history": "IMMUTABLE_VERSION_WRITES_IN_IMPLEMENTATION"
+  }
+}
