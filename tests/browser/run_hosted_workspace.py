@@ -142,6 +142,15 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                     page.get_by_role('button', name='检索文献', exact=True).click()
                     page.get_by_text('SYNTHETIC discovery fixture', exact=True).wait_for()
                     check('Search form submits and renders metadata-only source actions using a labelled engineering fixture', lambda: page.get_by_role('button', name='导入授权 PDF', exact=True).is_visible() or (_ for _ in ()).throw(AssertionError('Missing authorized PDF action')))
+                    page.unroute('**/api/discovery?**')
+                    page.route('**/api/discovery?**',lambda route:route.fulfill(json={'provider':'arxiv','scope':'SYNTHETIC_ENGINEERING_CACHE_FIXTURE','cache':{'state':'stale','fetched_at':'2026-11-18T00:00:00Z'},'items':[{'id':'9999.90000','source':'arxiv','title':'SYNTHETIC cached metadata fixture','url':'https://example.invalid/SYNTHETIC','authors':[]}]}))
+                    page.get_by_role('button',name='arXiv',exact=True).click()
+                    page.get_by_label('关键词、DOI 或 arXiv ID').fill('SYNTHETIC cache')
+                    page.get_by_role('button',name='检索文献',exact=True).click()
+                    expect(page.locator('.search-result-header')).to_contain_text('历史真实结果')
+                    expect(page.locator('.search-result-header')).to_contain_text('获取于')
+                    expect(page.locator('.search-result-header')).not_to_contain_text('实时元数据')
+                    results.append({'name':'Cached search metadata visibly retains its fetch date and is not presented as a fresh live query','status':'PASS'})
                     library()
                     page.locator('input[data-select="synthetic-alpha"]').check()
                     page.locator('input[data-select="synthetic-beta"]').check()
@@ -212,6 +221,7 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                         assert '2501.00680' not in text
                     assert page.url.endswith('/#library')
                     assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth + 1')
+                    expect(page.locator('#sidebar')).not_to_be_in_viewport()
                     capture('quick-export-library-mobile.png')
                     page.set_viewport_size({'width':1440,'height':1000})
                     results.append({'name':'With no selection, the library export button directly downloads all stored fixture records','status':'PASS'})
@@ -330,7 +340,13 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                     batch_metadata=[{'id':pid,'title':'SYNTHETIC batch '+str(n+1),'source':'arxiv','authors':['SYNTHETIC fixture'],
                                      'url':'https://example.org/SYNTHETIC','pdf_url':'https://example.org/SYNTHETIC.pdf',
                                      'license_url':'https://creativecommons.org/licenses/by/4.0/'} for n,pid in enumerate(batch_pdfs)]
-                    page.route('**/api/discovery?**',lambda route:route.fulfill(json={'items':batch_metadata,'provider':'arxiv','scope':'SYNTHETIC_ENGINEERING_BATCH_FIXTURE'}))
+                    discovery_outage={'enabled':True}
+                    def batch_discovery(route):
+                        if discovery_outage['enabled']:
+                            route.fulfill(status=503,json={'error':'SYNTHETIC sources unavailable; retry this batch','code':'DISCOVERY_UNAVAILABLE','retryable':True})
+                        else:
+                            route.fulfill(json={'items':batch_metadata,'provider':'datacite','scope':'SYNTHETIC_ENGINEERING_BATCH_FIXTURE','upstream_notice':'SYNTHETIC DataCite recovery fixture'})
+                    page.route('**/api/discovery?**',batch_discovery)
                     corrupt={'enabled':True};source_calls={pid:0 for pid in batch_pdfs}
                     def batch_source(route):
                         pid=urllib.parse.parse_qs(urllib.parse.urlparse(route.request.url).query)['id'][0]
@@ -341,12 +357,21 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                     page.goto(origin+'/#discovery');page.get_by_role('heading',name='检索科学文献',exact=True).wait_for()
                     page.get_by_role('button',name='arXiv',exact=True).click();page.get_by_label('关键词、DOI 或 arXiv ID',exact=True).fill('SYNTHETIC automatic batch')
                     page.get_by_label('计划获取',exact=True).select_option('5');page.locator('#batch-auto').check()
+                    page.get_by_role('button',name='一键爬取并生成 PDF / Excel',exact=True).click()
+                    page.get_by_role('button',name='重新检索本批',exact=True).wait_for()
+                    failed_batch=page.request.get(origin+'/api/batches').json()['batches'][0]
+                    assert failed_batch['status']=='failed' and failed_batch['items']==[] and failed_batch['files']==[]
+                    capture('search-outage-retry-desktop.png')
+                    discovery_outage['enabled']=False
                     with page.expect_download(timeout=120000) as batch_download:
-                        page.get_by_role('button',name='一键爬取并生成 PDF / Excel',exact=True).click()
+                        page.get_by_role('button',name='重新检索本批',exact=True).click()
+                    expect(page.locator('.batch-panel')).to_contain_text('SYNTHETIC DataCite recovery fixture')
+                    results.append({'name':'An empty failed search batch can retry the same checkpoint and automatically generate downloads after recovery','status':'PASS'})
                     partial_zip=output/'one-click-partial.zip';batch_download.value.save_as(partial_zip)
                     capture('one-click-partial-desktop.png')
                     with zipfile.ZipFile(partial_zip) as z:
                         manifest=json.loads(z.read('BATCH-MANIFEST.json'));batch_id=manifest['id'] if 'id' in manifest else None
+                        assert manifest['id']==failed_batch['id'] and manifest['source_provider']=='datacite'
                         assert len(manifest['items'])==5
                         assert sum(j['state']=='done' for j in manifest['items'])==4
                         assert sum(j['state']=='failed' for j in manifest['items'])==1
@@ -356,7 +381,7 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                             assert 'SYNTHETIC' in report_text and '失败1' in ''.join(report_text.split())
                         (output/'one-click-partial-report.pdf').write_bytes(z.read('report.pdf'))
                     assert all(n==1 for n in source_calls.values())
-                    results.append({'name':'One click processes five PDF fixtures, isolates one corrupt PDF and automatically downloads actual PDF/XLSX/JSONL/originals ZIP','status':'PASS'})
+                    results.append({'name':'Recovered search processes five PDF fixtures, isolates one corrupt PDF and automatically downloads actual PDF/XLSX/JSONL/originals ZIP','status':'PASS'})
                     corrupt['enabled']=False
                     with page.expect_download(timeout=120000) as retried_download:
                         page.get_by_role('button',name='仅重试失败项',exact=True).click()
@@ -365,7 +390,7 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                         m=json.loads(z.read('BATCH-MANIFEST.json'));assert m['status']=='complete'
                         assert sum(j['state']=='done' for j in m['items'])==5
                         actual=[json.loads(line) for line in z.read('research.jsonl').decode().splitlines()]
-                        assert len(actual)==5 and all(r['extractor_version']=='browser-scientific-rules-v1.5' for r in actual)
+                        assert len(actual)==5 and all(r['extractor_version']=='browser-scientific-rules-v1.6' for r in actual)
                         assert all('source_review' not in r['reading_card'] for r in actual)
                         (output/'one-click-complete-report.pdf').write_bytes(z.read('report.pdf'))
                         (output/'one-click-complete.xlsx').write_bytes(z.read('research.xlsx'))

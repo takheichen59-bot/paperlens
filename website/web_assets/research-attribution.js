@@ -1,6 +1,6 @@
 // Browser-only rule candidates. This is not model output or scientific validation.
 // Quoted text stays raw; every stored offset counts Unicode code points, as Python does.
-export const ATTRIBUTION_VERSION='browser-context-roles-v1.1';
+export const ATTRIBUTION_VERSION='browser-context-roles-v1.2';
 export const MATERIAL_ROLE_LABELS={study_subject:'本文研究对象（规则候选）',background:'背景提及',comparator:'本文对照材料（规则候选）',reagent_or_environment:'试剂 / 环境',uncertain:'归属不确定'};
 export const NUMERIC_ROLE_LABELS={own_result:'本文结果（规则候选）',simulation_parameter:'模拟参数',experimental_condition:'实验条件',cited_result:'引用 / 背景数值',uncertain:'归属不确定'};
 const PRIOR=/\b(?:in (?:recent|previous|prior|earlier) (?:work|studies|research)|(?:previous|prior|earlier|other) (?:stud\w*|work|report\w*)|(?:[A-Z][a-z]+ et al\.|collaborators)\s*(?:\[.{1,25}?\])?\s*(?:have |has )?(?:report\w*|investigat\w*|found|show\w*)|(?:has|have) been (?:reported|demonstrated|found)|previous record|best known|well known|canonical example)\b/i;
@@ -71,6 +71,9 @@ export function buildAttribution(record,body,add){
    }
   }
  }
+ // Preserve legacy keyword fragments (for example GeTe inside Fe₅GeTe₂) as
+ // uncertain audit candidates, never as a standalone material or study sample.
+ for(const [name,items] of mentions){if(items.length)continue;for(const block of body){for(const [start,end] of sentenceRanges(block.text)){const sentence=block.text.slice(start,end);if(!sentence.toLowerCase().includes(name.toLowerCase()))continue;const ev=add(block,'material_roles',start,end);items.push({role:'uncertain',reason:'partial_token_candidate_not_standalone_material',match_status:'partial_token',evidence_ids:[ev.evidence_id],context_evidence_ids:[]});if(items.length>=2)break;}if(items.length>=2)break;}}
  const byId=new Map(record.source_snippets.map(s=>[s.evidence_id,s])),numeric=[];
  for(const [candidateIndex,candidate] of record.experimental_data.entries()){
   const ev=byId.get(candidate.evidence_ids[0]),index=body.findIndex(b=>b.block_id===ev?.block_id),block=body[index];
@@ -96,7 +99,7 @@ export function buildAttribution(record,body,add){
 
 export function validateAttribution(record){
  const layer=record.attribution;if(!layer)return record;
- if(![ATTRIBUTION_VERSION,'browser-context-roles-v1','context-roles-v1','context-roles-v1.1'].includes(layer.version)||layer.review_status!=='unreviewed')throw Error('Unsupported attribution layer');
+ if(![ATTRIBUTION_VERSION,'browser-context-roles-v1.1','browser-context-roles-v1','context-roles-v1','context-roles-v1.1'].includes(layer.version)||layer.review_status!=='unreviewed')throw Error('Unsupported attribution layer');
  const byId=new Map(record.source_snippets.map(s=>[s.evidence_id,s]));
  if(!Array.isArray(layer.materials)||JSON.stringify(layer.materials.map(m=>m.name))!==JSON.stringify(record.materials))throw Error('Attribution material candidate mismatch');
  function context(item){for(const eid of item.context_evidence_ids||[])if(byId.get(eid)?.field!=='attribution_context')throw Error('Attribution context evidence mismatch');}
@@ -105,7 +108,7 @@ export function validateAttribution(record){
   const expected=[...new Set(material.mentions.flatMap(m=>m.evidence_ids))];if(JSON.stringify(expected)!==JSON.stringify(material.evidence_ids))throw Error('Material evidence aggregation mismatch');
   for(const mention of material.mentions){
    if(!Object.hasOwn(MATERIAL_ROLE_LABELS,mention.role)||!Array.isArray(mention.evidence_ids)||!mention.evidence_ids.length)throw Error('Invalid material mention');
-   for(const eid of mention.evidence_ids){const ev=byId.get(eid);if(ev?.field!=='material_roles'||!materialPattern(material.name).test(ev.text))throw Error('Material mention evidence mismatch');}
+   for(const eid of mention.evidence_ids){const ev=byId.get(eid);if(ev?.field!=='material_roles')throw Error('Material mention evidence mismatch');if(mention.match_status==='partial_token'){if(layer.version!==ATTRIBUTION_VERSION||material.role!=='uncertain'||mention.role!=='uncertain'||mention.reason!=='partial_token_candidate_not_standalone_material'||materialPattern(material.name).test(ev.text)||!ev.text.toLowerCase().includes(material.name.toLowerCase()))throw Error('Invalid partial material candidate');}else if(!materialPattern(material.name).test(ev.text))throw Error('Material mention evidence mismatch');}
    context(mention);
   }
  }

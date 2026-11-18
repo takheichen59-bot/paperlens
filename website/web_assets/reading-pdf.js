@@ -109,7 +109,7 @@ function bookmarks(doc,entries){
  * By default the pinned, privately seeded font is fetched from /api/report-font.
  * No paper or report text is sent to that endpoint or any external service.
  */
-export async function readingPDF(records,{fontBytes,batch,fetchImpl=globalThis.fetch,fontUrl='/api/report-font',title='PaperLens 文献处理与阅读报告'}={}){
+export async function readingPDF(records,{fontBytes,batch,fetchImpl=globalThis.fetch,fontUrl='/api/report-font?revision=2',title='PaperLens 文献处理与阅读报告'}={}){
  const input=Array.from(records),completedIds=batch?.items?new Set(batch.items.filter(i=>i.state==='done').flatMap(i=>[i.id,i.record_id,i.meta?.id,i.meta?.paper_id].filter(Boolean))):null;
  const completed=input.filter(r=>!completedIds||[r.id,r.paper_id,r.meta?.id,r.meta?.paper_id].some(id=>completedIds.has(id)));
  const plan=readingReportPlan(completed);
@@ -178,6 +178,7 @@ export async function readingPDF(records,{fontBytes,batch,fetchImpl=globalThis.f
   const returned=Number.isFinite(Number(batch.source_returned))?Math.max(0,Number(batch.source_returned)):items.length;
   const failed=items.filter(i=>i.state==='failed'||i.error),pending=items.filter(i=>i.state!=='done'&&i.state!=='duplicate'&&i.state!=='failed'&&!i.error),missing=Math.max(0,requested-items.length);
   text('检索词：'+clean(batch.query||'未提供'));
+  if(batch.source_notice)text('元数据来源：'+clean(batch.source_notice),{color:MUTED});
   text('目标 '+requested+' 篇 · 来源实际返回 '+returned+' 篇 · 本批保留 '+items.length+' 篇 · 已提取并纳入正文 '+plan.length+' 篇 · 失败 '+failed.length+' 篇 · 内容去重 '+items.filter(i=>i.state==='duplicate').length+' 条 · 未完成 '+pending.length+' 篇 · 未取得目标名额 '+missing+' 篇。');
   if(batch.error)text('批次异常：'+clean(batch.error),{color:MUTED});
   for(const item of failed)text('失败：'+clean(item.id||item.meta?.id||'未提供ID')+' · 阶段 '+clean(item.stage||'未提供')+' · '+clean(typeof item.error==='object'?item.error?.message||JSON.stringify(item.error):item.error||'未记录具体原因'),{color:MUTED});

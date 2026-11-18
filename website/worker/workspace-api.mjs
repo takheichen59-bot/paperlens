@@ -1,4 +1,5 @@
 import {api,ARXIV_ID} from './api.mjs';
+import {discoverArxiv} from './discovery.mjs';
 const workspaceReply = (value, status=200) => Response.json(value, {status, headers:{'Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff'}});
 
 function crossrefPaper(x) {
@@ -9,11 +10,11 @@ function crossrefPaper(x) {
 }
 
 export function openAlexArxivPaper(x){const locations=(x.locations||[]).filter(l=>l.source?.id==='https://openalex.org/S4306400194');for(const l of locations){const raw=l.landing_page_url||l.pdf_url||'',m=raw.match(/(?:arxiv\.org\/(?:abs|pdf)\/|10\.48550\/arxiv\.)([^?#]+)$/i);const id=m?.[1]?.replace(/\.pdf$/,'');if(!id||!ARXIV_ID.test(id))continue;const licences={'cc-by':'https://creativecommons.org/licenses/by/','cc-by-sa':'https://creativecommons.org/licenses/by-sa/','cc0':'https://creativecommons.org/publicdomain/zero/','cc-by-nc':'https://creativecommons.org/licenses/by-nc/','cc-by-nc-sa':'https://creativecommons.org/licenses/by-nc-sa/','cc-by-nd':'https://creativecommons.org/licenses/by-nd/','cc-by-nc-nd':'https://creativecommons.org/licenses/by-nc-nd/'};return {id,source:'arxiv',metadata_source:'OpenAlex',metadata_url:x.id,title:x.title||x.display_name||id,authors:(x.authorships||[]).map(a=>a.author?.display_name).filter(Boolean),year:x.publication_year||null,doi:x.doi?.replace(/^https?:\/\/doi.org\//,''),url:'https://arxiv.org/abs/'+id,pdf_url:'https://arxiv.org/pdf/'+id,license_url:licences[l.license]||null,license_source:l.license?'OpenAlex arXiv location; license version unverified':null,license_identifier:l.license||null,source_version:'LATEST_AT_FETCH',abstract:''};}return null;}
-async function openAlexArxivSearch(query,limit){if(/\b(?:cat|ti|au|abs|all):/.test(query))return null;const target='https://api.openalex.org/works?'+new URLSearchParams({search:query,filter:'locations.source.id:S4306400194','per-page':String(limit),sort:'relevance_score:desc'});const response=await fetch(target,{headers:{'User-Agent':'PaperLens/0.4.0 (public literature discovery)'},signal:AbortSignal.timeout(45000)});if(!response.ok)return null;const data=await response.json(),items=[...new Map((data.results||[]).map(openAlexArxivPaper).filter(Boolean).map(p=>[p.id,p])).values()];return {items,total:data.meta?.count||items.length,provider:'openalex',scope:'REAL_OPENALEX_ARXIV_LOCATIONS',upstream_notice:'arXiv 查询暂不可用；本次使用 OpenAlex 的真实聚合元数据，仅保留具有 arXiv 原文位置的论文。'};}
+
 
 export async function workspaceApi(request, env, corpus, index) {
  const url=new URL(request.url),path=url.pathname;
- if(path==='/api/health')return workspaceReply({status:'ok',product:'PaperLens',version:'0.4.0-batch',storage:!!env.BUCKET,
+ if(path==='/api/health')return workspaceReply({status:'ok',product:'PaperLens',version:'0.4.2-recovery',storage:!!env.BUCKET,
   parser:'PDF.js in browser',record_format:'research-1',llm:'NOT_CONFIGURED',scientific_accuracy:'NOT_INDEPENDENTLY_EVALUATED',seed_count:index.records.length});
  if(path==='/api/discovery') {
   if(request.method!=='GET')return workspaceReply({error:'GET required'},405);
@@ -35,10 +36,7 @@ export async function workspaceApi(request, env, corpus, index) {
    if(ids.length>1&&ids.length<=20&&ids.every(v=>ARXIV_ID.test(v))){const pinned=ids.map(v=>corpus.papers.find(p=>p.id===v||p.id.replace(/v\d+$/,'')===v));if(pinned.every(Boolean))return workspaceReply({items:pinned.slice(0,limit),total:pinned.length,provider:'arxiv',scope:'PINNED_REAL_CORPUS_ID_LIST_LOOKUP'});const target=new URL('/api/identify',url);target.searchParams.set('ids',ids.join(','));const response=await api(new Request(target),env,corpus);if(!response.ok)return workspaceReply({error:'arXiv 标识批量查询失败，请稍后重试。'},502);return workspaceReply({...await response.json(),provider:'arxiv',scope:'REAL_UPSTREAM_ID_LIST'});}
    const known=corpus.papers.find(p=>p.id===id||p.id.replace(/v\d+$/,'')===id);
    if(known)return workspaceReply({items:[known],total:1,provider:'arxiv',scope:'PINNED_REAL_CORPUS_ID_LOOKUP'});
-   const upstream=new URL('/api/search',url);upstream.searchParams.set('q',id);upstream.searchParams.set('limit',String(limit));upstream.searchParams.set('sort','relevance');
-   const result=await api(new Request(upstream),env,corpus);
-   if(!result.ok){const alternative=await openAlexArxivSearch(id,limit);if(alternative)return workspaceReply(alternative);return workspaceReply({error:'arXiv 及开放元数据查询暂不可用，请稍后重试。没有替换为示例记录。'},502);}
-   const data=await result.json();return workspaceReply({...data,provider:'arxiv',scope:'REAL_UPSTREAM_METADATA'});
+   const data=await discoverArxiv(request,id,limit,corpus,env,openAlexArxivPaper);return workspaceReply(data,data.error?503:200);
   }catch{return workspaceReply({error:'检索服务连接失败。已有文献和导出仍可使用，请稍后重试。'},502);}
  }
  if(path==='/api/research/download') {

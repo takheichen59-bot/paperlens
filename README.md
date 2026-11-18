@@ -96,3 +96,5 @@ node verify-master-a.mjs
 OCR测试要求系统安装 `tesseract` 和英文语言数据。Linux 本次重新运行结果、脚本依赖及未测项目见 [VALIDATION](docs/VALIDATION.md)。
 
 **必须先读[当前问题](docs/KNOWN_ISSUES.md)：真实科学质量、模型集成、授权来源、浏览器、规模与部署仍有明确缺口。** 本仓库未授予原创代码的开源许可证；第三方组件与论文遵循各自许可，详见 [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md)。
+
+检索来源故障与恢复机制见[检索维修说明](docs/SEARCH_RELIABILITY.md)，2026-11-19真实正式站检索及20篇全文验收见[维修报告](docs/qa/search-recovery-20261119/REPORT.md)。
