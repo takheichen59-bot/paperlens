@@ -48,3 +48,5 @@
 现在适合：小批文献获取、来源整理、原文定位、规则候选预筛和人工复核。涉及论文结论、算法创新归属、数值比较或研究空白判断时，应逐条回查全文。
 
 不能将“测试通过”“status=success”“原句匹配”“HTTP200”分别等同于科研正确、内容完整、推理正确或界面验收。
+
+Reading-quality follow-up (2026-11-18): the independent reading layer improves complete-sentence evidence and reader delivery, but does not repair all empty historical core fields. The five Chinese source reviews are assistant-authored, hash-bound, unreviewed by the user and not independent gold. Generic entity/step/numeric binding recall remains incomplete. See [the 18-issue disposition](qa/review-20261118/REPORT.md).
