@@ -153,7 +153,31 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                     library()
                     assert page.locator('input[data-select="synthetic-alpha"]').is_checked()
                     assert page.locator('input[data-select="synthetic-beta"]').is_checked()
-                    page.get_by_role('button', name='导出所选', exact=True).click()
+                    with page.expect_download() as quick_download:
+                        page.get_by_role('button', name='导出所选', exact=True).click()
+                    quick_path=output/'quick-selected.xlsx';quick_download.value.save_as(quick_path)
+                    assert page.url.endswith('/#library')
+                    with zipfile.ZipFile(quick_path) as archive:
+                        text=''.join(archive.read(n).decode() for n in archive.namelist() if n.startswith('xl/worksheets/sheet'))
+                        assert 'SYNTHETIC alpha' in text and 'SYNTHETIC beta' in text
+                        assert '2501.00680' not in text and 'synthetic-reading' not in text
+                    results.append({'name':'One library click directly downloads selected Excel without opening export settings','status':'PASS'})
+                    capture('quick-export-library-desktop.png')
+                    # A genuine failed record request must recover the direct-download button and selection.
+                    page.reload();page.get_by_role('heading',name='我的文献库',exact=True).wait_for()
+                    page.route('**/api/research/record?id=synthetic-alpha',lambda route:route.fulfill(status=503,json={'error':'SYNTHETIC export source failure'}))
+                    page.get_by_role('button',name='导出文献',exact=True).click()
+                    page.get_by_text('SYNTHETIC export source failure',exact=True).wait_for()
+                    expect(page.get_by_role('button',name='导出文献',exact=True)).to_be_enabled()
+                    assert page.locator('input[data-select="synthetic-alpha"]').is_checked()
+                    assert page.locator('input[data-select="synthetic-beta"]').is_checked()
+                    page.unroute('**/api/research/record?id=synthetic-alpha')
+                    with page.expect_download() as recovered_download:
+                        page.get_by_role('button',name='导出文献',exact=True).click()
+                    recovered_download.value.save_as(output/'quick-recovered.xlsx')
+                    assert page.url.endswith('/#library')
+                    results.append({'name':'Direct export failure restores its button and selection, and retry starts a real download','status':'PASS'})
+                    page.get_by_role('link',name='更多格式',exact=True).click()
                     page.get_by_role('radio', name='JSONL 完整记录', exact=False).check()
                     with page.expect_download() as download:
                         page.get_by_role('button', name='导出 2 篇文献', exact=True).click()
@@ -172,7 +196,36 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                         assert 'SYNTHETIC alpha' in exported_text and 'SYNTHETIC beta' in exported_text
                         assert '2501.00680' not in exported_text
                     results.append({'name': 'UI Excel download has nine reading/audit sheets and excludes unselected real-example records', 'status': 'PASS'})
+                    # Isolate all-library scope to genuine synthetic stored records, without fabricating seed full texts.
+                    synthetic_summaries=[r for r in page.request.get(origin+'/api/research/index').json()['records'] if r['id'].startswith('synthetic-')]
+                    assert len(synthetic_summaries)==4
+                    library();page.get_by_role('button',name='清空选择',exact=True).click()
+                    page.route('**/api/research/index',lambda route:route.fulfill(json={'records':synthetic_summaries,'cursor':None}))
+                    page.reload();page.get_by_role('heading',name='我的文献库',exact=True).wait_for()
+                    page.set_viewport_size({'width':390,'height':844})
+                    with page.expect_download() as all_download:
+                        page.get_by_role('button',name='导出文献',exact=True).click()
+                    all_path=output/'quick-all.xlsx';all_download.value.save_as(all_path)
+                    with zipfile.ZipFile(all_path) as archive:
+                        text=''.join(archive.read(n).decode() for n in archive.namelist() if n.startswith('xl/worksheets/sheet'))
+                        assert all(r['id'] in text for r in synthetic_summaries)
+                        assert '2501.00680' not in text
+                    assert page.url.endswith('/#library')
+                    assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth + 1')
+                    capture('quick-export-library-mobile.png')
+                    page.set_viewport_size({'width':1440,'height':1000})
+                    results.append({'name':'With no selection, the library export button directly downloads all stored fixture records','status':'PASS'})
+                    page.unroute('**/api/research/index');page.reload()
+                    page.locator('input[data-select="synthetic-alpha"]').check();page.locator('input[data-select="synthetic-beta"]').check()
                     open_fixture()
+                    with page.expect_download() as single_download:
+                        page.locator('[data-export-one]').click()
+                    single_path=output/'quick-single.xlsx';single_download.value.save_as(single_path)
+                    with zipfile.ZipFile(single_path) as archive:
+                        text=''.join(archive.read(n).decode() for n in archive.namelist() if n.startswith('xl/worksheets/sheet'))
+                        assert 'SYNTHETIC alpha' in text and 'SYNTHETIC beta' not in text
+                    assert page.url.endswith('/#paper/synthetic-alpha')
+                    results.append({'name':'Single-paper Excel directly downloads only the current paper and leaves its detail open','status':'PASS'})
                     with page.expect_download(timeout=60000) as generated_pdf:
                         page.locator('[data-report-one]').click()
                     report_path=output/'synthetic-processing-report.pdf';generated_pdf.value.save_as(report_path)

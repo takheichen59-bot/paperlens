@@ -19,3 +19,5 @@
 本批文件：`report.pdf`、`research.xlsx`、`research.jsonl`、`reading-evidence.csv`。ZIP另含实际保存的原PDF及`BATCH-MANIFEST.json`，其中记录真实失败原因、来源与许可。不要把处理报告当成原始论文。
 
 Python阅读兼容校验增加主动制备/测量动词，同时升级scientific-evidence-v1.4和reading-evidence-v1.1，使旧缓存不会冒充新规则结果；旧版本仍可读取，未静默重写。两种解析实现继续记录各自版本，不声称与浏览器输出等价。
+
+文献库中的“导出文献”直接下载Excel：有勾选时只导出已选项，无勾选时导出全部文献；“导出所选”和单篇Excel也直接下载。PDF、CSV、JSONL和ZIP可进入“更多格式”选择后直接下载。生成时显示进度提示并禁用重复操作，失败后按钮恢复且勾选保留。
