@@ -87,10 +87,10 @@ def main():
       window.__restoreFetch=()=>window.fetch=original;
       location.hash='algorithms';
      }""")
-     page.wait_for_function('window.__bodyHeld === true')
+     page.wait_for_function('() => window.__bodyHeld === true')
      go('comparison','跨论文比较')
      page.evaluate('async () => { window.__releaseBody(); window.__restoreFetch(); await new Promise(resolve=>setTimeout(resolve,0)); }')
-     page.wait_for_function("document.querySelector('#connection').textContent.includes('本地 API 已连接')")
+     page.wait_for_function("() => document.querySelector('#connection').textContent.includes('本地 API 已连接')")
      expect(page.locator('main h1')).to_have_text('跨论文比较')
     check('02 all navigation pages, empty states and delayed response isolation',all_pages)
     def filter_case():
