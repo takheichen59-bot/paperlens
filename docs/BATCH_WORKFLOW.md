@@ -12,7 +12,7 @@
 - arXiv查询限流/故障时，普通关键词可使用OpenAlex真实元数据后备，只接受具有arXiv原文位置的条目，界面明确标注来源。arXiv专用查询语法不静默转译。全文仍从arXiv取得。
 - OpenAlex的许可类型没有精确版本信息时不编造4.0/3.0版本；元数据来源与许可来源保留在记录里。
 
-报告固定框架见 [REPORT_FRAMEWORK.md](REPORT_FRAMEWORK.md)。自动提取版本为 `browser-scientific-rules-v1.5`，布局为 `pdfjs-layout-v1.1`，独立阅读层为 `reading-evidence-browser-v2.1`。新版本直接从来源句生成方法、发现与结论字段；原基线单独保存在legacy_record，旧服务器记录保留历史。来源切片一致不代表归属或科学内容已被专家确认。
+报告固定框架见 [REPORT_FRAMEWORK.md](REPORT_FRAMEWORK.md)。自动提取版本为 `browser-scientific-rules-v1.6`，布局为 `pdfjs-layout-v1.1`，独立阅读层为 `reading-evidence-browser-v2.1`。新版本直接从来源句生成方法、发现与结论字段；原基线单独保存在legacy_record，旧服务器记录保留历史。来源切片一致不代表归属或科学内容已被专家确认。
 
 存储使用独立的paperlens-batch-1检查点、不可变版本和batches/前缀，不修改冻结contracts、旧storage或SQL结构。现有私有站点的受众不变。不存在付费模型、外部论文上传、外部翻译或模型生成结果。
 
@@ -21,3 +21,5 @@
 Python阅读兼容校验增加主动制备/测量动词，同时升级scientific-evidence-v1.4和reading-evidence-v1.1，使旧缓存不会冒充新规则结果；旧版本仍可读取，未静默重写。两种解析实现继续记录各自版本，不声称与浏览器输出等价。
 
 文献库中的“导出文献”直接下载Excel：有勾选时只导出已选项，无勾选时导出全部文献；“导出所选”和单篇Excel也直接下载。PDF、CSV、JSONL和ZIP可进入“更多格式”选择后直接下载。生成时显示进度提示并禁用重复操作，失败后按钮恢复且勾选保留。
+
+真实20篇批次回归发现Unicode复合化学式可能留下GeTe等片段候选；browser-context-roles-v1.2将这类片段明确保留为归属未确认的审计候选，记录原因和原句，不将片段冒充独立材料，也不让一条片段使全文提取中止。旧版本记录仍可读取。

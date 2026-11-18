@@ -109,7 +109,7 @@ function bookmarks(doc,entries){
  * By default the pinned, privately seeded font is fetched from /api/report-font.
  * No paper or report text is sent to that endpoint or any external service.
  */
-export async function readingPDF(records,{fontBytes,batch,fetchImpl=globalThis.fetch,fontUrl='/api/report-font',title='PaperLens 文献处理与阅读报告'}={}){
+export async function readingPDF(records,{fontBytes,batch,fetchImpl=globalThis.fetch,fontUrl='/api/report-font?revision=2',title='PaperLens 文献处理与阅读报告'}={}){
  const input=Array.from(records),completedIds=batch?.items?new Set(batch.items.filter(i=>i.state==='done').flatMap(i=>[i.id,i.record_id,i.meta?.id,i.meta?.paper_id].filter(Boolean))):null;
  const completed=input.filter(r=>!completedIds||[r.id,r.paper_id,r.meta?.id,r.meta?.paper_id].some(id=>completedIds.has(id)));
  const plan=readingReportPlan(completed);

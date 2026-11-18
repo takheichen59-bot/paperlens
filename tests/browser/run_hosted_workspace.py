@@ -390,7 +390,7 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                         m=json.loads(z.read('BATCH-MANIFEST.json'));assert m['status']=='complete'
                         assert sum(j['state']=='done' for j in m['items'])==5
                         actual=[json.loads(line) for line in z.read('research.jsonl').decode().splitlines()]
-                        assert len(actual)==5 and all(r['extractor_version']=='browser-scientific-rules-v1.5' for r in actual)
+                        assert len(actual)==5 and all(r['extractor_version']=='browser-scientific-rules-v1.6' for r in actual)
                         assert all('source_review' not in r['reading_card'] for r in actual)
                         (output/'one-click-complete-report.pdf').write_bytes(z.read('report.pdf'))
                         (output/'one-click-complete.xlsx').write_bytes(z.read('research.xlsx'))

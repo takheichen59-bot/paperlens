@@ -1,13 +1,13 @@
 {
   "schema_version": "paperlens-report-font-1",
-  "filename": "PaperLens-Report-Regular.ttf",
+  "filename": "PaperLens-Report-Regular-v2.ttf",
   "family": "PaperLens Report Regular",
   "weight": 400,
   "format": "truetype",
-  "bytes": 11004296,
-  "sha256": "01171f37b3d9662af76cd7ccbc35f5072fd31bf0daad5050a214ca043a08b7ba",
+  "bytes": 11175960,
+  "sha256": "0b25a1253476f100644b396da442f4633c3d4982123b121a51c36519b380b6da",
   "license": "OFL-1.1",
-  "unicode_characters": 34423,
+  "unicode_characters": 35906,
   "source": [
     {
       "name": "NotoSansSC-variable.ttf",
@@ -33,6 +33,7 @@
     "third_party/REPORT_FONT_NotoSans_OFL.txt",
     "third_party/REPORT_FONT_NotoSansMath_OFL.txt"
   ],
-  "preparation": "fontTools 4.61.1; NotoSansSC wght=400; missing Latin/Greek/punctuation/subscripts from NotoSans wght=400 wdth=100; remaining NotoSansMath characters; decomposed outlines scaled to base UPEM; modified family renamed PaperLens Report. GSUB removed to keep source Unicode mapping literal and avoid fontkit numeric alternate extraction errors.",
-  "delivery": "Privately seed font bytes through authenticated /api/report-font; not embedded in Worker JavaScript or committed as full font."
+  "preparation": "fontTools 4.61.1; NotoSansSC wght=400; missing Latin/Greek/punctuation/subscripts from NotoSans wght=400 wdth=100; remaining NotoSansMath characters; decomposed outlines scaled to base UPEM; modified family renamed PaperLens Report. GSUB removed to keep source Unicode mapping literal and avoid fontkit numeric alternate extraction errors. Revision 2 adds all remaining NotoSans weight-400 glyphs, including modifier letters such as U+02DC; original Unicode text stays literal.",
+  "delivery": "Privately seed font bytes through authenticated /api/report-font; not embedded in Worker JavaScript or committed as full font.",
+  "revision": 2
 }
