@@ -39,9 +39,9 @@ export async function workspaceApi(request, env, corpus, index) {
   if(request.method!=='GET')return workspaceReply({error:'GET required'},405);
   const name=url.searchParams.get('name'),known=index.artifacts?.[name];
   if(!known||!env.BUCKET)return workspaceReply({error:'文件不存在。'},404);
-  const object=await env.BUCKET.get('research/artifacts/'+name);
+  const object=await env.BUCKET.get('research/artifact_versions/'+known.sha256+'/'+name)||await env.BUCKET.get('research/artifacts/'+name);
   if(!object)return workspaceReply({error:'示例文件尚未准备好，请稍后重试。'},503);
-  const mime=name.endsWith('.pdf')?'application/pdf':name.endsWith('.xlsx')?'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':name.endsWith('.csv')?'text/csv;charset=utf-8':'application/x-ndjson;charset=utf-8';
+  const mime=name.endsWith('.pdf')?'application/pdf':name.endsWith('.xlsx')?'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':name.endsWith('.csv')?'text/csv;charset=utf-8':name.endsWith('.html')?'text/html;charset=utf-8':'application/x-ndjson;charset=utf-8';
   return new Response(object.body,{headers:{'Content-Type':mime,'Content-Disposition':'attachment; filename="PaperLens-'+name+'"','Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff'}});
  }
  return null;

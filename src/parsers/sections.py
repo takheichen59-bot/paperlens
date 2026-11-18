@@ -149,7 +149,7 @@ def eligible_blocks(paper,view=None):
 class StructuredPDFParser(BaseParser):
     def __init__(self):self.reader=PDFParser();self.cleaner=LayoutCleaner();self.identifier=SectionIdentifier()
     @property
-    def version(self):return self.reader.version+'+'+self.cleaner.version+'+'+self.identifier.version
+    def version(self):return self.reader.version+'+'+self.cleaner.version+'+'+self.identifier.version+'+sparse-columns-v1'
     def parse_with_view(self,pdf_path):
         raw=self.reader.parse(pdf_path);layout=self.reader.layout_hints(pdf_path)
         paper,view=self.identifier.identify_with_view(self.cleaner.apply(raw,layout=layout),layout)

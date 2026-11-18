@@ -17,6 +17,13 @@ async function rPublish(bucket,key,bytes,{expectedReviewRevision=undefined}={}){
  return !!published;
 }
 async function rHash(bytes){return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),b=>b.toString(16).padStart(2,'0')).join('');}
+async function rArtifactPublish(bucket,name,bytes,sha){
+ // Keep both the prior named object and every new release by content hash.
+ const key='research/artifacts/'+name,prior=await bucket.get(key);
+ if(prior){const old=await prior.arrayBuffer();await bucket.put('research/artifact_versions/'+await rHash(old)+'/'+name,old);}
+ await bucket.put('research/artifact_versions/'+sha+'/'+name,bytes);
+ await bucket.put(key,bytes);
+}
 async function rBody(request,max=3000000){if(Number(request.headers.get('content-length'))>max)throw Error('Request too large');const reader=request.body?.getReader();if(!reader)throw Error('Body required');let size=0,text='';const decoder=new TextDecoder('utf-8',{fatal:true});try{for(;;){const {value,done}=await reader.read();if(done)break;size+=value.byteLength;if(size>max){await reader.cancel();throw Error('Request too large');}text+=decoder.decode(value,{stream:true});}text+=decoder.decode();return {text,value:JSON.parse(text)};}finally{reader.releaseLock();}}
 
 export async function researchApi(request,env={},index={records:[],artifacts:{}}){
@@ -46,11 +53,11 @@ export async function researchApi(request,env={},index={records:[],artifacts:{}}
    const bytes=new TextEncoder().encode(text),expected=known||artifact;const size=known?known.artifact_bytes:artifact.bytes,sha=known?known.artifact_sha256:artifact.sha256;
    if(bytes.length!==size||await rHash(bytes)!==sha)return rReply({error:'Artifact checksum mismatch'},400);
    if(known){validateResearch(value);if(value.id!==id)return rReply({error:'Record identity mismatch'},400);if(!await rPublish(bucket,rRecord(id),bytes))return rReply({error:'Record changed concurrently'},409);}
-   else await bucket.put('research/artifacts/'+artifactName,bytes);
+   else await rArtifactPublish(bucket,artifactName,bytes,sha);
    return rReply({stored:true,id,artifact:artifactName||null},201);
   }
   if(path==='/api/research/artifact'&&request.method==='PUT'){
-   const name=url.searchParams.get('name'),a=index.artifacts?.[name];if(!a||a.bytes>12000000)return rReply({error:'Unknown artifact'},400);const bytes=await request.arrayBuffer();if(bytes.byteLength!==a.bytes||await rHash(bytes)!==a.sha256)return rReply({error:'Artifact checksum mismatch'},400);await bucket.put('research/artifacts/'+name,bytes);return rReply({stored:true,name},201);
+   const name=url.searchParams.get('name'),a=index.artifacts?.[name];if(!a||a.bytes>12000000)return rReply({error:'Unknown artifact'},400);const bytes=await request.arrayBuffer();if(bytes.byteLength!==a.bytes||await rHash(bytes)!==a.sha256)return rReply({error:'Artifact checksum mismatch'},400);await rArtifactPublish(bucket,name,bytes,a.sha256);return rReply({stored:true,name,history_preserved:true},201);
   }
   if(path==='/api/research/review'){
    if(!id||id.length>160)return rReply({error:'Invalid paper ID'},400);
@@ -62,7 +69,7 @@ export async function researchApi(request,env={},index={records:[],artifacts:{}}
    }
   }
   if(path==='/api/research/bundle'&&request.method==='GET'){
-   const pdfs=index.records.map(r=>({...r.meta,sha256:r.meta.sha256||r.pdf_hash,bytes:r.meta.bytes||r.meta.file_size,file:r.meta.file||'PDF/'+r.id+'.pdf'})),artifacts=Object.entries(index.artifacts||{});const objects=[...pdfs.map(p=>({name:p.file,key:'phase1/'+p.sha256+'.pdf',size:p.bytes})),...artifacts.map(([name,a])=>({name:a.filename,key:'research/artifacts/'+name,size:a.bytes}))];const checks=await Promise.all(objects.map(o=>bucket.head(o.key)));if(checks.some((v,i)=>!v||v.size!==objects[i].size))return rReply({error:'Full research bundle is still being prepared.'},503);const entries=objects.map(o=>({name:o.name,size:o.size,open:async()=>{const v=await bucket.get(o.key);if(!v)throw Error('Object unavailable');return v.body;}}));return new Response(makeZipStream(entries),{headers:{'Content-Type':'application/zip','Content-Disposition':'attachment; filename="PaperLens-'+index.records.length+'-papers-full.zip"','Cache-Control':'private, no-store'}});
+   const pdfs=index.records.map(r=>({...r.meta,sha256:r.meta.sha256||r.pdf_hash,bytes:r.meta.bytes||r.meta.file_size,file:r.meta.file||'PDF/'+r.id+'.pdf'})),artifacts=Object.entries(index.artifacts||{});const objects=[...pdfs.map(p=>({name:p.file,key:'phase1/'+p.sha256+'.pdf',size:p.bytes})),...artifacts.map(([name,a])=>({name:a.filename,key:'research/artifact_versions/'+a.sha256+'/'+name,legacy:'research/artifacts/'+name,size:a.bytes}))];const checks=await Promise.all(objects.map(async o=>{const head=await bucket.head(o.key);if(head)return head;if(o.legacy){o.key=o.legacy;return bucket.head(o.key);}return null;}));if(checks.some((v,i)=>!v||v.size!==objects[i].size))return rReply({error:'Full research bundle is still being prepared.'},503);const entries=objects.map(o=>({name:o.name,size:o.size,open:async()=>{const v=await bucket.get(o.key);if(!v)throw Error('Object unavailable');return v.body;}}));return new Response(makeZipStream(entries),{headers:{'Content-Type':'application/zip','Content-Disposition':'attachment; filename="PaperLens-'+index.records.length+'-papers-full.zip"','Cache-Control':'private, no-store'}});
   }
   return rReply({error:'Method or route not supported'},405);
  }catch{return rReply({error:'Record or evidence validation failed. Original data was preserved; check input and retry.'},400);}

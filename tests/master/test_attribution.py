@@ -76,7 +76,7 @@ class AttributionTests(unittest.TestCase):
     def test_pdf_integration_preserves_original_candidates_and_exact_evidence(self):
         with tempfile.TemporaryDirectory() as root:
             path, meta = fixture(root); r = extract_pdf(path, meta)
-            self.assertEqual(VERSION, "scientific-evidence-v1.2")
+            self.assertEqual(VERSION, "scientific-evidence-v1.3")
             self.assertIs(validate_scientific_record(r), r)
             self.assertEqual(r["materials"], r["legacy_record"]["chemicals"])
             roles = {m["name"].casefold(): m["role"] for m in r["attribution"]["materials"]}

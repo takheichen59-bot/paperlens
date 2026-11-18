@@ -6,7 +6,7 @@ Unknown or mixed ownership is retained for review rather than assigned by unit.
 """
 import re
 
-VERSION = "context-roles-v1"
+VERSION = "context-roles-v1.1"
 MATERIAL_ROLES = {"study_subject", "background", "comparator", "reagent_or_environment", "uncertain"}
 NUMERIC_ROLES = {"own_result", "simulation_parameter", "experimental_condition", "cited_result", "uncertain"}
 MATERIAL_LABELS = {"study_subject": "本文研究对象（规则候选）", "background": "背景提及",
@@ -20,7 +20,7 @@ PRIOR = re.compile(r"\b(?:in (?:recent|previous|prior|earlier) (?:work|studies|r
     r"(?:has|have) been (?:reported|demonstrated|found)|previous record|"
     r"best known|well known|canonical example)\b", re.I)
 OWN = re.compile(r"\b(?:we (?:have )?(?:stud\w*|investigat\w*|analy[sz]\w*|explor\w*|"
-    r"observ\w*|find|found|show\w*|report\w*|synthesi[sz]\w*|compar\w*|simulat\w*|measur\w*|used?)|"
+    r"observ\w*|find|found|show\w*|report\w*|synthesi[sz]\w*|compar\w*|simulat\w*|measur\w*|calculat\w*|characteriz\w*|combin\w*|used?)|"
     r"(?:this|our) (?:paper|work|study|results?|simulations?|measurements?)\s+(?:\w+\s+){0,3}"
     r"(?:analy[sz]\w*|investigat\w*|show\w*|demonstrat\w*|reveal\w*|report\w*))\b", re.I)
 CITATION = re.compile(r"\[\d[\d\s,–−-]*\]")
@@ -73,6 +73,7 @@ def numeric_role(sentence, preceding, section, methods_context=""):
     previous_own = list(OWN.finditer(before)); previous_prior = list(PRIOR.finditer(before))
     if previous_own and (not previous_prior or previous_own[-1].start() > previous_prior[-1].start()):
         before = ""
+    inherited_own = bool(previous_own and (not previous_prior or previous_own[-1].start() > previous_prior[-1].start()))
     prior = bool(PRIOR.search(text) or (PRIOR.search(before) and not own))
     if prior:
         return ("uncertain", "mixed_current_and_prior_work") if own else ("cited_result", "explicit_prior_work_context")
@@ -84,6 +85,8 @@ def numeric_role(sentence, preceding, section, methods_context=""):
         return "cited_result", "background_citation"
     if (RESULT.search(text) and PARAMETER.search(text)) or re.search(r"\b(?:resulting in|experimental value|compared with|compared to|versus)\b", text, re.I):
         return "uncertain", "mixed_result_condition_or_comparison"
+    if (own or inherited_own) and not CITATION.search(text) and re.search(r"\b(?:find|found|possesses|has an internal transition)\b", text, re.I) and section != "methods":
+        return "own_result", "current_work_result_with_local_context"
     if RESULT.search(text) and (own or section in {"results", "discussion", "conclusions", "inferred_results"}):
         return "own_result", "current_result_statement"
     if PARAMETER.search(text) and section == "methods":
@@ -164,7 +167,7 @@ def validate_attribution(record):
     layer = record.get("attribution")
     if layer is None:  # Historical research-1 records remain explicitly unclassified.
         return
-    if layer.get("version") != VERSION or layer.get("review_status") != "unreviewed":
+    if layer.get("version") not in {"context-roles-v1", VERSION} or layer.get("review_status") != "unreviewed":
         raise ValueError("Unsupported attribution layer")
     by_id = {s["evidence_id"]: s for s in record["source_snippets"]}
     if [m["name"] for m in layer["materials"]] != record["materials"]:

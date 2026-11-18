@@ -1,3 +1,4 @@
+import {READING_COLUMNS,readingRow,READING_NUMBERS,readingNumbers,READING_SOURCES,readingSources} from './reading-export.js';
 import {ZipArchive} from './exports.js';
 import {effectiveFields,researchGraph} from './research-shared.js';
 
@@ -97,6 +98,7 @@ const STYLES='<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml
 export async function scientificXLSX(records){
  const rows=snapshot(records),zip=new ZipArchive();
  const sheets=[['科研汇总',SCI_COLUMNS,rows.map(sciRow)],['原始自动结果',ORIGINAL_HEADERS,rows.map(originalRow)],['材料角色',MATERIAL_HEADERS,rows.flatMap(materialRows)],['数值归属',NUMERIC_HEADERS,rows.flatMap(numericRows)],['证据',EVIDENCE_HEADERS,rows.flatMap(evidenceRows)],['说明',['项目','说明'],NOTES]];
+ if(rows.some(r=>r.reading_card))sheets.unshift(['阅读卡片',READING_COLUMNS,rows.map(readingRow)],['关键数值与条件',READING_NUMBERS,rows.flatMap(readingNumbers)],['阅读证据映射',READING_SOURCES,rows.flatMap(readingSources)]);
  await zip.add('[Content_Types].xml','<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>'+sheets.map((_,i)=>`<Override PartName="/xl/worksheets/sheet${i+1}.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>`).join('')+'</Types>');
  await zip.add('_rels/.rels','<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>');
  await zip.add('xl/workbook.xml','<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets>'+sheets.map(([name],i)=>`<sheet name="${sx(name)}" sheetId="${i+1}" r:id="rId${i+1}"/>`).join('')+'</sheets></workbook>');
@@ -112,6 +114,7 @@ export async function scientificPackage(records,jobs=[]){
  await zip.add('科研汇总.xlsx',await scientificXLSX(rows));
  await zip.add('科研汇总.csv',scientificCSV(rows));
  await zip.add('research.jsonl',researchJSONL(rows));
+ if(rows.some(r=>r.reading_card)){await zip.add('阅读卡片.csv',csvText([READING_COLUMNS,...rows.map(readingRow)]));await zip.add('reading-evidence.csv',csvText([READING_SOURCES,...rows.flatMap(readingSources)]));await zip.add('reading.jsonl',rows.filter(r=>r.reading_card).map(r=>JSON.stringify({schema_version:'paperlens-reading-1',paper_id:r.paper_id,pdf_hash:r.pdf_hash,reading_card:r.reading_card})).join('\n')+'\n');}
  await zip.add('material_roles.csv',scientificMaterialRolesCSV(rows));
  await zip.add('numeric_attribution.csv',scientificNumericCSV(rows));
  await zip.add('evidence.csv',scientificEvidenceCSV(rows));

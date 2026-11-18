@@ -17,10 +17,14 @@ for r in records:
         raise ValueError('Seed indexes accept the explicitly licensed public corpus only')
     papers.append({**m, 'bytes': m['file_size'], 'sha256': r['pdf_hash'], 'file': 'PDF/' + r['id'] + '.pdf'})
 files = {}
-for filename in ['research.xlsx', 'research.jsonl', 'research.csv', 'evidence.csv', 'material_roles.csv', 'numeric_attribution.csv', 'processing-report.pdf']:
+for filename in ['research.xlsx', 'research.jsonl', 'research.csv', 'evidence.csv', 'material_roles.csv', 'numeric_attribution.csv', 'processing-report.pdf', 'research-cards.xlsx', 'reading.jsonl', 'reading-evidence.csv', 'preview.html']:
+    if not (a.exports / filename).exists():
+        if filename in {'research-cards.xlsx', 'reading.jsonl', 'reading-evidence.csv', 'preview.html'}: continue
+        raise ValueError('Missing required audit artifact: ' + filename)
     data = (a.exports / filename).read_bytes()
     files[filename] = {'filename': filename, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()}
-summary = [{k: v for k, v in r.items() if k not in {'raw_blocks', 'eligible_ranges', 'legacy_record'}} for r in records]
+# Public source contains metadata and receipts only. Full source text stays in private R2.
+summary = [{**{k:r[k] for k in ('schema','id','paper_id','pdf_hash','parser_version','extractor_version','meta','status','review_status') if k in r}, 'materials':[], 'methods':'', 'findings':'', 'conclusions':'', 'limitations':'', 'algorithms':[], 'formulas':[], 'experimental_data':[], 'source_snippets':[], 'seed_scope':'METADATA_ONLY_PRIVATE_RECORD_REQUIRED'} for r in records]
 (a.output / 'corpus.json').write_text(json.dumps({'papers': papers, 'scope': 'five_real_cc_by_papers'}, ensure_ascii=False))
 (a.output / 'research-index.json').write_text(json.dumps({'records': summary, 'artifacts': files, 'schema': 'research-1', 'seed_label': '真实论文示例 · 非实时检索结果'}, ensure_ascii=False))
 print(json.dumps({'public_seed_papers': len(papers), 'download_files': len(files), 'output': str(a.output)}))

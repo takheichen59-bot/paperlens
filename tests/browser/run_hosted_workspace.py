@@ -33,7 +33,7 @@ def main():
     args = parser.parse_args(); output = args.output.resolve(); output.mkdir(parents=True, exist_ok=True)
     results = []
     report = {'scope': 'ACTUAL_CHROMIUM_WITH_SYNTHETIC_ENGINEERING_FIXTURES',
-              'production_authentication': 'NOT_TESTED', 'scientific_accuracy': 'NOT_EVALUATED',
+              'production_authentication': 'NOT_TESTED', 'scientific_accuracy': 'NOT_EVALUATED', 'reading_scope':'SYNTHETIC_GUIDE_AND_PERSPECTIVE_UI_FIXTURES',
               'checks': results, 'screenshots': []}
     server = None
     with tempfile.TemporaryDirectory(prefix='paperlens-hosted-ci-') as temp:
@@ -66,15 +66,19 @@ def main():
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {scientificFromBlocks} from './web_assets/research-core.js';
 import {validateResearch} from './web_assets/research-shared.js';
+import {syntheticReadingRecords} from './fixtures/reading-synthetic.mjs';
 const dir='work/fixture-inputs',policy=JSON.parse(await readFile('web_assets/research-policy.json','utf8'));
 const specs=JSON.parse(await readFile(dir+'/specs.json','utf8'));await mkdir('work/preview-objects',{recursive:true});
 for(const s of specs){const meta={id:s.id,paper_id:'local:'+s.pdf_hash,title:s.title,source:'local',authors:['SYNTHETIC test fixture'],url:'',doi:null};
 const r=scientificFromBlocks(s.blocks,meta,policy,s.pdf_hash);validateResearch(r);
 await writeFile(dir+'/'+s.id+'-'+s.revision+'.jsonl',JSON.stringify(r)+'\n');
 if(s.revision==='ONE')await writeFile('work/preview-objects/'+Buffer.from('research/records/'+encodeURIComponent(r.id)+'.json').toString('base64url'),JSON.stringify(r));}
+for(const r of syntheticReadingRecords(policy)){validateResearch(r);await writeFile('work/preview-objects/'+Buffer.from('research/records/'+encodeURIComponent(r.id)+'.json').toString('base64url'),JSON.stringify(r));}
+await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords(policy)));
 '''
         (project / 'generate-browser-fixtures.mjs').write_text(generator)
         subprocess.run(['node', 'generate-browser-fixtures.mjs'], cwd=project, check=True)
+        reading_fixtures=json.loads((fixture_dir/'reading-specs.json').read_text())
         subprocess.run(['node', 'build-workspace.mjs'], cwd=project, check=True)
         invalid = fixture_dir / 'invalid.pdf'; invalid.write_bytes(b'This is a SYNTHETIC invalid PDF fixture, not a paper.')
         with socket.socket() as sock:
@@ -151,11 +155,11 @@ if(s.revision==='ONE')await writeFile('work/preview-objects/'+Buffer.from('resea
                     workbook = output / 'selected.xlsx'; download.value.save_as(workbook)
                     with zipfile.ZipFile(workbook) as archive:
                         sheet_names = [n for n in archive.namelist() if n.startswith('xl/worksheets/sheet') and n.endswith('.xml')]
-                        assert len(sheet_names) == 6
+                        assert len(sheet_names) == 9
                         exported_text = ''.join(archive.read(n).decode() for n in sheet_names)
                         assert 'SYNTHETIC alpha' in exported_text and 'SYNTHETIC beta' in exported_text
                         assert '2501.00680' not in exported_text
-                    results.append({'name': 'UI Excel download has six sheets and excludes unselected real-example records', 'status': 'PASS'})
+                    results.append({'name': 'UI Excel download has nine reading/audit sheets and excludes unselected real-example records', 'status': 'PASS'})
                     open_fixture()
                     with page.expect_popup() as popup:
                         page.locator('[data-report-one]').click()
@@ -192,7 +196,8 @@ if(s.revision==='ONE')await writeFile('work/preview-objects/'+Buffer.from('resea
                         page.get_by_role('button', name='导入 JSONL 记录', exact=True).click()
                     chooser.value.set_files(str(fixture_dir / 'synthetic-alpha-TWO.jsonl'))
                     page.get_by_role('heading', name='我的文献库', exact=True).wait_for()
-                    open_fixture(); page.locator('.record-copy').filter(has_text='fixture revision TWO').wait_for()
+                    open_fixture(); page.locator('.reader-points').filter(has_text='fixture revision TWO').first.wait_for()
+                    page.locator('[data-detail-tab="record"]').click(); page.locator('.record-copy').filter(has_text='fixture revision TWO').wait_for()
                     assert all('fixture revision ONE' not in value for value in page.locator('.record-copy').all_text_contents())
                     results.append({'name': 'Import of an already-viewed ID refreshes cached detail and evidence', 'status': 'PASS'})
                     page.goto(origin + '/#upload'); page.get_by_role('button', name='选择 PDF 文件', exact=True).wait_for()
@@ -231,6 +236,30 @@ if(s.revision==='ONE')await writeFile('work/preview-objects/'+Buffer.from('resea
                     assert page.locator('#sidebar').evaluate('(node)=>node.inert') is True
                     assert page.get_by_role('button', name='打开导航', exact=True).evaluate('(node)=>document.activeElement===node')
                     results.append({'name': 'Mobile composition fits width and closed navigation leaves keyboard/assistive focus order', 'status': 'PASS'})
+                    page.set_viewport_size({'width':1440,'height':1000})
+                    for record in reading_fixtures:
+                        page.goto(origin+'/#paper/'+record['id'])
+                        guide=record['reading_card']['source_review']
+                        page.get_by_role('heading',name=guide['title_zh'],exact=True).wait_for()
+                        page.locator('[data-detail-tab="reading"]').click()
+                        expect(page.locator('.reader-notice')).to_contain_text('不是规则自动摘要或独立专家金标准')
+                        expect(page.locator('.reader-quality')).to_contain_text('待用户复核')
+                        expect(page.locator('.reader-points').first).to_contain_text(guide['question'][0]['text'])
+                        page.locator('[data-reading-evidence]').first.click()
+                        assert page.locator('#evidence-inspector .inspector-quote').inner_text().strip()
+                        if record['id']=='synthetic-reading-experiment':
+                            expect(page.locator('.reader-numbers')).to_contain_text('1.80')
+                            expect(page.locator('.reader-numbers')).to_contain_text('1.79')
+                            expect(page.locator('.reader-numbers')).to_contain_text('4.2')
+                        if record['id']=='synthetic-reading-perspective':
+                            assert page.get_by_role('heading',name='主要论点',exact=True).count()==1
+                            assert page.get_by_role('heading',name='主要步骤',exact=True).count()==0
+                            assert page.get_by_role('heading',name='主要发现',exact=True).count()==0
+                        capture('reading-'+record['id']+'.png')
+                        results.append({'name':'Synthetic reading-card origin, typed sections and evidence interaction '+record['id'],'status':'PASS'})
+                    page.set_viewport_size({'width':390,'height':844})
+                    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1') is True
+                    capture('reading-mobile.png')
                     assert not errors, errors
                     results.append({'name': 'Hosted UI completes the exercised flows without uncaught browser JavaScript errors', 'status': 'PASS'})
                     browser.close()
