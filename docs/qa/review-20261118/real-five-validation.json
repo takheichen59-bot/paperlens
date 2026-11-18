@@ -180,26 +180,32 @@
     }
   ],
   "export": {
-    "version": "5e5300b22dcb4c2483e900bf49f2851f",
+    "version": "9dbe2e63423640da82f4e4af5394ce5b",
     "records": 5,
     "files": {
       "failures.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "numeric_attribution.csv": "772adb2c13bf33cad375e58bdd68e99f5128a2afeee47320b3394f0268bf0d18",
       "material_roles.csv": "865207f7d29edc7bca909ef5b7dccdb706ba9ad2efab07348877043c26cd83b6",
       "reading.jsonl": "7757a4d0ccbe87526597faf00e8b70caf070e1e6a0d4269a27271ef6ad5e44db",
-      "research-cards.xlsx": "9475f191e98a71bb6b73287cd62a6abdfc7132fd5125f3c93b23e71142f8f086",
+      "research-cards.xlsx": "fad113588e7e0266a3afa3af47a6c7123238f03db87b429a3a39b108d9719605",
       "reading-evidence.csv": "e35e5dfd2ff331905d6c305101bfb880b197dedbfa6f784b944ca42490c361f0",
       "preview.html": "72236fbf6546bedce8e1801c466588a9dbb0db434a9bc07da535610d8ac4e73c",
       "research.jsonl": "1bf5e956beed9ce727a05c3c148dca505e181ddbc98e24f7b84afa4c9b6905f6",
-      "research.xlsx": "2ffff2bb861d29f29b303395985cc857c23b69d667d397b93a00927311823393",
+      "research.xlsx": "46225a0c273acc139e9ed629dd9bff164c11d48bbfbcb602bdaa3db797352103",
       "evidence.csv": "aed06100f511cb6a421a01126304e32770247923b5f7962ea090549d1bb60812",
       "results.jsonl": "1700c0dfec923ac90c2445656552adbe7b1e80ee4396158b734fd7efb314668f",
-      "processing-report.pdf": "f9da934e021819e2a13fb7ef58f319b591b7c5416f603cd79cd2da6a5c80a803",
+      "processing-report.pdf": "5af01bd5fb200ec51416cc28bfa268d2a8b8774b4bed5890572d8b82088e7f62",
       "review.jsonl": "aa3226b44891ead9a9064a6f72ab4798700f6a9d432247a272860388200050cd",
       "research.csv": "2f47a539638e19d91a75123d49b8d736dee217b7f8f155a74455332b338e16ee"
     }
   },
   "scientific_accuracy": "NOT_INDEPENDENTLY_EVALUATED",
   "reader_timed_study": "NOT_EXECUTED",
-  "llm": "NOT_CONFIGURED_NOT_EXECUTED"
+  "llm": "NOT_CONFIGURED_NOT_EXECUTED",
+  "pdf_delivery": {
+    "runtime": "PyMuPDF 1.28.2",
+    "pages": 11,
+    "body_font_pt": 11,
+    "card_pages_max": 2
+  }
 }

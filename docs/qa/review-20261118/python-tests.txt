@@ -71,6 +71,6 @@ test_11_comparison_export_and_gap_do_not_silently_drop_missing_paper (test_workf
 test_12_flat_spreadsheet_columns_guard_whitespace_formula (test_workflow_repairs.WorkflowTests.test_12_flat_spreadsheet_columns_guard_whitespace_formula) ... ok
 
 ----------------------------------------------------------------------
-Ran 69 tests in 4.519s
+Ran 69 tests in 4.196s
 
 OK

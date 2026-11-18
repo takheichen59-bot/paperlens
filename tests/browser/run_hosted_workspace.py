@@ -259,6 +259,7 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                         results.append({'name':'Synthetic reading-card origin, typed sections and evidence interaction '+record['id'],'status':'PASS'})
                     page.set_viewport_size({'width':390,'height':844})
                     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1') is True
+                    expect(page.locator('#sidebar')).not_to_be_in_viewport()
                     capture('reading-mobile.png')
                     assert not errors, errors
                     results.append({'name': 'Hosted UI completes the exercised flows without uncaught browser JavaScript errors', 'status': 'PASS'})

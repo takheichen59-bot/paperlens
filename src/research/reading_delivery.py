@@ -227,16 +227,16 @@ def _overview_html(cards, *, portable=False):
 
 
 PDF_CSS = """
-* {box-sizing:border-box;} body {font-family:sans-serif;font-size:9.4pt;line-height:1.38;color:#172b3b;}
+* {box-sizing:border-box;} body {font-family:sans-serif;font-size:11pt;line-height:1.4;color:#172b3b;}
 h1 {font-size:18pt;line-height:1.2;margin:0 0 6pt;font-weight:bold;color:#163d4c;}
 h2.subtitle {font-size:13pt;line-height:1.3;margin:0 0 6pt;color:#315c61;}
-h3 {font-size:10.3pt;line-height:1.3;margin:10pt 0 3pt;color:#175861;page-break-after:avoid;}
+h3 {font-size:12pt;line-height:1.3;margin:10pt 0 3pt;color:#175861;page-break-after:avoid;}
 p {margin:3pt 0 5pt;} .eyebrow {font-size:8pt;letter-spacing:.7pt;color:#557b7b;margin:0 0 7pt;}
 .identity {font-size:8.3pt;color:#536977;margin:3pt 0 7pt;}
 .notice {font-size:8pt;line-height:1.4;background:#edf5f3;padding:7pt;margin:5pt 0 9pt;}
 .muted {color:#61727c;} .field {page-break-inside:avoid;} .field li {margin:2pt 0 4pt;}
 ul,ol {margin:3pt 0 5pt;padding-left:17pt;} a {color:#207073;text-decoration:none;}
-table {border-collapse:collapse;width:100%;font-size:8.3pt;line-height:1.4;}
+table {border-collapse:collapse;width:100%;font-size:10pt;line-height:1.4;}
 th {background:#e7f0ee;color:#244f56;font-weight:bold;text-align:left;}
 th,td {border-bottom:.5pt solid #cbdcda;padding:6pt;vertical-align:top;}
 tr {page-break-inside:avoid;}
