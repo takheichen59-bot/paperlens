@@ -1,0 +1,38 @@
+{
+  "schema_version": "paperlens-report-font-1",
+  "filename": "PaperLens-Report-Regular.ttf",
+  "family": "PaperLens Report Regular",
+  "weight": 400,
+  "format": "truetype",
+  "bytes": 11004296,
+  "sha256": "01171f37b3d9662af76cd7ccbc35f5072fd31bf0daad5050a214ca043a08b7ba",
+  "license": "OFL-1.1",
+  "unicode_characters": 34423,
+  "source": [
+    {
+      "name": "NotoSansSC-variable.ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
+      "bytes": 17772300,
+      "sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da"
+    },
+    {
+      "name": "NotoSans-variable.ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosans/NotoSans%5Bwdth,wght%5D.ttf",
+      "bytes": 2049096,
+      "sha256": "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d"
+    },
+    {
+      "name": "NotoSansMath-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansmath/NotoSansMath-Regular.ttf",
+      "bytes": 1015396,
+      "sha256": "3f495fe933c06786e4d5f6d86b8ee70b6753a68ee3b9d87528726de0f6e2c47d"
+    }
+  ],
+  "license_files": [
+    "third_party/REPORT_FONT_NotoSansSC_OFL.txt",
+    "third_party/REPORT_FONT_NotoSans_OFL.txt",
+    "third_party/REPORT_FONT_NotoSansMath_OFL.txt"
+  ],
+  "preparation": "fontTools 4.61.1; NotoSansSC wght=400; missing Latin/Greek/punctuation/subscripts from NotoSans wght=400 wdth=100; remaining NotoSansMath characters; decomposed outlines scaled to base UPEM; modified family renamed PaperLens Report. GSUB removed to keep source Unicode mapping literal and avoid fontkit numeric alternate extraction errors.",
+  "delivery": "Privately seed font bytes through authenticated /api/report-font; not embedded in Worker JavaScript or committed as full font."
+}

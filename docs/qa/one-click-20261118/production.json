@@ -1,0 +1,209 @@
+{
+  "scope": "ACTUAL_PRIVATE_PRODUCTION_HTTP_BATCH_WITH_NODE_PDFJS",
+  "browser_interaction": "NOT_THIS_RUN",
+  "production_authentication": "SERVER_BEARER_ONLY_NOT_BROWSER_LOGIN",
+  "scientific_accuracy": "NOT_INDEPENDENTLY_EVALUATED",
+  "llm": "NOT_CONFIGURED_NOT_EXECUTED",
+  "health": {
+    "status": "ok",
+    "product": "PaperLens",
+    "version": "0.4.0-batch",
+    "storage": true,
+    "parser": "PDF.js in browser",
+    "record_format": "research-1",
+    "llm": "NOT_CONFIGURED",
+    "scientific_accuracy": "NOT_INDEPENDENTLY_EVALUATED",
+    "seed_count": 5
+  },
+  "batch_id": "759cab7e-7897-4bd6-a7f4-dab53f3bac14",
+  "query": "BiFeO3 nanoparticles",
+  "source_scope": "REAL_UPSTREAM_METADATA",
+  "status": "complete",
+  "counts": {
+    "total": 5,
+    "done": 5,
+    "duplicates": 0,
+    "failed": 0,
+    "pdfs": 5,
+    "pending": 0
+  },
+  "error": null,
+  "items": [
+    {
+      "id": "2402.13260v1",
+      "state": "done",
+      "error": null,
+      "pdf_hash": "484d7be7ded3644637f951cd0c92b9f86078b18888366542957019ac8e94fc42",
+      "reading_version": "reading-evidence-browser-v2.1",
+      "field_counts": {
+        "question": 1,
+        "methods": 0,
+        "findings": 0,
+        "conclusions": 0,
+        "limitations": 2
+      }
+    },
+    {
+      "id": "cond-mat/0701513v1",
+      "state": "done",
+      "error": null,
+      "pdf_hash": "7aaf96efd0c99b9100d3c0bdc63bfa8d861aa08bb70f5851e7385d1b555ca3ef",
+      "reading_version": "reading-evidence-browser-v2.1",
+      "field_counts": {
+        "question": 2,
+        "methods": 5,
+        "findings": 3,
+        "conclusions": 2,
+        "limitations": 0
+      }
+    },
+    {
+      "id": "1011.3398v1",
+      "state": "done",
+      "error": null,
+      "pdf_hash": "b408b801acfb71fe24c0fd347f1d3639287a00cee7f734312118fcff305279c8",
+      "reading_version": "reading-evidence-browser-v2.1",
+      "field_counts": {
+        "question": 2,
+        "methods": 3,
+        "findings": 3,
+        "conclusions": 0,
+        "limitations": 0
+      }
+    },
+    {
+      "id": "2004.06028v1",
+      "state": "done",
+      "error": null,
+      "pdf_hash": "b0372adbe22daa00895df67ab8801574ad3b569730e6faa5085c5a32c4e949eb",
+      "reading_version": "reading-evidence-browser-v2.1",
+      "field_counts": {
+        "question": 2,
+        "methods": 4,
+        "findings": 3,
+        "conclusions": 1,
+        "limitations": 0
+      }
+    },
+    {
+      "id": "1805.06409v3",
+      "state": "done",
+      "error": null,
+      "pdf_hash": "e36ae02a6aa88319062271db4843e7c9a27167b19f2cbd488b33b1d4854b0d47",
+      "reading_version": "reading-evidence-browser-v2.1",
+      "field_counts": {
+        "question": 2,
+        "methods": 3,
+        "findings": 3,
+        "conclusions": 1,
+        "limitations": 1
+      }
+    }
+  ],
+  "downloads": [
+    {
+      "name": "research.xlsx",
+      "bytes": 1767318,
+      "sha256": "1d4c2bd4dd3f9652b1ad4585d278a770bb1148f4de3d1e49bdc9173a4904e356"
+    },
+    {
+      "name": "research.jsonl",
+      "bytes": 1111685,
+      "sha256": "e1f9f51f805a440f4ef5aac8fb1d85ee43a2cd8e41aa0f9ea9aa216ff21bc811"
+    },
+    {
+      "name": "reading-evidence.csv",
+      "bytes": 540397,
+      "sha256": "e656fbfb4f743fb954173e4f1c131eed9203a668b345dbff094ba90b17fe17a4"
+    },
+    {
+      "name": "report.pdf",
+      "bytes": 6698787,
+      "sha256": "219a4ddfbbea4f4e3e5275f67707240ed4f7a04e578c83f89800a9ada5fa91e0"
+    },
+    {
+      "name": "PaperLens-batch.zip",
+      "bytes": 16960665,
+      "sha256": "95e5ebf0810aa77a30d41fb5242ca7c736cd35334b163b09f33be0ec268cdebd"
+    }
+  ],
+  "artifact_validation": {
+    "zip_crc": "PASS",
+    "originals": [
+      {
+        "id": "2402.13260v1",
+        "pages": 35,
+        "bytes": 3927697,
+        "sha256": "484d7be7ded3644637f951cd0c92b9f86078b18888366542957019ac8e94fc42"
+      },
+      {
+        "id": "cond-mat/0701513v1",
+        "pages": 16,
+        "bytes": 630060,
+        "sha256": "7aaf96efd0c99b9100d3c0bdc63bfa8d861aa08bb70f5851e7385d1b555ca3ef"
+      },
+      {
+        "id": "1011.3398v1",
+        "pages": 4,
+        "bytes": 180304,
+        "sha256": "b408b801acfb71fe24c0fd347f1d3639287a00cee7f734312118fcff305279c8"
+      },
+      {
+        "id": "2004.06028v1",
+        "pages": 5,
+        "bytes": 1569245,
+        "sha256": "b0372adbe22daa00895df67ab8801574ad3b569730e6faa5085c5a32c4e949eb"
+      },
+      {
+        "id": "1805.06409v3",
+        "pages": 13,
+        "bytes": 523179,
+        "sha256": "e36ae02a6aa88319062271db4843e7c9a27167b19f2cbd488b33b1d4854b0d47"
+      }
+    ],
+    "pdf_pages": 12,
+    "pdf_bytes": 6698787,
+    "bookmarks": 6,
+    "text_outside_pages": [],
+    "xlsx_sheets": [
+      "阅读卡片",
+      "关键数值与条件",
+      "阅读证据映射",
+      "批次执行",
+      "科研汇总",
+      "原始自动结果",
+      "材料角色",
+      "数值归属",
+      "证据",
+      "说明"
+    ],
+    "records": 5,
+    "all_unreviewed": true,
+    "source_review_present": false,
+    "completed_records_unchanged_on_retry": [
+      {
+        "id": "2402.13260v1",
+        "unchanged": true
+      },
+      {
+        "id": "2004.06028v1",
+        "unchanged": true
+      },
+      {
+        "id": "1805.06409v3",
+        "unchanged": true
+      }
+    ]
+  },
+  "earlier_attempt": {
+    "status": "partial",
+    "completed": 3,
+    "failed": 2,
+    "error": "record write HTTP400, exact transient cause unconfirmed",
+    "recovery": "retry_failed_only",
+    "completed_records_preserved": true
+  },
+  "site_version": 6,
+  "site_source_commit": "a4f86fb553c89f039d5b34c081a0ecc0abc035dd",
+  "github_code_commit": "98f246effb4bdb4959bc18c313f1fc41555275cb"
+}

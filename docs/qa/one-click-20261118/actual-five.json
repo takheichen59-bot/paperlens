@@ -1,0 +1,422 @@
+{
+  "scope": "ACTUAL_PDFJS_TEXT_EXTRACTION_AND_GENERIC_RULES",
+  "browser_interaction": "NOT_THIS_RUN",
+  "scientific_accuracy": "NOT_INDEPENDENTLY_EVALUATED",
+  "llm": "NOT_CONFIGURED_NOT_EXECUTED",
+  "success": 5,
+  "failed": 0,
+  "checks": [
+    {
+      "id": "2501.00680v1",
+      "pdf_hash": "1f88d96cfa8bc36595ac00eaebd42db85fbcc1eb35733058e2399906aa0fb7cd",
+      "pages": 11,
+      "bytes": 6027220,
+      "reading_sentences": 85,
+      "objects": [
+        {
+          "name": "BiFeO3",
+          "role": "study_subject"
+        },
+        {
+          "name": "perovskite",
+          "role": "uncertain"
+        },
+        {
+          "name": "Bi4T",
+          "role": "background"
+        },
+        {
+          "name": "FeO2",
+          "role": "component_or_termination"
+        }
+      ],
+      "method_routes": [
+        "计算与模型"
+      ],
+      "numeric_candidates": 5,
+      "fields": {
+        "question": {
+          "before_candidates": 1,
+          "after_candidates": 2,
+          "status": "candidate_extracted"
+        },
+        "methods": {
+          "before_candidates": 1,
+          "after_candidates": 3,
+          "status": "candidate_extracted"
+        },
+        "findings": {
+          "before_candidates": 1,
+          "after_candidates": 3,
+          "status": "candidate_extracted"
+        },
+        "conclusions": {
+          "before_candidates": 1,
+          "after_candidates": 2,
+          "status": "candidate_extracted"
+        },
+        "limitations": {
+          "before_candidates": 0,
+          "after_candidates": 0,
+          "status": "not_identified"
+        }
+      },
+      "before_core": {
+        "methods": 1679,
+        "findings": 845,
+        "conclusions": 789
+      },
+      "after_core": {
+        "methods": 351,
+        "findings": 480,
+        "conclusions": 302
+      },
+      "source_review_present": false,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "2501.00591v1",
+      "pdf_hash": "a4b49de0f407be3444b089a4a9b7955319ad55634929f802c18044461c0060cf",
+      "pages": 7,
+      "bytes": 8110924,
+      "reading_sentences": 79,
+      "objects": [
+        {
+          "name": "CoxNbSe2",
+          "role": "study_subject"
+        },
+        {
+          "name": "Co0.28NbSe2",
+          "role": "study_subject_variant"
+        },
+        {
+          "name": "Co1/3NbSe2",
+          "role": "study_subject_variant"
+        },
+        {
+          "name": "NbSe2",
+          "role": "uncertain"
+        },
+        {
+          "name": "silica",
+          "role": "uncertain"
+        },
+        {
+          "name": "CoI2",
+          "role": "uncertain"
+        },
+        {
+          "name": "B/Co2",
+          "role": "uncertain"
+        }
+      ],
+      "method_routes": [
+        "样品制备",
+        "测量与表征",
+        "比较与验证"
+      ],
+      "numeric_candidates": 5,
+      "fields": {
+        "question": {
+          "before_candidates": 0,
+          "after_candidates": 2,
+          "status": "candidate_extracted"
+        },
+        "methods": {
+          "before_candidates": 0,
+          "after_candidates": 6,
+          "status": "candidate_extracted"
+        },
+        "findings": {
+          "before_candidates": 0,
+          "after_candidates": 3,
+          "status": "candidate_extracted"
+        },
+        "conclusions": {
+          "before_candidates": 0,
+          "after_candidates": 0,
+          "status": "not_identified"
+        },
+        "limitations": {
+          "before_candidates": 0,
+          "after_candidates": 0,
+          "status": "not_identified"
+        }
+      },
+      "before_core": {
+        "methods": 0,
+        "findings": 446,
+        "conclusions": 0
+      },
+      "after_core": {
+        "methods": 1078,
+        "findings": 464,
+        "conclusions": 0
+      },
+      "source_review_present": false,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "2501.00561v1",
+      "pdf_hash": "5f1c9de042bdb4020a8977dc1889b9be906c24c1aea556d47994ce64a89d6f77",
+      "pages": 9,
+      "bytes": 4348948,
+      "reading_sentences": 142,
+      "objects": [
+        {
+          "name": "Cr → β-Ga2O3",
+          "role": "impurity_in_host"
+        },
+        {
+          "name": "Ga2O3",
+          "role": "study_subject"
+        },
+        {
+          "name": "Al2O3",
+          "role": "uncertain"
+        },
+        {
+          "name": "alumina",
+          "role": "uncertain"
+        },
+        {
+          "name": "O2",
+          "role": "uncertain"
+        },
+        {
+          "name": "CrO2",
+          "role": "uncertain"
+        },
+        {
+          "name": "Cr2O3",
+          "role": "uncertain"
+        },
+        {
+          "name": "GaN",
+          "role": "uncertain"
+        },
+        {
+          "name": "AlN",
+          "role": "uncertain"
+        },
+        {
+          "name": "Ga2O3.9",
+          "role": "uncertain"
+        },
+        {
+          "name": "GA2O3",
+          "role": "uncertain"
+        },
+        {
+          "name": "AK261",
+          "role": "uncertain"
+        },
+        {
+          "name": "Cr0Ga",
+          "role": "uncertain"
+        }
+      ],
+      "method_routes": [
+        "计算与模型",
+        "样品制备",
+        "测量与表征"
+      ],
+      "numeric_candidates": 32,
+      "fields": {
+        "question": {
+          "before_candidates": 0,
+          "after_candidates": 2,
+          "status": "candidate_extracted"
+        },
+        "methods": {
+          "before_candidates": 2,
+          "after_candidates": 7,
+          "status": "candidate_extracted"
+        },
+        "findings": {
+          "before_candidates": 1,
+          "after_candidates": 3,
+          "status": "candidate_extracted"
+        },
+        "conclusions": {
+          "before_candidates": 0,
+          "after_candidates": 2,
+          "status": "candidate_extracted"
+        },
+        "limitations": {
+          "before_candidates": 0,
+          "after_candidates": 0,
+          "status": "not_identified"
+        }
+      },
+      "before_core": {
+        "methods": 2740,
+        "findings": 351,
+        "conclusions": 1312
+      },
+      "after_core": {
+        "methods": 1230,
+        "findings": 603,
+        "conclusions": 359
+      },
+      "source_review_present": false,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "2501.00447v1",
+      "pdf_hash": "c5f176d2ad680dbce590b751c2679bec832b313d1bb6d5fbcb2562a87c63106b",
+      "pages": 9,
+      "bytes": 836130,
+      "reading_sentences": 93,
+      "objects": [
+        {
+          "name": "The Physics of Quantum 2.0: Challenges in understanding Quantum Matter",
+          "role": "research_topic_not_sample"
+        }
+      ],
+      "method_routes": [],
+      "numeric_candidates": 0,
+      "fields": {
+        "question": {
+          "before_candidates": 0,
+          "after_candidates": 2,
+          "status": "candidate_extracted"
+        },
+        "methods": {
+          "before_candidates": 1,
+          "after_candidates": 0,
+          "status": "not_applicable"
+        },
+        "findings": {
+          "before_candidates": 0,
+          "after_candidates": 0,
+          "status": "not_applicable"
+        },
+        "conclusions": {
+          "before_candidates": 0,
+          "after_candidates": 0,
+          "status": "not_identified"
+        },
+        "limitations": {
+          "before_candidates": 0,
+          "after_candidates": 0,
+          "status": "not_identified"
+        }
+      },
+      "before_core": {
+        "methods": 0,
+        "findings": 1180,
+        "conclusions": 0
+      },
+      "after_core": {
+        "methods": 0,
+        "findings": 0,
+        "conclusions": 0
+      },
+      "source_review_present": false,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "2501.00423v1",
+      "pdf_hash": "7bfd69c413d3aba5c14690b45e0b42f621f693d0cb9fa9cb64168d795f27e3d2",
+      "pages": 16,
+      "bytes": 974554,
+      "reading_sentences": 77,
+      "objects": [
+        {
+          "name": "Cs2AgInCl6",
+          "role": "study_subject"
+        },
+        {
+          "name": "Cs2NaInCl6",
+          "role": "study_subject"
+        },
+        {
+          "name": "perovskite",
+          "role": "material_family"
+        },
+        {
+          "name": "halide perovskite",
+          "role": "material_family"
+        },
+        {
+          "name": "InCl3",
+          "role": "uncertain"
+        },
+        {
+          "name": "hydrochloric acid",
+          "role": "uncertain"
+        },
+        {
+          "name": "HCl",
+          "role": "uncertain"
+        },
+        {
+          "name": "isopropanol",
+          "role": "uncertain"
+        },
+        {
+          "name": "ethanol",
+          "role": "uncertain"
+        },
+        {
+          "name": "APbX3",
+          "role": "uncertain"
+        },
+        {
+          "name": "InCl6",
+          "role": "uncertain"
+        },
+        {
+          "name": "Cs2Ag0.05Na0.95BiCl6",
+          "role": "uncertain"
+        }
+      ],
+      "method_routes": [
+        "样品制备",
+        "测量与表征",
+        "比较与验证"
+      ],
+      "numeric_candidates": 8,
+      "fields": {
+        "question": {
+          "before_candidates": 0,
+          "after_candidates": 2,
+          "status": "candidate_extracted"
+        },
+        "methods": {
+          "before_candidates": 0,
+          "after_candidates": 6,
+          "status": "candidate_extracted"
+        },
+        "findings": {
+          "before_candidates": 0,
+          "after_candidates": 3,
+          "status": "candidate_extracted"
+        },
+        "conclusions": {
+          "before_candidates": 0,
+          "after_candidates": 0,
+          "status": "not_identified"
+        },
+        "limitations": {
+          "before_candidates": 0,
+          "after_candidates": 2,
+          "status": "candidate_extracted"
+        }
+      },
+      "before_core": {
+        "methods": 0,
+        "findings": 363,
+        "conclusions": 0
+      },
+      "after_core": {
+        "methods": 864,
+        "findings": 347,
+        "conclusions": 0
+      },
+      "source_review_present": false,
+      "review_status": "unreviewed"
+    }
+  ]
+}

@@ -7,7 +7,7 @@ from __future__ import annotations
 import hashlib
 import re
 
-VERSION = 'reading-evidence-v1'
+VERSION = 'reading-evidence-v1.1'
 SCHEMA = 'paperlens-reading-1'
 JOIN_WORDS = set('distributions arrangement arrangements previously floating substitutional phonon observations coupling groundstates commensurate incommensurate networking measurements measurement experimental experiments experiment computational computation calculations calculation photoluminescence spectroscopy temperature dependence nanoparticles nanoparticle ferroelectric polarization antiferromagnetic centrosymmetric noncentrosymmetric synthesized synthesis characterizes characterization configurations configuration interactions interaction simulation simulations relaxation implementation investigated investigate electronic structural spectroscopy properties consequently corresponding comparison approximately superconductivity intercalation irreducible representation'.split())
 METHODS = {
@@ -19,18 +19,22 @@ METHODS = {
 OWN = re.compile(r'\b(?:we|our|this (?:work|study|paper)|here we)\b', re.I)
 PRIOR = re.compile(r'\b(?:previous(?:ly)?|prior|earlier|et al\.|collaborators|has been reported|have been reported|best known)\b', re.I)
 RESULT = re.compile(r'\b(?:observ\w*|find|found|show\w*|reveal\w*|demonstrat\w*|exhibit\w*|confirm\w*|stabili[sz]\w*|suggest\w*|possesses|correspond\w*)\b', re.I)
-PREDICATE = re.compile(r'\b(?:is|are|was|were|has|have|can|cannot|may|will|could|should|do|does|did|observ\w*|find|found|show\w*|report\w*|reveal\w*|demonstrat\w*|confirm\w*|suggest\w*|exhibit\w*|lead\w*|stabili[sz]\w*|possess\w*|outline|discuss|synthesi[sz]\w*|calculate|use|used|performed|remain\w*|induce\w*|drive\w*|simulat\w*|promotes|supports|indicates|corroborates|provides|affects|contains|describes|uses|stabilizes|aim\w*|turn\w*|obtain\w*|verif\w*|characteriz\w*|focus\w*|make\w*|yield\w*)\b', re.I)
+PREDICATE = re.compile(r'\b(?:is|are|was|were|has|have|can|cannot|may|will|could|should|do|does|did|observ\w*|find|found|show\w*|report\w*|reveal\w*|demonstrat\w*|confirm\w*|suggest\w*|exhibit\w*|lead\w*|stabili[sz]\w*|possess\w*|outline|discuss|synthesi[sz]\w*|calculate|use|used|prepared|grown|measur\w*|conduct\w*|collect\w*|record\w*|refin\w*|perform\w*|anneal\w*|relax\w*|optimi[sz]\w*|remain\w*|induce\w*|drive\w*|simulat\w*|promotes|supports|indicates|corroborates|provides|affects|contains|describes|uses|stabilizes|aim\w*|turn\w*|obtain\w*|verif\w*|characteriz\w*|focus\w*|make\w*|yield\w*)\b', re.I)
 ORPHAN = re.compile(r'^(?:as (?:a|an|the)\b|temperature dependence\b|and\b|which\b|that\b|with\b|of\b|to\b|because\b|respectively\b)', re.I)
 QUANTITIES = re.compile(r'(?<![\w.])([−-]?\d+(?:\.\d+)?)\s*(meV|eV|GPa|MPa|nm|μm|µm|mm|cm[−-]?1|K|°C|ps|fs|Å|%)(?![A-Za-z])')
 FIELD_LABELS = {'question':'研究问题', 'methods':'方法路线', 'findings':'主要发现', 'conclusions':'作者结论', 'limitations':'作者明确局限'}
 
 
-def normalize_text(text):
+def normalize_text(text, *, browser_compatible=False):
     """Reflow prose, joining only known broken words; retain ambiguous hyphens."""
     def join(match):
         a, b = match.group(1), match.group(2)
         return a+b if (a+b).lower() in JOIN_WORDS else a+'-'+b
     text = re.sub(r'([A-Za-zα-ωΑ-Ω]+)-[ \t]*\n\s*([A-Za-zα-ωΑ-Ω]+)', join, text)
+    if browser_compatible:
+        # ECMAScript whitespace excludes PDF control characters U+001C..U+001F.
+        whitespace=r'[\t\n\v\f\r \u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]'
+        return re.sub(whitespace+'+', ' ', text).strip(' ')
     return re.sub(r'\s+', ' ', text).strip()
 
 
@@ -57,8 +61,8 @@ def sentences(text):
     if a<len(text):yield a,len(text.rstrip())
 
 
-def complete_sentence(text):
-    return not re.search(r'(?:Fig|Sec|Ref|Dr)\.$',text) and len(text.split())>=4 and len(text)>24 and bool(re.search(r'[.!?][”\'"]?$|(?<![0-9])[.!?][0-9,–−-]+$',text)) and not re.match(r'^(?:And|Which|That|Of)\b',text) and not re.match(r'^[a-z]',text) and bool(PREDICATE.search(text))
+def complete_sentence(text, *, browser_compatible=False):
+    return not re.search(r'(?:Fig|Sec|Ref|Dr)\.$',text) and len(text.split())>=4 and len(text)>24 and bool(re.search(r'[.!?][”\'"]?$|(?<![0-9])[.!?][0-9,–−-]+$',text)) and not re.match(r'^(?:And|Which|That|Of)\b',text) and not re.match(r'^[a-z]',text) and bool(PREDICATE.search(text) or browser_compatible and re.search(r'\b(?:calculat\w*|address\w*)\b',text,re.I))
 
 
 def _heading(text):
@@ -177,8 +181,9 @@ def validate_reading(record,layer=None):
     layer=layer or record.get('reading_card')
     if layer is None:return record
     if layer.get('schema_version')!=SCHEMA or layer['pdf_hash']!=record['pdf_hash'] or layer['review_status']!='unreviewed':raise ValueError('Invalid reading layer identity')
-    if layer.get('version') not in {VERSION,'reading-evidence-browser-v1'} or layer.get('paper_id')!=record['paper_id'] or not isinstance(layer.get('article_type',{}).get('label'),str):raise ValueError('Invalid reading metadata')
+    if layer.get('version') not in {VERSION,'reading-evidence-v1','reading-evidence-browser-v1','reading-evidence-browser-v2','reading-evidence-browser-v2.1'} or layer.get('paper_id')!=record['paper_id'] or not isinstance(layer.get('article_type',{}).get('label'),str):raise ValueError('Invalid reading metadata')
     if set(layer.get('fields',{}))!=set(FIELD_LABELS):raise ValueError('Missing reading fields')
+    browser_compatible=layer['version'].startswith('reading-evidence-browser-')
     raw={b['block_id']:b for b in record['raw_blocks']};paragraphs={p['id']:p for p in layer['paragraphs']};evidence={s['id']:s for s in layer['evidence']}
     if len(paragraphs)!=len(layer['paragraphs']) or len(evidence)!=len(layer['evidence']):raise ValueError('Duplicate reading evidence')
     def source(part):
@@ -188,12 +193,12 @@ def validate_reading(record,layer=None):
         return b['text'][a:z]
     for p in paragraphs.values():
         chunks=[source(part) for part in p['parts']]
-        if normalize_text('\n'.join(chunks))!=p['text']:raise ValueError('Reading normalization/source mismatch')
+        if normalize_text('\n'.join(chunks),browser_compatible=browser_compatible)!=p['text']:raise ValueError('Reading normalization/source mismatch')
     for s in evidence.values():
         p=paragraphs[s['paragraph_id']]
-        if p['text'][s['start']:s['end']]!=s['text'] or not complete_sentence(s['text']):raise ValueError('Incomplete or mismatched reading sentence')
+        if p['text'][s['start']:s['end']]!=s['text'] or not complete_sentence(s['text'],browser_compatible=browser_compatible):raise ValueError('Incomplete or mismatched reading sentence')
         chunks=[source(v) for v in s['parts']]
-        if normalize_text('\n'.join(chunks))!=s['text'] or s['pages']!=sorted({v['page'] for v in s['parts']}):raise ValueError('Reading sentence source map mismatch')
+        if normalize_text('\n'.join(chunks),browser_compatible=browser_compatible)!=s['text'] or s['pages']!=sorted({v['page'] for v in s['parts']}):raise ValueError('Reading sentence source map mismatch')
     for field in layer['fields'].values():
         if any(eid not in evidence for eid in field['evidence_ids']):raise ValueError('Reading field lacks evidence')
     review=layer.get('source_review')

@@ -18,7 +18,7 @@ from .attribution import build_attribution, validate_attribution
 from .reading import build_reading, validate_reading
 from .source_reviews import attach_source_review
 
-VERSION = "scientific-evidence-v1.3"
+VERSION = "scientific-evidence-v1.4"
 
 
 class ScientificBaselineAdapter(BaseExtractor):
