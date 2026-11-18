@@ -151,20 +151,20 @@ def _number_table(card, *, portable=False):
         return "".join(out) + '<p class="muted">' + reason + "</p></section>"
     if portable:
         out.append('<div class="table-scroll">')
-    out.append('<table class="number-table"><thead><tr><th class="object">对象 / 物理量</th><th class="value">值与单位</th><th>条件 / 归属 / 来源</th></tr></thead><tbody>')
+    out.append('<table class="number-table"><thead><tr><th class="object">对象 / 物理量</th><th class="value">值与单位</th><th class="conditions">条件 / 归属 / 来源</th></tr></thead><tbody>')
     for n in numbers:
         conditions = _text(n.get("conditions"))
         if n.get("comparison_baseline"):
             conditions += "；比较基准：" + _text(n["comparison_baseline"])
         out.append('<tr><td class="object">' + escape(_text(n.get("object"))) + "<br/>" + escape(_text(n.get("quantity"))) +
                    '</td><td class="value">' + escape(_text(n.get("value")) + " " + _text(n.get("unit"))) +
-                   "</td><td>" + escape(conditions) + "<br/>" + escape(_text(n.get("ownership"))) + " " +
+                   '</td><td class="conditions">' + escape(conditions) + "<br/>" + escape(_text(n.get("ownership"))) + " " +
                    _citation(card, n, portable) + "</td></tr>")
     return "".join(out) + "</tbody></table>" + ("</div>" if portable else "") + "</section>"
 
 
 def _card_html(card, *, portable=False, part=None):
-    origin = "助手来源复核 · assistant_source_review" if card["assisted"] else "规则候选 · 未执行助手来源复核"
+    origin = "助手来源复核导读" if card["assisted"] else "规则候选 · 未执行助手来源复核"
     out = ['<article class="card" id="paper-' + escape(card["id"], quote=True) + '">',
            '<p class="eyebrow">PAPERLENS · 研究阅读卡片</p>',
            "<h1>" + escape(card["title"]) + "</h1>"]
@@ -240,7 +240,7 @@ table {border-collapse:collapse;width:100%;font-size:8.3pt;line-height:1.4;}
 th {background:#e7f0ee;color:#244f56;font-weight:bold;text-align:left;}
 th,td {border-bottom:.5pt solid #cbdcda;padding:6pt;vertical-align:top;}
 tr {page-break-inside:avoid;}
-.number-table .object {width:31%;} .number-table .value {width:14%;}
+.number-table {table-layout:fixed;} .number-table .object {width:150pt;} .number-table .value {width:70pt;} .number-table .conditions {width:263pt;}
 .overview-table .paper {width:29%;} .overview-table .route {width:34%;} .overview-table .core {width:37%;}
 .overview-table {font-size:8.3pt;} .source-link {font-size:7.3pt;color:#61727c;margin-top:10pt;}
 .lead {font-size:10pt;margin:8pt 0;} .citation {font-size:8pt;color:#286b6c;white-space:nowrap;} .continuation {font-size:8pt;margin-top:16pt;}

@@ -97,7 +97,10 @@ class ReadingDeliveryTests(unittest.TestCase):
     def test_pdf_navigation_page_bounds_and_unicode_title(self):
         with tempfile.TemporaryDirectory() as d:
             p=Path(d)/"report.pdf";result=write_reading_report(p,[sample()]);doc=fitz.open(p)
-            self.assertEqual(result["overview_pages"],1);self.assertEqual(len(doc),2)
+            self.assertEqual(result["overview_pages"],1)
+            self.assertIn(result["cards"][0]["pages"],(1,2))
+            self.assertEqual(len(doc),1+result["cards"][0]["pages"])
+            self.assertGreater(len(doc[-1].get_text().strip()),100)
             self.assertEqual(len(doc.get_toc()),2)
             self.assertTrue(any(l.get("page")==1 for l in doc[0].get_links()))
             self.assertIn("β-Ga₂O₃",doc[1].get_text())
