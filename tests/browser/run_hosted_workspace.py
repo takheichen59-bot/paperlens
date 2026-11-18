@@ -6,6 +6,7 @@ Managed Sites preview must use its own relay; this runner does not bypass it.
 """
 from __future__ import annotations
 import argparse
+import base64
 import hashlib
 import json
 import os
@@ -79,6 +80,17 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
         (project / 'generate-browser-fixtures.mjs').write_text(generator)
         subprocess.run(['node', 'generate-browser-fixtures.mjs'], cwd=project, check=True)
         reading_fixtures=json.loads((fixture_dir/'reading-specs.json').read_text())
+        # Small OFL test font; production's complete static font is kept in private R2.
+        font=(ROOT/'tests/assets/report-ci.ttf').read_bytes();font_sha=hashlib.sha256(font).hexdigest()
+        font_manifest=json.loads((project/'seed/report-font.json').read_text());font_manifest.update({'bytes':len(font),'sha256':font_sha,'test_scope':'SYNTHETIC_ENGINEERING_UI_FONT'})
+        (project/'seed/report-font.json').write_text(json.dumps(font_manifest))
+        (project/'work/preview-objects'/base64.urlsafe_b64encode(('batches/assets/'+font_sha+'.font').encode()).decode().rstrip('=')).write_bytes(font)
+        batch_pdfs={}
+        for number in range(1,6):
+            d=fitz.open();p=d.new_page();y=45
+            for text,head in [(f'SYNTHETIC batch {number}',True),*base_rows[1:]]:
+                p.insert_textbox(fitz.Rect(45,y,550,y+58),text,fontsize=14 if head else 11);y+=40 if head else 65
+            batch_pdfs[f'9999.0000{number}v1']=d.tobytes();d.close()
         subprocess.run(['node', 'build-workspace.mjs'], cwd=project, check=True)
         invalid = fixture_dir / 'invalid.pdf'; invalid.write_bytes(b'This is a SYNTHETIC invalid PDF fixture, not a paper.')
         with socket.socket() as sock:
@@ -161,16 +173,13 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                         assert '2501.00680' not in exported_text
                     results.append({'name': 'UI Excel download has nine reading/audit sheets and excludes unselected real-example records', 'status': 'PASS'})
                     open_fixture()
-                    with page.expect_popup() as popup:
+                    with page.expect_download(timeout=60000) as generated_pdf:
                         page.locator('[data-report-one]').click()
-                    report_page = popup.value; report_page.wait_for_load_state()
-                    report_path = output / 'synthetic-processing-report.pdf'
-                    report_page.pdf(path=str(report_path), format='A4', print_background=True)
+                    report_path=output/'synthetic-processing-report.pdf';generated_pdf.value.save_as(report_path)
                     with fitz.open(report_path) as document:
-                        assert len(document) >= 1
+                        assert len(document)>=2
                         assert 'SYNTHETIC' in ''.join(p.get_text() for p in document)
-                    report_page.close()
-                    results.append({'name': 'UI report renders as a real browser-generated PDF from labelled synthetic data', 'status': 'PASS'})
+                    results.append({'name':'UI directly downloads a selectable PDF with a fixed reading framework, without a print popup','status':'PASS'})
                     page.locator('.detail-tabs [data-detail-tab="evidence"]').click()
                     page.locator('.evidence-entry').first.wait_for()
                     page.locator('.detail-tabs [data-detail-tab="record"]').click()
@@ -261,6 +270,61 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1') is True
                     expect(page.locator('#sidebar')).not_to_be_in_viewport()
                     capture('reading-mobile.png')
+                    # New one-click flow uses real PDF.js, rule extraction, R2 API and PDF/XLSX generation.
+                    # Only upstream discovery/PDF bytes are explicitly synthetic fixtures.
+                    page.set_viewport_size({'width':1440,'height':1000})
+                    page.unroute('**/api/discovery?**')
+                    batch_metadata=[{'id':pid,'title':'SYNTHETIC batch '+str(n+1),'source':'arxiv','authors':['SYNTHETIC fixture'],
+                                     'url':'https://example.org/SYNTHETIC','pdf_url':'https://example.org/SYNTHETIC.pdf',
+                                     'license_url':'https://creativecommons.org/licenses/by/4.0/'} for n,pid in enumerate(batch_pdfs)]
+                    page.route('**/api/discovery?**',lambda route:route.fulfill(json={'items':batch_metadata,'provider':'arxiv','scope':'SYNTHETIC_ENGINEERING_BATCH_FIXTURE'}))
+                    corrupt={'enabled':True};source_calls={pid:0 for pid in batch_pdfs}
+                    def batch_source(route):
+                        pid=urllib.parse.parse_qs(urllib.parse.urlparse(route.request.url).query)['id'][0]
+                        source_calls[pid]+=1
+                        body=b'%PDF-1.4\nSYNTHETIC corrupt fixture' if pid=='9999.00003v1' and corrupt['enabled'] else batch_pdfs[pid]
+                        route.fulfill(status=200,content_type='application/pdf',body=body)
+                    page.route('**/api/pdf?**',batch_source)
+                    page.goto(origin+'/#discovery');page.get_by_role('heading',name='检索科学文献',exact=True).wait_for()
+                    page.get_by_role('button',name='arXiv',exact=True).click();page.get_by_label('关键词、DOI 或 arXiv ID',exact=True).fill('SYNTHETIC automatic batch')
+                    page.get_by_label('计划获取',exact=True).select_option('5');page.locator('#batch-auto').check()
+                    with page.expect_download(timeout=120000) as batch_download:
+                        page.get_by_role('button',name='一键爬取并生成 PDF / Excel',exact=True).click()
+                    partial_zip=output/'one-click-partial.zip';batch_download.value.save_as(partial_zip)
+                    capture('one-click-partial-desktop.png')
+                    with zipfile.ZipFile(partial_zip) as z:
+                        manifest=json.loads(z.read('BATCH-MANIFEST.json'));batch_id=manifest['id'] if 'id' in manifest else None
+                        assert len(manifest['items'])==5
+                        assert sum(j['state']=='done' for j in manifest['items'])==4
+                        assert sum(j['state']=='failed' for j in manifest['items'])==1
+                        assert len(z.read('research.jsonl').decode().splitlines())==4
+                        with fitz.open(stream=z.read('report.pdf'),filetype='pdf') as report_doc:
+                            report_text=''.join(report_doc[n].get_text() for n in range(len(report_doc)))
+                            assert 'SYNTHETIC' in report_text and '失败1' in ''.join(report_text.split())
+                        (output/'one-click-partial-report.pdf').write_bytes(z.read('report.pdf'))
+                    assert all(n==1 for n in source_calls.values())
+                    results.append({'name':'One click processes five PDF fixtures, isolates one corrupt PDF and automatically downloads actual PDF/XLSX/JSONL/originals ZIP','status':'PASS'})
+                    corrupt['enabled']=False
+                    with page.expect_download(timeout=120000) as retried_download:
+                        page.get_by_role('button',name='仅重试失败项',exact=True).click()
+                    finished_zip=output/'one-click-complete.zip';retried_download.value.save_as(finished_zip)
+                    with zipfile.ZipFile(finished_zip) as z:
+                        m=json.loads(z.read('BATCH-MANIFEST.json'));assert m['status']=='complete'
+                        assert sum(j['state']=='done' for j in m['items'])==5
+                        actual=[json.loads(line) for line in z.read('research.jsonl').decode().splitlines()]
+                        assert len(actual)==5 and all(r['extractor_version']=='browser-scientific-rules-v1.4' for r in actual)
+                        assert all('source_review' not in r['reading_card'] for r in actual)
+                        (output/'one-click-complete-report.pdf').write_bytes(z.read('report.pdf'))
+                        (output/'one-click-complete.xlsx').write_bytes(z.read('research.xlsx'))
+                    assert source_calls['9999.00003v1']==2
+                    assert all(n==1 for pid,n in source_calls.items() if pid!='9999.00003v1')
+                    capture('one-click-complete-desktop.png')
+                    results.append({'name':'Failed-only retry refetches the corrupt PDF and leaves four completed extraction checkpoints untouched','status':'PASS'})
+                    page.reload();page.get_by_role('link',name='下载本批报告 PDF',exact=True).wait_for()
+                    page.set_viewport_size({'width':390,'height':844});expect(page.locator('#sidebar')).not_to_be_in_viewport()
+                    assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+1')
+                    capture('one-click-complete-mobile.png')
+                    results.append({'name':'Durable batch files survive reload and the complete one-click page fits mobile width','status':'PASS'})
                     assert not errors, errors
                     results.append({'name': 'Hosted UI completes the exercised flows without uncaught browser JavaScript errors', 'status': 'PASS'})
                     browser.close()

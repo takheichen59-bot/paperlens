@@ -1,0 +1,18 @@
+Package: @pdf-lib/fontkit 1.1.1
+License declared by package: MIT
+Package metadata: https://registry.npmjs.org/@pdf-lib/fontkit/1.1.1
+Published source: https://unpkg.com/@pdf-lib/fontkit@1.1.1/
+Repository: https://github.com/Hopding/fontkit
+
+Verbatim README license section from the exact 1.1.1 npm tarball:
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+The published tarball contains no separate LICENSE or LICENSE.md file.
+The upstream root also has no separate license file. This notice records
+the upstream declaration faithfully and does not invent a copyright notice.
+The package author metadata names Andrew Dillon; upstream fontkit is by the
+fontkit contributors. Consult the exact upstream source for copyright and
+dependency notices. No library source other than the local pako import was
+modified for this project.

@@ -31,7 +31,7 @@ jobs:
           node-version: '22'
       - run: node verify-site.mjs && node verify-research.mjs && node verify-master-a.mjs
         working-directory: website
-      - run: node verify-hosted-attribution.mjs && node verify-hosted-exports.mjs && node verify-workspace.mjs && node verify-reading.mjs && node build-workspace.mjs
+      - run: node verify-hosted-attribution.mjs && node verify-hosted-exports.mjs && node verify-workspace.mjs && node verify-reading.mjs && node verify-batch.mjs && PAPERLENS_REPORT_FONT=../tests/assets/report-ci.ttf node verify-reading-pdf.mjs && node build-workspace.mjs
         working-directory: website
   browser:
     runs-on: ubuntu-latest
@@ -60,6 +60,7 @@ jobs:
             work/hosted-browser-ci/*.jsonl
             work/hosted-browser-ci/*.xlsx
             work/hosted-browser-ci/*.pdf
+            work/hosted-browser-ci/*.zip
             work/hosted-browser-ci/server.log
 # This workflow validates explicitly synthetic engineering/browser fixtures, not real LLMs,
 # publisher permissions, scientific gold, Windows or 5,000 real PDFs.
