@@ -321,6 +321,15 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                         page.locator('[data-reading-evidence]').first.click()
                         assert page.locator('#evidence-inspector .inspector-quote').inner_text().strip()
                         if record['id']=='synthetic-reading-experiment':
+                            expect(page.locator('.reader-analogy')).to_contain_text('这些比喻帮助理解，不能当作论文结论')
+                            with page.expect_download(timeout=60000) as illustrated_pdf:
+                                page.locator('[data-report-one]').click()
+                            illustrated_path=output/'synthetic-illustrated-report.pdf';illustrated_pdf.value.save_as(illustrated_path)
+                            with fitz.open(illustrated_path) as illustrated_doc:
+                                illustrated_text=''.join(p.get_text() for p in illustrated_doc)
+                                assert '看图理解' in illustrated_text and '像搭一组积木' in illustrated_text
+                                assert '比喻只帮助理解' in illustrated_text
+                            results.append({'name':'Chinese illustrated PDF downloads with a source-labelled diagram and separate bounded analogy','status':'PASS'})
                             expect(page.locator('.reader-numbers')).to_contain_text('1.80')
                             expect(page.locator('.reader-numbers')).to_contain_text('1.79')
                             expect(page.locator('.reader-numbers')).to_contain_text('4.2')

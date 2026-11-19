@@ -14,7 +14,7 @@ export function openAlexArxivPaper(x){const locations=(x.locations||[]).filter(l
 
 export async function workspaceApi(request, env, corpus, index) {
  const url=new URL(request.url),path=url.pathname;
- if(path==='/api/health')return workspaceReply({status:'ok',product:'PaperLens',version:'0.5.0-zh',storage:!!env.BUCKET,
+ if(path==='/api/health')return workspaceReply({status:'ok',product:'PaperLens',version:'0.5.1-illustrated',storage:!!env.BUCKET,
   parser:'PDF.js in browser',record_format:'research-1',llm:'NOT_CONFIGURED',scientific_accuracy:'NOT_INDEPENDENTLY_EVALUATED',seed_count:index.records.length});
  if(path==='/api/discovery') {
   if(request.method!=='GET')return workspaceReply({error:'GET required'},405);
