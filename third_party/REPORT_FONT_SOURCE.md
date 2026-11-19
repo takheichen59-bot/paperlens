@@ -47,3 +47,5 @@ Revision 2 (2026-11-19): private full font PaperLens-Report-Regular-v2.ttf adds 
 Updated public CI-only subset: 331,072 bytes; SHA256 21ccaa853232e5f8d295c03a285e23e4266b5ab8b7d91f8fb87ebea7e28d82ab; 2,006 characters derived only from public interface/engineering fixture strings.
 
 2026-11-20: the public CI subset now also scans public report/test module strings for the Chinese-first renderer. It remains derived only from public code and explicitly synthetic fixtures; no real paper or private Chinese guide is included. Current subset: 333388 bytes, SHA256 294e2a7af7731cf377e4515e49d3181e7339f791428e7215e4eb020a07428899. The full private v2 report font is unchanged.
+
+2026-11-20 illustrated report: public CI font updated for vector-diagram labels and punctuation wrapping fixtures only. Subset: 344792 bytes; SHA256 bbbcbd87ff8cfd4c187ed88a58821b6c1cfb0302aad3e3d77ce9112e10e4c947; 2055 Unicode characters. Private full v2 font remains unchanged.

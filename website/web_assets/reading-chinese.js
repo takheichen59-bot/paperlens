@@ -1,5 +1,6 @@
 // Presentation layer only. Original fields, source text and user reviews stay intact.
 export const CHINESE_GUIDE_VERSION='source-chinese-v1';
+export const READING_DIAGRAM_TYPES=['surface_particles','preparation','assembly','sensor','layer_stack'];
 const zh=s=>typeof s==='string'&&/[\u3400-\u9fff]/u.test(s);
 const names=['question','objects','methods','steps','findings','arguments','conclusion','author_limitations','boundaries','suggestions','numbers'];
 export function validateChineseSourceReview(record,guide=record.reading_card?.source_review){
@@ -12,6 +13,13 @@ export function validateChineseSourceReview(record,guide=record.reading_card?.so
  for(const name of names){
   if(guide[name]!==undefined&&!Array.isArray(guide[name]))throw Error('中文导读栏目格式不正确。');
   for(const item of guide[name]||[])if(!zh(item.text)||!item.evidence_ids?.length||item.evidence_ids.some(id=>!anchors.has(id)))throw Error('中文要点必须有中文说明和可回查的原句。');
+ }
+ const aids=guide.reading_aids;
+ if(aids){
+  if(aids.schema_version!=='paperlens-reading-aids-1'||aids.origin!=='assistant_explanation'||!Array.isArray(aids.analogies)||aids.analogies.length>2)throw Error('生活比喻需要单独标明助手解释，不能写成论文结果。');
+  const refs=item=>Array.isArray(item.evidence_ids)&&item.evidence_ids.length&&item.evidence_ids.every(id=>anchors.has(id));
+  for(const a of aids.analogies)if(!zh(a.title)||a.title.length>60||!zh(a.text)||a.text.length>600||!zh(a.limit)||a.limit.length>260||!refs(a))throw Error('生活比喻必须说明含义、边界和对应的原文。');
+  const d=aids.diagram;if(d&&(!READING_DIAGRAM_TYPES.includes(d.type)||d.not_original_figure!==true||!zh(d.caption)||d.caption.length>260||!zh(d.limit)||d.limit.length>260||!refs(d)))throw Error('配图必须是有来源的理解示意，并标明不是论文原图。');
  }
  return guide;
 }
@@ -31,6 +39,6 @@ export function chineseReadingPlan(record){
   const techniques=(c.techniques||[]).filter(t=>t.evidence_ids?.length);
   if(techniques.length)fields.methods.items=[{text:'文中出现了这些技术：'+techniques.map(t=>t.label.replace(/Raman/g,'拉曼')).join('、')+'。这只是方法线索，尚未整理成完整中文说明。',evidence_ids:[...new Set(techniques.flatMap(t=>t.evidence_ids))]}];
  }
- return {language:'zh-CN',origin:guide?'assistant_source_review':'rule_based_chinese_hints',title:guide?.title_zh||'研究阅读卡片',fields,numbers:guide?.numbers||[],boundaries:guide?.boundaries||[],guide,
+ return {language:'zh-CN',origin:guide?'assistant_source_review':'rule_based_chinese_hints',title:guide?.title_zh||'研究阅读卡片',fields,numbers:guide?.numbers||[],boundaries:guide?.boundaries||[],aids:guide&&!guide.legacy?guide.reading_aids||null:null,guide,
   notice:guide?.legacy?'这是以前保存的助手中文导读，本次没有重新核对其解释。原来的自动结果和原句均保留。':guide?'中文说明由助手对照原文整理，尚未经过用户或领域专家确认。英文原句和自动提取结果另行保留。':'这篇还没有完整中文导读。下面只列出能识别的线索；没有把英文段落直接当作中文说明。'};
 }

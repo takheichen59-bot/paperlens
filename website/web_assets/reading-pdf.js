@@ -1,3 +1,4 @@
+import {renderChineseReport} from './reading-layout.js';
 import {chineseReadingPlan} from './reading-chinese.js';
 // Selectable, source-linked PDF. Automatic candidates remain separate from
 // authored source_review and from historical/manual research-1 fields.
@@ -20,6 +21,12 @@ export function wrapReportText(text,font,size,width){
   if(!line&&/^\s+$/u.test(token))continue;
   const next=line+token;
   if(font.widthOfTextAtSize(next,size)<=width){line=next;continue;}
+  if(/^[，。！？；：、）》】」』”’、,.!?;:)\]]+$/u.test(token)&&line.trim()){
+   const chars=Array.from(line.trimEnd()),closing=[];while(chars.length&&/^[，。！？；：、）》】」』”’、,.!?;:)\]]$/u.test(chars.at(-1)))closing.unshift(chars.pop());
+   const base=chars.join(''),tail=base.match(/[\p{Script=Latin}\p{Script=Greek}\p{N}]+(?:[-’'.,][\p{Script=Latin}\p{Script=Greek}\p{N}]+)*$|.$/u)?.[0]||'';
+   const prefix=base.slice(0,-tail.length);if(prefix)lines.push(prefix.trimEnd());line=tail+closing.join('')+token;if(font.widthOfTextAtSize(line,size)>width)throw Error('单词和句末标点无法完整放入一行，请调整显示内容；原文保持不变。');continue;
+  }
+  const opening=line.match(/[（《【「『“‘]$/u)?.[0]||'';if(opening){line=line.slice(0,-opening.length);if(line.trim())lines.push(line.trimEnd());line=opening+token;continue;}
   if(line.trim())lines.push(line.trimEnd());line=/^\s+$/u.test(token)?'':token;
   if(line&&font.widthOfTextAtSize(line,size)>width)throw Error('报告含无法完整排入一行的单词；原文保留在 JSONL，请缩短显示字段或使用可换行标题。');
  }
@@ -133,6 +140,7 @@ export async function readingPDF(records,{fontBytes,batch,fetchImpl=globalThis.f
  // despite retaining extractable text. Embed one complete, compressed static
  // TTF per PDF instead. It is fetched as an asset, never bundled into Worker JS.
  const font=await doc.embedFont(fontBytes,{subset:false});const supported=new Set(font.getCharacterSet());
+ if(chinese)return renderChineseReport({doc,font,plan,batch,title,wrap:wrapReportText});
  doc.setTitle(title);doc.setAuthor('PaperLens');doc.setSubject('Automatic source candidates; unreviewed; scientific accuracy not independently evaluated');
  const allPages=[],overviewPages=[],entryLinks=[],outlines=[];let page,y,phase='overview';
  function checkGlyphs(text){for(const ch of Array.from(text))if(!supported.has(ch.codePointAt(0)))throw Error('报告字体缺少 Unicode U+'+ch.codePointAt(0).toString(16).toUpperCase()+'；原文未改写，请补齐字体覆盖后重试。');}
