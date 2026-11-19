@@ -42,7 +42,7 @@ export async function renderChineseReport({doc,font,plan,batch,title,wrap}){
  small('每篇按同一条线来读：研究什么 → 怎么做 → 发现什么 → 怎么理解。',{size:11.5,color:C.ink,after:14});
  card('三种分区，别混在一起看',[{text:'浅蓝色写论文要点；浅黄色放生活比喻；浅灰色提醒适用条件和需要核对的地方。',evidence_ids:[]}],{byId:new Map(),record:{}},{tone:'neutral'});
  small('中文说明和生活比喻由助手整理，尚待用户或专家核对。示意图帮助理解，不是论文原图或实验数据。',{size:10,after:14});
- if(batch){const failed=(batch.items||[]).filter(i=>i.state==='failed'||i.error),pending=(batch.items||[]).filter(i=>!['done','duplicate','failed'].includes(i.state));small('本次整理 '+plan.length+' 篇；失败 '+failed.length+' 篇，未完成 '+pending.length+' 篇。',{size:11.5,color:C.ink,after:8});if(failed.length)for(const f of failed)small(f.id+'：'+String(f.error?.message||f.error||'请查看批次记录'));small('检索式和处理记录保存在配套文件中，原文可以从正文页码打开。',{size:10,after:12});}
+ if(batch){const failed=(batch.items||[]).filter(i=>i.state==='failed'||i.error),pending=(batch.items||[]).filter(i=>!['done','duplicate','failed'].includes(i.state));small('本次整理 '+plan.length+' 篇；失败 '+failed.length+' 篇，未完成 '+pending.length+' 篇。',{size:11.5,color:C.ink,after:8});if(failed.length)for(const f of failed)small(f.id+'：'+String(f.error?.message||f.error||'请查看批次记录'));small('检索式：'+String(batch.query||'未记录'),{size:10,after:12});}
  section('这一组论文，各自在看什么');
  for(const p of plan){const rows=lines(p.title,12,W-25),h=rows.length*18+26;ensure(h+8);const top=y;page.drawRectangle({x:L,y:y-h,width:W,height:h,color:C.fact});small(p.title,{size:12,color:C.accent,width:W-24,x:L+12,leading:18,after:3});small(p.id,{size:9,x:L+12,after:9});nav.push({page,rect:[L,top-h,R,top],plan:p});y-=8;}
  const starts=new Map();
