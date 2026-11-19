@@ -98,3 +98,5 @@ OCR测试要求系统安装 `tesseract` 和英文语言数据。Linux 本次重�
 **必须先读[当前问题](docs/KNOWN_ISSUES.md)：真实科学质量、模型集成、授权来源、浏览器、规模与部署仍有明确缺口。** 本仓库未授予原创代码的开源许可证；第三方组件与论文遵循各自许可，详见 [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md)。
 
 检索来源故障与恢复机制见[检索维修说明](docs/SEARCH_RELIABILITY.md)，2026-11-19真实正式站检索及20篇全文验收见[维修报告](docs/qa/search-recovery-20261119/REPORT.md)。
+
+中文阅读版将原文提取、中文导读和报告排版分开，默认生成中文PDF，保留英文证据与原始结果；没有中文导读的论文会标明待补充。当前没有配置通用翻译模型，真实示例中文由助手对照原文整理。详见[中文报告结构](docs/CHINESE_READING.md)。

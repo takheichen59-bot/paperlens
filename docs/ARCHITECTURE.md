@@ -78,3 +78,7 @@ Real embeddings are optional; current semantic behavior reranks BM25 candidates 
 ## Workflow repair additions
 
 Export endpoints optionally accept repeated `paper_id` query values; omission keeps all-library behavior, while invalid/unknown selections are rejected. JSONL snapshots now include the current review with revision/status/payload; spreadsheets additionally expose readable identifiers, methodology, conclusions and results. Nested original records remain present. `/jobs/{id}/resume` can requeue failed items from a completed mixed batch while keeping successful checkpoints. No legacy contract or database schema changes are required. Large selected-ID URLs can exceed proxy limits; this path is validated for small batches, not5000-ID URLs.
+
+## 中文报告的三层结构（2026-11-20）
+
+原文提取、中文导读、报告展示分别负责取证、解释和排版。中文导读使用已有可选 `reading_card.source_review`，不改写英文自动结果；用论文指纹、版本和完整来源句防止跨论文或旧证据误用。没有中文说明时保留待补充状态，不冒充已自动翻译。详见 [中文阅读结构](CHINESE_READING.md)。冻结接口和旧表结构保持不变。

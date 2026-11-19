@@ -56,3 +56,5 @@
 Reading-quality follow-up (2026-11-18): the independent reading layer improves complete-sentence evidence and reader delivery, but does not repair all empty historical core fields. The five Chinese source reviews are assistant-authored, hash-bound, unreviewed by the user and not independent gold. Generic entity/step/numeric binding recall remains incomplete. See [the 18-issue disposition](qa/review-20261118/REPORT.md).
 
 一键批次迭代（2026-11-18）：通用规则现在直接填充方法/发现/结论，并识别综述章节；原空字段与归属缺陷仍未完全解决，不能把覆盖变多作为准确率。数值未绑定完整条件时不进入关键数值表。操作与实际失败记录见[本轮验收](qa/one-click-20261118/REPORT.md)。
+
+中文报告更新（2026-11-20）：已有5篇可回查来源的助手中文导读，网页和默认PDF使用中文；其他论文尚无通用中文翻译引擎，只显示中文线索和待补充状态。已修复实测中的页边竖排标记串栏、机构地址拼接、部分对象误识别和旧警告矛盾。中文解释仍待用户/专家核对；普通多词检索偏宽和更复杂的跨栏、引用归属仍有缺口。

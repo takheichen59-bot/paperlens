@@ -45,3 +45,5 @@ Public CI font is a local FontTools subset of the same static production font, u
 Revision 2 (2026-11-19): private full font PaperLens-Report-Regular-v2.ttf adds 1,483 remaining NotoSans weight-400 glyphs, including U+02DC small tilde. Bytes 11,175,960; SHA256 0b25a1253476f100644b396da442f4633c3d4982123b121a51c36519b380b6da. The prior pinned font is retained; the new font uses a new immutable R2 hash and browser revision URL. No original Unicode text was rewritten.
 
 Updated public CI-only subset: 331,072 bytes; SHA256 21ccaa853232e5f8d295c03a285e23e4266b5ab8b7d91f8fb87ebea7e28d82ab; 2,006 characters derived only from public interface/engineering fixture strings.
+
+2026-11-20: the public CI subset now also scans public report/test module strings for the Chinese-first renderer. It remains derived only from public code and explicitly synthetic fixtures; no real paper or private Chinese guide is included. Current subset: 333388 bytes, SHA256 294e2a7af7731cf377e4515e49d3181e7339f791428e7215e4eb020a07428899. The full private v2 report font is unchanged.

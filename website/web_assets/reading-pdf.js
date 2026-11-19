@@ -1,3 +1,4 @@
+import {chineseReadingPlan} from './reading-chinese.js';
 // Selectable, source-linked PDF. Automatic candidates remain separate from
 // authored source_review and from historical/manual research-1 fields.
 import {PDFDocument,PDFName,PDFString,PDFHexString,rgb} from './vendor/pdf-lib.esm.min.js';
@@ -7,7 +8,7 @@ const PAGE=[595.28,841.89],LEFT=42,RIGHT=553.28,TOP=800,BOTTOM=48;
 const BODY=11,LEADING=15.6,INK=rgb(.09,.18,.23),MUTED=rgb(.34,.43,.47),ACCENT=rgb(.09,.36,.39);
 const clean=value=>String(value??'').replace(/\s+/gu,' ').trim();
 const cpLength=text=>Array.from(text).length;
-const typeLabels={perspective_or_review:'观点 / 综述候选',computational:'计算研究候选',mixed_computational_experimental:'计算与实验候选',experimental_or_unresolved:'实验研究候选',unresolved:'类型尚未判定'};
+const typeLabels={perspective_or_review:'综述或观点文章（初步判断）',computational:'计算研究（初步判断）',mixed_computational_experimental:'计算与实验研究（初步判断）',experimental_or_unresolved:'实验研究（初步判断）',unresolved:'类型尚未判定'};
 const roleLabels={material_family:'材料类别候选',study_subject_variant:'组分变体候选',component_or_termination:'组分 / 表面终止候选',study_subject:'本文对象（规则候选）',background:'背景提及',uncertain:'角色待核实',comparator:'本文对照候选',impurity_in_host:'杂质 / 宿主候选',research_topic_not_sample:'研究主题，非样品',title_study_object_candidate:'标题对象候选',impurity_in_host_candidate:'杂质 / 宿主候选'};
 
 /** Wrap at words and Unicode code points, never at UTF-16 surrogate halves. */
@@ -53,9 +54,14 @@ function fieldContent(c,name,byId,used,limit=2){
 }
 
 /** A bounded display plan; raw evidence, source reviews and human history stay untouched. */
-export function readingReportPlan(records){
+export function readingReportPlan(records,{language='source'}={}){
  return Array.from(records,r=>{
   const c=r.reading_card||{},byId=sourceMap(r),used=new Set(),fields={};
+  if(language==='zh-CN'){
+   const chinese=chineseReadingPlan(r),evidence=[...new Set(Object.values(chinese.fields).flatMap(f=>f.items.flatMap(i=>i.evidence_ids||[])).concat(chinese.numbers.flatMap(n=>n.evidence_ids||[])))];
+   return {record:r,c,byId,title:chinese.title,id:clean(r.id||r.paper_id),fields:chinese.fields,numbers:chinese.numbers,unbound:0,usedEvidence:evidence,sourceReview:chinese.guide,chinese};
+  }
+
   fields.question=fieldContent(c,'question',byId,used,1);
   const objects=(c.objects||[]).filter(o=>o.evidence_ids?.length&&['study_subject','study_subject_variant','material_family','impurity_in_host','title_study_object_candidate','impurity_in_host_candidate','research_topic_not_sample'].includes(o.role)).slice(0,5).map(o=>({text:clean(o.name)+' — '+(roleLabels[o.role]||clean(o.role)||'角色未核实'),evidence_ids:o.evidence_ids}));
   for(const o of objects)for(const id of o.evidence_ids)if(!byId.has(id))throw Error('PDF 研究对象缺少对应来源证据。');
@@ -109,10 +115,10 @@ function bookmarks(doc,entries){
  * By default the pinned, privately seeded font is fetched from /api/report-font.
  * No paper or report text is sent to that endpoint or any external service.
  */
-export async function readingPDF(records,{fontBytes,batch,fetchImpl=globalThis.fetch,fontUrl='/api/report-font?revision=2',title='PaperLens 文献处理与阅读报告'}={}){
+export async function readingPDF(records,{fontBytes,batch,fetchImpl=globalThis.fetch,fontUrl='/api/report-font?revision=2',title='PaperLens 中文文献阅读报告',language='zh-CN'}={}){
  const input=Array.from(records),completedIds=batch?.items?new Set(batch.items.filter(i=>i.state==='done').flatMap(i=>[i.id,i.record_id,i.meta?.id,i.meta?.paper_id].filter(Boolean))):null;
  const completed=input.filter(r=>!completedIds||[r.id,r.paper_id,r.meta?.id,r.meta?.paper_id].some(id=>completedIds.has(id)));
- const plan=readingReportPlan(completed);
+ const plan=readingReportPlan(completed,{language});const chinese=language==='zh-CN';
  if(fontBytes===undefined){
   if(typeof fetchImpl!=='function')throw Error('没有可用的字体读取能力；请传入 fontBytes。');
   const response=await fetchImpl(fontUrl,{credentials:'same-origin'});
@@ -142,7 +148,7 @@ export async function readingPDF(records,{fontBytes,batch,fetchImpl=globalThis.f
   y-=after;return first;
  }
  function heading(value){ensure(41);y-=6;text(value,{size:12.5,color:ACCENT,leading:18,after:4});}
- function citation(item,p){const pages=citedPages(item.evidence_ids||[],p.byId);return pages.length?' [p.'+pages.join(',')+']':'';}
+ function citation(item,p){const pages=citedPages(item.evidence_ids||[],p.byId);return pages.length?'（原文第'+pages.join('、')+'页）':'';}
  function renderField(label,value,p){
   heading(label);
   for(const [index,item]of value.items.entries()){
@@ -163,16 +169,16 @@ export async function readingPDF(records,{fontBytes,batch,fetchImpl=globalThis.f
   return fields;
  }
  function cardHeader(p,continued=false){
-  const start=addPage(continued?'研究卡片 · 结论与证据':'研究卡片 · 自动候选');
+  const start=addPage(continued?'研究卡片 · 结论与证据':'研究卡片 · 中文说明');
   text(p.title,{size:17,color:ACCENT,leading:22,after:8});
   text(p.id+' · '+(typeLabels[p.c.article_type?.label]||'类型尚未判定'),{size:9.5,color:MUTED,leading:13,after:5});
-  text(continued?'续页：结论、数值条件、局限与证据。':'通用自动规则候选；用户复核 unreviewed。以下完整原句不等于科学主张已核实。',{color:MUTED,after:7});
+  text(continued?'接着看：作者的结论、适用条件和原文出处。':chinese?p.chinese.notice:'以下为英文原句，尚未经过人工核对。',{color:MUTED,after:7});
   return start;
  }
  addPage('批量概览');overviewPages.push(page);outlines.push({title:'批量概览',page});
  text(title,{size:21,color:ACCENT,leading:28,after:12});
- text('固定阅读框架：问题 → 对象 → 方法路线 → 来源顺序操作候选 → 发现 → 结论 → 数值条件 → 局限 → 证据。');
- text('本文件是处理报告，不是原始论文。自动结果与人工历史保持原值；没有独立科研准确率金标准，不做跨论文数值排名。',{color:MUTED});
+ text(chinese?'按这几个问题读论文：研究什么？怎么做？发现了什么？作者怎么总结？还有哪些地方要核对？':'阅读顺序：问题、对象、方法、步骤、发现、结论、条件和证据。');
+ text(chinese?'本报告帮助你读论文。中文说明、自动提取原句和用户复核分开保存；正文的页码可回到原论文。没有中文导读的文章会明确提示待补充。':'本文件是处理报告，原始论文另附。原句存在不代表科研解释已经核实。',{color:MUTED});
  if(batch){
   const items=batch.items||[],requested=Number.isFinite(Number(batch.requested_count))?Math.max(0,Number(batch.requested_count)):items.length;
   const returned=Number.isFinite(Number(batch.source_returned))?Math.max(0,Number(batch.source_returned)):items.length;
@@ -197,27 +203,27 @@ export async function readingPDF(records,{fontBytes,batch,fetchImpl=globalThis.f
  for(const p of plan){
   const start=cardHeader(p);starts.set(p,start);outlines.push({title:p.title,page:start});
   const firstFields=fitFirstPage(p);
-  renderField('研究问题',firstFields.question,p);
-  renderField('研究对象 / 主题',firstFields.objects,p);
-  renderField('方法路线与原文候选',firstFields.methods,p);
-  renderField('来源顺序操作候选（非已验证流程）',firstFields.steps,p);
-  renderField('主要发现 / 论点候选',firstFields.findings,p);
+  renderField('这篇文章想弄清什么',firstFields.question,p);
+  renderField('主要研究什么材料或对象',firstFields.objects,p);
+  renderField('作者是怎么做的',firstFields.methods,p);
+  renderField('大致做了哪几步',firstFields.steps,p);
+  renderField('最值得注意的发现',firstFields.findings,p);
   // A deliberate second-page boundary keeps the same report framework for
   // every paper without reducing body size or leaving headings at page ends.
   cardHeader(p,true);
-  renderField('作者结论候选',p.fields.conclusions,p);
+  renderField('作者最后得出了什么结论',p.fields.conclusions,p);
   heading('关键数值、对象与条件');
-  if(!p.numbers.length)text('尚无对象、物理量、单位、条件和归属均明确的自动绑定；未将未绑定数字填作本文新结果。',{color:MUTED});
+  if(!p.numbers.length)text('暂时没有把数值、对应对象和测试条件一起核对清楚。请结合上面的中文发现和原文理解。',{color:MUTED});
   for(const n of p.numbers){
    text(clean(n.object)+' · '+clean(n.quantity)+'：'+clean(n.value)+' '+clean(n.unit)+citation(n,p));
    const condition=clean(n.conditions);
    text('条件：'+(cpLength(condition)<=250?condition:'完整条件原句较长，保留在 JSONL；不得脱离该条件使用此数值。')+'；归属：'+clean(n.ownership),{color:MUTED});
   }
   if(p.unbound)text(p.unbound+' 条其余数值候选 / 未绑定条目完整保留在 JSONL 审计层，不用于跨条件比较。',{color:MUTED});
-  const numeric=p.c.numeric_candidates||[];if(numeric.length){const labels={own_result:'本文结果候选，待核实',simulation_parameter:'模拟参数候选',experimental_condition:'实验条件候选',cited_result:'引用 / 背景结果',uncertain:'归属未确认',needs_review:'归属未确认'},rank={simulation_parameter:0,own_result:1,experimental_condition:2,uncertain:3,cited_result:4};const sample=[...numeric].sort((a,b)=>(rank[a.ownership]??3)-(rank[b.ownership]??3)).slice(0,2);for(const n of sample){text('数值候选：'+(n.values||[{value:n.value,unit:n.unit}]).map(v=>v.value+' '+v.unit).join('；')+' · '+(labels[n.ownership]||'归属未确认')+citation(n,p));}text('以上对象 / 条件仍需结合原句核对；点击页码或查阅 Excel，不据此直接比较性能。',{color:MUTED});}
-  renderField('作者明确局限候选',p.fields.limitations,p);
+  const numeric=chinese?[]:p.c.numeric_candidates||[];if(numeric.length){const labels={own_result:'本文结果候选，待核实',simulation_parameter:'模拟参数候选',experimental_condition:'实验条件候选',cited_result:'引用 / 背景结果',uncertain:'归属未确认',needs_review:'归属未确认'},rank={simulation_parameter:0,own_result:1,experimental_condition:2,uncertain:3,cited_result:4};const sample=[...numeric].sort((a,b)=>(rank[a.ownership]??3)-(rank[b.ownership]??3)).slice(0,2);for(const n of sample){text('数值候选：'+(n.values||[{value:n.value,unit:n.unit}]).map(v=>v.value+' '+v.unit).join('；')+' · '+(labels[n.ownership]||'归属未确认')+citation(n,p));}text('以上对象 / 条件仍需结合原句核对；点击页码或查阅 Excel，不据此直接比较性能。',{color:MUTED});}
+  renderField('读这篇文章时，要留意什么',p.fields.limitations,p);
   heading('证据与回查');
-  const shown=p.usedEvidence.slice(0,5);
+  const shown=p.usedEvidence.slice(0,5);if(!chinese){
   for(const [index,id]of shown.entries()){
    const e=p.byId.get(id);if(!e)throw Error('报告证据索引缺少原句。');
    const parts=(e.parts||[]).slice(0,2).map(s=>'p.'+s.page+' / '+s.block_id+' ['+s.start+','+s.end+')').join('; ');
@@ -225,9 +231,11 @@ export async function readingPDF(records,{fontBytes,batch,fetchImpl=globalThis.f
    if((e.parts||[]).length>2)text('该句跨 '+e.parts.length+' 个来源部分，完整映射见 JSONL。',{color:MUTED});
   }
   text('本卡只展开短且完整的来源句，未截断原文。全部 '+p.byId.size+' 条英文证据、原始块和 Unicode 字符偏移及未展开候选见 research.jsonl / Excel 证据表。',{color:MUTED});
-  heading('来源与复核边界');
-  if(p.sourceReview)text('另有 assistant_source_review 助手来源复核层。本报告以上正文采用通用自动字段；该助手层独立保留在 JSONL，不是自动摘要、独立金标准或用户复核。',{color:MUTED});
-  else text('本篇没有助手来源复核层；未使用固定示例导读替代自动提取。',{color:MUTED});
+  }
+  if(chinese){for(const item of p.chinese.boundaries)text(item.text+citation(item,p),{color:MUTED});text('要核对原句，可以点击各段后的页码。英文原句、字符位置和原始自动结果保留在配套表格和完整记录文件中。',{color:MUTED});}
+  heading('这些中文说明从哪里来');
+  if(p.sourceReview)text(chinese?'本篇中文内容由助手根据所列原文整理，来源句已绑定，尚未经过用户或领域专家确认。原来的自动提取内容保持不变。':'另有独立的助手导读，本英文原句报告没有用它替换自动结果。',{color:MUTED});
+  else text(chinese?'这篇还没有完整中文导读。报告只列出已识别的线索，其他部分需要继续补充。':'本篇尚无助手导读。',{color:MUTED});
   const meta=p.record.meta||{};
   if(meta.pdf_url||meta.url)text('打开原始论文 PDF / 来源页面',{color:ACCENT,uri:meta.pdf_url||meta.url});
   if(meta.license_url)text('原文许可（点击查看）',{color:ACCENT,uri:meta.license_url});
@@ -237,7 +245,7 @@ export async function readingPDF(records,{fontBytes,batch,fetchImpl=globalThis.f
  const total=allPages.length;
  allPages.forEach((p,i)=>{
   p.drawLine({start:{x:LEFT,y:34},end:{x:RIGHT,y:34},thickness:.5,color:rgb(.77,.84,.83)});
-  p.drawText('PaperLens · 自动阅读候选',{x:LEFT,y:20,size:8.5,font,color:MUTED});
+  p.drawText(chinese?'PaperLens · 中文阅读说明 · 尚待核对':'PaperLens · 原文摘录 · 尚待核对',{x:LEFT,y:20,size:8.5,font,color:MUTED});
   const number=(i+1)+' / '+total;p.drawText(number,{x:RIGHT-font.widthOfTextAtSize(number,8.5),y:20,size:8.5,font,color:MUTED});
   p.drawText('返回概览',{x:265,y:20,size:8.5,font,color:ACCENT});annotation(doc,p,[262,17,310,30],{destination:overviewPages[0]});
  });

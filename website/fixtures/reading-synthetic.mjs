@@ -7,5 +7,6 @@ export function syntheticReadingRecords(policy){return [false,true].map(perspect
  const r=scientificFromBlocks(rows.map(([text,heading],i)=>({block_id:'s'+i,page:1,text,heading,caption:false})),meta,policy,'b'.repeat(64)),c=r.reading_card;
  const e=c.evidence[0].id,claim={text:'合成 UI 导读，仅用于工程测试，没有真实科研主张。',evidence_ids:[e]};
  c.source_review={version:'SYNTHETIC-guide-test',origin:'assistant_source_review',human_review_status:'unreviewed',independent_gold:false,pdf_hash:r.pdf_hash,status:'source_bound',title_zh:meta.title,type_zh:perspective?'合成观点测试':'合成实验测试',question:[claim],objects:[claim],methods:perspective?[]:[claim],steps:perspective?[]:[claim,claim,claim],arguments:perspective?[claim]:[],findings:perspective?[]:[claim],conclusion:[claim],author_limitations:[],boundaries:[claim],suggestions:[claim],numbers:perspective?[]:['1.80','1.79'].map(value=>({...claim,value,unit:'eV',quantity:'合成测试值',object:'合成对象',conditions:'4.2 K，虚构条件',ownership:'合成数据，无科研意义'}))};
+ c.source_review={...c.source_review,version:'source-chinese-v1',language:'zh-CN',source_paper_id:r.paper_id,source_title:meta.title,source_parser_version:r.parser_version,source_reading_version:c.version,evidence_anchors:[{id:e,text:c.evidence[0].text}],title_zh:perspective?'合成观点文章，仅供测试':'合成实验文章，仅供测试'};
  return r;
  });}
