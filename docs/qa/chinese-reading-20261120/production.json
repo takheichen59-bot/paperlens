@@ -1,0 +1,81 @@
+{
+  "scope": "ACTUAL_PRIVATE_PRODUCTION_HTTP_WITH_VERSIONED_CHINESE_GUIDES",
+  "browser_interaction": "NOT_THIS_RUN",
+  "query": "all:BiFeO3 AND all:nanoparticles",
+  "batch_id": "9783c8c5-234a-4904-abda-702e6164d3ca",
+  "parent_batch": "6989b824-c352-4e68-b7e8-cad6e48dd7b4",
+  "status": "complete",
+  "counts": {
+    "total": 5,
+    "done": 5,
+    "duplicates": 0,
+    "failed": 0,
+    "pdfs": 5,
+    "pending": 0
+  },
+  "health": {
+    "status": "ok",
+    "product": "PaperLens",
+    "version": "0.5.0-zh",
+    "storage": true,
+    "parser": "PDF.js in browser",
+    "record_format": "research-1",
+    "llm": "NOT_CONFIGURED",
+    "scientific_accuracy": "NOT_INDEPENDENTLY_EVALUATED",
+    "seed_count": 5
+  },
+  "downloads": [
+    {
+      "name": "research.xlsx",
+      "bytes": 1881896,
+      "sha256": "8747d4ceaf32696ac2182f8df86d10fbe31de7d38587cc7d37354194193fe70d"
+    },
+    {
+      "name": "research.jsonl",
+      "bytes": 1273940,
+      "sha256": "45a2ec80245cbd719cb20cd3373e84f2ea406ce7af27c0858fc2c0313477d13c"
+    },
+    {
+      "name": "reading-evidence.csv",
+      "bytes": 401678,
+      "sha256": "6db4ae8a2399b01f98d2e90d1c5de4a20ed7c0b85bf7c962df65189885196e8b"
+    },
+    {
+      "name": "report.pdf",
+      "bytes": 6790082,
+      "sha256": "02dafceda683f459e5fc070348039b2b84fd6a056303b4eb83a81de4f18a9f5a"
+    },
+    {
+      "name": "PaperLens-Chinese-batch.zip",
+      "bytes": 16604764,
+      "sha256": "0929cd706591121db34745b399351e9b161ca29bee7005aa554a3f115d17e26b"
+    }
+  ],
+  "translation_origin": "ASSISTANT_SOURCE_READING_NOT_GENERAL_MODEL_TRANSLATION",
+  "all_unreviewed": true,
+  "verified_at": "2026-11-19T17:23:46.062232+00:00",
+  "source_spans_equal": 387,
+  "chinese_points": 46,
+  "source_anchors_equal": 38,
+  "report_pages": 11,
+  "report_bookmarks": 6,
+  "report_words_outside_page": 0,
+  "english_prose_runs": 0,
+  "xlsx_sheets": [
+    "阅读卡片",
+    "关键数值与条件",
+    "阅读证据映射",
+    "批次执行",
+    "科研汇总",
+    "原始自动结果",
+    "材料角色",
+    "数值归属",
+    "证据",
+    "说明",
+    "中文导读"
+  ],
+  "zip_crc": "PASS",
+  "original_pdf_hashes_verified": 5,
+  "source_site_commit": "556a408c6e41b94dc8daeed9aa48c7609e076b61",
+  "site_version": 10
+}

@@ -200,11 +200,11 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                     workbook = output / 'selected.xlsx'; download.value.save_as(workbook)
                     with zipfile.ZipFile(workbook) as archive:
                         sheet_names = [n for n in archive.namelist() if n.startswith('xl/worksheets/sheet') and n.endswith('.xml')]
-                        assert len(sheet_names) == 9
+                        assert len(sheet_names) == 10
                         exported_text = ''.join(archive.read(n).decode() for n in sheet_names)
                         assert 'SYNTHETIC alpha' in exported_text and 'SYNTHETIC beta' in exported_text
                         assert '2501.00680' not in exported_text
-                    results.append({'name': 'UI Excel download has nine reading/audit sheets and excludes unselected real-example records', 'status': 'PASS'})
+                    results.append({'name': 'UI Excel download has ten Chinese/reading/audit sheets and excludes unselected real-example records', 'status': 'PASS'})
                     # Isolate all-library scope to genuine synthetic stored records, without fabricating seed full texts.
                     synthetic_summaries=[r for r in page.request.get(origin+'/api/research/index').json()['records'] if r['id'].startswith('synthetic-')]
                     assert len(synthetic_summaries)==4
@@ -241,7 +241,8 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                     report_path=output/'synthetic-processing-report.pdf';generated_pdf.value.save_as(report_path)
                     with fitz.open(report_path) as document:
                         assert len(document)>=2
-                        assert 'SYNTHETIC' in ''.join(p.get_text() for p in document)
+                        assert '中文文献阅读报告' in ''.join(p.get_text() for p in document)
+                        assert 'synthetic-alpha' in ''.join(p.get_text() for p in document).lower()
                     results.append({'name':'UI directly downloads a selectable PDF with a fixed reading framework, without a print popup','status':'PASS'})
                     page.locator('.detail-tabs [data-detail-tab="evidence"]').click()
                     page.locator('.evidence-entry').first.wait_for()
@@ -268,7 +269,7 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                         page.get_by_role('button', name='导入 JSONL 记录', exact=True).click()
                     chooser.value.set_files(str(fixture_dir / 'synthetic-alpha-TWO.jsonl'))
                     page.get_by_role('heading', name='我的文献库', exact=True).wait_for()
-                    open_fixture(); page.locator('.reader-points').filter(has_text='fixture revision TWO').first.wait_for()
+                    open_fixture(); expect(page.locator('.reader-notice')).to_contain_text('中文导读')
                     page.locator('.detail-tabs [data-detail-tab="record"]').click(); page.locator('.record-copy').filter(has_text='fixture revision TWO').wait_for()
                     assert all('fixture revision ONE' not in value for value in page.locator('.record-copy').all_text_contents())
                     results.append({'name': 'Import of an already-viewed ID refreshes cached detail and evidence', 'status': 'PASS'})
@@ -314,8 +315,8 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                         guide=record['reading_card']['source_review']
                         page.get_by_role('heading',name=guide['title_zh'],exact=True).wait_for()
                         page.locator('.detail-tabs [data-detail-tab="reading"]').click()
-                        expect(page.locator('.reader-notice')).to_contain_text('不是规则自动摘要或独立专家金标准')
-                        expect(page.locator('.reader-quality')).to_contain_text('待用户复核')
+                        expect(page.locator('.reader-notice')).to_contain_text('尚未经过用户或领域专家确认')
+                        expect(page.locator('.reader-quality')).to_contain_text('待用户核对')
                         expect(page.locator('.reader-points').first).to_contain_text(guide['question'][0]['text'])
                         page.locator('[data-reading-evidence]').first.click()
                         assert page.locator('#evidence-inspector .inspector-quote').inner_text().strip()
@@ -390,7 +391,7 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                         m=json.loads(z.read('BATCH-MANIFEST.json'));assert m['status']=='complete'
                         assert sum(j['state']=='done' for j in m['items'])==5
                         actual=[json.loads(line) for line in z.read('research.jsonl').decode().splitlines()]
-                        assert len(actual)==5 and all(r['extractor_version']=='browser-scientific-rules-v1.6' for r in actual)
+                        assert len(actual)==5 and all(r['extractor_version']=='browser-scientific-rules-v1.7' for r in actual)
                         assert all('source_review' not in r['reading_card'] for r in actual)
                         (output/'one-click-complete-report.pdf').write_bytes(z.read('report.pdf'))
                         (output/'one-click-complete.xlsx').write_bytes(z.read('research.xlsx'))

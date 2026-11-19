@@ -3,8 +3,9 @@ import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {PDFDocument,PDFName} from './web_assets/vendor/pdf-lib.esm.min.js';
 import fontkit from './web_assets/vendor/fontkit.es.min.js';
-import {readingPDF,readingReportPlan,wrapReportText} from './web_assets/reading-pdf.js';
+import {readingPDF as renderer,readingReportPlan,wrapReportText} from './web_assets/reading-pdf.js';
 
+const readingPDF=(records,options={})=>renderer(records,{language:'source',...options});
 const results=[];
 async function check(name,fn){await fn();results.push({name,status:'PASS'});console.log('PASS '+name);}
 function sample(id='SYNTHETIC-PDF'){
