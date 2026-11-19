@@ -269,7 +269,7 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                         page.get_by_role('button', name='导入 JSONL 记录', exact=True).click()
                     chooser.value.set_files(str(fixture_dir / 'synthetic-alpha-TWO.jsonl'))
                     page.get_by_role('heading', name='我的文献库', exact=True).wait_for()
-                    open_fixture(); page.locator('.reader-points').filter(has_text='fixture revision TWO').first.wait_for()
+                    open_fixture(); expect(page.locator('.reader-notice')).to_contain_text('中文导读')
                     page.locator('.detail-tabs [data-detail-tab="record"]').click(); page.locator('.record-copy').filter(has_text='fixture revision TWO').wait_for()
                     assert all('fixture revision ONE' not in value for value in page.locator('.record-copy').all_text_contents())
                     results.append({'name': 'Import of an already-viewed ID refreshes cached detail and evidence', 'status': 'PASS'})
