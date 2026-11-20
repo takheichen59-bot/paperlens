@@ -127,7 +127,7 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                     page.get_by_text('从真实论文开始', exact=True).wait_for()
                     page.locator('.sample-list .paper-row').nth(2).wait_for()
                     check('Homepage prioritizes search and pins genuine examples without labelling synthetic imports as examples', lambda: (
-                        page.get_by_label('关键词、DOI 或 arXiv ID').is_visible() or (_ for _ in ()).throw(AssertionError('Search missing')),
+                        page.get_by_label('研究主题、关键词或论文 ID').is_visible() or (_ for _ in ()).throw(AssertionError('Search missing')),
                         len(page.locator('.sample-list .paper-row').all()) == 3 or (_ for _ in ()).throw(AssertionError('Expected three fixed genuine metadata examples')),
                         'SYNTHETIC' not in page.locator('.sample-list').inner_text() or (_ for _ in ()).throw(AssertionError('Fixture mislabeled as acquired example'))))
                     capture('homepage-desktop.png')
@@ -137,15 +137,16 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                         'items': [{'id': 'doi:10.0000/synthetic', 'doi': '10.0000/synthetic', 'title': 'SYNTHETIC discovery fixture',
                                    'authors': ['SYNTHETIC author'], 'year': 2026, 'source': 'crossref', 'url': 'https://doi.org/10.0000/synthetic',
                                    'abstract': 'Synthetic UI fixture only.', 'fulltext_status': 'METADATA_ONLY'}]}))
+                    page.locator('.advanced-search summary').click()
                     page.get_by_role('button', name='Crossref', exact=True).click()
-                    page.get_by_label('关键词、DOI 或 arXiv ID').fill('SYNTHETIC query')
+                    page.get_by_label('研究主题、关键词或论文 ID').fill('SYNTHETIC query')
                     page.get_by_role('button', name='检索文献', exact=True).click()
                     page.get_by_text('SYNTHETIC discovery fixture', exact=True).wait_for()
                     check('Search form submits and renders metadata-only source actions using a labelled engineering fixture', lambda: page.get_by_role('button', name='导入授权 PDF', exact=True).is_visible() or (_ for _ in ()).throw(AssertionError('Missing authorized PDF action')))
                     page.unroute('**/api/discovery?**')
                     page.route('**/api/discovery?**',lambda route:route.fulfill(json={'provider':'arxiv','scope':'SYNTHETIC_ENGINEERING_CACHE_FIXTURE','cache':{'state':'stale','fetched_at':'2026-11-18T00:00:00Z'},'items':[{'id':'9999.90000','source':'arxiv','title':'SYNTHETIC cached metadata fixture','url':'https://example.invalid/SYNTHETIC','authors':[]}]}))
                     page.get_by_role('button',name='arXiv',exact=True).click()
-                    page.get_by_label('关键词、DOI 或 arXiv ID').fill('SYNTHETIC cache')
+                    page.get_by_label('研究主题、关键词或论文 ID').fill('SYNTHETIC cache')
                     page.get_by_role('button',name='检索文献',exact=True).click()
                     expect(page.locator('.search-result-header')).to_contain_text('历史真实结果')
                     expect(page.locator('.search-result-header')).to_contain_text('获取于')
@@ -365,19 +366,30 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                         route.fulfill(status=200,content_type='application/pdf',body=body)
                     page.route('**/api/pdf?**',batch_source)
                     page.goto(origin+'/#discovery');page.get_by_role('heading',name='检索科学文献',exact=True).wait_for()
-                    page.get_by_role('button',name='arXiv',exact=True).click();page.get_by_label('关键词、DOI 或 arXiv ID',exact=True).fill('SYNTHETIC automatic batch')
-                    page.get_by_label('计划获取',exact=True).select_option('5');page.locator('#batch-auto').check()
-                    page.get_by_role('button',name='一键爬取并生成 PDF / Excel',exact=True).click()
-                    page.get_by_role('button',name='重新检索本批',exact=True).wait_for()
+                    page.get_by_label('研究主题、关键词或论文 ID',exact=True).fill('SYNTHETIC automatic batch')
+                    page.get_by_label('整理篇数',exact=True).select_option('5')
+                    assert not page.locator('.advanced-search').get_attribute('open')
+                    page.get_by_role('button',name='一键生成中文 PDF',exact=True).click()
+                    page.get_by_role('button',name='继续生成',exact=True).wait_for()
+                    assert page.evaluate('location.hash')=='#discovery'
                     failed_batch=page.request.get(origin+'/api/batches').json()['batches'][0]
                     assert failed_batch['status']=='failed' and failed_batch['items']==[] and failed_batch['files']==[]
                     capture('search-outage-retry-desktop.png')
                     discovery_outage['enabled']=False
                     with page.expect_download(timeout=120000) as batch_download:
-                        page.get_by_role('button',name='重新检索本批',exact=True).click()
+                        page.get_by_role('button',name='继续生成',exact=True).click()
+                    direct_pdf=output/'one-click-partial-direct.pdf';batch_download.value.save_as(direct_pdf)
+                    with fitz.open(direct_pdf) as doc:
+                        direct_text=''.join(p.get_text() for p in doc)
+                        assert '主题对比' in direct_text and '原文题目' in direct_text
+                    assert page.evaluate('location.hash')=='#discovery'
+                    page.get_by_role('link',name='只看主题对比',exact=True).wait_for(timeout=120000)
+                    with page.expect_download(timeout=120000) as zip_download:
+                        page.get_by_role('link',name='下载全部文件 ZIP',exact=True).click()
+                    page.get_by_role('link',name='查看原文和详细记录',exact=True).click()
                     expect(page.locator('.batch-panel')).to_contain_text('SYNTHETIC DataCite recovery fixture')
                     results.append({'name':'An empty failed search batch can retry the same checkpoint and automatically generate downloads after recovery','status':'PASS'})
-                    partial_zip=output/'one-click-partial.zip';batch_download.value.save_as(partial_zip)
+                    partial_zip=output/'one-click-partial.zip';zip_download.value.save_as(partial_zip)
                     capture('one-click-partial-desktop.png')
                     with zipfile.ZipFile(partial_zip) as z:
                         manifest=json.loads(z.read('BATCH-MANIFEST.json'));batch_id=manifest['id'] if 'id' in manifest else None
@@ -386,16 +398,24 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                         assert sum(j['state']=='done' for j in manifest['items'])==4
                         assert sum(j['state']=='failed' for j in manifest['items'])==1
                         assert len(z.read('research.jsonl').decode().splitlines())==4
+                        assert all(n in z.namelist() for n in ['report.pdf','overview.pdf','papers.pdf'])
+                        for name,expected in [('overview.pdf','主题对比'),('papers.pdf','先看懂')]:
+                            with fitz.open(stream=z.read(name),filetype='pdf') as part:
+                                assert expected in ''.join(p.get_text() for p in part)
                         with fitz.open(stream=z.read('report.pdf'),filetype='pdf') as report_doc:
                             report_text=''.join(report_doc[n].get_text() for n in range(len(report_doc)))
                             assert 'SYNTHETIC' in report_text and '失败1' in ''.join(report_text.split())
                         (output/'one-click-partial-report.pdf').write_bytes(z.read('report.pdf'))
                     assert all(n==1 for n in source_calls.values())
-                    results.append({'name':'Recovered search processes five PDF fixtures, isolates one corrupt PDF and automatically downloads actual PDF/XLSX/JSONL/originals ZIP','status':'PASS'})
+                    results.append({'name':'One primary action stays on the homepage and automatically downloads the combined PDF; both standalone PDFs and Excel persist without a manual export step','status':'PASS'})
                     corrupt['enabled']=False
                     with page.expect_download(timeout=120000) as retried_download:
                         page.get_by_role('button',name='仅重试失败项',exact=True).click()
-                    finished_zip=output/'one-click-complete.zip';retried_download.value.save_as(finished_zip)
+                    retried_download.value.save_as(output/'one-click-complete-direct.pdf')
+                    page.get_by_text('文件已生成，自动结果待复核',exact=True).wait_for(timeout=120000)
+                    with page.expect_download(timeout=120000) as retried_zip:
+                        page.get_by_role('link',name='下载原文与全部结果 ZIP',exact=True).click()
+                    finished_zip=output/'one-click-complete.zip';retried_zip.value.save_as(finished_zip)
                     with zipfile.ZipFile(finished_zip) as z:
                         m=json.loads(z.read('BATCH-MANIFEST.json'));assert m['status']=='complete'
                         assert sum(j['state']=='done' for j in m['items'])==5
@@ -413,6 +433,10 @@ await writeFile(dir+'/reading-specs.json',JSON.stringify(syntheticReadingRecords
                     assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+1')
                     capture('one-click-complete-mobile.png')
                     results.append({'name':'Durable batch files survive reload and the complete one-click page fits mobile width','status':'PASS'})
+                    page.goto(origin+'/#discovery');page.get_by_role('button',name='一键生成中文 PDF',exact=True).wait_for()
+                    assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+1')
+                    capture('homepage-one-click-mobile.png')
+                    results.append({'name':'The simple one-click homepage, progress and downloads fit mobile width','status':'PASS'})
                     assert not errors, errors
                     results.append({'name': 'Hosted UI completes the exercised flows without uncaught browser JavaScript errors', 'status': 'PASS'})
                     browser.close()
