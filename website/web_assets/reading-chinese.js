@@ -39,6 +39,6 @@ export function chineseReadingPlan(record){
   const techniques=(c.techniques||[]).filter(t=>t.evidence_ids?.length);
   if(techniques.length)fields.methods.items=[{text:'文中出现了这些技术：'+techniques.map(t=>t.label.replace(/Raman/g,'拉曼')).join('、')+'。这只是方法线索，尚未整理成完整中文说明。',evidence_ids:[...new Set(techniques.flatMap(t=>t.evidence_ids))]}];
  }
- return {language:'zh-CN',origin:guide?'assistant_source_review':'rule_based_chinese_hints',title:guide?.title_zh||'研究阅读卡片',fields,numbers:guide?.numbers||[],boundaries:guide?.boundaries||[],aids:guide&&!guide.legacy?guide.reading_aids||null:null,guide,
+ return {language:'zh-CN',origin:guide?'assistant_source_review':'rule_based_chinese_hints',title:guide?.title_zh||'论文 '+String(record.id||record.paper_id)+' 的研究线索',fields,numbers:guide?.numbers||[],boundaries:guide?.boundaries||[],aids:guide&&!guide.legacy?guide.reading_aids||null:null,guide,
   notice:guide?.legacy?'这是以前保存的助手中文导读，本次没有重新核对其解释。原来的自动结果和原句均保留。':guide?'中文说明由助手对照原文整理，尚未经过用户或领域专家确认。英文原句和自动提取结果另行保留。':'这篇还没有完整中文导读。下面只列出能识别的线索；没有把英文段落直接当作中文说明。'};
 }

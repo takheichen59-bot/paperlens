@@ -1,3 +1,5 @@
+import {compactReportFont} from './report-font-compact.js';
+import {REPORT_CHARACTERS} from './report-characters.js';
 import {renderChineseReport} from './reading-layout.js';
 import {chineseReadingPlan} from './reading-chinese.js';
 // Selectable, source-linked PDF. Automatic candidates remain separate from
@@ -122,7 +124,7 @@ function bookmarks(doc,entries){
  * By default the pinned, privately seeded font is fetched from /api/report-font.
  * No paper or report text is sent to that endpoint or any external service.
  */
-export async function readingPDF(records,{fontBytes,batch,fetchImpl=globalThis.fetch,fontUrl='/api/report-font?revision=2',title='PaperLens 中文文献阅读报告',language='zh-CN'}={}){
+export async function readingPDF(records,{fontBytes,batch,fetchImpl=globalThis.fetch,fontUrl='/api/report-font?revision=2',title='PaperLens 中文文献阅读报告',language='zh-CN',kind='papers',compactFont=true}={}){
  const input=Array.from(records),completedIds=batch?.items?new Set(batch.items.filter(i=>i.state==='done').flatMap(i=>[i.id,i.record_id,i.meta?.id,i.meta?.paper_id].filter(Boolean))):null;
  const completed=input.filter(r=>!completedIds||[r.id,r.paper_id,r.meta?.id,r.meta?.paper_id].some(id=>completedIds.has(id)));
  const plan=readingReportPlan(completed,{language});const chinese=language==='zh-CN';
@@ -135,12 +137,13 @@ export async function readingPDF(records,{fontBytes,batch,fetchImpl=globalThis.f
  else if(fontBytes instanceof ArrayBuffer)fontBytes=new Uint8Array(fontBytes);
  if(!(fontBytes instanceof Uint8Array)||!fontBytes.byteLength)throw Error('fontBytes 必须是非空 TTF 字节。');
  if(String.fromCharCode(...fontBytes.subarray(0,4))==='wOF2')throw Error('报告字体要求静态 TTF；fontkit 可解析 WOFF2，但当前动态子集不能可靠绘制，请先将测试字体转换为 TTF。');
+ if(compactFont)fontBytes=compactReportFont(fontBytes,REPORT_CHARACTERS+JSON.stringify({records:completed,batch,title}));
  const doc=await PDFDocument.create();doc.registerFontkit(fontkit);
- // fontkit 1.1.1 runtime subsets of the tested CJK TTF lose visible outlines
- // despite retaining extractable text. Embed one complete, compressed static
- // TTF per PDF instead. It is fetched as an asset, never bundled into Worker JS.
+ // Dynamic fontkit subsets lose some CJK outlines. The static TTF has already
+ // been compacted with original glyph IDs and complete composite dependencies.
+ // Embed that font whole; no document text leaves this browser.
  const font=await doc.embedFont(fontBytes,{subset:false});const supported=new Set(font.getCharacterSet());
- if(chinese)return renderChineseReport({doc,font,plan,batch,title,wrap:wrapReportText});
+ if(chinese)return renderChineseReport({doc,font,plan,batch,title,wrap:wrapReportText,kind});
  doc.setTitle(title);doc.setAuthor('PaperLens');doc.setSubject('Automatic source candidates; unreviewed; scientific accuracy not independently evaluated');
  const allPages=[],overviewPages=[],entryLinks=[],outlines=[];let page,y,phase='overview';
  function checkGlyphs(text){for(const ch of Array.from(text))if(!supported.has(ch.codePointAt(0)))throw Error('报告字体缺少 Unicode U+'+ch.codePointAt(0).toString(16).toUpperCase()+'；原文未改写，请补齐字体覆盖后重试。');}
@@ -258,4 +261,12 @@ export async function readingPDF(records,{fontBytes,batch,fetchImpl=globalThis.f
   p.drawText('返回概览',{x:265,y:20,size:8.5,font,color:ACCENT});annotation(doc,p,[262,17,310,30],{destination:overviewPages[0]});
  });
  return new Blob([await doc.save()],{type:'application/pdf'});
+}
+
+/** Three independently readable PDFs; one font fetch, compact glyphs, original evidence intact. */
+export async function readingPDFBundle(records,{fontBytes,batch,fetchImpl=globalThis.fetch,onReady}={}){
+ const start=performance.now();if(fontBytes===undefined){const r=await fetchImpl('/api/report-font?revision=2',{credentials:'same-origin'});if(!r.ok)throw Error('报告字体读取失败（HTTP '+r.status+'）');fontBytes=new Uint8Array(await r.arrayBuffer());}else if(fontBytes?.arrayBuffer)fontBytes=new Uint8Array(await fontBytes.arrayBuffer());
+ const titles={combined:'PaperLens 主题对比与逐篇阅读报告',overview:'PaperLens 主题对比报告',papers:'PaperLens 逐篇阅读报告'},compact=compactReportFont(fontBytes,REPORT_CHARACTERS+JSON.stringify({records,batch,titles})),files={};
+ for(const [kind,name]of [['combined','report.pdf'],['overview','overview.pdf'],['papers','papers.pdf']]){files[name]=await readingPDF(records,{fontBytes:compact,batch,title:titles[kind],kind,compactFont:false});if(name==='report.pdf')await onReady?.(files[name]);}
+ return {files,metrics:{pdf_generation_ms:Math.round(performance.now()-start),font_bytes:fontBytes.byteLength,compact_font_bytes:compact.byteLength,pdf_bytes:files['report.pdf'].size}};
 }
